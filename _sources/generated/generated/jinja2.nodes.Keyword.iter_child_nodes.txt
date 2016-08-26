@@ -1,0 +1,6 @@
+jinja2.nodes.Keyword.iter_child_nodes
+=====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Keyword.iter_child_nodes

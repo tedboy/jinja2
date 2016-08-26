@@ -1,0 +1,6 @@
+jinja2.bccache.MemcachedBytecodeCache.__init__
+==============================================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: MemcachedBytecodeCache.__init__

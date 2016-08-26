@@ -1,0 +1,6 @@
+jinja2.nodes.deque.extend
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.extend

@@ -1,0 +1,6 @@
+jinja2.runtime.Markup.decode
+============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Markup.decode

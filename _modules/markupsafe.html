@@ -83,9 +83,17 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -169,7 +177,7 @@
 <span class="n">_entity_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;&amp;([^;]+);&#39;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Markup"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.html#jinja2.Markup">[docs]</a><span class="k">class</span> <span class="nc">Markup</span><span class="p">(</span><span class="n">text_type</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.html#jinja2.Markup">[docs]</a><span class="k">class</span> <span class="nc">Markup</span><span class="p">(</span><span class="n">text_type</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;Marks a string as being safe for inclusion in HTML/XML output without</span>
 <span class="sd">    needing to be escaped.  This implements the `__html__` interface a couple</span>
 <span class="sd">    of frameworks and web applications use.  :class:`Markup` is a direct</span>
@@ -253,24 +261,24 @@
             <span class="n">text_type</span><span class="o">.</span><span class="n">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="Markup.join"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.join.html#jinja2.Markup.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.join"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.join.html#jinja2.Markup.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">text_type</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">,</span> <span class="n">seq</span><span class="p">)))</span></div>
     <span class="n">join</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">join</span><span class="o">.</span><span class="n">__doc__</span>
 
-<div class="viewcode-block" id="Markup.split"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.split.html#jinja2.Markup.split">[docs]</a>    <span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.split"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.split.html#jinja2.Markup.split">[docs]</a>    <span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="n">text_type</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
     <span class="n">split</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">__doc__</span>
 
-<div class="viewcode-block" id="Markup.rsplit"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.rsplit.html#jinja2.Markup.rsplit">[docs]</a>    <span class="k">def</span> <span class="nf">rsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.rsplit"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.rsplit.html#jinja2.Markup.rsplit">[docs]</a>    <span class="k">def</span> <span class="nf">rsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="n">text_type</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
     <span class="n">rsplit</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">rsplit</span><span class="o">.</span><span class="n">__doc__</span>
 
-<div class="viewcode-block" id="Markup.splitlines"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.splitlines.html#jinja2.Markup.splitlines">[docs]</a>    <span class="k">def</span> <span class="nf">splitlines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.splitlines"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.splitlines.html#jinja2.Markup.splitlines">[docs]</a>    <span class="k">def</span> <span class="nf">splitlines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="n">text_type</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
     <span class="n">splitlines</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">splitlines</span><span class="o">.</span><span class="n">__doc__</span>
 
-<div class="viewcode-block" id="Markup.unescape"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.unescape.html#jinja2.Markup.unescape">[docs]</a>    <span class="k">def</span> <span class="nf">unescape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.unescape"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.unescape.html#jinja2.Markup.unescape">[docs]</a>    <span class="k">def</span> <span class="nf">unescape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">r&quot;&quot;&quot;Unescape markup again into an text_type string.  This also resolves</span>
 <span class="sd">        known HTML4 and XHTML entities:</span>
 
@@ -292,7 +300,7 @@
             <span class="k">return</span> <span class="s1">u&#39;&#39;</span>
         <span class="k">return</span> <span class="n">_entity_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">handle_match</span><span class="p">,</span> <span class="n">text_type</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Markup.striptags"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.striptags.html#jinja2.Markup.striptags">[docs]</a>    <span class="k">def</span> <span class="nf">striptags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.striptags"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.striptags.html#jinja2.Markup.striptags">[docs]</a>    <span class="k">def</span> <span class="nf">striptags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">r&quot;&quot;&quot;Unescape markup into an text_type string and strip all tags.  This</span>
 <span class="sd">        also resolves known HTML4 and XHTML entities.  Whitespace is</span>
 <span class="sd">        normalized to one:</span>
@@ -304,7 +312,7 @@
         <span class="k">return</span> <span class="n">Markup</span><span class="p">(</span><span class="n">stripped</span><span class="p">)</span><span class="o">.</span><span class="n">unescape</span><span class="p">()</span></div>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Markup.escape"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.escape.html#jinja2.Markup.escape">[docs]</a>    <span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.escape"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.escape.html#jinja2.Markup.escape">[docs]</a>    <span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Escape the string.  Works like :func:`escape` with the difference</span>
 <span class="sd">        that for subclasses of :class:`Markup` this function would return the</span>
 <span class="sd">        correct subclass.</span>
@@ -332,16 +340,16 @@
 
     <span class="c1"># new in python 2.5</span>
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="s1">&#39;partition&#39;</span><span class="p">):</span>
-<div class="viewcode-block" id="Markup.partition"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.partition.html#jinja2.Markup.partition">[docs]</a>        <span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.partition"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.partition.html#jinja2.Markup.partition">[docs]</a>        <span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span>
                              <span class="n">text_type</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">sep</span><span class="p">))))</span></div>
-<div class="viewcode-block" id="Markup.rpartition"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.rpartition.html#jinja2.Markup.rpartition">[docs]</a>        <span class="k">def</span> <span class="nf">rpartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.rpartition"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.rpartition.html#jinja2.Markup.rpartition">[docs]</a>        <span class="k">def</span> <span class="nf">rpartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span>
                              <span class="n">text_type</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">sep</span><span class="p">))))</span></div>
 
     <span class="c1"># new in python 2.6</span>
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">):</span>
-<div class="viewcode-block" id="Markup.format"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.format.html#jinja2.Markup.format">[docs]</a>        <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.format"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Markup.format.html#jinja2.Markup.format">[docs]</a>        <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
             <span class="n">formatter</span> <span class="o">=</span> <span class="n">EscapeFormatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
             <span class="n">kwargs</span> <span class="o">=</span> <span class="n">_MagicFormatMapping</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>

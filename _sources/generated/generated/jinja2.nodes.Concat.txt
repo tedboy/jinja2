@@ -1,0 +1,38 @@
+jinja2.nodes.Concat
+===================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Concat
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Concat.__init__
+   ~Concat.as_const
+   ~Concat.can_assign
+   ~Concat.find
+   ~Concat.find_all
+   ~Concat.iter_child_nodes
+   ~Concat.iter_fields
+   ~Concat.set_ctx
+   ~Concat.set_environment
+   ~Concat.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Concat.abstract
+   ~Concat.attributes
+   ~Concat.fields
+

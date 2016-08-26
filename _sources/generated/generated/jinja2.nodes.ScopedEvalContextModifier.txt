@@ -1,0 +1,36 @@
+jinja2.nodes.ScopedEvalContextModifier
+======================================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: ScopedEvalContextModifier
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ScopedEvalContextModifier.__init__
+   ~ScopedEvalContextModifier.find
+   ~ScopedEvalContextModifier.find_all
+   ~ScopedEvalContextModifier.iter_child_nodes
+   ~ScopedEvalContextModifier.iter_fields
+   ~ScopedEvalContextModifier.set_ctx
+   ~ScopedEvalContextModifier.set_environment
+   ~ScopedEvalContextModifier.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ScopedEvalContextModifier.abstract
+   ~ScopedEvalContextModifier.attributes
+   ~ScopedEvalContextModifier.fields
+

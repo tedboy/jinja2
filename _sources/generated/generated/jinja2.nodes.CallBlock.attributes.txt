@@ -1,0 +1,6 @@
+jinja2.nodes.CallBlock.attributes
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: CallBlock.attributes

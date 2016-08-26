@@ -1,0 +1,6 @@
+jinja2.lexer.text_type.rindex
+=============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: text_type.rindex

@@ -1,0 +1,6 @@
+jinja2.environment.Context.resolve
+==================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Context.resolve

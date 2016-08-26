@@ -1,0 +1,36 @@
+jinja2.nodes.FilterBlock
+========================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: FilterBlock
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FilterBlock.__init__
+   ~FilterBlock.find
+   ~FilterBlock.find_all
+   ~FilterBlock.iter_child_nodes
+   ~FilterBlock.iter_fields
+   ~FilterBlock.set_ctx
+   ~FilterBlock.set_environment
+   ~FilterBlock.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~FilterBlock.abstract
+   ~FilterBlock.attributes
+   ~FilterBlock.fields
+

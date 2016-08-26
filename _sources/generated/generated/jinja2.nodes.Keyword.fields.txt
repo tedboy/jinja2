@@ -1,0 +1,6 @@
+jinja2.nodes.Keyword.fields
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Keyword.fields

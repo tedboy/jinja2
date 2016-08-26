@@ -1,0 +1,6 @@
+jinja2.nodes.Pow.operator
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Pow.operator

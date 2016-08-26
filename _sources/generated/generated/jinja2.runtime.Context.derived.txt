@@ -1,0 +1,6 @@
+jinja2.runtime.Context.derived
+==============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.derived

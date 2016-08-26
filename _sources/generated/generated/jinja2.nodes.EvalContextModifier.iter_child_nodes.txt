@@ -1,0 +1,6 @@
+jinja2.nodes.EvalContextModifier.iter_child_nodes
+=================================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EvalContextModifier.iter_child_nodes

@@ -1,0 +1,6 @@
+jinja2.nodes.FromImport.attributes
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: FromImport.attributes

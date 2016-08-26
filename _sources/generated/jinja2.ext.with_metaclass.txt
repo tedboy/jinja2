@@ -1,0 +1,6 @@
+jinja2.ext.with_metaclass
+=========================
+
+.. currentmodule:: jinja2.ext
+
+.. autofunction:: with_metaclass

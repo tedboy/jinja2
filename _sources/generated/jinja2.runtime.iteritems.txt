@@ -1,0 +1,6 @@
+jinja2.runtime.iteritems
+========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: iteritems

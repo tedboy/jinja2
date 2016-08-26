@@ -1,0 +1,6 @@
+jinja2.ext.do.priority
+======================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: do.priority

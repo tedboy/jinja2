@@ -1,0 +1,6 @@
+jinja2.nodes.Sub.fields
+=======================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Sub.fields

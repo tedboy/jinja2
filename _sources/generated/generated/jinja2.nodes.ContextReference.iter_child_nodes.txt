@@ -1,0 +1,6 @@
+jinja2.nodes.ContextReference.iter_child_nodes
+==============================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ContextReference.iter_child_nodes

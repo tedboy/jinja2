@@ -1,0 +1,39 @@
+jinja2.nodes.UnaryExpr
+======================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: UnaryExpr
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~UnaryExpr.__init__
+   ~UnaryExpr.as_const
+   ~UnaryExpr.can_assign
+   ~UnaryExpr.find
+   ~UnaryExpr.find_all
+   ~UnaryExpr.iter_child_nodes
+   ~UnaryExpr.iter_fields
+   ~UnaryExpr.set_ctx
+   ~UnaryExpr.set_environment
+   ~UnaryExpr.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~UnaryExpr.abstract
+   ~UnaryExpr.attributes
+   ~UnaryExpr.fields
+   ~UnaryExpr.operator
+

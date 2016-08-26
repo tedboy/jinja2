@@ -1,0 +1,6 @@
+jinja2.environment.Parser.parse_mod
+===================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Parser.parse_mod

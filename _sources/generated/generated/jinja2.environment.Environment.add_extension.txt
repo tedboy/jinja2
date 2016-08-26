@@ -1,0 +1,6 @@
+jinja2.environment.Environment.add_extension
+============================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Environment.add_extension

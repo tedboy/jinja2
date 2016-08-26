@@ -1,0 +1,6 @@
+jinja2.lexer.deque.popleft
+==========================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: deque.popleft

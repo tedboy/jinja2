@@ -1,0 +1,6 @@
+jinja2.nodes.Sub.as_const
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Sub.as_const

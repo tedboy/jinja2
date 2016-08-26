@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.bind
+===================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: AutoEscapeExtension.bind

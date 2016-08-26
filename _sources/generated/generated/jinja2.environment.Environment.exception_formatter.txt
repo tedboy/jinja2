@@ -1,0 +1,6 @@
+jinja2.environment.Environment.exception_formatter
+==================================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Environment.exception_formatter

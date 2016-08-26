@@ -1,0 +1,6 @@
+jinja2.nodes.Impossible
+=======================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoexception:: Impossible

@@ -1,0 +1,6 @@
+jinja2.environment.LRUCache.iterkeys
+====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: LRUCache.iterkeys

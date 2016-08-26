@@ -1,0 +1,6 @@
+jinja2.runtime.TemplateReference.__init__
+=========================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: TemplateReference.__init__

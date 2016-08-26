@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.translate
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.translate

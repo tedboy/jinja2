@@ -1,0 +1,6 @@
+jinja2.nodes.If.abstract
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: If.abstract

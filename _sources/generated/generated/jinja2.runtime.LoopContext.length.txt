@@ -1,0 +1,6 @@
+jinja2.runtime.LoopContext.length
+=================================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoattribute:: LoopContext.length

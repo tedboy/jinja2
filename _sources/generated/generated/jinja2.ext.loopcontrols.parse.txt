@@ -1,0 +1,6 @@
+jinja2.ext.loopcontrols.parse
+=============================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: loopcontrols.parse

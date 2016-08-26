@@ -1,0 +1,6 @@
+jinja2.ext.i18n.__init__
+========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: i18n.__init__

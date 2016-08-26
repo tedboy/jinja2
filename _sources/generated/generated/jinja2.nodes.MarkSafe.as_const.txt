@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafe.as_const
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafe.as_const

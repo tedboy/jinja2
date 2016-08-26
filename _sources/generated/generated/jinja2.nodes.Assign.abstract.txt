@@ -1,0 +1,6 @@
+jinja2.nodes.Assign.abstract
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Assign.abstract

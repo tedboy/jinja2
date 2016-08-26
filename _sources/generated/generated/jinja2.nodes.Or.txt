@@ -1,0 +1,39 @@
+jinja2.nodes.Or
+===============
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Or
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Or.__init__
+   ~Or.as_const
+   ~Or.can_assign
+   ~Or.find
+   ~Or.find_all
+   ~Or.iter_child_nodes
+   ~Or.iter_fields
+   ~Or.set_ctx
+   ~Or.set_environment
+   ~Or.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Or.abstract
+   ~Or.attributes
+   ~Or.fields
+   ~Or.operator
+

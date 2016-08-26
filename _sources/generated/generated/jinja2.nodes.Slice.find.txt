@@ -1,0 +1,6 @@
+jinja2.nodes.Slice.find
+=======================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Slice.find

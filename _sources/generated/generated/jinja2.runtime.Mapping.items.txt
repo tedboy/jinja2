@@ -1,0 +1,6 @@
+jinja2.runtime.Mapping.items
+============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Mapping.items

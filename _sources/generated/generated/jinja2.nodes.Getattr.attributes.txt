@@ -1,0 +1,6 @@
+jinja2.nodes.Getattr.attributes
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Getattr.attributes

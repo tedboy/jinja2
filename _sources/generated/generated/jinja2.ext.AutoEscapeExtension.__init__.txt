@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.__init__
+=======================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: AutoEscapeExtension.__init__

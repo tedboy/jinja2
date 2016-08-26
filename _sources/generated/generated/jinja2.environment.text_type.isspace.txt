@@ -1,0 +1,6 @@
+jinja2.environment.text_type.isspace
+====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: text_type.isspace

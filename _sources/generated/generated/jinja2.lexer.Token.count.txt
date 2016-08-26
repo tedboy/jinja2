@@ -1,0 +1,6 @@
+jinja2.lexer.Token.count
+========================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: Token.count

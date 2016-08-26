@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.end_write
+==========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.end_write

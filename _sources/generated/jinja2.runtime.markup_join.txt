@@ -1,0 +1,6 @@
+jinja2.runtime.markup_join
+==========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: markup_join

@@ -1,0 +1,37 @@
+jinja2.nodes.deque
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: deque
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~deque.append
+   ~deque.appendleft
+   ~deque.clear
+   ~deque.count
+   ~deque.extend
+   ~deque.extendleft
+   ~deque.pop
+   ~deque.popleft
+   ~deque.remove
+   ~deque.reverse
+   ~deque.rotate
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~deque.maxlen
+

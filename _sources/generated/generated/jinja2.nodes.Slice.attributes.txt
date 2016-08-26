@@ -1,0 +1,6 @@
+jinja2.nodes.Slice.attributes
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Slice.attributes

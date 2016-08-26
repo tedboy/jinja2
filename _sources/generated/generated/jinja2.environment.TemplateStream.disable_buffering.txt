@@ -1,0 +1,6 @@
+jinja2.environment.TemplateStream.disable_buffering
+===================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TemplateStream.disable_buffering

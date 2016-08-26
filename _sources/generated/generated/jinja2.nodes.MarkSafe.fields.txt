@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafe.fields
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: MarkSafe.fields

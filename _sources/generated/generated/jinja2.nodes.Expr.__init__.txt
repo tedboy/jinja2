@@ -1,0 +1,6 @@
+jinja2.nodes.Expr.__init__
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Expr.__init__

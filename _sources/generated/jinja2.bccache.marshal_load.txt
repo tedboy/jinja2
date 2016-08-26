@@ -1,0 +1,6 @@
+jinja2.bccache.marshal_load
+===========================
+
+.. currentmodule:: jinja2.bccache
+
+.. autofunction:: marshal_load

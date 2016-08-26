@@ -1,0 +1,6 @@
+jinja2.environment.reduce
+=========================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: reduce

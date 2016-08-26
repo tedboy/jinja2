@@ -1,0 +1,6 @@
+jinja2.nodes.ImportedName.set_environment
+=========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ImportedName.set_environment

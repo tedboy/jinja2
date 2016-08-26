@@ -1,0 +1,6 @@
+jinja2.ext.Markup.center
+========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Markup.center

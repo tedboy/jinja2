@@ -1,0 +1,6 @@
+jinja2.nodes.ExtensionAttribute.abstract
+========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: ExtensionAttribute.abstract

@@ -1,0 +1,6 @@
+jinja2.environment.Markup.isalnum
+=================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Markup.isalnum

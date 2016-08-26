@@ -1,0 +1,6 @@
+jinja2.nodes.EvalContextModifier.__init__
+=========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EvalContextModifier.__init__

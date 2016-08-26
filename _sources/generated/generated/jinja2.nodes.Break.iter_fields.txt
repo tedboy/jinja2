@@ -1,0 +1,6 @@
+jinja2.nodes.Break.iter_fields
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Break.iter_fields

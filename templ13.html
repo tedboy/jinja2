@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.13. Expressions &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="4.14. List of Builtin Filters" href="templ14.html"/>
+        <link rel="prev" title="4.12. Import Context Behavior" href="templ12.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">4.13. Expressions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#literals">4.13.1. Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#math">4.13.2. Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comparisons">4.13.3. Comparisons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logic">4.13.4. Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-operators">4.13.5. Other Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#if-expression">4.13.6. If Expression</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
+        
+      <li>4.13. Expressions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/templ13.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="expressions">
+<span id="id1"></span><h1>4.13. Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h1>
+<p>Jinja allows basic expressions everywhere.  These work very similarly to
+regular Python; even if you&#8217;re not working with Python
+you should feel comfortable with it.</p>
+<div class="section" id="literals">
+<h2>4.13.1. Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h2>
+<p>The simplest form of expressions are literals.  Literals are representations
+for Python objects such as strings and numbers.  The following literals exist:</p>
+<dl class="docutils">
+<dt>&#8220;Hello World&#8221;:</dt>
+<dd>Everything between two double or single quotes is a string.  They are
+useful whenever you need a string in the template (e.g. as
+arguments to function calls and filters, or just to extend or include a
+template).</dd>
+<dt>42 / 42.23:</dt>
+<dd>Integers and floating point numbers are created by just writing the
+number down.  If a dot is present, the number is a float, otherwise an
+integer.  Keep in mind that, in Python, <code class="docutils literal"><span class="pre">42</span></code> and <code class="docutils literal"><span class="pre">42.0</span></code>
+are different (<code class="docutils literal"><span class="pre">int</span></code> and <code class="docutils literal"><span class="pre">float</span></code>, respectively).</dd>
+<dt>[&#8216;list&#8217;, &#8216;of&#8217;, &#8216;objects&#8217;]:</dt>
+<dd><p class="first">Everything between two brackets is a list.  Lists are useful for storing
+sequential data to be iterated over.  For example, you can easily
+create a list of links using lists and tuples for (and with) a for loop:</p>
+<div class="last highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">href</span><span class="o">,</span> <span class="nv">caption</span> <span class="k">in</span> <span class="o">[(</span><span class="s1">&#39;index.html&#39;</span><span class="o">,</span> <span class="s1">&#39;Index&#39;</span><span class="o">),</span> <span class="o">(</span><span class="s1">&#39;about.html&#39;</span><span class="o">,</span> <span class="s1">&#39;About&#39;</span><span class="o">),</span>
+                         <span class="o">(</span><span class="s1">&#39;downloads.html&#39;</span><span class="o">,</span> <span class="s1">&#39;Downloads&#39;</span><span class="o">)]</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">href</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">caption</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>(&#8216;tuple&#8217;, &#8216;of&#8217;, &#8216;values&#8217;):</dt>
+<dd>Tuples are like lists that cannot be modified (&#8220;immutable&#8221;).  If a tuple
+only has one item, it must be followed by a comma (<code class="docutils literal"><span class="pre">('1-tuple',)</span></code>).
+Tuples are usually used to represent items of two or more elements.
+See the list example above for more details.</dd>
+<dt>{&#8216;dict&#8217;: &#8216;of&#8217;, &#8216;key&#8217;: &#8216;and&#8217;, &#8216;value&#8217;: &#8216;pairs&#8217;}:</dt>
+<dd>A dict in Python is a structure that combines keys and values.  Keys must
+be unique and always have exactly one value.  Dicts are rarely used in
+templates; they are useful in some rare cases such as the <a class="reference internal" href="templ14.html#xmlattr" title="xmlattr"><code class="xref py py-func docutils literal"><span class="pre">xmlattr()</span></code></a>
+filter.</dd>
+<dt>true / false:</dt>
+<dd>true is always true and false is always false.</dd>
+</dl>
+<div class="admonition-note admonition">
+<p class="first admonition-title">Note</p>
+<p class="last">The special constants <cite>true</cite>, <cite>false</cite>, and <cite>none</cite> are indeed lowercase.
+Because that caused confusion in the past, (<cite>True</cite> used to expand
+to an undefined variable that was considered false),
+all three can now also be written in title case
+(<cite>True</cite>, <cite>False</cite>, and <cite>None</cite>).
+However, for consistency, (all Jinja identifiers are lowercase)
+you should use the lowercase versions.</p>
+</div>
+</div>
+<div class="section" id="math">
+<h2>4.13.2. Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<p>Jinja allows you to calculate with values.  This is rarely useful in templates
+but exists for completeness&#8217; sake.  The following operators are supported:</p>
+<dl class="docutils">
+<dt>+</dt>
+<dd>Adds two objects together. Usually the objects are numbers, but if both are
+strings or lists, you can concatenate them this way.  This, however, is not
+the preferred way to concatenate strings!  For string concatenation, have
+a look-see at the <code class="docutils literal"><span class="pre">~</span></code> operator.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span> <span class="pre">}}</span></code> is <code class="docutils literal"><span class="pre">2</span></code>.</dd>
+<dt>-</dt>
+<dd>Subtract the second number from the first one.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">2</span> <span class="pre">}}</span></code> is <code class="docutils literal"><span class="pre">1</span></code>.</dd>
+</dl>
+<dl class="docutils">
+<dt>/</dt>
+<dd>Divide two numbers.  The return value will be a floating point number.
+<code class="docutils literal"><span class="pre">{{</span> <span class="pre">1</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">}}</span></code> is <code class="docutils literal"><span class="pre">{{</span> <span class="pre">0.5</span> <span class="pre">}}</span></code>.
+(Just like <code class="docutils literal"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span></code>.)</dd>
+</dl>
+<dl class="docutils">
+<dt>//</dt>
+<dd>Divide two numbers and return the truncated integer result.
+<code class="docutils literal"><span class="pre">{{</span> <span class="pre">20</span> <span class="pre">//</span> <span class="pre">7</span> <span class="pre">}}</span></code> is <code class="docutils literal"><span class="pre">2</span></code>.</dd>
+</dl>
+<dl class="docutils">
+<dt>%</dt>
+<dd>Calculate the remainder of an integer division.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">11</span> <span class="pre">%</span> <span class="pre">7</span> <span class="pre">}}</span></code> is <code class="docutils literal"><span class="pre">4</span></code>.</dd>
+<dt>*</dt>
+<dd>Multiply the left operand with the right one.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">}}</span></code> would
+return <code class="docutils literal"><span class="pre">4</span></code>.  This can also be used to repeat a string multiple times.
+<code class="docutils literal"><span class="pre">{{</span> <span class="pre">'='</span> <span class="pre">*</span> <span class="pre">80</span> <span class="pre">}}</span></code> would print a bar of 80 equal signs.</dd>
+<dt>**</dt>
+<dd>Raise the left operand to the power of the right operand.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">2**3</span> <span class="pre">}}</span></code>
+would return <code class="docutils literal"><span class="pre">8</span></code>.</dd>
+</dl>
+</div>
+<div class="section" id="comparisons">
+<h2>4.13.3. Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>==</dt>
+<dd>Compares two objects for equality.</dd>
+<dt>!=</dt>
+<dd>Compares two objects for inequality.</dd>
+</dl>
+<dl class="docutils">
+<dt>&gt;</dt>
+<dd><cite>true</cite> if the left hand side is greater than the right hand side.</dd>
+<dt>&gt;=</dt>
+<dd><cite>true</cite> if the left hand side is greater or equal to the right hand side.</dd>
+</dl>
+<dl class="docutils">
+<dt>&lt;</dt>
+<dd><cite>true</cite> if the left hand side is lower than the right hand side.</dd>
+<dt>&lt;=</dt>
+<dd><cite>true</cite> if the left hand side is lower or equal to the right hand side.</dd>
+</dl>
+</div>
+<div class="section" id="logic">
+<h2>4.13.4. Logic<a class="headerlink" href="#logic" title="Permalink to this headline">¶</a></h2>
+<p>For <cite>if</cite> statements, <cite>for</cite> filtering, and <cite>if</cite> expressions, it can be useful to
+combine multiple expressions:</p>
+<dl class="docutils">
+<dt>and</dt>
+<dd>Return true if the left and the right operand are true.</dd>
+<dt>or</dt>
+<dd>Return true if the left or the right operand are true.</dd>
+<dt>not</dt>
+<dd>negate a statement (see below).</dd>
+<dt>(expr)</dt>
+<dd>group an expression.</dd>
+</dl>
+<div class="admonition-note admonition">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">is</span></code> and <code class="docutils literal"><span class="pre">in</span></code> operators support negation using an infix notation,
+too: <code class="docutils literal"><span class="pre">foo</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">bar</span></code> and <code class="docutils literal"><span class="pre">foo</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">bar</span></code> instead of <code class="docutils literal"><span class="pre">not</span> <span class="pre">foo</span> <span class="pre">is</span> <span class="pre">bar</span></code>
+and <code class="docutils literal"><span class="pre">not</span> <span class="pre">foo</span> <span class="pre">in</span> <span class="pre">bar</span></code>.  All other expressions require a prefix notation:
+<code class="docutils literal"><span class="pre">not</span> <span class="pre">(foo</span> <span class="pre">and</span> <span class="pre">bar).</span></code></p>
+</div>
+</div>
+<div class="section" id="other-operators">
+<h2>4.13.5. Other Operators<a class="headerlink" href="#other-operators" title="Permalink to this headline">¶</a></h2>
+<p>The following operators are very useful but don&#8217;t fit into any of the other
+two categories:</p>
+<dl class="docutils">
+<dt>in</dt>
+<dd>Perform a sequence / mapping containment test.  Returns true if the left
+operand is contained in the right.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">1</span> <span class="pre">in</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span> <span class="pre">}}</span></code> would, for
+example, return true.</dd>
+<dt>is</dt>
+<dd>Performs a <a class="reference internal" href="templ4.html#tests"><span>test</span></a>.</dd>
+<dt>|</dt>
+<dd>Applies a <a class="reference internal" href="templ3.html#filters"><span>filter</span></a>.</dd>
+</dl>
+<dl class="docutils">
+<dt>~</dt>
+<dd><p class="first">Converts all operands into strings and concatenates them.</p>
+<p class="last"><code class="docutils literal"><span class="pre">{{</span> <span class="pre">&quot;Hello</span> <span class="pre">&quot;</span> <span class="pre">~</span> <span class="pre">name</span> <span class="pre">~</span> <span class="pre">&quot;!&quot;</span> <span class="pre">}}</span></code> would return (assuming <cite>name</cite> is set
+to <code class="docutils literal"><span class="pre">'John'</span></code>) <code class="docutils literal"><span class="pre">Hello</span> <span class="pre">John!</span></code>.</p>
+</dd>
+<dt>()</dt>
+<dd><p class="first">Call a callable: <code class="docutils literal"><span class="pre">{{</span> <span class="pre">post.render()</span> <span class="pre">}}</span></code>.  Inside of the parentheses you
+can use positional arguments and keyword arguments like in Python:</p>
+<p class="last"><code class="docutils literal"><span class="pre">{{</span> <span class="pre">post.render(user,</span> <span class="pre">full=true)</span> <span class="pre">}}</span></code>.</p>
+</dd>
+<dt>. / []</dt>
+<dd>Get an attribute of an object.  (See <a class="reference internal" href="templ2.html#variables"><span>Variables</span></a>)</dd>
+</dl>
+</div>
+<div class="section" id="if-expression">
+<span id="id2"></span><h2>4.13.6. If Expression<a class="headerlink" href="#if-expression" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to use inline <cite>if</cite> expressions.  These are useful in some
+situations.  For example, you can use this to extend from one template if a
+variable is defined, otherwise from the default layout template:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="nv">layout_template</span> <span class="k">if</span> <span class="nv">layout_template</span> <span class="k">is</span> <span class="nf">defined</span> <span class="k">else</span> <span class="s1">&#39;master.html&#39;</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>The general syntax is <code class="docutils literal"><span class="pre">&lt;do</span> <span class="pre">something&gt;</span> <span class="pre">if</span> <span class="pre">&lt;something</span> <span class="pre">is</span> <span class="pre">true&gt;</span> <span class="pre">else</span> <span class="pre">&lt;do</span>
+<span class="pre">something</span> <span class="pre">else&gt;</span></code>.</p>
+<p>The <cite>else</cite> part is optional.  If not provided, the else block implicitly
+evaluates into an undefined object:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span>{{ &#39;[%s]&#39; % page.title if page.title }}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templ14.html" class="btn btn-neutral float-right" title="4.14. List of Builtin Filters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templ12.html" class="btn btn-neutral" title="4.12. Import Context Behavior" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

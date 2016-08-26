@@ -1,0 +1,6 @@
+jinja2.nodes.Add.operator
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Add.operator

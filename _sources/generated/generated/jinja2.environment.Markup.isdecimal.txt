@@ -1,0 +1,6 @@
+jinja2.environment.Markup.isdecimal
+===================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Markup.isdecimal

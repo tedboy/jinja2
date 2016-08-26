@@ -1,0 +1,6 @@
+jinja2.nodes.deque.extendleft
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.extendleft

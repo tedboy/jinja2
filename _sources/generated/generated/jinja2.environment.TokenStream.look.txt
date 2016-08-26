@@ -1,0 +1,6 @@
+jinja2.environment.TokenStream.look
+===================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TokenStream.look

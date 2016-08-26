@@ -1,0 +1,36 @@
+jinja2.nodes.Macro
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Macro
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Macro.__init__
+   ~Macro.find
+   ~Macro.find_all
+   ~Macro.iter_child_nodes
+   ~Macro.iter_fields
+   ~Macro.set_ctx
+   ~Macro.set_environment
+   ~Macro.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Macro.abstract
+   ~Macro.attributes
+   ~Macro.fields
+

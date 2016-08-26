@@ -1,0 +1,6 @@
+jinja2.ext.with_.__init__
+=========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: with_.__init__

@@ -1,0 +1,6 @@
+jinja2.nodes.Extends.set_lineno
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Extends.set_lineno

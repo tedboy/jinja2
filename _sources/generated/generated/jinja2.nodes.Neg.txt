@@ -1,0 +1,39 @@
+jinja2.nodes.Neg
+================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Neg
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Neg.__init__
+   ~Neg.as_const
+   ~Neg.can_assign
+   ~Neg.find
+   ~Neg.find_all
+   ~Neg.iter_child_nodes
+   ~Neg.iter_fields
+   ~Neg.set_ctx
+   ~Neg.set_environment
+   ~Neg.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Neg.abstract
+   ~Neg.attributes
+   ~Neg.fields
+   ~Neg.operator
+

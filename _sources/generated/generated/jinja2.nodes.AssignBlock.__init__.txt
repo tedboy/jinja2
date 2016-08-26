@@ -1,0 +1,6 @@
+jinja2.nodes.AssignBlock.__init__
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: AssignBlock.__init__

@@ -1,0 +1,6 @@
+jinja2.nodes.Stmt.attributes
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Stmt.attributes

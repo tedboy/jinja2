@@ -1,0 +1,6 @@
+jinja2.environment.TokenStream.skip_if
+======================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TokenStream.skip_if

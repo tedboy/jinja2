@@ -1,0 +1,6 @@
+jinja2.environment.get_next
+===========================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: get_next

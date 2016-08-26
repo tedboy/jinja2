@@ -1,0 +1,6 @@
+jinja2.ext.Markup.strip
+=======================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Markup.strip

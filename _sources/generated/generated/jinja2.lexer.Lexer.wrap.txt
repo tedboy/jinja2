@@ -1,0 +1,6 @@
+jinja2.lexer.Lexer.wrap
+=======================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: Lexer.wrap

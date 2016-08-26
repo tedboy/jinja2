@@ -1,0 +1,6 @@
+jinja2.nodes.Dict.set_ctx
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Dict.set_ctx

@@ -1,0 +1,6 @@
+jinja2.environment.Template.from_code
+=====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Template.from_code

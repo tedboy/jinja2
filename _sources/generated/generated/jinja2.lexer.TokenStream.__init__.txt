@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.__init__
+=================================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStream.__init__

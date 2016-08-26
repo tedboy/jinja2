@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafe.iter_child_nodes
+======================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafe.iter_child_nodes

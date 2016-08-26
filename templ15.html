@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.15. List of Builtin Tests &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="4.16. List of Global Functions" href="templ16.html"/>
+        <link rel="prev" title="4.14. List of Builtin Filters" href="templ14.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">4.15. List of Builtin Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
+        
+      <li>4.15. List of Builtin Tests</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/templ15.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="list-of-builtin-tests">
+<span id="builtin-tests"></span><h1>4.15. List of Builtin Tests<a class="headerlink" href="#list-of-builtin-tests" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="callable">
+<code class="descname">callable</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#callable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the object is callable (i.e., some kind of function).
+Note that classes are callable, as are instances with a __call__() method.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defined">
+<code class="descname">defined</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#defined" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is defined:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">variable</span> <span class="k">is</span> <span class="nf">defined</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    value of variable: </span><span class="cp">{{</span> <span class="nv">variable</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    variable is not defined</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="templ14.html#default" title="default"><code class="xref py py-func docutils literal"><span class="pre">default()</span></code></a> filter for a simple way to set undefined
+variables.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="divisibleby">
+<code class="descname">divisibleby</code><span class="sig-paren">(</span><em>value</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#divisibleby" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a variable is divisible by a number.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="equalto">
+<code class="descname">equalto</code><span class="sig-paren">(</span><em>value</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#equalto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if an object has the same value as another object:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">foo.expression</span> <span class="k">is</span> <span class="nf">equalto</span> <span class="m">42</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    the foo attribute evaluates to the constant 42</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>This appears to be a useless test as it does exactly the same as the
+<code class="docutils literal"><span class="pre">==</span></code> operator, but it can be useful when used together with the
+<cite>selectattr</cite> function:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">users</span><span class="o">|</span><span class="nf">selectattr</span><span class="o">(</span><span class="s2">&quot;email&quot;</span><span class="o">,</span> <span class="s2">&quot;equalto&quot;</span><span class="o">,</span> <span class="s2">&quot;foo@bar.invalid&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="escaped">
+<code class="descname">escaped</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#escaped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the value is escaped.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="even">
+<code class="descname">even</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#even" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is even.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="iterable">
+<code class="descname">iterable</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#iterable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if it&#8217;s possible to iterate over an object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lower">
+<code class="descname">lower</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#lower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is lowercased.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="mapping">
+<code class="descname">mapping</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the object is a mapping (dict etc.).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.6.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="none">
+<code class="descname">none</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#none" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is none.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="number">
+<code class="descname">number</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is a number.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="odd">
+<code class="descname">odd</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#odd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is odd.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sameas">
+<code class="descname">sameas</code><span class="sig-paren">(</span><em>value</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sameas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if an object points to the same memory address than another
+object:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">foo.attribute</span> <span class="k">is</span> <span class="nf">sameas</span> <span class="kp">false</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    the foo attribute really is the `False` singleton</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="sequence">
+<code class="descname">sequence</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is a sequence. Sequences are variables
+that are iterable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="string">
+<code class="descname">string</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the object is a string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="undefined">
+<code class="descname">undefined</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#undefined" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#defined" title="defined"><code class="xref py py-func docutils literal"><span class="pre">defined()</span></code></a> but the other way round.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="upper">
+<code class="descname">upper</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#upper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the variable is uppercased.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templ16.html" class="btn btn-neutral float-right" title="4.16. List of Global Functions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templ14.html" class="btn btn-neutral" title="4.14. List of Builtin Filters" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

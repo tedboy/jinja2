@@ -1,0 +1,6 @@
+jinja2.runtime.to_string.isdecimal
+==================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: to_string.isdecimal

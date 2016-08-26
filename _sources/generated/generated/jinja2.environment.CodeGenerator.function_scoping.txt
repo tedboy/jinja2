@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.function_scoping
+=================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.function_scoping

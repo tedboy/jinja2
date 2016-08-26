@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.filter_stream
+============================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: AutoEscapeExtension.filter_stream

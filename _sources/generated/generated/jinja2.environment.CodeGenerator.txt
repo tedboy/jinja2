@@ -1,0 +1,103 @@
+jinja2.environment.CodeGenerator
+================================
+.. currentmodule:: jinja2.environment
+.. autoclass:: CodeGenerator
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CodeGenerator.__init__
+   ~CodeGenerator.blockvisit
+   ~CodeGenerator.buffer
+   ~CodeGenerator.end_write
+   ~CodeGenerator.export_assigned_vars
+   ~CodeGenerator.fail
+   ~CodeGenerator.function_scoping
+   ~CodeGenerator.generic_visit
+   ~CodeGenerator.get_visitor
+   ~CodeGenerator.indent
+   ~CodeGenerator.macro_body
+   ~CodeGenerator.macro_def
+   ~CodeGenerator.make_assignment_frame
+   ~CodeGenerator.newline
+   ~CodeGenerator.outdent
+   ~CodeGenerator.pop_scope
+   ~CodeGenerator.position
+   ~CodeGenerator.pull_dependencies
+   ~CodeGenerator.pull_locals
+   ~CodeGenerator.push_scope
+   ~CodeGenerator.return_buffer_contents
+   ~CodeGenerator.signature
+   ~CodeGenerator.simple_write
+   ~CodeGenerator.start_write
+   ~CodeGenerator.temporary_identifier
+   ~CodeGenerator.unoptimize_scope
+   ~CodeGenerator.visit
+   ~CodeGenerator.visit_Add
+   ~CodeGenerator.visit_And
+   ~CodeGenerator.visit_Assign
+   ~CodeGenerator.visit_AssignBlock
+   ~CodeGenerator.visit_Block
+   ~CodeGenerator.visit_Break
+   ~CodeGenerator.visit_Call
+   ~CodeGenerator.visit_CallBlock
+   ~CodeGenerator.visit_Compare
+   ~CodeGenerator.visit_Concat
+   ~CodeGenerator.visit_CondExpr
+   ~CodeGenerator.visit_Const
+   ~CodeGenerator.visit_ContextReference
+   ~CodeGenerator.visit_Continue
+   ~CodeGenerator.visit_Dict
+   ~CodeGenerator.visit_Div
+   ~CodeGenerator.visit_EnvironmentAttribute
+   ~CodeGenerator.visit_EvalContextModifier
+   ~CodeGenerator.visit_ExprStmt
+   ~CodeGenerator.visit_Extends
+   ~CodeGenerator.visit_ExtensionAttribute
+   ~CodeGenerator.visit_Filter
+   ~CodeGenerator.visit_FilterBlock
+   ~CodeGenerator.visit_FloorDiv
+   ~CodeGenerator.visit_For
+   ~CodeGenerator.visit_FromImport
+   ~CodeGenerator.visit_Getattr
+   ~CodeGenerator.visit_Getitem
+   ~CodeGenerator.visit_If
+   ~CodeGenerator.visit_Import
+   ~CodeGenerator.visit_ImportedName
+   ~CodeGenerator.visit_Include
+   ~CodeGenerator.visit_InternalName
+   ~CodeGenerator.visit_Keyword
+   ~CodeGenerator.visit_List
+   ~CodeGenerator.visit_Macro
+   ~CodeGenerator.visit_MarkSafe
+   ~CodeGenerator.visit_MarkSafeIfAutoescape
+   ~CodeGenerator.visit_Mod
+   ~CodeGenerator.visit_Mul
+   ~CodeGenerator.visit_Name
+   ~CodeGenerator.visit_Neg
+   ~CodeGenerator.visit_Not
+   ~CodeGenerator.visit_Operand
+   ~CodeGenerator.visit_Or
+   ~CodeGenerator.visit_Output
+   ~CodeGenerator.visit_Pos
+   ~CodeGenerator.visit_Pow
+   ~CodeGenerator.visit_Scope
+   ~CodeGenerator.visit_ScopedEvalContextModifier
+   ~CodeGenerator.visit_Slice
+   ~CodeGenerator.visit_Sub
+   ~CodeGenerator.visit_Template
+   ~CodeGenerator.visit_TemplateData
+   ~CodeGenerator.visit_Test
+   ~CodeGenerator.visit_Tuple
+   ~CodeGenerator.write
+   ~CodeGenerator.writeline
+
+
+
+
+

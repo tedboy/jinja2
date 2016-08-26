@@ -1,0 +1,6 @@
+jinja2.ext.Extension.attr
+=========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Extension.attr

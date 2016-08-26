@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1.2.1. jinja2.clear_caches &mdash; Jinja2 API</title>
+  <title>jinja2.clear_caches &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="../index.html"/>
-        <link rel="up" title="1. jinja2" href="jinja2.html"/>
-        <link rel="next" title="1.1.2.2. jinja2.contextfilter" href="jinja2.contextfilter.html"/>
-        <link rel="prev" title="1. jinja2" href="jinja2.html"/> 
+        <link rel="up" title="jinja2" href="jinja2.html"/>
+        <link rel="next" title="jinja2.contextfilter" href="jinja2.contextfilter.html"/>
+        <link rel="prev" title="jinja2" href="jinja2.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,30 +85,38 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="jinja2.html">1. jinja2</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="jinja2.html#id1">1.1. jinja2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="jinja2.html#nutshell">1.1.1. Nutshell</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="jinja2.html#functions">1.1.2. Functions</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">1.1.2.1. jinja2.clear_caches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.contextfilter.html">1.1.2.2. jinja2.contextfilter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.contextfunction.html">1.1.2.3. jinja2.contextfunction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.environmentfilter.html">1.1.2.4. jinja2.environmentfilter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.environmentfunction.html">1.1.2.5. jinja2.environmentfunction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.escape.html">1.1.2.6. jinja2.escape</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.evalcontextfilter.html">1.1.2.7. jinja2.evalcontextfilter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.evalcontextfunction.html">1.1.2.8. jinja2.evalcontextfunction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.is_undefined.html">1.1.2.9. jinja2.is_undefined</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.make_logging_undefined.html">1.1.2.10. jinja2.make_logging_undefined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jinja2.html">jinja2</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="jinja2.html#id1">jinja2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="jinja2.html#nutshell">Nutshell</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="jinja2.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.clear_caches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.contextfilter.html">jinja2.contextfilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.contextfunction.html">jinja2.contextfunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environmentfilter.html">jinja2.environmentfilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environmentfunction.html">jinja2.environmentfunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.escape.html">jinja2.escape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.evalcontextfilter.html">jinja2.evalcontextfilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.evalcontextfunction.html">jinja2.evalcontextfunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.is_undefined.html">jinja2.is_undefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.make_logging_undefined.html">jinja2.make_logging_undefined</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="jinja2.html#classes">1.1.3. Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="jinja2.html#exceptions">1.1.4. Exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jinja2.html#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jinja2.html#exceptions">Exceptions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -152,9 +160,9 @@
         
           <li><a href="../api.html">&lt;no title&gt;</a> &raquo;</li>
         
-          <li><a href="jinja2.html">1. jinja2</a> &raquo;</li>
+          <li><a href="jinja2.html">jinja2</a> &raquo;</li>
         
-      <li>1.1.2.1. jinja2.clear_caches</li>
+      <li>jinja2.clear_caches</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,7 +180,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="jinja2-clear-caches">
-<h1>1.1.2.1. jinja2.clear_caches<a class="headerlink" href="#jinja2-clear-caches" title="Permalink to this headline">¶</a></h1>
+<h1>jinja2.clear_caches<a class="headerlink" href="#jinja2-clear-caches" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="jinja2.clear_caches">
 <code class="descclassname">jinja2.</code><code class="descname">clear_caches</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jinja2/utils.html#clear_caches"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.clear_caches" title="Permalink to this definition">¶</a></dt>
@@ -191,10 +199,10 @@ messuring memory consumption you may want to clean the caches.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="jinja2.contextfilter.html" class="btn btn-neutral float-right" title="1.1.2.2. jinja2.contextfilter" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="jinja2.contextfilter.html" class="btn btn-neutral float-right" title="jinja2.contextfilter" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="jinja2.html" class="btn btn-neutral" title="1. jinja2" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="jinja2.html" class="btn btn-neutral" title="jinja2" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

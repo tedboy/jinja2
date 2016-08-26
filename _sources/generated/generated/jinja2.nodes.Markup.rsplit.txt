@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.rsplit
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.rsplit

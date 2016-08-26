@@ -1,0 +1,27 @@
+jinja2.runtime.BlockReference
+=============================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: BlockReference
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BlockReference.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BlockReference.super
+

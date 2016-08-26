@@ -1,0 +1,6 @@
+jinja2.nodes.EvalContextModifier.set_ctx
+========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EvalContextModifier.set_ctx

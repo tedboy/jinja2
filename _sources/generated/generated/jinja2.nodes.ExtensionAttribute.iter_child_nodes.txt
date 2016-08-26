@@ -1,0 +1,6 @@
+jinja2.nodes.ExtensionAttribute.iter_child_nodes
+================================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ExtensionAttribute.iter_child_nodes

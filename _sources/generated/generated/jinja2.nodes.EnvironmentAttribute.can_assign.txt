@@ -1,0 +1,6 @@
+jinja2.nodes.EnvironmentAttribute.can_assign
+============================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EnvironmentAttribute.can_assign

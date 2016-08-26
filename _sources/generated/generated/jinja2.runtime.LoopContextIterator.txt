@@ -1,0 +1,28 @@
+jinja2.runtime.LoopContextIterator
+==================================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: LoopContextIterator
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LoopContextIterator.__init__
+   ~LoopContextIterator.next
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~LoopContextIterator.context
+

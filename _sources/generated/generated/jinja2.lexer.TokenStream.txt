@@ -1,0 +1,35 @@
+jinja2.lexer.TokenStream
+========================
+.. currentmodule:: jinja2.lexer
+.. autoclass:: TokenStream
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TokenStream.__init__
+   ~TokenStream.close
+   ~TokenStream.expect
+   ~TokenStream.look
+   ~TokenStream.next
+   ~TokenStream.next_if
+   ~TokenStream.push
+   ~TokenStream.skip
+   ~TokenStream.skip_if
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~TokenStream.eos
+

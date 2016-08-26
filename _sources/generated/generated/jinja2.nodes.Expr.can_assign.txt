@@ -1,0 +1,6 @@
+jinja2.nodes.Expr.can_assign
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Expr.can_assign

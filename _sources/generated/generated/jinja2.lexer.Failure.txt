@@ -1,0 +1,19 @@
+jinja2.lexer.Failure
+====================
+.. currentmodule:: jinja2.lexer
+.. autoclass:: Failure
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Failure.__init__
+
+
+
+
+

@@ -1,0 +1,6 @@
+jinja2.nodes.Getattr.set_lineno
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Getattr.set_lineno

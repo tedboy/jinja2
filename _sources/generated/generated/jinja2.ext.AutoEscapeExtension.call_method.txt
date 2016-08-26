@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.call_method
+==========================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: AutoEscapeExtension.call_method

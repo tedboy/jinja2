@@ -1,0 +1,6 @@
+jinja2.nodes.Div.attributes
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Div.attributes

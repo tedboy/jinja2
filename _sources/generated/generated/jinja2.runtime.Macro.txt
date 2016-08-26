@@ -1,0 +1,19 @@
+jinja2.runtime.Macro
+====================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: Macro
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Macro.__init__
+
+
+
+
+

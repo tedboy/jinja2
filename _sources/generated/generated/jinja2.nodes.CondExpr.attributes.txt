@@ -1,0 +1,6 @@
+jinja2.nodes.CondExpr.attributes
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: CondExpr.attributes

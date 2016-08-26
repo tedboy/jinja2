@@ -1,0 +1,6 @@
+jinja2.environment.create_cache
+===============================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: create_cache

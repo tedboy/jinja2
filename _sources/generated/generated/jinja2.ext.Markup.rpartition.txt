@@ -1,0 +1,6 @@
+jinja2.ext.Markup.rpartition
+============================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Markup.rpartition

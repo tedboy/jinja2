@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2. Variables &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="4.3. Filters" href="templ3.html"/>
+        <link rel="prev" title="4.1. Synopsis" href="templ1.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">4.2. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
+        
+      <li>4.2. Variables</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/templ2.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="variables">
+<span id="id1"></span><h1>4.2. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
+<p>Template variables are defined by the context dictionary passed to the
+template.</p>
+<p>You can mess around with the variables in templates provided they are passed in
+by the application.  Variables may have attributes or elements on them you can
+access too.  What attributes a variable has depends heavily on the application
+providing that variable.</p>
+<p>You can use a dot (<code class="docutils literal"><span class="pre">.</span></code>) to access attributes of a variable in addition
+to the standard Python <code class="docutils literal"><span class="pre">__getitem__</span></code> &#8220;subscript&#8221; syntax (<code class="docutils literal"><span class="pre">[]</span></code>).</p>
+<p>The following lines do the same thing:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">foo.bar</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">foo</span><span class="o">[</span><span class="s1">&#39;bar&#39;</span><span class="o">]</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p>It&#8217;s important to know that the outer double-curly braces are <em>not</em> part of the
+variable, but the print statement.  If you access variables inside tags don&#8217;t
+put the braces around them.</p>
+<p>If a variable or attribute does not exist, you will get back an undefined
+value.  What you can do with that kind of value depends on the application
+configuration: the default behavior is to evaluate to an empty string if
+printed or iterated over, and to fail for every other operation.</p>
+<div class="admonition-implementation admonition" id="notes-on-subscriptions">
+<p class="first admonition-title">Implementation</p>
+<p>For the sake of convenience, <code class="docutils literal"><span class="pre">foo.bar</span></code> in Jinja2 does the following
+things on the Python layer:</p>
+<ul class="simple">
+<li>check for an attribute called <cite>bar</cite> on <cite>foo</cite>
+(<code class="docutils literal"><span class="pre">getattr(foo,</span> <span class="pre">'bar')</span></code>)</li>
+<li>if there is not, check for an item <code class="docutils literal"><span class="pre">'bar'</span></code> in <cite>foo</cite>
+(<code class="docutils literal"><span class="pre">foo.__getitem__('bar')</span></code>)</li>
+<li>if there is not, return an undefined object.</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">foo['bar']</span></code> works mostly the same with a small difference in sequence:</p>
+<ul class="simple">
+<li>check for an item <code class="docutils literal"><span class="pre">'bar'</span></code> in <cite>foo</cite>.
+(<code class="docutils literal"><span class="pre">foo.__getitem__('bar')</span></code>)</li>
+<li>if there is not, check for an attribute called <cite>bar</cite> on <cite>foo</cite>.
+(<code class="docutils literal"><span class="pre">getattr(foo,</span> <span class="pre">'bar')</span></code>)</li>
+<li>if there is not, return an undefined object.</li>
+</ul>
+<p class="last">This is important if an object has an item and attribute with the same
+name.  Additionally, the <a class="reference internal" href="templ14.html#attr" title="attr"><code class="xref py py-func docutils literal"><span class="pre">attr()</span></code></a> filter only looks up attributes.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templ3.html" class="btn btn-neutral float-right" title="4.3. Filters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templ1.html" class="btn btn-neutral" title="4.1. Synopsis" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

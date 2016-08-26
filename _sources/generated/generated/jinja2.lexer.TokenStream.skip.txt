@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.skip
+=============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStream.skip

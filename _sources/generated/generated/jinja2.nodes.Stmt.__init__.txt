@@ -1,0 +1,6 @@
+jinja2.nodes.Stmt.__init__
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Stmt.__init__

@@ -1,0 +1,6 @@
+jinja2.ext.ExprStmtExtension.call_method
+========================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: ExprStmtExtension.call_method

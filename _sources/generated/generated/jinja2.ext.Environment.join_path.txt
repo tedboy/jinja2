@@ -1,0 +1,6 @@
+jinja2.ext.Environment.join_path
+================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Environment.join_path

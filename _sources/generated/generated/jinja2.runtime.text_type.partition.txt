@@ -1,0 +1,6 @@
+jinja2.runtime.text_type.partition
+==================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: text_type.partition

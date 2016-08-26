@@ -1,0 +1,6 @@
+jinja2.nodes.EnvironmentAttribute.__init__
+==========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EnvironmentAttribute.__init__

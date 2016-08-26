@@ -1,0 +1,6 @@
+jinja2.nodes.Or.__init__
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Or.__init__

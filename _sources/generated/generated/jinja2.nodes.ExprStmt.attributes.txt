@@ -1,0 +1,6 @@
+jinja2.nodes.ExprStmt.attributes
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: ExprStmt.attributes

@@ -1,0 +1,6 @@
+jinja2.environment.Environment.iter_extensions
+==============================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Environment.iter_extensions

@@ -1,0 +1,6 @@
+jinja2.nodes.If.__init__
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: If.__init__

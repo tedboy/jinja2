@@ -1,0 +1,6 @@
+jinja2.environment.EvalContext.revert
+=====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: EvalContext.revert

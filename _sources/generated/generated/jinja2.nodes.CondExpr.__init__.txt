@@ -1,0 +1,6 @@
+jinja2.nodes.CondExpr.__init__
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: CondExpr.__init__

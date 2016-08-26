@@ -1,0 +1,6 @@
+jinja2.ext.Markup.zfill
+=======================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Markup.zfill

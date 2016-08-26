@@ -1,0 +1,6 @@
+jinja2.lexer.count_newlines
+===========================
+
+.. currentmodule:: jinja2.lexer
+
+.. autofunction:: count_newlines

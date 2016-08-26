@@ -1,0 +1,6 @@
+jinja2.nodes.Break.abstract
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Break.abstract

@@ -1,0 +1,6 @@
+jinja2.runtime.UndefinedError
+=============================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoexception:: UndefinedError

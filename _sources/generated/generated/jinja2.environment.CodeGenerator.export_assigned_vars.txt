@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.export_assigned_vars
+=====================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.export_assigned_vars

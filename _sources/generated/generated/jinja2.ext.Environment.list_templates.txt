@@ -1,0 +1,6 @@
+jinja2.ext.Environment.list_templates
+=====================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Environment.list_templates

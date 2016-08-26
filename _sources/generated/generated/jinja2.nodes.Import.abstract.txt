@@ -1,0 +1,6 @@
+jinja2.nodes.Import.abstract
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Import.abstract

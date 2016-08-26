@@ -1,0 +1,6 @@
+jinja2.nodes.Macro.find_all
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Macro.find_all

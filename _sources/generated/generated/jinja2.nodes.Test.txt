@@ -1,0 +1,38 @@
+jinja2.nodes.Test
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Test
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Test.__init__
+   ~Test.as_const
+   ~Test.can_assign
+   ~Test.find
+   ~Test.find_all
+   ~Test.iter_child_nodes
+   ~Test.iter_fields
+   ~Test.set_ctx
+   ~Test.set_environment
+   ~Test.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Test.abstract
+   ~Test.attributes
+   ~Test.fields
+

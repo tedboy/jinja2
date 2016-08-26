@@ -1,0 +1,6 @@
+jinja2.nodes.Continue.fields
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Continue.fields

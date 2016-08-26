@@ -1,0 +1,36 @@
+jinja2.nodes.Scope
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Scope
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Scope.__init__
+   ~Scope.find
+   ~Scope.find_all
+   ~Scope.iter_child_nodes
+   ~Scope.iter_fields
+   ~Scope.set_ctx
+   ~Scope.set_environment
+   ~Scope.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Scope.abstract
+   ~Scope.attributes
+   ~Scope.fields
+

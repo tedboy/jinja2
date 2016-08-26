@@ -1,0 +1,6 @@
+jinja2.runtime.Context.values
+=============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.values

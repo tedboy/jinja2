@@ -1,0 +1,6 @@
+jinja2.nodes.Getitem.__init__
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Getitem.__init__

@@ -1,0 +1,6 @@
+jinja2.ext.LoopControlExtension.call_method
+===========================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: LoopControlExtension.call_method

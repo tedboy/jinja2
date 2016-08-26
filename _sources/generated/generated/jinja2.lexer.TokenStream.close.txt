@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.close
+==============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStream.close

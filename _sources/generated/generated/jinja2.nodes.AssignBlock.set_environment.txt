@@ -1,0 +1,6 @@
+jinja2.nodes.AssignBlock.set_environment
+========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: AssignBlock.set_environment

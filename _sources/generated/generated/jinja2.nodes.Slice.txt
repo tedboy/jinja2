@@ -1,0 +1,38 @@
+jinja2.nodes.Slice
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Slice
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Slice.__init__
+   ~Slice.as_const
+   ~Slice.can_assign
+   ~Slice.find
+   ~Slice.find_all
+   ~Slice.iter_child_nodes
+   ~Slice.iter_fields
+   ~Slice.set_ctx
+   ~Slice.set_environment
+   ~Slice.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Slice.abstract
+   ~Slice.attributes
+   ~Slice.fields
+

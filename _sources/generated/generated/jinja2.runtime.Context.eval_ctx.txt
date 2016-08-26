@@ -1,0 +1,6 @@
+jinja2.runtime.Context.eval_ctx
+===============================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoattribute:: Context.eval_ctx

@@ -1,0 +1,6 @@
+jinja2.environment.LRUCache.get
+===============================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: LRUCache.get

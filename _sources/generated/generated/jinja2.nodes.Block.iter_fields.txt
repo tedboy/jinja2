@@ -1,0 +1,6 @@
+jinja2.nodes.Block.iter_fields
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Block.iter_fields

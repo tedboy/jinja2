@@ -1,0 +1,6 @@
+jinja2.environment.LRUCache.copy
+================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: LRUCache.copy

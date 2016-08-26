@@ -1,0 +1,6 @@
+jinja2.nodes.If.iter_fields
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: If.iter_fields

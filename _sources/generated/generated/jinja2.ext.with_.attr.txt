@@ -1,0 +1,6 @@
+jinja2.ext.with_.attr
+=====================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: with_.attr

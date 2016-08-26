@@ -1,0 +1,6 @@
+jinja2.nodes.List.attributes
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: List.attributes

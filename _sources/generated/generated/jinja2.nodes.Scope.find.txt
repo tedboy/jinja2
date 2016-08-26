@@ -1,0 +1,6 @@
+jinja2.nodes.Scope.find
+=======================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Scope.find

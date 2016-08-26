@@ -1,0 +1,38 @@
+jinja2.nodes.CondExpr
+=====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: CondExpr
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CondExpr.__init__
+   ~CondExpr.as_const
+   ~CondExpr.can_assign
+   ~CondExpr.find
+   ~CondExpr.find_all
+   ~CondExpr.iter_child_nodes
+   ~CondExpr.iter_fields
+   ~CondExpr.set_ctx
+   ~CondExpr.set_environment
+   ~CondExpr.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~CondExpr.abstract
+   ~CondExpr.attributes
+   ~CondExpr.fields
+

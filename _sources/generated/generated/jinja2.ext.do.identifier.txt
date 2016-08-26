@@ -1,0 +1,6 @@
+jinja2.ext.do.identifier
+========================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: do.identifier

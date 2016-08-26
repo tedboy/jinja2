@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.environment.LRUCache &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="jinja2.environment" href="../jinja2.environment.html"/>
+        <link rel="next" title="jinja2.environment.LRUCache.__init__" href="jinja2.environment.LRUCache.__init__.html"/>
+        <link rel="prev" title="jinja2.environment.EvalContext.save" href="jinja2.environment.EvalContext.save.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.environment.html#id1">jinja2.environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.environment.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.environment.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.CodeGenerator.html">jinja2.environment.CodeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Context.html">jinja2.environment.Context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Environment.html">jinja2.environment.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.EvalContext.html">jinja2.environment.EvalContext</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.environment.LRUCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Markup.html">jinja2.environment.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Parser.html">jinja2.environment.Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Template.html">jinja2.environment.Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateExpression.html">jinja2.environment.TemplateExpression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateModule.html">jinja2.environment.TemplateModule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateStream.html">jinja2.environment.TemplateStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TokenStream.html">jinja2.environment.TokenStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Undefined.html">jinja2.environment.Undefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.ifilter.html">jinja2.environment.ifilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.imap.html">jinja2.environment.imap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.text_type.html">jinja2.environment.text_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.environment.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.environment.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.environment.html">jinja2.environment</a> &raquo;</li>
+        
+      <li>jinja2.environment.LRUCache</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.environment.LRUCache.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-environment-lrucache">
+<h1>jinja2.environment.LRUCache<a class="headerlink" href="#jinja2-environment-lrucache" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jinja2.environment.LRUCache">
+<em class="property">class </em><code class="descclassname">jinja2.environment.</code><code class="descname">LRUCache</code><span class="sig-paren">(</span><em>capacity</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jinja2/utils.html#LRUCache"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.environment.LRUCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple LRU Cache implementation.</p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.LRUCache.__init__.html#jinja2.environment.LRUCache.__init__" title="jinja2.environment.LRUCache.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(capacity)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.LRUCache.clear.html#jinja2.environment.LRUCache.clear" title="jinja2.environment.LRUCache.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td>Clear the cache.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.LRUCache.copy.html#jinja2.environment.LRUCache.copy" title="jinja2.environment.LRUCache.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Return a shallow copy of the instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.LRUCache.get.html#jinja2.environment.LRUCache.get" title="jinja2.environment.LRUCache.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;default])</td>
+<td>Return an item from the cache dict or <cite>default</cite></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.LRUCache.items.html#jinja2.environment.LRUCache.items" title="jinja2.environment.LRUCache.items"><code class="xref py py-obj docutils literal"><span class="pre">items</span></code></a>()</td>
+<td>Return a list of items.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.LRUCache.iteritems.html#jinja2.environment.LRUCache.iteritems" title="jinja2.environment.LRUCache.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>()</td>
+<td>Iterate over all items.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.LRUCache.iterkeys.html#jinja2.environment.LRUCache.iterkeys" title="jinja2.environment.LRUCache.iterkeys"><code class="xref py py-obj docutils literal"><span class="pre">iterkeys</span></code></a>()</td>
+<td>Iterate over all keys in the cache dict, ordered by the most recent usage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.LRUCache.itervalue.html#jinja2.environment.LRUCache.itervalue" title="jinja2.environment.LRUCache.itervalue"><code class="xref py py-obj docutils literal"><span class="pre">itervalue</span></code></a>()</td>
+<td>Iterate over all values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.LRUCache.keys.html#jinja2.environment.LRUCache.keys" title="jinja2.environment.LRUCache.keys"><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code></a>()</td>
+<td>Return a list of all keys ordered by most recent usage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.LRUCache.setdefault.html#jinja2.environment.LRUCache.setdefault" title="jinja2.environment.LRUCache.setdefault"><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code></a>(key[,&nbsp;default])</td>
+<td>Set <cite>default</cite> if the key is not in the cache otherwise leave unchanged.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.LRUCache.values.html#jinja2.environment.LRUCache.values" title="jinja2.environment.LRUCache.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>()</td>
+<td>Return a list of all values.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.environment.LRUCache.__init__.html" class="btn btn-neutral float-right" title="jinja2.environment.LRUCache.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jinja2.environment.EvalContext.save.html" class="btn btn-neutral" title="jinja2.environment.EvalContext.save" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

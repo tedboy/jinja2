@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStreamIterator.next
+=====================================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStreamIterator.next

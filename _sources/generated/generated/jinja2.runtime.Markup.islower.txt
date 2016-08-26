@@ -1,0 +1,6 @@
+jinja2.runtime.Markup.islower
+=============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Markup.islower

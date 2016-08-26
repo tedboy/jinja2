@@ -1,0 +1,6 @@
+jinja2.environment.TokenStream.close
+====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TokenStream.close

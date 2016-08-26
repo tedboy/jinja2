@@ -1,0 +1,82 @@
+jinja2.ext
+==========
+
+.. automodule:: jinja2.ext
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      babel_extract
+      concat
+      contextfunction
+      extract_from_ast
+      import_string
+      iteritems
+      with_metaclass
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      AutoEscapeExtension
+      Environment
+      ExprStmtExtension
+      Extension
+      ExtensionRegistry
+      InternationalizationExtension
+      LoopControlExtension
+      Markup
+      WithExtension
+      autoescape
+      do
+      i18n
+      loopcontrols
+      with_
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.ext.AutoEscapeExtension
+       generated/jinja2.ext.Environment
+       generated/jinja2.ext.ExprStmtExtension
+       generated/jinja2.ext.Extension
+       generated/jinja2.ext.ExtensionRegistry
+       generated/jinja2.ext.InternationalizationExtension
+       generated/jinja2.ext.LoopControlExtension
+       generated/jinja2.ext.Markup
+       generated/jinja2.ext.WithExtension
+       generated/jinja2.ext.autoescape
+       generated/jinja2.ext.do
+       generated/jinja2.ext.i18n
+       generated/jinja2.ext.loopcontrols
+       generated/jinja2.ext.with_
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      TemplateAssertionError
+      TemplateSyntaxError
+   
+   

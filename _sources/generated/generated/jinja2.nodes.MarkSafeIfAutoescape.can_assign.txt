@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafeIfAutoescape.can_assign
+============================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafeIfAutoescape.can_assign

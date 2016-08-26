@@ -1,0 +1,6 @@
+jinja2.environment.EvalContext.__init__
+=======================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: EvalContext.__init__

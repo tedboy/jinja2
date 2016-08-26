@@ -1,0 +1,6 @@
+jinja2.runtime.Context.super
+============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.super

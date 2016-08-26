@@ -1,0 +1,6 @@
+jinja2.environment.generate
+===========================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: generate

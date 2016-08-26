@@ -1,0 +1,6 @@
+jinja2.ext.Markup.index
+=======================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Markup.index

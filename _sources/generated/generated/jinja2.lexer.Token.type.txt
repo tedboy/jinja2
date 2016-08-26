@@ -1,0 +1,6 @@
+jinja2.lexer.Token.type
+=======================
+
+.. currentmodule:: jinja2.lexer
+
+.. autoattribute:: Token.type

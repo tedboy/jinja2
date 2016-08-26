@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.environment.CodeGenerator &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="jinja2.environment" href="../jinja2.environment.html"/>
+        <link rel="next" title="jinja2.environment.CodeGenerator.__init__" href="jinja2.environment.CodeGenerator.__init__.html"/>
+        <link rel="prev" title="jinja2.environment.reraise" href="../jinja2.environment.reraise.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.environment.html#id1">jinja2.environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.environment.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.environment.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.environment.CodeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Context.html">jinja2.environment.Context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Environment.html">jinja2.environment.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.EvalContext.html">jinja2.environment.EvalContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.LRUCache.html">jinja2.environment.LRUCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Markup.html">jinja2.environment.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Parser.html">jinja2.environment.Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Template.html">jinja2.environment.Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateExpression.html">jinja2.environment.TemplateExpression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateModule.html">jinja2.environment.TemplateModule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateStream.html">jinja2.environment.TemplateStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TokenStream.html">jinja2.environment.TokenStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Undefined.html">jinja2.environment.Undefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.ifilter.html">jinja2.environment.ifilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.imap.html">jinja2.environment.imap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.text_type.html">jinja2.environment.text_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.environment.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.environment.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.environment.html">jinja2.environment</a> &raquo;</li>
+        
+      <li>jinja2.environment.CodeGenerator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.environment.CodeGenerator.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-environment-codegenerator">
+<h1>jinja2.environment.CodeGenerator<a class="headerlink" href="#jinja2-environment-codegenerator" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jinja2.environment.CodeGenerator">
+<em class="property">class </em><code class="descclassname">jinja2.environment.</code><code class="descname">CodeGenerator</code><span class="sig-paren">(</span><em>environment</em>, <em>name</em>, <em>filename</em>, <em>stream=None</em>, <em>defer_init=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jinja2/compiler.html#CodeGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.environment.CodeGenerator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.__init__.html#jinja2.environment.CodeGenerator.__init__" title="jinja2.environment.CodeGenerator.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(environment,&nbsp;name,&nbsp;filename[,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.blockvisit.html#jinja2.environment.CodeGenerator.blockvisit" title="jinja2.environment.CodeGenerator.blockvisit"><code class="xref py py-obj docutils literal"><span class="pre">blockvisit</span></code></a>(nodes,&nbsp;frame)</td>
+<td>Visit a list of nodes as block in a frame.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.buffer.html#jinja2.environment.CodeGenerator.buffer" title="jinja2.environment.CodeGenerator.buffer"><code class="xref py py-obj docutils literal"><span class="pre">buffer</span></code></a>(frame)</td>
+<td>Enable buffering for the frame from that point onwards.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.end_write.html#jinja2.environment.CodeGenerator.end_write" title="jinja2.environment.CodeGenerator.end_write"><code class="xref py py-obj docutils literal"><span class="pre">end_write</span></code></a>(frame)</td>
+<td>End the writing process started by <cite>start_write</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.export_assigned_vars.html#jinja2.environment.CodeGenerator.export_assigned_vars" title="jinja2.environment.CodeGenerator.export_assigned_vars"><code class="xref py py-obj docutils literal"><span class="pre">export_assigned_vars</span></code></a>(frame,&nbsp;assignment_frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.fail.html#jinja2.environment.CodeGenerator.fail" title="jinja2.environment.CodeGenerator.fail"><code class="xref py py-obj docutils literal"><span class="pre">fail</span></code></a>(msg,&nbsp;lineno)</td>
+<td>Fail with a <code class="xref py py-exc docutils literal"><span class="pre">TemplateAssertionError</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.function_scoping.html#jinja2.environment.CodeGenerator.function_scoping" title="jinja2.environment.CodeGenerator.function_scoping"><code class="xref py py-obj docutils literal"><span class="pre">function_scoping</span></code></a>(node,&nbsp;frame[,&nbsp;children,&nbsp;...])</td>
+<td>In Jinja a few statements require the help of anonymous functions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.generic_visit.html#jinja2.environment.CodeGenerator.generic_visit" title="jinja2.environment.CodeGenerator.generic_visit"><code class="xref py py-obj docutils literal"><span class="pre">generic_visit</span></code></a>(node,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Called if no explicit visitor function exists for a node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.get_visitor.html#jinja2.environment.CodeGenerator.get_visitor" title="jinja2.environment.CodeGenerator.get_visitor"><code class="xref py py-obj docutils literal"><span class="pre">get_visitor</span></code></a>(node)</td>
+<td>Return the visitor function for this node or <cite>None</cite> if no visitor exists for this node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.indent.html#jinja2.environment.CodeGenerator.indent" title="jinja2.environment.CodeGenerator.indent"><code class="xref py py-obj docutils literal"><span class="pre">indent</span></code></a>()</td>
+<td>Indent by one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.macro_body.html#jinja2.environment.CodeGenerator.macro_body" title="jinja2.environment.CodeGenerator.macro_body"><code class="xref py py-obj docutils literal"><span class="pre">macro_body</span></code></a>(node,&nbsp;frame[,&nbsp;children])</td>
+<td>Dump the function def of a macro or call block.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.macro_def.html#jinja2.environment.CodeGenerator.macro_def" title="jinja2.environment.CodeGenerator.macro_def"><code class="xref py py-obj docutils literal"><span class="pre">macro_def</span></code></a>(node,&nbsp;frame)</td>
+<td>Dump the macro definition for the def created by macro_body.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.make_assignment_frame.html#jinja2.environment.CodeGenerator.make_assignment_frame" title="jinja2.environment.CodeGenerator.make_assignment_frame"><code class="xref py py-obj docutils literal"><span class="pre">make_assignment_frame</span></code></a>(frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.newline.html#jinja2.environment.CodeGenerator.newline" title="jinja2.environment.CodeGenerator.newline"><code class="xref py py-obj docutils literal"><span class="pre">newline</span></code></a>([node,&nbsp;extra])</td>
+<td>Add one or more newlines before the next write.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.outdent.html#jinja2.environment.CodeGenerator.outdent" title="jinja2.environment.CodeGenerator.outdent"><code class="xref py py-obj docutils literal"><span class="pre">outdent</span></code></a>([step])</td>
+<td>Outdent by step.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.pop_scope.html#jinja2.environment.CodeGenerator.pop_scope" title="jinja2.environment.CodeGenerator.pop_scope"><code class="xref py py-obj docutils literal"><span class="pre">pop_scope</span></code></a>(aliases,&nbsp;frame)</td>
+<td>Restore all aliases and delete unused variables.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.position.html#jinja2.environment.CodeGenerator.position" title="jinja2.environment.CodeGenerator.position"><code class="xref py py-obj docutils literal"><span class="pre">position</span></code></a>(node)</td>
+<td>Return a human readable position for the node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.pull_dependencies.html#jinja2.environment.CodeGenerator.pull_dependencies" title="jinja2.environment.CodeGenerator.pull_dependencies"><code class="xref py py-obj docutils literal"><span class="pre">pull_dependencies</span></code></a>(nodes)</td>
+<td>Pull all the dependencies.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.pull_locals.html#jinja2.environment.CodeGenerator.pull_locals" title="jinja2.environment.CodeGenerator.pull_locals"><code class="xref py py-obj docutils literal"><span class="pre">pull_locals</span></code></a>(frame)</td>
+<td>Pull all the references identifiers into the local scope.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.push_scope.html#jinja2.environment.CodeGenerator.push_scope" title="jinja2.environment.CodeGenerator.push_scope"><code class="xref py py-obj docutils literal"><span class="pre">push_scope</span></code></a>(frame[,&nbsp;extra_vars])</td>
+<td>This function returns all the shadowed variables in a dict in the form name: alias and will write the required assignments into the current scope.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.return_buffer_contents.html#jinja2.environment.CodeGenerator.return_buffer_contents" title="jinja2.environment.CodeGenerator.return_buffer_contents"><code class="xref py py-obj docutils literal"><span class="pre">return_buffer_contents</span></code></a>(frame)</td>
+<td>Return the buffer contents of the frame.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.signature.html#jinja2.environment.CodeGenerator.signature" title="jinja2.environment.CodeGenerator.signature"><code class="xref py py-obj docutils literal"><span class="pre">signature</span></code></a>(node,&nbsp;frame[,&nbsp;extra_kwargs])</td>
+<td>Writes a function call to the stream for the current node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.simple_write.html#jinja2.environment.CodeGenerator.simple_write" title="jinja2.environment.CodeGenerator.simple_write"><code class="xref py py-obj docutils literal"><span class="pre">simple_write</span></code></a>(s,&nbsp;frame[,&nbsp;node])</td>
+<td>Simple shortcut for start_write + write + end_write.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.start_write.html#jinja2.environment.CodeGenerator.start_write" title="jinja2.environment.CodeGenerator.start_write"><code class="xref py py-obj docutils literal"><span class="pre">start_write</span></code></a>(frame[,&nbsp;node])</td>
+<td>Yield or write into the frame buffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.temporary_identifier.html#jinja2.environment.CodeGenerator.temporary_identifier" title="jinja2.environment.CodeGenerator.temporary_identifier"><code class="xref py py-obj docutils literal"><span class="pre">temporary_identifier</span></code></a>()</td>
+<td>Get a new unique identifier.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.unoptimize_scope.html#jinja2.environment.CodeGenerator.unoptimize_scope" title="jinja2.environment.CodeGenerator.unoptimize_scope"><code class="xref py py-obj docutils literal"><span class="pre">unoptimize_scope</span></code></a>(frame)</td>
+<td>Disable Python optimizations for the frame.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit.html#jinja2.environment.CodeGenerator.visit" title="jinja2.environment.CodeGenerator.visit"><code class="xref py py-obj docutils literal"><span class="pre">visit</span></code></a>(node,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Visit a node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Add.html#jinja2.environment.CodeGenerator.visit_Add" title="jinja2.environment.CodeGenerator.visit_Add"><code class="xref py py-obj docutils literal"><span class="pre">visit_Add</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_And.html#jinja2.environment.CodeGenerator.visit_And" title="jinja2.environment.CodeGenerator.visit_And"><code class="xref py py-obj docutils literal"><span class="pre">visit_And</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Assign.html#jinja2.environment.CodeGenerator.visit_Assign" title="jinja2.environment.CodeGenerator.visit_Assign"><code class="xref py py-obj docutils literal"><span class="pre">visit_Assign</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_AssignBlock.html#jinja2.environment.CodeGenerator.visit_AssignBlock" title="jinja2.environment.CodeGenerator.visit_AssignBlock"><code class="xref py py-obj docutils literal"><span class="pre">visit_AssignBlock</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Block.html#jinja2.environment.CodeGenerator.visit_Block" title="jinja2.environment.CodeGenerator.visit_Block"><code class="xref py py-obj docutils literal"><span class="pre">visit_Block</span></code></a>(node,&nbsp;frame)</td>
+<td>Call a block and register it for the template.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Break.html#jinja2.environment.CodeGenerator.visit_Break" title="jinja2.environment.CodeGenerator.visit_Break"><code class="xref py py-obj docutils literal"><span class="pre">visit_Break</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Call.html#jinja2.environment.CodeGenerator.visit_Call" title="jinja2.environment.CodeGenerator.visit_Call"><code class="xref py py-obj docutils literal"><span class="pre">visit_Call</span></code></a>(node,&nbsp;frame[,&nbsp;forward_caller])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_CallBlock.html#jinja2.environment.CodeGenerator.visit_CallBlock" title="jinja2.environment.CodeGenerator.visit_CallBlock"><code class="xref py py-obj docutils literal"><span class="pre">visit_CallBlock</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Compare.html#jinja2.environment.CodeGenerator.visit_Compare" title="jinja2.environment.CodeGenerator.visit_Compare"><code class="xref py py-obj docutils literal"><span class="pre">visit_Compare</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Concat.html#jinja2.environment.CodeGenerator.visit_Concat" title="jinja2.environment.CodeGenerator.visit_Concat"><code class="xref py py-obj docutils literal"><span class="pre">visit_Concat</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_CondExpr.html#jinja2.environment.CodeGenerator.visit_CondExpr" title="jinja2.environment.CodeGenerator.visit_CondExpr"><code class="xref py py-obj docutils literal"><span class="pre">visit_CondExpr</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Const.html#jinja2.environment.CodeGenerator.visit_Const" title="jinja2.environment.CodeGenerator.visit_Const"><code class="xref py py-obj docutils literal"><span class="pre">visit_Const</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_ContextReference.html#jinja2.environment.CodeGenerator.visit_ContextReference" title="jinja2.environment.CodeGenerator.visit_ContextReference"><code class="xref py py-obj docutils literal"><span class="pre">visit_ContextReference</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Continue.html#jinja2.environment.CodeGenerator.visit_Continue" title="jinja2.environment.CodeGenerator.visit_Continue"><code class="xref py py-obj docutils literal"><span class="pre">visit_Continue</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Dict.html#jinja2.environment.CodeGenerator.visit_Dict" title="jinja2.environment.CodeGenerator.visit_Dict"><code class="xref py py-obj docutils literal"><span class="pre">visit_Dict</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Div.html#jinja2.environment.CodeGenerator.visit_Div" title="jinja2.environment.CodeGenerator.visit_Div"><code class="xref py py-obj docutils literal"><span class="pre">visit_Div</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_EnvironmentAttribute.html#jinja2.environment.CodeGenerator.visit_EnvironmentAttribute" title="jinja2.environment.CodeGenerator.visit_EnvironmentAttribute"><code class="xref py py-obj docutils literal"><span class="pre">visit_EnvironmentAttribute</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_EvalContextModifier.html#jinja2.environment.CodeGenerator.visit_EvalContextModifier" title="jinja2.environment.CodeGenerator.visit_EvalContextModifier"><code class="xref py py-obj docutils literal"><span class="pre">visit_EvalContextModifier</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_ExprStmt.html#jinja2.environment.CodeGenerator.visit_ExprStmt" title="jinja2.environment.CodeGenerator.visit_ExprStmt"><code class="xref py py-obj docutils literal"><span class="pre">visit_ExprStmt</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Extends.html#jinja2.environment.CodeGenerator.visit_Extends" title="jinja2.environment.CodeGenerator.visit_Extends"><code class="xref py py-obj docutils literal"><span class="pre">visit_Extends</span></code></a>(node,&nbsp;frame)</td>
+<td>Calls the extender.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_ExtensionAttribute.html#jinja2.environment.CodeGenerator.visit_ExtensionAttribute" title="jinja2.environment.CodeGenerator.visit_ExtensionAttribute"><code class="xref py py-obj docutils literal"><span class="pre">visit_ExtensionAttribute</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Filter.html#jinja2.environment.CodeGenerator.visit_Filter" title="jinja2.environment.CodeGenerator.visit_Filter"><code class="xref py py-obj docutils literal"><span class="pre">visit_Filter</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_FilterBlock.html#jinja2.environment.CodeGenerator.visit_FilterBlock" title="jinja2.environment.CodeGenerator.visit_FilterBlock"><code class="xref py py-obj docutils literal"><span class="pre">visit_FilterBlock</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_FloorDiv.html#jinja2.environment.CodeGenerator.visit_FloorDiv" title="jinja2.environment.CodeGenerator.visit_FloorDiv"><code class="xref py py-obj docutils literal"><span class="pre">visit_FloorDiv</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_For.html#jinja2.environment.CodeGenerator.visit_For" title="jinja2.environment.CodeGenerator.visit_For"><code class="xref py py-obj docutils literal"><span class="pre">visit_For</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_FromImport.html#jinja2.environment.CodeGenerator.visit_FromImport" title="jinja2.environment.CodeGenerator.visit_FromImport"><code class="xref py py-obj docutils literal"><span class="pre">visit_FromImport</span></code></a>(node,&nbsp;frame)</td>
+<td>Visit named imports.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Getattr.html#jinja2.environment.CodeGenerator.visit_Getattr" title="jinja2.environment.CodeGenerator.visit_Getattr"><code class="xref py py-obj docutils literal"><span class="pre">visit_Getattr</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Getitem.html#jinja2.environment.CodeGenerator.visit_Getitem" title="jinja2.environment.CodeGenerator.visit_Getitem"><code class="xref py py-obj docutils literal"><span class="pre">visit_Getitem</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_If.html#jinja2.environment.CodeGenerator.visit_If" title="jinja2.environment.CodeGenerator.visit_If"><code class="xref py py-obj docutils literal"><span class="pre">visit_If</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Import.html#jinja2.environment.CodeGenerator.visit_Import" title="jinja2.environment.CodeGenerator.visit_Import"><code class="xref py py-obj docutils literal"><span class="pre">visit_Import</span></code></a>(node,&nbsp;frame)</td>
+<td>Visit regular imports.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_ImportedName.html#jinja2.environment.CodeGenerator.visit_ImportedName" title="jinja2.environment.CodeGenerator.visit_ImportedName"><code class="xref py py-obj docutils literal"><span class="pre">visit_ImportedName</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Include.html#jinja2.environment.CodeGenerator.visit_Include" title="jinja2.environment.CodeGenerator.visit_Include"><code class="xref py py-obj docutils literal"><span class="pre">visit_Include</span></code></a>(node,&nbsp;frame)</td>
+<td>Handles includes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_InternalName.html#jinja2.environment.CodeGenerator.visit_InternalName" title="jinja2.environment.CodeGenerator.visit_InternalName"><code class="xref py py-obj docutils literal"><span class="pre">visit_InternalName</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Keyword.html#jinja2.environment.CodeGenerator.visit_Keyword" title="jinja2.environment.CodeGenerator.visit_Keyword"><code class="xref py py-obj docutils literal"><span class="pre">visit_Keyword</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_List.html#jinja2.environment.CodeGenerator.visit_List" title="jinja2.environment.CodeGenerator.visit_List"><code class="xref py py-obj docutils literal"><span class="pre">visit_List</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Macro.html#jinja2.environment.CodeGenerator.visit_Macro" title="jinja2.environment.CodeGenerator.visit_Macro"><code class="xref py py-obj docutils literal"><span class="pre">visit_Macro</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_MarkSafe.html#jinja2.environment.CodeGenerator.visit_MarkSafe" title="jinja2.environment.CodeGenerator.visit_MarkSafe"><code class="xref py py-obj docutils literal"><span class="pre">visit_MarkSafe</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_MarkSafeIfAutoescape.html#jinja2.environment.CodeGenerator.visit_MarkSafeIfAutoescape" title="jinja2.environment.CodeGenerator.visit_MarkSafeIfAutoescape"><code class="xref py py-obj docutils literal"><span class="pre">visit_MarkSafeIfAutoescape</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Mod.html#jinja2.environment.CodeGenerator.visit_Mod" title="jinja2.environment.CodeGenerator.visit_Mod"><code class="xref py py-obj docutils literal"><span class="pre">visit_Mod</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Mul.html#jinja2.environment.CodeGenerator.visit_Mul" title="jinja2.environment.CodeGenerator.visit_Mul"><code class="xref py py-obj docutils literal"><span class="pre">visit_Mul</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Name.html#jinja2.environment.CodeGenerator.visit_Name" title="jinja2.environment.CodeGenerator.visit_Name"><code class="xref py py-obj docutils literal"><span class="pre">visit_Name</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Neg.html#jinja2.environment.CodeGenerator.visit_Neg" title="jinja2.environment.CodeGenerator.visit_Neg"><code class="xref py py-obj docutils literal"><span class="pre">visit_Neg</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Not.html#jinja2.environment.CodeGenerator.visit_Not" title="jinja2.environment.CodeGenerator.visit_Not"><code class="xref py py-obj docutils literal"><span class="pre">visit_Not</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Operand.html#jinja2.environment.CodeGenerator.visit_Operand" title="jinja2.environment.CodeGenerator.visit_Operand"><code class="xref py py-obj docutils literal"><span class="pre">visit_Operand</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Or.html#jinja2.environment.CodeGenerator.visit_Or" title="jinja2.environment.CodeGenerator.visit_Or"><code class="xref py py-obj docutils literal"><span class="pre">visit_Or</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Output.html#jinja2.environment.CodeGenerator.visit_Output" title="jinja2.environment.CodeGenerator.visit_Output"><code class="xref py py-obj docutils literal"><span class="pre">visit_Output</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Pos.html#jinja2.environment.CodeGenerator.visit_Pos" title="jinja2.environment.CodeGenerator.visit_Pos"><code class="xref py py-obj docutils literal"><span class="pre">visit_Pos</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Pow.html#jinja2.environment.CodeGenerator.visit_Pow" title="jinja2.environment.CodeGenerator.visit_Pow"><code class="xref py py-obj docutils literal"><span class="pre">visit_Pow</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Scope.html#jinja2.environment.CodeGenerator.visit_Scope" title="jinja2.environment.CodeGenerator.visit_Scope"><code class="xref py py-obj docutils literal"><span class="pre">visit_Scope</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_ScopedEvalContextModifier.html#jinja2.environment.CodeGenerator.visit_ScopedEvalContextModifier" title="jinja2.environment.CodeGenerator.visit_ScopedEvalContextModifier"><code class="xref py py-obj docutils literal"><span class="pre">visit_ScopedEvalContextModifier</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Slice.html#jinja2.environment.CodeGenerator.visit_Slice" title="jinja2.environment.CodeGenerator.visit_Slice"><code class="xref py py-obj docutils literal"><span class="pre">visit_Slice</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Sub.html#jinja2.environment.CodeGenerator.visit_Sub" title="jinja2.environment.CodeGenerator.visit_Sub"><code class="xref py py-obj docutils literal"><span class="pre">visit_Sub</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Template.html#jinja2.environment.CodeGenerator.visit_Template" title="jinja2.environment.CodeGenerator.visit_Template"><code class="xref py py-obj docutils literal"><span class="pre">visit_Template</span></code></a>(node[,&nbsp;frame])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_TemplateData.html#jinja2.environment.CodeGenerator.visit_TemplateData" title="jinja2.environment.CodeGenerator.visit_TemplateData"><code class="xref py py-obj docutils literal"><span class="pre">visit_TemplateData</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Test.html#jinja2.environment.CodeGenerator.visit_Test" title="jinja2.environment.CodeGenerator.visit_Test"><code class="xref py py-obj docutils literal"><span class="pre">visit_Test</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.visit_Tuple.html#jinja2.environment.CodeGenerator.visit_Tuple" title="jinja2.environment.CodeGenerator.visit_Tuple"><code class="xref py py-obj docutils literal"><span class="pre">visit_Tuple</span></code></a>(node,&nbsp;frame)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.write.html#jinja2.environment.CodeGenerator.write" title="jinja2.environment.CodeGenerator.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(x)</td>
+<td>Write a string into the output stream.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.CodeGenerator.writeline.html#jinja2.environment.CodeGenerator.writeline" title="jinja2.environment.CodeGenerator.writeline"><code class="xref py py-obj docutils literal"><span class="pre">writeline</span></code></a>(x[,&nbsp;node,&nbsp;extra])</td>
+<td>Combination of newline and write.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.environment.CodeGenerator.__init__.html" class="btn btn-neutral float-right" title="jinja2.environment.CodeGenerator.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../jinja2.environment.reraise.html" class="btn btn-neutral" title="jinja2.environment.reraise" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

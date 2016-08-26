@@ -1,0 +1,6 @@
+jinja2.nodes.FloorDiv.__init__
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FloorDiv.__init__

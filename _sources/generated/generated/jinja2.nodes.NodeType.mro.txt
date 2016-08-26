@@ -1,0 +1,6 @@
+jinja2.nodes.NodeType.mro
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: NodeType.mro

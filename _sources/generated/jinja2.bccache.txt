@@ -1,0 +1,54 @@
+jinja2.bccache
+==============
+
+.. automodule:: jinja2.bccache
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      BytesIO
+      listdir
+      marshal_dump
+      marshal_load
+      open_if_exists
+      sha1
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      Bucket
+      BytecodeCache
+      FileSystemBytecodeCache
+      MemcachedBytecodeCache
+      text_type
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.bccache.Bucket
+       generated/jinja2.bccache.BytecodeCache
+       generated/jinja2.bccache.FileSystemBytecodeCache
+       generated/jinja2.bccache.MemcachedBytecodeCache
+       generated/jinja2.bccache.text_type
+
+   
+   
+
+   
+   
+   

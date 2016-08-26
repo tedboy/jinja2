@@ -1,0 +1,6 @@
+jinja2.environment.TemplateStream.enable_buffering
+==================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TemplateStream.enable_buffering

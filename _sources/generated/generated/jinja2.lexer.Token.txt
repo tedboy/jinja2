@@ -1,0 +1,32 @@
+jinja2.lexer.Token
+==================
+.. currentmodule:: jinja2.lexer
+.. autoclass:: Token
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Token.count
+   ~Token.index
+   ~Token.test
+   ~Token.test_any
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Token.lineno
+   ~Token.type
+   ~Token.value
+

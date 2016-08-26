@@ -1,0 +1,6 @@
+jinja2.nodes.TemplateData.__init__
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: TemplateData.__init__

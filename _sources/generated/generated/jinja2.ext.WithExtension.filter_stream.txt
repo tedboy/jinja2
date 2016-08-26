@@ -1,0 +1,6 @@
+jinja2.ext.WithExtension.filter_stream
+======================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: WithExtension.filter_stream

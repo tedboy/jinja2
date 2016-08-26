@@ -1,0 +1,6 @@
+jinja2.nodes.Slice.fields
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Slice.fields

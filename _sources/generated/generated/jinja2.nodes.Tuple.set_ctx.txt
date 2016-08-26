@@ -1,0 +1,6 @@
+jinja2.nodes.Tuple.set_ctx
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Tuple.set_ctx

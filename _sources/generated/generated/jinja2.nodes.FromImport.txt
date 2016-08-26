@@ -1,0 +1,36 @@
+jinja2.nodes.FromImport
+=======================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: FromImport
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FromImport.__init__
+   ~FromImport.find
+   ~FromImport.find_all
+   ~FromImport.iter_child_nodes
+   ~FromImport.iter_fields
+   ~FromImport.set_ctx
+   ~FromImport.set_environment
+   ~FromImport.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~FromImport.abstract
+   ~FromImport.attributes
+   ~FromImport.fields
+

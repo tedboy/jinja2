@@ -1,0 +1,6 @@
+jinja2.bccache.FileSystemBytecodeCache.dump_bytecode
+====================================================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: FileSystemBytecodeCache.dump_bytecode

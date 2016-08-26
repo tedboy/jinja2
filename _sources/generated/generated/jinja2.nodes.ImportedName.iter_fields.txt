@@ -1,0 +1,6 @@
+jinja2.nodes.ImportedName.iter_fields
+=====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ImportedName.iter_fields

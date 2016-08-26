@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafeIfAutoescape.set_ctx
+=========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafeIfAutoescape.set_ctx

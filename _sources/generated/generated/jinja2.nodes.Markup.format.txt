@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.format
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.format

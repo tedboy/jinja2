@@ -1,0 +1,38 @@
+jinja2.nodes.ImportedName
+=========================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: ImportedName
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ImportedName.__init__
+   ~ImportedName.as_const
+   ~ImportedName.can_assign
+   ~ImportedName.find
+   ~ImportedName.find_all
+   ~ImportedName.iter_child_nodes
+   ~ImportedName.iter_fields
+   ~ImportedName.set_ctx
+   ~ImportedName.set_environment
+   ~ImportedName.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ImportedName.abstract
+   ~ImportedName.attributes
+   ~ImportedName.fields
+

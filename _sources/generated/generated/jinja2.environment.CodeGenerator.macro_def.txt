@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.macro_def
+==========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.macro_def

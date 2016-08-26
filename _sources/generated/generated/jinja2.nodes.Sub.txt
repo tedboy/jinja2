@@ -1,0 +1,39 @@
+jinja2.nodes.Sub
+================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Sub
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Sub.__init__
+   ~Sub.as_const
+   ~Sub.can_assign
+   ~Sub.find
+   ~Sub.find_all
+   ~Sub.iter_child_nodes
+   ~Sub.iter_fields
+   ~Sub.set_ctx
+   ~Sub.set_environment
+   ~Sub.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Sub.abstract
+   ~Sub.attributes
+   ~Sub.fields
+   ~Sub.operator
+

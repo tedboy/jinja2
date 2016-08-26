@@ -1,0 +1,6 @@
+jinja2.nodes.Mod.set_ctx
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Mod.set_ctx

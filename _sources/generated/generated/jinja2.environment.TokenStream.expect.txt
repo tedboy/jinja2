@@ -1,0 +1,6 @@
+jinja2.environment.TokenStream.expect
+=====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TokenStream.expect

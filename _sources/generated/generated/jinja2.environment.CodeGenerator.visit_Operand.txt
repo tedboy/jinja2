@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.visit_Operand
+==============================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.visit_Operand

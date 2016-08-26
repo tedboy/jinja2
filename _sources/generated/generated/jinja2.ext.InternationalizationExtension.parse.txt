@@ -1,0 +1,6 @@
+jinja2.ext.InternationalizationExtension.parse
+==============================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: InternationalizationExtension.parse

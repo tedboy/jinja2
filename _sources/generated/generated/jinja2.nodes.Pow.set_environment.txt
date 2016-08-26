@@ -1,0 +1,6 @@
+jinja2.nodes.Pow.set_environment
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Pow.set_environment

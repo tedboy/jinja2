@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. jinja2.sandbox &mdash; Jinja2 API</title>
+  <title>jinja2.sandbox &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="../index.html"/>
-        <link rel="up" title="&lt;no title&gt;" href="../api_sandbox.html"/>
-        <link rel="next" title="2.1.1.1. jinja2.sandbox.is_internal_attribute" href="jinja2.sandbox.is_internal_attribute.html"/>
-        <link rel="prev" title="&lt;no title&gt;" href="../api_sandbox.html"/> 
+        <link rel="up" title="&lt;no title&gt;" href="../api.sandbox.html"/>
+        <link rel="next" title="jinja2.sandbox.is_internal_attribute" href="jinja2.sandbox.is_internal_attribute.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="../api.sandbox.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,39 +85,47 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">2. jinja2.sandbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. jinja2.sandbox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#functions">2.1.1. Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.is_internal_attribute.html">2.1.1.1. jinja2.sandbox.is_internal_attribute</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.modifies_known_mutable.html">2.1.1.2. jinja2.sandbox.modifies_known_mutable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.safe_range.html">2.1.1.3. jinja2.sandbox.safe_range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.unsafe.html">2.1.1.4. jinja2.sandbox.unsafe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">jinja2.sandbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">jinja2.sandbox</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.is_internal_attribute.html">jinja2.sandbox.is_internal_attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.modifies_known_mutable.html">jinja2.sandbox.modifies_known_mutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.safe_range.html">jinja2.sandbox.safe_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.unsafe.html">jinja2.sandbox.unsafe</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#classes">2.1.2. Classes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.DictMixin.html">2.1.2.1. jinja2.sandbox.DictMixin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.Environment.html">2.1.2.2. jinja2.sandbox.Environment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.ImmutableSandboxedEnvironment.html">2.1.2.3. jinja2.sandbox.ImmutableSandboxedEnvironment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.MutableMapping.html">2.1.2.4. jinja2.sandbox.MutableMapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.MutableSequence.html">2.1.2.5. jinja2.sandbox.MutableSequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.MutableSet.html">2.1.2.6. jinja2.sandbox.MutableSet</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.SandboxedEnvironment.html">2.1.2.7. jinja2.sandbox.SandboxedEnvironment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.Set.html">2.1.2.8. jinja2.sandbox.Set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.UserDict.html">2.1.2.9. jinja2.sandbox.UserDict</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.UserList.html">2.1.2.10. jinja2.sandbox.UserList</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.deque.html">2.1.2.11. jinja2.sandbox.deque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.DictMixin.html">jinja2.sandbox.DictMixin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.Environment.html">jinja2.sandbox.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.ImmutableSandboxedEnvironment.html">jinja2.sandbox.ImmutableSandboxedEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.MutableMapping.html">jinja2.sandbox.MutableMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.MutableSequence.html">jinja2.sandbox.MutableSequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.MutableSet.html">jinja2.sandbox.MutableSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.SandboxedEnvironment.html">jinja2.sandbox.SandboxedEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.Set.html">jinja2.sandbox.Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.UserDict.html">jinja2.sandbox.UserDict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.UserList.html">jinja2.sandbox.UserList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.sandbox.deque.html">jinja2.sandbox.deque</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#exceptions">2.1.3. Exceptions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.SecurityError.html">2.1.3.1. jinja2.sandbox.SecurityError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.SecurityError.html">jinja2.sandbox.SecurityError</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -159,9 +167,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../api_sandbox.html">&lt;no title&gt;</a> &raquo;</li>
+          <li><a href="../api.sandbox.html">&lt;no title&gt;</a> &raquo;</li>
         
-      <li>2. jinja2.sandbox</li>
+      <li>jinja2.sandbox</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,9 +187,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-jinja2.sandbox">
-<span id="jinja2-sandbox"></span><h1>2. jinja2.sandbox<a class="headerlink" href="#module-jinja2.sandbox" title="Permalink to this headline">¶</a></h1>
+<span id="jinja2-sandbox"></span><h1>jinja2.sandbox<a class="headerlink" href="#module-jinja2.sandbox" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>2.1. jinja2.sandbox<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>jinja2.sandbox<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Adds a sandbox layer to Jinja as it was the default behavior in the old
 Jinja 1 releases.  This sandbox is slightly different from Jinja 1 as the
 default behavior is easier to use.</p>
@@ -201,7 +209,7 @@ default behavior is easier to use.</p>
 </tbody>
 </table>
 <div class="section" id="functions">
-<h3>2.1.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
@@ -224,7 +232,7 @@ default behavior is easier to use.</p>
 </table>
 </div>
 <div class="section" id="classes">
-<h3>2.1.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
@@ -270,7 +278,7 @@ default behavior is easier to use.</p>
 </div>
 </div>
 <div class="section" id="exceptions">
-<h3>2.1.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
@@ -293,10 +301,10 @@ default behavior is easier to use.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="jinja2.sandbox.is_internal_attribute.html" class="btn btn-neutral float-right" title="2.1.1.1. jinja2.sandbox.is_internal_attribute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="jinja2.sandbox.is_internal_attribute.html" class="btn btn-neutral float-right" title="jinja2.sandbox.is_internal_attribute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../api_sandbox.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../api.sandbox.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.look
+=============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStream.look

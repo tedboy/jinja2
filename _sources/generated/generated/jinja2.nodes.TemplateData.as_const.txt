@@ -1,0 +1,6 @@
+jinja2.nodes.TemplateData.as_const
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: TemplateData.as_const

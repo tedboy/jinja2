@@ -1,0 +1,6 @@
+jinja2.ext.LoopControlExtension.tags
+====================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: LoopControlExtension.tags

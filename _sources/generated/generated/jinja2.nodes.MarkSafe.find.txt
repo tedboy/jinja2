@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafe.find
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafe.find

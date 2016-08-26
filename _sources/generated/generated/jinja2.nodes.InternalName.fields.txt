@@ -1,0 +1,6 @@
+jinja2.nodes.InternalName.fields
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: InternalName.fields

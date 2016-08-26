@@ -1,0 +1,6 @@
+jinja2.nodes.ContextReference.fields
+====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: ContextReference.fields

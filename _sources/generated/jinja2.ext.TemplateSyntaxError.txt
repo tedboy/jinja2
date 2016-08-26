@@ -1,0 +1,6 @@
+jinja2.ext.TemplateSyntaxError
+==============================
+
+.. currentmodule:: jinja2.ext
+
+.. autoexception:: TemplateSyntaxError

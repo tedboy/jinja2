@@ -1,0 +1,6 @@
+jinja2.runtime.internalcode
+===========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: internalcode

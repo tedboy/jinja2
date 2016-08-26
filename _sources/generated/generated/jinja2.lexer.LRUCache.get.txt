@@ -1,0 +1,6 @@
+jinja2.lexer.LRUCache.get
+=========================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: LRUCache.get

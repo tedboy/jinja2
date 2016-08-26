@@ -1,0 +1,6 @@
+jinja2.nodes.And.as_const
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: And.as_const

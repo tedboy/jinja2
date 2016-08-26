@@ -1,0 +1,6 @@
+jinja2.ext.ExprStmtExtension.identifier
+=======================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: ExprStmtExtension.identifier

@@ -1,0 +1,6 @@
+jinja2.environment.Template.make_module
+=======================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Template.make_module

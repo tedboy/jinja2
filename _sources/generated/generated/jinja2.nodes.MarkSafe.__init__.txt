@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafe.__init__
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafe.__init__

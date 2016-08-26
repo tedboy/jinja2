@@ -1,0 +1,6 @@
+jinja2.nodes.Pow.__init__
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Pow.__init__

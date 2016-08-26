@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.next_if
+================================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStream.next_if

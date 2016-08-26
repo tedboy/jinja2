@@ -1,0 +1,6 @@
+jinja2.runtime.LoopContextIterator.context
+==========================================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoattribute:: LoopContextIterator.context

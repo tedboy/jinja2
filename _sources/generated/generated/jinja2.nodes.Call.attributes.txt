@@ -1,0 +1,6 @@
+jinja2.nodes.Call.attributes
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Call.attributes

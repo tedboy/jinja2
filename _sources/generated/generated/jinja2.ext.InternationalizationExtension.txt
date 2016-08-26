@@ -1,0 +1,35 @@
+jinja2.ext.InternationalizationExtension
+========================================
+.. currentmodule:: jinja2.ext
+.. autoclass:: InternationalizationExtension
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~InternationalizationExtension.__init__
+   ~InternationalizationExtension.attr
+   ~InternationalizationExtension.bind
+   ~InternationalizationExtension.call_method
+   ~InternationalizationExtension.filter_stream
+   ~InternationalizationExtension.parse
+   ~InternationalizationExtension.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~InternationalizationExtension.identifier
+   ~InternationalizationExtension.priority
+   ~InternationalizationExtension.tags
+

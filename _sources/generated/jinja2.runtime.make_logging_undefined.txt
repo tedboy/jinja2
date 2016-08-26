@@ -1,0 +1,6 @@
+jinja2.runtime.make_logging_undefined
+=====================================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: make_logging_undefined

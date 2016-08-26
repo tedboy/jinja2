@@ -1,0 +1,6 @@
+jinja2.nodes.Macro.iter_fields
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Macro.iter_fields

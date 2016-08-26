@@ -1,0 +1,38 @@
+jinja2.nodes.Getitem
+====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Getitem
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Getitem.__init__
+   ~Getitem.as_const
+   ~Getitem.can_assign
+   ~Getitem.find
+   ~Getitem.find_all
+   ~Getitem.iter_child_nodes
+   ~Getitem.iter_fields
+   ~Getitem.set_ctx
+   ~Getitem.set_environment
+   ~Getitem.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Getitem.abstract
+   ~Getitem.attributes
+   ~Getitem.fields
+

@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafeIfAutoescape.abstract
+==========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: MarkSafeIfAutoescape.abstract

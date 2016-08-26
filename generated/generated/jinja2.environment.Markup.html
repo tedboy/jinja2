@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.environment.Markup &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="jinja2.environment" href="../jinja2.environment.html"/>
+        <link rel="next" title="jinja2.environment.Markup.capitalize" href="jinja2.environment.Markup.capitalize.html"/>
+        <link rel="prev" title="jinja2.environment.LRUCache.values" href="jinja2.environment.LRUCache.values.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.environment.html#id1">jinja2.environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.environment.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.environment.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.CodeGenerator.html">jinja2.environment.CodeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Context.html">jinja2.environment.Context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Environment.html">jinja2.environment.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.EvalContext.html">jinja2.environment.EvalContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.LRUCache.html">jinja2.environment.LRUCache</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.environment.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Parser.html">jinja2.environment.Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Template.html">jinja2.environment.Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateExpression.html">jinja2.environment.TemplateExpression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateModule.html">jinja2.environment.TemplateModule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TemplateStream.html">jinja2.environment.TemplateStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.TokenStream.html">jinja2.environment.TokenStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.Undefined.html">jinja2.environment.Undefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.ifilter.html">jinja2.environment.ifilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.imap.html">jinja2.environment.imap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.environment.text_type.html">jinja2.environment.text_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.environment.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.environment.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.environment.html">jinja2.environment</a> &raquo;</li>
+        
+      <li>jinja2.environment.Markup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.environment.Markup.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-environment-markup">
+<h1>jinja2.environment.Markup<a class="headerlink" href="#jinja2-environment-markup" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jinja2.environment.Markup">
+<em class="property">class </em><code class="descclassname">jinja2.environment.</code><code class="descname">Markup</code><a class="reference internal" href="../../_modules/markupsafe.html#Markup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.environment.Markup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marks a string as being safe for inclusion in HTML/XML output without
+needing to be escaped.  This implements the <cite>__html__</cite> interface a couple
+of frameworks and web applications use.  <a class="reference internal" href="#jinja2.environment.Markup" title="jinja2.environment.Markup"><code class="xref py py-class docutils literal"><span class="pre">Markup</span></code></a> is a direct
+subclass of <cite>unicode</cite> and provides all the methods of <cite>unicode</cite> just that
+it escapes arguments passed and always returns <cite>Markup</cite>.</p>
+<p>The <cite>escape</cite> function returns markup objects so that double escaping can&#8217;t
+happen.</p>
+<p>The constructor of the <a class="reference internal" href="#jinja2.environment.Markup" title="jinja2.environment.Markup"><code class="xref py py-class docutils literal"><span class="pre">Markup</span></code></a> class can be used for three
+different things:  When passed an unicode object it&#8217;s assumed to be safe,
+when passed an object with an HTML representation (has an <cite>__html__</cite>
+method) that representation is used, otherwise the object passed is
+converted into a unicode string and then assumed to be safe:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Markup</span><span class="p">(</span><span class="s2">&quot;Hello &lt;em&gt;World&lt;/em&gt;!&quot;</span><span class="p">)</span>
+<span class="go">Markup(u&#39;Hello &lt;em&gt;World&lt;/em&gt;!&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span> <span class="k">def</span> <span class="nf">__html__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="s1">&#39;&lt;a href=&quot;#&quot;&gt;foo&lt;/a&gt;&#39;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Markup</span><span class="p">(</span><span class="n">Foo</span><span class="p">())</span>
+<span class="go">Markup(u&#39;&lt;a href=&quot;#&quot;&gt;foo&lt;/a&gt;&#39;)</span>
+</pre></div>
+</div>
+<p>If you want object passed being always treated as unsafe you can use the
+<a class="reference internal" href="../../templ14.html#escape" title="escape"><code class="xref py py-meth docutils literal"><span class="pre">escape()</span></code></a> classmethod to create a <a class="reference internal" href="#jinja2.environment.Markup" title="jinja2.environment.Markup"><code class="xref py py-class docutils literal"><span class="pre">Markup</span></code></a> object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Markup</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="s2">&quot;Hello &lt;em&gt;World&lt;/em&gt;!&quot;</span><span class="p">)</span>
+<span class="go">Markup(u&#39;Hello &amp;lt;em&amp;gt;World&amp;lt;/em&amp;gt;!&#39;)</span>
+</pre></div>
+</div>
+<p>Operations on a markup string are markup aware which means that all
+arguments are passed through the <a class="reference internal" href="../../templ14.html#escape" title="escape"><code class="xref py py-func docutils literal"><span class="pre">escape()</span></code></a> function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">em</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="s2">&quot;&lt;em&gt;</span><span class="si">%s</span><span class="s2">&lt;/em&gt;&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">em</span> <span class="o">%</span> <span class="s2">&quot;foo &amp; bar&quot;</span>
+<span class="go">Markup(u&#39;&lt;em&gt;foo &amp;amp; bar&lt;/em&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strong</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="s2">&quot;&lt;strong&gt;</span><span class="si">%(text)s</span><span class="s2">&lt;/strong&gt;&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strong</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;blink&gt;hacker here&lt;/blink&gt;&#39;</span><span class="p">}</span>
+<span class="go">Markup(u&#39;&lt;strong&gt;&amp;lt;blink&amp;gt;hacker here&amp;lt;/blink&amp;gt;&lt;/strong&gt;&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Markup</span><span class="p">(</span><span class="s2">&quot;&lt;em&gt;Hello&lt;/em&gt; &quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;foo&gt;&quot;</span>
+<span class="go">Markup(u&#39;&lt;em&gt;Hello&lt;/em&gt; &amp;lt;foo&amp;gt;&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.capitalize.html#jinja2.environment.Markup.capitalize" title="jinja2.environment.Markup.capitalize"><code class="xref py py-obj docutils literal"><span class="pre">capitalize</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a capitalized version of S, i.e.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.center.html#jinja2.environment.Markup.center" title="jinja2.environment.Markup.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return S centered in a Unicode string of length width.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.count.html#jinja2.environment.Markup.count" title="jinja2.environment.Markup.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>((sub[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the number of non-overlapping occurrences of substring sub in Unicode string S[start:end].</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.decode.html#jinja2.environment.Markup.decode" title="jinja2.environment.Markup.decode"><code class="xref py py-obj docutils literal"><span class="pre">decode</span></code></a>(...)</td>
+<td>Decodes S using the codec registered for encoding.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.encode.html#jinja2.environment.Markup.encode" title="jinja2.environment.Markup.encode"><code class="xref py py-obj docutils literal"><span class="pre">encode</span></code></a>(...)</td>
+<td>Encodes S using the codec registered for encoding.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.endswith.html#jinja2.environment.Markup.endswith" title="jinja2.environment.Markup.endswith"><code class="xref py py-obj docutils literal"><span class="pre">endswith</span></code></a>((suffix[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S ends with the specified suffix, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.escape.html#jinja2.environment.Markup.escape" title="jinja2.environment.Markup.escape"><code class="xref py py-obj docutils literal"><span class="pre">escape</span></code></a>(s)</td>
+<td>Escape the string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.expandtabs.html#jinja2.environment.Markup.expandtabs" title="jinja2.environment.Markup.expandtabs"><code class="xref py py-obj docutils literal"><span class="pre">expandtabs</span></code></a>(([tabsize])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S where all tab characters are expanded using spaces.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.find.html#jinja2.environment.Markup.find" title="jinja2.environment.Markup.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the lowest index in S where substring sub is found, such that sub is contained within S[start:end].</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.format.html#jinja2.environment.Markup.format" title="jinja2.environment.Markup.format"><code class="xref py py-obj docutils literal"><span class="pre">format</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.index.html#jinja2.environment.Markup.index" title="jinja2.environment.Markup.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Like S.find() but raise ValueError when the substring is not found.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.isalnum.html#jinja2.environment.Markup.isalnum" title="jinja2.environment.Markup.isalnum"><code class="xref py py-obj docutils literal"><span class="pre">isalnum</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.isalpha.html#jinja2.environment.Markup.isalpha" title="jinja2.environment.Markup.isalpha"><code class="xref py py-obj docutils literal"><span class="pre">isalpha</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are alphabetic and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.isdecimal.html#jinja2.environment.Markup.isdecimal" title="jinja2.environment.Markup.isdecimal"><code class="xref py py-obj docutils literal"><span class="pre">isdecimal</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if there are only decimal characters in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.isdigit.html#jinja2.environment.Markup.isdigit" title="jinja2.environment.Markup.isdigit"><code class="xref py py-obj docutils literal"><span class="pre">isdigit</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are digits and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.islower.html#jinja2.environment.Markup.islower" title="jinja2.environment.Markup.islower"><code class="xref py py-obj docutils literal"><span class="pre">islower</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all cased characters in S are lowercase and there is at least one cased character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.isnumeric.html#jinja2.environment.Markup.isnumeric" title="jinja2.environment.Markup.isnumeric"><code class="xref py py-obj docutils literal"><span class="pre">isnumeric</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if there are only numeric characters in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.isspace.html#jinja2.environment.Markup.isspace" title="jinja2.environment.Markup.isspace"><code class="xref py py-obj docutils literal"><span class="pre">isspace</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are whitespace and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.istitle.html#jinja2.environment.Markup.istitle" title="jinja2.environment.Markup.istitle"><code class="xref py py-obj docutils literal"><span class="pre">istitle</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S is a titlecased string and there is at least one character in S, i.e.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.isupper.html#jinja2.environment.Markup.isupper" title="jinja2.environment.Markup.isupper"><code class="xref py py-obj docutils literal"><span class="pre">isupper</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all cased characters in S are uppercase and there is at least one cased character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.join.html#jinja2.environment.Markup.join" title="jinja2.environment.Markup.join"><code class="xref py py-obj docutils literal"><span class="pre">join</span></code></a>((iterable)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a string which is the concatenation of the strings in the iterable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.ljust.html#jinja2.environment.Markup.ljust" title="jinja2.environment.Markup.ljust"><code class="xref py py-obj docutils literal"><span class="pre">ljust</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return S left-justified in a Unicode string of length width.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.lower.html#jinja2.environment.Markup.lower" title="jinja2.environment.Markup.lower"><code class="xref py py-obj docutils literal"><span class="pre">lower</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S converted to lowercase.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.lstrip.html#jinja2.environment.Markup.lstrip" title="jinja2.environment.Markup.lstrip"><code class="xref py py-obj docutils literal"><span class="pre">lstrip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with leading whitespace removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.partition.html#jinja2.environment.Markup.partition" title="jinja2.environment.Markup.partition"><code class="xref py py-obj docutils literal"><span class="pre">partition</span></code></a>(sep)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.replace.html#jinja2.environment.Markup.replace" title="jinja2.environment.Markup.replace"><code class="xref py py-obj docutils literal"><span class="pre">replace</span></code></a>((old,&nbsp;new[,&nbsp;count])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S with all occurrences of substring old replaced by new.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.rfind.html#jinja2.environment.Markup.rfind" title="jinja2.environment.Markup.rfind"><code class="xref py py-obj docutils literal"><span class="pre">rfind</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the highest index in S where substring sub is found, such that sub is contained within S[start:end].</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.rindex.html#jinja2.environment.Markup.rindex" title="jinja2.environment.Markup.rindex"><code class="xref py py-obj docutils literal"><span class="pre">rindex</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Like S.rfind() but raise ValueError when the substring is not found.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.rjust.html#jinja2.environment.Markup.rjust" title="jinja2.environment.Markup.rjust"><code class="xref py py-obj docutils literal"><span class="pre">rjust</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return S right-justified in a Unicode string of length width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.rpartition.html#jinja2.environment.Markup.rpartition" title="jinja2.environment.Markup.rpartition"><code class="xref py py-obj docutils literal"><span class="pre">rpartition</span></code></a>(sep)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.rsplit.html#jinja2.environment.Markup.rsplit" title="jinja2.environment.Markup.rsplit"><code class="xref py py-obj docutils literal"><span class="pre">rsplit</span></code></a>(([sep&nbsp;[,maxsplit]])&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the words in S, using sep as the delimiter string, starting at the end of the string and working to the front.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.rstrip.html#jinja2.environment.Markup.rstrip" title="jinja2.environment.Markup.rstrip"><code class="xref py py-obj docutils literal"><span class="pre">rstrip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with trailing whitespace removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.split.html#jinja2.environment.Markup.split" title="jinja2.environment.Markup.split"><code class="xref py py-obj docutils literal"><span class="pre">split</span></code></a>(([sep&nbsp;[,maxsplit]])&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the words in S, using sep as the delimiter string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.splitlines.html#jinja2.environment.Markup.splitlines" title="jinja2.environment.Markup.splitlines"><code class="xref py py-obj docutils literal"><span class="pre">splitlines</span></code></a>((keepends=False)&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the lines in S, breaking at line boundaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.startswith.html#jinja2.environment.Markup.startswith" title="jinja2.environment.Markup.startswith"><code class="xref py py-obj docutils literal"><span class="pre">startswith</span></code></a>((prefix[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S starts with the specified prefix, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.strip.html#jinja2.environment.Markup.strip" title="jinja2.environment.Markup.strip"><code class="xref py py-obj docutils literal"><span class="pre">strip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with leading and trailing whitespace removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.striptags.html#jinja2.environment.Markup.striptags" title="jinja2.environment.Markup.striptags"><code class="xref py py-obj docutils literal"><span class="pre">striptags</span></code></a>()</td>
+<td>Unescape markup into an text_type string and strip all tags.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.swapcase.html#jinja2.environment.Markup.swapcase" title="jinja2.environment.Markup.swapcase"><code class="xref py py-obj docutils literal"><span class="pre">swapcase</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S with uppercase characters converted to lowercase and vice versa.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.title.html#jinja2.environment.Markup.title" title="jinja2.environment.Markup.title"><code class="xref py py-obj docutils literal"><span class="pre">title</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a titlecased version of S, i.e.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.translate.html#jinja2.environment.Markup.translate" title="jinja2.environment.Markup.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>((table)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S, where all characters have been mapped through the given translation table, which must be a mapping of Unicode ordinals to Unicode ordinals, Unicode strings or None.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.unescape.html#jinja2.environment.Markup.unescape" title="jinja2.environment.Markup.unescape"><code class="xref py py-obj docutils literal"><span class="pre">unescape</span></code></a>()</td>
+<td>Unescape markup again into an text_type string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.environment.Markup.upper.html#jinja2.environment.Markup.upper" title="jinja2.environment.Markup.upper"><code class="xref py py-obj docutils literal"><span class="pre">upper</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S converted to uppercase.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.environment.Markup.zfill.html#jinja2.environment.Markup.zfill" title="jinja2.environment.Markup.zfill"><code class="xref py py-obj docutils literal"><span class="pre">zfill</span></code></a>((width)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Pad a numeric string S with zeros on the left, to fill a field of the specified width.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.environment.Markup.capitalize.html" class="btn btn-neutral float-right" title="jinja2.environment.Markup.capitalize" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jinja2.environment.LRUCache.values.html" class="btn btn-neutral" title="jinja2.environment.LRUCache.values" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

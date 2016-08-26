@@ -1,0 +1,6 @@
+jinja2.bccache.FileSystemBytecodeCache.__init__
+===============================================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: FileSystemBytecodeCache.__init__

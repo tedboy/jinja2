@@ -1,0 +1,6 @@
+jinja2.environment.imap.next
+============================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: imap.next

@@ -1,0 +1,6 @@
+jinja2.nodes.Output.fields
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Output.fields

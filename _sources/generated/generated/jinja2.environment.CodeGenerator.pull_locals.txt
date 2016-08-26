@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.pull_locals
+============================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.pull_locals

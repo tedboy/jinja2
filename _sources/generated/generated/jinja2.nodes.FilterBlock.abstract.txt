@@ -1,0 +1,6 @@
+jinja2.nodes.FilterBlock.abstract
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: FilterBlock.abstract

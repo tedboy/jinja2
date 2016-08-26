@@ -1,0 +1,6 @@
+jinja2.environment.consume
+==========================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: consume

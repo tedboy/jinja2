@@ -1,0 +1,6 @@
+jinja2.parser.Parser.__init__
+=============================
+
+.. currentmodule:: jinja2.parser
+
+.. automethod:: Parser.__init__

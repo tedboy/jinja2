@@ -1,0 +1,6 @@
+jinja2.nodes.ScopedEvalContextModifier.attributes
+=================================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: ScopedEvalContextModifier.attributes

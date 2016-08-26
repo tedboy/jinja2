@@ -1,0 +1,6 @@
+jinja2.nodes.Compare.can_assign
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Compare.can_assign

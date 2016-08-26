@@ -1,0 +1,6 @@
+jinja2.nodes.Literal.iter_fields
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Literal.iter_fields

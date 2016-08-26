@@ -1,0 +1,6 @@
+jinja2.ext.WithExtension.__init__
+=================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: WithExtension.__init__

@@ -1,0 +1,6 @@
+jinja2.nodes.deque.appendleft
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.appendleft

@@ -1,0 +1,6 @@
+jinja2.lexer.Lexer.tokeniter
+============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: Lexer.tokeniter

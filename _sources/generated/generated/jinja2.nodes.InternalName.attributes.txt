@@ -1,0 +1,6 @@
+jinja2.nodes.InternalName.attributes
+====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: InternalName.attributes

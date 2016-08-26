@@ -1,0 +1,36 @@
+jinja2.nodes.Stmt
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Stmt
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Stmt.__init__
+   ~Stmt.find
+   ~Stmt.find_all
+   ~Stmt.iter_child_nodes
+   ~Stmt.iter_fields
+   ~Stmt.set_ctx
+   ~Stmt.set_environment
+   ~Stmt.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Stmt.abstract
+   ~Stmt.attributes
+   ~Stmt.fields
+

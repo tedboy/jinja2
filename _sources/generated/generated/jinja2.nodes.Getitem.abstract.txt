@@ -1,0 +1,6 @@
+jinja2.nodes.Getitem.abstract
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Getitem.abstract

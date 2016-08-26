@@ -1,0 +1,38 @@
+jinja2.nodes.Tuple
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Tuple
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Tuple.__init__
+   ~Tuple.as_const
+   ~Tuple.can_assign
+   ~Tuple.find
+   ~Tuple.find_all
+   ~Tuple.iter_child_nodes
+   ~Tuple.iter_fields
+   ~Tuple.set_ctx
+   ~Tuple.set_environment
+   ~Tuple.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Tuple.abstract
+   ~Tuple.attributes
+   ~Tuple.fields
+

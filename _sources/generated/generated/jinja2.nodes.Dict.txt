@@ -1,0 +1,38 @@
+jinja2.nodes.Dict
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Dict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Dict.__init__
+   ~Dict.as_const
+   ~Dict.can_assign
+   ~Dict.find
+   ~Dict.find_all
+   ~Dict.iter_child_nodes
+   ~Dict.iter_fields
+   ~Dict.set_ctx
+   ~Dict.set_environment
+   ~Dict.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Dict.abstract
+   ~Dict.attributes
+   ~Dict.fields
+

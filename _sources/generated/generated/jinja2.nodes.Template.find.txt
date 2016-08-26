@@ -1,0 +1,6 @@
+jinja2.nodes.Template.find
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Template.find

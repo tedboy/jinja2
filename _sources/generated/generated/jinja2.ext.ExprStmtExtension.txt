@@ -1,0 +1,35 @@
+jinja2.ext.ExprStmtExtension
+============================
+.. currentmodule:: jinja2.ext
+.. autoclass:: ExprStmtExtension
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ExprStmtExtension.__init__
+   ~ExprStmtExtension.attr
+   ~ExprStmtExtension.bind
+   ~ExprStmtExtension.call_method
+   ~ExprStmtExtension.filter_stream
+   ~ExprStmtExtension.parse
+   ~ExprStmtExtension.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ExprStmtExtension.identifier
+   ~ExprStmtExtension.priority
+   ~ExprStmtExtension.tags
+

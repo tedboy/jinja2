@@ -1,0 +1,6 @@
+jinja2.environment.Parser.free_identifier
+=========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Parser.free_identifier

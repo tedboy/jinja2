@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.blockvisit
+===========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.blockvisit

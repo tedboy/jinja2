@@ -1,0 +1,6 @@
+jinja2.nodes.Const.attributes
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Const.attributes

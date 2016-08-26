@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.3.1. jinja2.sandbox.SecurityError &mdash; Jinja2 API</title>
+  <title>jinja2.sandbox.SecurityError &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="../index.html"/>
-        <link rel="up" title="2. jinja2.sandbox" href="jinja2.sandbox.html"/>
+        <link rel="up" title="jinja2.sandbox" href="jinja2.sandbox.html"/>
         <link rel="next" title="&lt;no title&gt;" href="../api.exceptions.html"/>
-        <link rel="prev" title="2.1.2.11.2.1. jinja2.sandbox.deque.maxlen" href="generated/jinja2.sandbox.deque.maxlen.html"/> 
+        <link rel="prev" title="jinja2.sandbox.deque.maxlen" href="generated/jinja2.sandbox.deque.maxlen.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,20 +85,28 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="jinja2.sandbox.html">2. jinja2.sandbox</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="jinja2.sandbox.html#id1">2.1. jinja2.sandbox</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="jinja2.sandbox.html#functions">2.1.1. Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="jinja2.sandbox.html#classes">2.1.2. Classes</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="jinja2.sandbox.html#exceptions">2.1.3. Exceptions</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">2.1.3.1. jinja2.sandbox.SecurityError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="jinja2.sandbox.html#id1">jinja2.sandbox</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="jinja2.sandbox.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jinja2.sandbox.html#classes">Classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="jinja2.sandbox.html#exceptions">Exceptions</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.sandbox.SecurityError</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -140,11 +148,11 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../api_sandbox.html">&lt;no title&gt;</a> &raquo;</li>
+          <li><a href="../api.sandbox.html">&lt;no title&gt;</a> &raquo;</li>
         
-          <li><a href="jinja2.sandbox.html">2. jinja2.sandbox</a> &raquo;</li>
+          <li><a href="jinja2.sandbox.html">jinja2.sandbox</a> &raquo;</li>
         
-      <li>2.1.3.1. jinja2.sandbox.SecurityError</li>
+      <li>jinja2.sandbox.SecurityError</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,7 +170,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="jinja2-sandbox-securityerror">
-<h1>2.1.3.1. jinja2.sandbox.SecurityError<a class="headerlink" href="#jinja2-sandbox-securityerror" title="Permalink to this headline">¶</a></h1>
+<h1>jinja2.sandbox.SecurityError<a class="headerlink" href="#jinja2-sandbox-securityerror" title="Permalink to this headline">¶</a></h1>
 <dl class="exception">
 <dt id="jinja2.sandbox.SecurityError">
 <em class="property">exception </em><code class="descclassname">jinja2.sandbox.</code><code class="descname">SecurityError</code><span class="sig-paren">(</span><em>message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jinja2/exceptions.html#SecurityError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.sandbox.SecurityError" title="Permalink to this definition">¶</a></dt>
@@ -182,7 +190,7 @@ sandbox is enabled.</p>
         <a href="../api.exceptions.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="generated/jinja2.sandbox.deque.maxlen.html" class="btn btn-neutral" title="2.1.2.11.2.1. jinja2.sandbox.deque.maxlen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="generated/jinja2.sandbox.deque.maxlen.html" class="btn btn-neutral" title="jinja2.sandbox.deque.maxlen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

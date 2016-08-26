@@ -1,0 +1,38 @@
+jinja2.nodes.Compare
+====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Compare
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Compare.__init__
+   ~Compare.as_const
+   ~Compare.can_assign
+   ~Compare.find
+   ~Compare.find_all
+   ~Compare.iter_child_nodes
+   ~Compare.iter_fields
+   ~Compare.set_ctx
+   ~Compare.set_environment
+   ~Compare.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Compare.abstract
+   ~Compare.attributes
+   ~Compare.fields
+

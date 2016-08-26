@@ -1,0 +1,35 @@
+jinja2.ext.i18n
+===============
+.. currentmodule:: jinja2.ext
+.. autoclass:: i18n
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~i18n.__init__
+   ~i18n.attr
+   ~i18n.bind
+   ~i18n.call_method
+   ~i18n.filter_stream
+   ~i18n.parse
+   ~i18n.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~i18n.identifier
+   ~i18n.priority
+   ~i18n.tags
+

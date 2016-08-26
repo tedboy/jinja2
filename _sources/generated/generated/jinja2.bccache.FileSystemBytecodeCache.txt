@@ -1,0 +1,26 @@
+jinja2.bccache.FileSystemBytecodeCache
+======================================
+.. currentmodule:: jinja2.bccache
+.. autoclass:: FileSystemBytecodeCache
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FileSystemBytecodeCache.__init__
+   ~FileSystemBytecodeCache.clear
+   ~FileSystemBytecodeCache.dump_bytecode
+   ~FileSystemBytecodeCache.get_bucket
+   ~FileSystemBytecodeCache.get_cache_key
+   ~FileSystemBytecodeCache.get_source_checksum
+   ~FileSystemBytecodeCache.load_bytecode
+   ~FileSystemBytecodeCache.set_bucket
+
+
+
+
+

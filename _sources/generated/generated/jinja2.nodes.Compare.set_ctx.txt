@@ -1,0 +1,6 @@
+jinja2.nodes.Compare.set_ctx
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Compare.set_ctx

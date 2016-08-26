@@ -1,0 +1,6 @@
+jinja2.nodes.Slice.as_const
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Slice.as_const

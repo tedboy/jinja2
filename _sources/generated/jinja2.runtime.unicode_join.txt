@@ -1,0 +1,6 @@
+jinja2.runtime.unicode_join
+===========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: unicode_join

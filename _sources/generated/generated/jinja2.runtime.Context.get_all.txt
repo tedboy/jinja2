@@ -1,0 +1,6 @@
+jinja2.runtime.Context.get_all
+==============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.get_all

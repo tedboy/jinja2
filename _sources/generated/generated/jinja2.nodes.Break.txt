@@ -1,0 +1,36 @@
+jinja2.nodes.Break
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Break
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Break.__init__
+   ~Break.find
+   ~Break.find_all
+   ~Break.iter_child_nodes
+   ~Break.iter_fields
+   ~Break.set_ctx
+   ~Break.set_environment
+   ~Break.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Break.abstract
+   ~Break.attributes
+   ~Break.fields
+

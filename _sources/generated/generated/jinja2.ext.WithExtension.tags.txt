@@ -1,0 +1,6 @@
+jinja2.ext.WithExtension.tags
+=============================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: WithExtension.tags

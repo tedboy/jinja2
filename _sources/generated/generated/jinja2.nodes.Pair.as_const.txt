@@ -1,0 +1,6 @@
+jinja2.nodes.Pair.as_const
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Pair.as_const

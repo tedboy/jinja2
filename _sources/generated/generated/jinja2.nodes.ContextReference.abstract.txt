@@ -1,0 +1,6 @@
+jinja2.nodes.ContextReference.abstract
+======================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: ContextReference.abstract

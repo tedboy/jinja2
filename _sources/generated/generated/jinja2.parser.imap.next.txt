@@ -1,0 +1,6 @@
+jinja2.parser.imap.next
+=======================
+
+.. currentmodule:: jinja2.parser
+
+.. autoattribute:: imap.next

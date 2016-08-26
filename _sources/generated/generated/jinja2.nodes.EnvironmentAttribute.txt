@@ -1,0 +1,38 @@
+jinja2.nodes.EnvironmentAttribute
+=================================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: EnvironmentAttribute
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~EnvironmentAttribute.__init__
+   ~EnvironmentAttribute.as_const
+   ~EnvironmentAttribute.can_assign
+   ~EnvironmentAttribute.find
+   ~EnvironmentAttribute.find_all
+   ~EnvironmentAttribute.iter_child_nodes
+   ~EnvironmentAttribute.iter_fields
+   ~EnvironmentAttribute.set_ctx
+   ~EnvironmentAttribute.set_environment
+   ~EnvironmentAttribute.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~EnvironmentAttribute.abstract
+   ~EnvironmentAttribute.attributes
+   ~EnvironmentAttribute.fields
+

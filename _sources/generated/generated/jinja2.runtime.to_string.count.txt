@@ -1,0 +1,6 @@
+jinja2.runtime.to_string.count
+==============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: to_string.count

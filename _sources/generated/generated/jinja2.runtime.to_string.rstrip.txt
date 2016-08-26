@@ -1,0 +1,6 @@
+jinja2.runtime.to_string.rstrip
+===============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: to_string.rstrip

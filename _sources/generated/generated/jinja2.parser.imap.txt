@@ -1,0 +1,19 @@
+jinja2.parser.imap
+==================
+.. currentmodule:: jinja2.parser
+.. autoclass:: imap
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~imap.next
+

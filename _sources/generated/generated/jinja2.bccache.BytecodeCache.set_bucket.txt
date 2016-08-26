@@ -1,0 +1,6 @@
+jinja2.bccache.BytecodeCache.set_bucket
+=======================================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: BytecodeCache.set_bucket

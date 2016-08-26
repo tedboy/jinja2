@@ -1,0 +1,6 @@
+jinja2.nodes.Break.fields
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Break.fields

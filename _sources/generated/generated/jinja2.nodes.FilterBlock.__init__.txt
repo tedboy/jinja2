@@ -1,0 +1,6 @@
+jinja2.nodes.FilterBlock.__init__
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FilterBlock.__init__

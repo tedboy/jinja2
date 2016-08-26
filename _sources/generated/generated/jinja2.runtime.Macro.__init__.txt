@@ -1,0 +1,6 @@
+jinja2.runtime.Macro.__init__
+=============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Macro.__init__

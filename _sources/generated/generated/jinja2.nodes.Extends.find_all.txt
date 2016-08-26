@@ -1,0 +1,6 @@
+jinja2.nodes.Extends.find_all
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Extends.find_all

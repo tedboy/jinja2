@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.priority
+=======================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: AutoEscapeExtension.priority

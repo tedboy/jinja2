@@ -1,0 +1,6 @@
+jinja2.nodes.FloorDiv.operator
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: FloorDiv.operator

@@ -1,0 +1,37 @@
+jinja2.nodes.Pair
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Pair
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Pair.__init__
+   ~Pair.as_const
+   ~Pair.find
+   ~Pair.find_all
+   ~Pair.iter_child_nodes
+   ~Pair.iter_fields
+   ~Pair.set_ctx
+   ~Pair.set_environment
+   ~Pair.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Pair.abstract
+   ~Pair.attributes
+   ~Pair.fields
+

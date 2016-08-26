@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.find
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.find

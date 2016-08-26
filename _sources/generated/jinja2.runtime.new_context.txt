@@ -1,0 +1,6 @@
+jinja2.runtime.new_context
+==========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: new_context

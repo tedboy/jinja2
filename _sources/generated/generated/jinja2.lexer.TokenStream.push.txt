@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.push
+=============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: TokenStream.push

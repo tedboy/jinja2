@@ -1,0 +1,6 @@
+jinja2.nodes.UnaryExpr.fields
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: UnaryExpr.fields

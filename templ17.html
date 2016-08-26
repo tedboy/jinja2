@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.17. Extensions &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="4.18. Autoescape Extension" href="templ18.html"/>
+        <link rel="prev" title="4.16. List of Global Functions" href="templ16.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">4.17. Extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#i18n">4.17.1. i18n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#expression-statement">4.17.2. Expression Statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loop-controls">4.17.3. Loop Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-statement">4.17.4. With Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
+        
+      <li>4.17. Extensions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/templ17.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="extensions">
+<h1>4.17. Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h1>
+<p>The following sections cover the built-in Jinja2 extensions that may be
+enabled by an application.  An application could also provide further
+extensions not covered by this documentation; in which case there should
+be a separate document explaining said <a class="reference internal" href="off_doc.extensions.html#jinja-extensions"><span>extensions</span></a>.</p>
+<div class="section" id="i18n">
+<span id="i18n-in-templates"></span><h2>4.17.1. i18n<a class="headerlink" href="#i18n" title="Permalink to this headline">¶</a></h2>
+<p>If the i18n extension is enabled, it&#8217;s possible to mark parts in the template
+as translatable.  To mark a section as translatable, you can use <cite>trans</cite>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="cp">%}</span>Hello <span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span>!<span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>To translate a template expression &#8212; say, using template filters, or by just
+accessing an attribute of an object &#8212; you need to bind the expression to a
+name for use within the translation block:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="nv">user</span><span class="o">=</span><span class="nv">user.username</span> <span class="cp">%}</span>Hello <span class="cp">{{</span> <span class="nv">user</span> <span class="cp">}}</span>!<span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>If you need to bind more than one expression inside a <cite>trans</cite> tag, separate
+the pieces with a comma (<code class="docutils literal"><span class="pre">,</span></code>):</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">trans</span> <span class="nv">book_title</span><span class="o">=</span><span class="nv">book.title</span><span class="o">,</span> <span class="nv">author</span><span class="o">=</span><span class="nv">author.name</span> <span class="cp">%}</span>
+This is <span class="cp">{{</span> <span class="nv">book_title</span> <span class="cp">}}</span> by <span class="cp">{{</span> <span class="nv">author</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Inside trans tags no statements are allowed, only variable tags are.</p>
+<p>To pluralize, specify both the singular and plural forms with the <cite>pluralize</cite>
+tag, which appears between <cite>trans</cite> and <cite>endtrans</cite>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">trans</span> <span class="nv">count</span><span class="o">=</span><span class="nv">list</span><span class="o">|</span><span class="nf">length</span> <span class="cp">%}</span>
+There is <span class="cp">{{</span> <span class="nv">count</span> <span class="cp">}}</span> <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span> object.
+<span class="cp">{%</span> <span class="k">pluralize</span> <span class="cp">%}</span>
+There are <span class="cp">{{</span> <span class="nv">count</span> <span class="cp">}}</span> <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span> objects.
+<span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>By default, the first variable in a block is used to determine the correct
+singular or plural form.  If that doesn&#8217;t work out, you can specify the name
+which should be used for pluralizing by adding it as parameter to <cite>pluralize</cite>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">trans</span> <span class="p">...</span><span class="o">,</span> <span class="nv">user_count</span><span class="o">=</span><span class="nv">users</span><span class="o">|</span><span class="nf">length</span> <span class="cp">%}</span>...
+<span class="cp">{%</span> <span class="k">pluralize</span> <span class="nv">user_count</span> <span class="cp">%}</span>...<span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>It&#8217;s also possible to translate strings in expressions.  For that purpose,
+three functions exist:</p>
+<ul class="simple">
+<li><cite>gettext</cite>: translate a single string</li>
+<li><cite>ngettext</cite>: translate a pluralizable string</li>
+<li><cite>_</cite>: alias for <cite>gettext</cite></li>
+</ul>
+<p>For example, you can easily print a translated string like this:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="kp">_</span><span class="o">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p>To use placeholders, use the <cite>format</cite> filter:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="kp">_</span><span class="o">(</span><span class="s1">&#39;Hello %(user)s!&#39;</span><span class="o">)|</span><span class="nf">format</span><span class="o">(</span><span class="nv">user</span><span class="o">=</span><span class="nv">user.username</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p>For multiple placeholders, always use keyword arguments to <cite>format</cite>,
+as other languages may not use the words in the same order.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5.</span></p>
+</div>
+<p>If newstyle gettext calls are activated (<a class="reference internal" href="ext2.html#newstyle-gettext"><span>Newstyle Gettext</span></a>), using
+placeholders is a lot easier:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">gettext</span><span class="o">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">gettext</span><span class="o">(</span><span class="s1">&#39;Hello %(name)s!&#39;</span><span class="o">,</span> <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;World&#39;</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">ngettext</span><span class="o">(</span><span class="s1">&#39;%(num)d apple&#39;</span><span class="o">,</span> <span class="s1">&#39;%(num)d apples&#39;</span><span class="o">,</span> <span class="nv">apples</span><span class="o">|</span><span class="nf">count</span><span class="o">)</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p>Note that the <cite>ngettext</cite> function&#8217;s format string automatically receives
+the count as a <cite>num</cite> parameter in addition to the regular parameters.</p>
+</div>
+<div class="section" id="expression-statement">
+<h2>4.17.2. Expression Statement<a class="headerlink" href="#expression-statement" title="Permalink to this headline">¶</a></h2>
+<p>If the expression-statement extension is loaded, a tag called <cite>do</cite> is available
+that works exactly like the regular variable expression (<code class="docutils literal"><span class="pre">{{</span> <span class="pre">...</span> <span class="pre">}}</span></code>); except
+it doesn&#8217;t print anything.  This can be used to modify lists:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">do</span> <span class="nv">navigation.append</span><span class="o">(</span><span class="s1">&#39;a string&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loop-controls">
+<h2>4.17.3. Loop Controls<a class="headerlink" href="#loop-controls" title="Permalink to this headline">¶</a></h2>
+<p>If the application enables the <a class="reference internal" href="ext4.html#loopcontrols-extension"><span>Loop Controls</span></a>, it&#8217;s possible to
+use <cite>break</cite> and <cite>continue</cite> in loops.  When <cite>break</cite> is reached, the loop is
+terminated;  if <cite>continue</cite> is reached, the processing is stopped and continues
+with the next iteration.</p>
+<p>Here&#8217;s a loop that skips every second item:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+    <span class="cp">{%</span>- <span class="k">if</span> <span class="nb">loop</span><span class="nv">.index</span> <span class="k">is</span> <span class="nf">even</span> <span class="cp">%}{%</span> <span class="k">continue</span> <span class="cp">%}{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+    ...
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Likewise, a loop that stops processing after the 10th iteration:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+    <span class="cp">{%</span>- <span class="k">if</span> <span class="nb">loop</span><span class="nv">.index</span> <span class="o">&gt;=</span> <span class="m">10</span> <span class="cp">%}{%</span> <span class="k">break</span> <span class="cp">%}{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal"><span class="pre">loop.index</span></code> starts with 1, and <code class="docutils literal"><span class="pre">loop.index0</span></code> starts with 0
+(See: <a class="reference internal" href="templ11.html#for-loop"><span>For</span></a>).</p>
+</div>
+<div class="section" id="with-statement">
+<h2>4.17.4. With Statement<a class="headerlink" href="#with-statement" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.3.</span></p>
+</div>
+<p>If the application enables the <a class="reference internal" href="ext5.html#with-extension"><span>With Statement</span></a>, it is possible to
+use the <cite>with</cite> keyword in templates.  This makes it possible to create
+a new inner scope.  Variables set within this scope are not visible
+outside of the scope.</p>
+<p>With in a nutshell:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">with</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">set</span> <span class="nv">foo</span> <span class="o">=</span> <span class="m">42</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">foo</span> <span class="cp">}}</span>           foo is 42 here
+<span class="cp">{%</span> <span class="k">endwith</span> <span class="cp">%}</span>
+foo is not visible here any longer
+</pre></div>
+</div>
+<p>Because it is common to set variables at the beginning of the scope,
+you can do that within the <cite>with</cite> statement.  The following two examples
+are equivalent:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">with</span> <span class="nv">foo</span> <span class="o">=</span> <span class="m">42</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">foo</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endwith</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">with</span> <span class="cp">%}</span>
+    <span class="cp">{%</span> <span class="k">set</span> <span class="nv">foo</span> <span class="o">=</span> <span class="m">42</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">foo</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endwith</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templ18.html" class="btn btn-neutral float-right" title="4.18. Autoescape Extension" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templ16.html" class="btn btn-neutral" title="4.16. List of Global Functions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

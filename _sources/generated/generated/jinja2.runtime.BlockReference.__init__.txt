@@ -1,0 +1,6 @@
+jinja2.runtime.BlockReference.__init__
+======================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: BlockReference.__init__

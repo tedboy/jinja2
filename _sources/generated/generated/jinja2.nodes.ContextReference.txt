@@ -1,0 +1,38 @@
+jinja2.nodes.ContextReference
+=============================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: ContextReference
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ContextReference.__init__
+   ~ContextReference.as_const
+   ~ContextReference.can_assign
+   ~ContextReference.find
+   ~ContextReference.find_all
+   ~ContextReference.iter_child_nodes
+   ~ContextReference.iter_fields
+   ~ContextReference.set_ctx
+   ~ContextReference.set_environment
+   ~ContextReference.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ContextReference.abstract
+   ~ContextReference.attributes
+   ~ContextReference.fields
+

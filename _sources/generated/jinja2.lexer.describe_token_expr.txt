@@ -1,0 +1,6 @@
+jinja2.lexer.describe_token_expr
+================================
+
+.. currentmodule:: jinja2.lexer
+
+.. autofunction:: describe_token_expr

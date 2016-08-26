@@ -1,0 +1,6 @@
+jinja2.ext.with_.identifier
+===========================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: with_.identifier

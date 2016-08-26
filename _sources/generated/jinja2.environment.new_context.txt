@@ -1,0 +1,6 @@
+jinja2.environment.new_context
+==============================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: new_context

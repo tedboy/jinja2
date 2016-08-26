@@ -1,0 +1,6 @@
+jinja2.ext.LoopControlExtension.filter_stream
+=============================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: LoopControlExtension.filter_stream

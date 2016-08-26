@@ -1,0 +1,38 @@
+jinja2.nodes.MarkSafeIfAutoescape
+=================================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: MarkSafeIfAutoescape
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MarkSafeIfAutoescape.__init__
+   ~MarkSafeIfAutoescape.as_const
+   ~MarkSafeIfAutoescape.can_assign
+   ~MarkSafeIfAutoescape.find
+   ~MarkSafeIfAutoescape.find_all
+   ~MarkSafeIfAutoescape.iter_child_nodes
+   ~MarkSafeIfAutoescape.iter_fields
+   ~MarkSafeIfAutoescape.set_ctx
+   ~MarkSafeIfAutoescape.set_environment
+   ~MarkSafeIfAutoescape.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~MarkSafeIfAutoescape.abstract
+   ~MarkSafeIfAutoescape.attributes
+   ~MarkSafeIfAutoescape.fields
+

@@ -1,0 +1,6 @@
+jinja2.nodes.Compare.iter_fields
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Compare.iter_fields

@@ -1,0 +1,35 @@
+jinja2.ext.loopcontrols
+=======================
+.. currentmodule:: jinja2.ext
+.. autoclass:: loopcontrols
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~loopcontrols.__init__
+   ~loopcontrols.attr
+   ~loopcontrols.bind
+   ~loopcontrols.call_method
+   ~loopcontrols.filter_stream
+   ~loopcontrols.parse
+   ~loopcontrols.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~loopcontrols.identifier
+   ~loopcontrols.priority
+   ~loopcontrols.tags
+

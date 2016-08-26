@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.runtime &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../api.runtime.html"/>
+        <link rel="next" title="jinja2.runtime.concat" href="jinja2.runtime.concat.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="../api.runtime.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">jinja2.runtime</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">jinja2.runtime</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.concat.html">jinja2.runtime.concat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.escape.html">jinja2.runtime.escape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.identity.html">jinja2.runtime.identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.implements_iterator.html">jinja2.runtime.implements_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.implements_to_string.html">jinja2.runtime.implements_to_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.internalcode.html">jinja2.runtime.internalcode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.iteritems.html">jinja2.runtime.iteritems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.make_logging_undefined.html">jinja2.runtime.make_logging_undefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.markup_join.html">jinja2.runtime.markup_join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.new_context.html">jinja2.runtime.new_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.object_type_repr.html">jinja2.runtime.object_type_repr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.soft_unicode.html">jinja2.runtime.soft_unicode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.unicode_join.html">jinja2.runtime.unicode_join</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.BlockReference.html">jinja2.runtime.BlockReference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.Context.html">jinja2.runtime.Context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.DebugUndefined.html">jinja2.runtime.DebugUndefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.EvalContext.html">jinja2.runtime.EvalContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.LoopContext.html">jinja2.runtime.LoopContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.LoopContextIterator.html">jinja2.runtime.LoopContextIterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.Macro.html">jinja2.runtime.Macro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.Mapping.html">jinja2.runtime.Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.Markup.html">jinja2.runtime.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.StrictUndefined.html">jinja2.runtime.StrictUndefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.TemplateReference.html">jinja2.runtime.TemplateReference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.Undefined.html">jinja2.runtime.Undefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.chain.html">jinja2.runtime.chain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.imap.html">jinja2.runtime.imap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.text_type.html">jinja2.runtime.text_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.runtime.to_string.html">jinja2.runtime.to_string</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.TemplateNotFound.html">jinja2.runtime.TemplateNotFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.TemplateRuntimeError.html">jinja2.runtime.TemplateRuntimeError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.runtime.UndefinedError.html">jinja2.runtime.UndefinedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.runtime.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>jinja2.runtime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/jinja2.runtime.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jinja2.runtime">
+<span id="jinja2-runtime"></span><h1>jinja2.runtime<a class="headerlink" href="#module-jinja2.runtime" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>jinja2.runtime<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Runtime helpers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2010 by the Jinja Team.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">BSD.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.concat.html#jinja2.runtime.concat" title="jinja2.runtime.concat"><code class="xref py py-obj docutils literal"><span class="pre">concat</span></code></a></td>
+<td>S.join(iterable) -&gt; unicode</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.escape.html#jinja2.runtime.escape" title="jinja2.runtime.escape"><code class="xref py py-obj docutils literal"><span class="pre">escape</span></code></a>((s)&nbsp;-&gt;&nbsp;markup)</td>
+<td>Convert the characters &amp;, &lt;, &gt;, &#8216;, and &#8221; in string s to HTML-safe sequences.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.identity.html#jinja2.runtime.identity" title="jinja2.runtime.identity"><code class="xref py py-obj docutils literal"><span class="pre">identity</span></code></a>(x)</td>
+<td>the identity function.  Useful for certain things in the environment</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.implements_iterator.html#jinja2.runtime.implements_iterator" title="jinja2.runtime.implements_iterator"><code class="xref py py-obj docutils literal"><span class="pre">implements_iterator</span></code></a>(cls)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.implements_to_string.html#jinja2.runtime.implements_to_string" title="jinja2.runtime.implements_to_string"><code class="xref py py-obj docutils literal"><span class="pre">implements_to_string</span></code></a>(cls)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.internalcode.html#jinja2.runtime.internalcode" title="jinja2.runtime.internalcode"><code class="xref py py-obj docutils literal"><span class="pre">internalcode</span></code></a>(f)</td>
+<td>Marks the function as internally used</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.iteritems.html#jinja2.runtime.iteritems" title="jinja2.runtime.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(d)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.make_logging_undefined.html#jinja2.runtime.make_logging_undefined" title="jinja2.runtime.make_logging_undefined"><code class="xref py py-obj docutils literal"><span class="pre">make_logging_undefined</span></code></a>([logger,&nbsp;base])</td>
+<td>Given a logger object this returns a new undefined class that will log certain failures.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.markup_join.html#jinja2.runtime.markup_join" title="jinja2.runtime.markup_join"><code class="xref py py-obj docutils literal"><span class="pre">markup_join</span></code></a>(seq)</td>
+<td>Concatenation that escapes if necessary and converts to unicode.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.new_context.html#jinja2.runtime.new_context" title="jinja2.runtime.new_context"><code class="xref py py-obj docutils literal"><span class="pre">new_context</span></code></a>(environment,&nbsp;template_name,&nbsp;blocks)</td>
+<td>Internal helper to for context creation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.object_type_repr.html#jinja2.runtime.object_type_repr" title="jinja2.runtime.object_type_repr"><code class="xref py py-obj docutils literal"><span class="pre">object_type_repr</span></code></a>(obj)</td>
+<td>Returns the name of the object&#8217;s type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.soft_unicode.html#jinja2.runtime.soft_unicode" title="jinja2.runtime.soft_unicode"><code class="xref py py-obj docutils literal"><span class="pre">soft_unicode</span></code></a>((object)&nbsp;-&gt;&nbsp;string)</td>
+<td>Make a string unicode if it isn&#8217;t already.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.unicode_join.html#jinja2.runtime.unicode_join" title="jinja2.runtime.unicode_join"><code class="xref py py-obj docutils literal"><span class="pre">unicode_join</span></code></a>(seq)</td>
+<td>Simple args to unicode conversion and concatenation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.BlockReference.html#jinja2.runtime.BlockReference" title="jinja2.runtime.BlockReference"><code class="xref py py-obj docutils literal"><span class="pre">BlockReference</span></code></a>(name,&nbsp;context,&nbsp;stack,&nbsp;depth)</td>
+<td>One block on a template reference.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.Context.html#jinja2.runtime.Context" title="jinja2.runtime.Context"><code class="xref py py-obj docutils literal"><span class="pre">Context</span></code></a>(environment,&nbsp;parent,&nbsp;name,&nbsp;blocks)</td>
+<td>The template context holds the variables of a template.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.DebugUndefined.html#jinja2.runtime.DebugUndefined" title="jinja2.runtime.DebugUndefined"><code class="xref py py-obj docutils literal"><span class="pre">DebugUndefined</span></code></a>([hint,&nbsp;obj,&nbsp;name,&nbsp;exc])</td>
+<td>An undefined that returns the debug info when printed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.EvalContext.html#jinja2.runtime.EvalContext" title="jinja2.runtime.EvalContext"><code class="xref py py-obj docutils literal"><span class="pre">EvalContext</span></code></a>(environment[,&nbsp;template_name])</td>
+<td>Holds evaluation time information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.LoopContext.html#jinja2.runtime.LoopContext" title="jinja2.runtime.LoopContext"><code class="xref py py-obj docutils literal"><span class="pre">LoopContext</span></code></a>(iterable[,&nbsp;recurse,&nbsp;depth0])</td>
+<td>A loop context for dynamic iteration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.LoopContextIterator.html#jinja2.runtime.LoopContextIterator" title="jinja2.runtime.LoopContextIterator"><code class="xref py py-obj docutils literal"><span class="pre">LoopContextIterator</span></code></a>(context)</td>
+<td>The iterator for a loop context.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.Macro.html#jinja2.runtime.Macro" title="jinja2.runtime.Macro"><code class="xref py py-obj docutils literal"><span class="pre">Macro</span></code></a>(environment,&nbsp;func,&nbsp;name,&nbsp;arguments,&nbsp;...)</td>
+<td>Wraps a macro function.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.Mapping.html#jinja2.runtime.Mapping" title="jinja2.runtime.Mapping"><code class="xref py py-obj docutils literal"><span class="pre">Mapping</span></code></a></td>
+<td>A Mapping is a generic container for associating key/value pairs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.Markup.html#jinja2.runtime.Markup" title="jinja2.runtime.Markup"><code class="xref py py-obj docutils literal"><span class="pre">Markup</span></code></a></td>
+<td>Marks a string as being safe for inclusion in HTML/XML output without needing to be escaped.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.StrictUndefined.html#jinja2.runtime.StrictUndefined" title="jinja2.runtime.StrictUndefined"><code class="xref py py-obj docutils literal"><span class="pre">StrictUndefined</span></code></a>([hint,&nbsp;obj,&nbsp;name,&nbsp;exc])</td>
+<td>An undefined that barks on print and iteration as well as boolean tests and all kinds of comparisons.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.TemplateReference.html#jinja2.runtime.TemplateReference" title="jinja2.runtime.TemplateReference"><code class="xref py py-obj docutils literal"><span class="pre">TemplateReference</span></code></a>(context)</td>
+<td>The <cite>self</cite> in templates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.Undefined.html#jinja2.runtime.Undefined" title="jinja2.runtime.Undefined"><code class="xref py py-obj docutils literal"><span class="pre">Undefined</span></code></a>([hint,&nbsp;obj,&nbsp;name,&nbsp;exc])</td>
+<td>The default undefined type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.chain.html#jinja2.runtime.chain" title="jinja2.runtime.chain"><code class="xref py py-obj docutils literal"><span class="pre">chain</span></code></a></td>
+<td>chain(<a href="#id2"><span class="problematic" id="id3">*</span></a>iterables) &#8211;&gt; chain object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.imap.html#jinja2.runtime.imap" title="jinja2.runtime.imap"><code class="xref py py-obj docutils literal"><span class="pre">imap</span></code></a></td>
+<td>imap(func, <a href="#id4"><span class="problematic" id="id5">*</span></a>iterables) &#8211;&gt; imap object</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.runtime.text_type.html#jinja2.runtime.text_type" title="jinja2.runtime.text_type"><code class="xref py py-obj docutils literal"><span class="pre">text_type</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">unicode</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.runtime.to_string.html#jinja2.runtime.to_string" title="jinja2.runtime.to_string"><code class="xref py py-obj docutils literal"><span class="pre">to_string</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">unicode</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.TemplateNotFound.html#jinja2.runtime.TemplateNotFound" title="jinja2.runtime.TemplateNotFound"><code class="xref py py-obj docutils literal"><span class="pre">TemplateNotFound</span></code></a>(name[,&nbsp;message])</td>
+<td>Raised if a template does not exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.runtime.TemplateRuntimeError.html#jinja2.runtime.TemplateRuntimeError" title="jinja2.runtime.TemplateRuntimeError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateRuntimeError</span></code></a>([message])</td>
+<td>A generic runtime error in the template engine.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.runtime.UndefinedError.html#jinja2.runtime.UndefinedError" title="jinja2.runtime.UndefinedError"><code class="xref py py-obj docutils literal"><span class="pre">UndefinedError</span></code></a>([message])</td>
+<td>Raised if a template tries to operate on <a class="reference internal" href="generated/jinja2.runtime.Undefined.html#jinja2.runtime.Undefined" title="jinja2.runtime.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.runtime.concat.html" class="btn btn-neutral float-right" title="jinja2.runtime.concat" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.runtime.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

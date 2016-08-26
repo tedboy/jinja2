@@ -1,0 +1,6 @@
+jinja2.nodes.FloorDiv.iter_fields
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FloorDiv.iter_fields

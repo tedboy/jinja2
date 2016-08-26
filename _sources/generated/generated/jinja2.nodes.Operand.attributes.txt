@@ -1,0 +1,6 @@
+jinja2.nodes.Operand.attributes
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Operand.attributes

@@ -1,0 +1,6 @@
+jinja2.environment.Context.exported_vars
+========================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Context.exported_vars

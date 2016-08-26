@@ -1,0 +1,6 @@
+jinja2.nodes.Pos.attributes
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Pos.attributes

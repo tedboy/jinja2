@@ -1,0 +1,25 @@
+jinja2.runtime.Mapping
+======================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: Mapping
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Mapping.get
+   ~Mapping.items
+   ~Mapping.iteritems
+   ~Mapping.iterkeys
+   ~Mapping.itervalues
+   ~Mapping.keys
+   ~Mapping.values
+
+
+
+
+

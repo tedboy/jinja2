@@ -1,0 +1,6 @@
+jinja2.ext.i18n.filter_stream
+=============================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: i18n.filter_stream

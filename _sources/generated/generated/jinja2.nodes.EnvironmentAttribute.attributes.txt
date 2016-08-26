@@ -1,0 +1,6 @@
+jinja2.nodes.EnvironmentAttribute.attributes
+============================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: EnvironmentAttribute.attributes

@@ -1,0 +1,6 @@
+jinja2.ext.Extension.call_method
+================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Extension.call_method

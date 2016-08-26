@@ -1,0 +1,6 @@
+jinja2.lexer.text_type.endswith
+===============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: text_type.endswith

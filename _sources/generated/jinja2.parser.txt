@@ -1,0 +1,53 @@
+jinja2.parser
+=============
+
+.. automodule:: jinja2.parser
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      describe_token
+      describe_token_expr
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      Parser
+      imap
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.parser.Parser
+       generated/jinja2.parser.imap
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      TemplateAssertionError
+      TemplateSyntaxError
+   
+   

@@ -1,0 +1,100 @@
+jinja2.environment
+==================
+
+.. automodule:: jinja2.environment
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      concat
+      consume
+      copy_cache
+      create_cache
+      encode_filename
+      generate
+      get_lexer
+      get_next
+      get_spontaneous_environment
+      implements_iterator
+      implements_to_string
+      import_string
+      internalcode
+      iteritems
+      load_extensions
+      new_context
+      optimize
+      reduce
+      reraise
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      CodeGenerator
+      Context
+      Environment
+      EvalContext
+      LRUCache
+      Markup
+      Parser
+      Template
+      TemplateExpression
+      TemplateModule
+      TemplateStream
+      TokenStream
+      Undefined
+      ifilter
+      imap
+      text_type
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.environment.CodeGenerator
+       generated/jinja2.environment.Context
+       generated/jinja2.environment.Environment
+       generated/jinja2.environment.EvalContext
+       generated/jinja2.environment.LRUCache
+       generated/jinja2.environment.Markup
+       generated/jinja2.environment.Parser
+       generated/jinja2.environment.Template
+       generated/jinja2.environment.TemplateExpression
+       generated/jinja2.environment.TemplateModule
+       generated/jinja2.environment.TemplateStream
+       generated/jinja2.environment.TokenStream
+       generated/jinja2.environment.Undefined
+       generated/jinja2.environment.ifilter
+       generated/jinja2.environment.imap
+       generated/jinja2.environment.text_type
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      TemplateNotFound
+      TemplateRuntimeError
+      TemplateSyntaxError
+      TemplatesNotFound
+   
+   

@@ -1,0 +1,6 @@
+jinja2.runtime.LoopContextIterator.next
+=======================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: LoopContextIterator.next

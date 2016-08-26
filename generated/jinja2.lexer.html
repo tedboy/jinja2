@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.lexer &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../api.lexer.html"/>
+        <link rel="next" title="jinja2.lexer.compile_rules" href="jinja2.lexer.compile_rules.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="../api.lexer.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">jinja2.lexer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">jinja2.lexer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.compile_rules.html">jinja2.lexer.compile_rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.count_newlines.html">jinja2.lexer.count_newlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.describe_token.html">jinja2.lexer.describe_token</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.describe_token_expr.html">jinja2.lexer.describe_token_expr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.get_lexer.html">jinja2.lexer.get_lexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.implements_iterator.html">jinja2.lexer.implements_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.intern.html">jinja2.lexer.intern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.iteritems.html">jinja2.lexer.iteritems</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.Failure.html">jinja2.lexer.Failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.LRUCache.html">jinja2.lexer.LRUCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.Lexer.html">jinja2.lexer.Lexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.Token.html">jinja2.lexer.Token</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.TokenStream.html">jinja2.lexer.TokenStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.TokenStreamIterator.html">jinja2.lexer.TokenStreamIterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.deque.html">jinja2.lexer.deque</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.itemgetter.html">jinja2.lexer.itemgetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.lexer.text_type.html">jinja2.lexer.text_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.lexer.TemplateSyntaxError.html">jinja2.lexer.TemplateSyntaxError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.lexer.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>jinja2.lexer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/jinja2.lexer.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jinja2.lexer">
+<span id="jinja2-lexer"></span><h1>jinja2.lexer<a class="headerlink" href="#module-jinja2.lexer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>jinja2.lexer<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>This module implements a Jinja / Python combination lexer. The
+<cite>Lexer</cite> class provided by this module is used to do some preprocessing
+for Jinja.</p>
+<p>On the one hand it filters out invalid operators like the bitshift
+operators we don&#8217;t allow in templates. On the other hand it separates
+template code and python code in expressions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2010 by the Jinja Team.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">BSD, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.lexer.compile_rules.html#jinja2.lexer.compile_rules" title="jinja2.lexer.compile_rules"><code class="xref py py-obj docutils literal"><span class="pre">compile_rules</span></code></a>(environment)</td>
+<td>Compiles all the rules from the environment into a list of rules.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../off_doc.extensions.writing.html#jinja2.lexer.count_newlines" title="jinja2.lexer.count_newlines"><code class="xref py py-obj docutils literal"><span class="pre">count_newlines</span></code></a>(value)</td>
+<td>Count the number of newline characters in the string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.lexer.describe_token.html#jinja2.lexer.describe_token" title="jinja2.lexer.describe_token"><code class="xref py py-obj docutils literal"><span class="pre">describe_token</span></code></a>(token)</td>
+<td>Returns a description of the token.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.lexer.describe_token_expr.html#jinja2.lexer.describe_token_expr" title="jinja2.lexer.describe_token_expr"><code class="xref py py-obj docutils literal"><span class="pre">describe_token_expr</span></code></a>(expr)</td>
+<td>Like <cite>describe_token</cite> but for token expressions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.lexer.get_lexer.html#jinja2.lexer.get_lexer" title="jinja2.lexer.get_lexer"><code class="xref py py-obj docutils literal"><span class="pre">get_lexer</span></code></a>(environment)</td>
+<td>Return a lexer which is probably cached.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.lexer.implements_iterator.html#jinja2.lexer.implements_iterator" title="jinja2.lexer.implements_iterator"><code class="xref py py-obj docutils literal"><span class="pre">implements_iterator</span></code></a>(cls)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.lexer.intern.html#jinja2.lexer.intern" title="jinja2.lexer.intern"><code class="xref py py-obj docutils literal"><span class="pre">intern</span></code></a>((string)&nbsp;-&gt;&nbsp;string)</td>
+<td><a href="#id2"><span class="problematic" id="id3">``</span></a>Intern&#8217;&#8217; the given string.  This enters the string in the (global)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.lexer.iteritems.html#jinja2.lexer.iteritems" title="jinja2.lexer.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(d)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.lexer.Failure.html#jinja2.lexer.Failure" title="jinja2.lexer.Failure"><code class="xref py py-obj docutils literal"><span class="pre">Failure</span></code></a>(message[,&nbsp;cls])</td>
+<td>Class that raises a <cite>TemplateSyntaxError</cite> if called.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.lexer.LRUCache.html#jinja2.lexer.LRUCache" title="jinja2.lexer.LRUCache"><code class="xref py py-obj docutils literal"><span class="pre">LRUCache</span></code></a>(capacity)</td>
+<td>A simple LRU Cache implementation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.lexer.Lexer.html#jinja2.lexer.Lexer" title="jinja2.lexer.Lexer"><code class="xref py py-obj docutils literal"><span class="pre">Lexer</span></code></a>(environment)</td>
+<td>Class that implements a lexer for a given environment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../off_doc.extensions.writing.html#jinja2.lexer.Token" title="jinja2.lexer.Token"><code class="xref py py-obj docutils literal"><span class="pre">Token</span></code></a></td>
+<td>Token class.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../off_doc.extensions.writing.html#jinja2.lexer.TokenStream" title="jinja2.lexer.TokenStream"><code class="xref py py-obj docutils literal"><span class="pre">TokenStream</span></code></a>(generator,&nbsp;name,&nbsp;filename)</td>
+<td>A token stream is an iterable that yields <a class="reference internal" href="../off_doc.extensions.writing.html#jinja2.lexer.Token" title="jinja2.lexer.Token"><code class="xref py py-class docutils literal"><span class="pre">Token</span></code></a>s.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.lexer.TokenStreamIterator.html#jinja2.lexer.TokenStreamIterator" title="jinja2.lexer.TokenStreamIterator"><code class="xref py py-obj docutils literal"><span class="pre">TokenStreamIterator</span></code></a>(stream)</td>
+<td>The iterator for tokenstreams.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.lexer.deque.html#jinja2.lexer.deque" title="jinja2.lexer.deque"><code class="xref py py-obj docutils literal"><span class="pre">deque</span></code></a></td>
+<td>deque([iterable[, maxlen]]) &#8211;&gt; deque object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.lexer.itemgetter.html#jinja2.lexer.itemgetter" title="jinja2.lexer.itemgetter"><code class="xref py py-obj docutils literal"><span class="pre">itemgetter</span></code></a></td>
+<td>itemgetter(item, ...) &#8211;&gt; itemgetter object</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.lexer.text_type.html#jinja2.lexer.text_type" title="jinja2.lexer.text_type"><code class="xref py py-obj docutils literal"><span class="pre">text_type</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">unicode</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.lexer.TemplateSyntaxError.html#jinja2.lexer.TemplateSyntaxError" title="jinja2.lexer.TemplateSyntaxError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateSyntaxError</span></code></a>(message,&nbsp;lineno[,&nbsp;name,&nbsp;...])</td>
+<td>Raised to tell the user that there is a problem with the template.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.lexer.compile_rules.html" class="btn btn-neutral float-right" title="jinja2.lexer.compile_rules" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.lexer.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

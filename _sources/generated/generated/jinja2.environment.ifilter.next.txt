@@ -1,0 +1,6 @@
+jinja2.environment.ifilter.next
+===============================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: ifilter.next

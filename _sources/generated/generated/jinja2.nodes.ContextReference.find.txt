@@ -1,0 +1,6 @@
+jinja2.nodes.ContextReference.find
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ContextReference.find

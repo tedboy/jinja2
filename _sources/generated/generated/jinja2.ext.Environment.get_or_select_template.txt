@@ -1,0 +1,6 @@
+jinja2.ext.Environment.get_or_select_template
+=============================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Environment.get_or_select_template

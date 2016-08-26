@@ -1,0 +1,6 @@
+jinja2.runtime.Markup.lstrip
+============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Markup.lstrip

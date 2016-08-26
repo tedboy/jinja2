@@ -1,0 +1,38 @@
+jinja2.nodes.Filter
+===================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Filter
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Filter.__init__
+   ~Filter.as_const
+   ~Filter.can_assign
+   ~Filter.find
+   ~Filter.find_all
+   ~Filter.iter_child_nodes
+   ~Filter.iter_fields
+   ~Filter.set_ctx
+   ~Filter.set_environment
+   ~Filter.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Filter.abstract
+   ~Filter.attributes
+   ~Filter.fields
+

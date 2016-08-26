@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.ext.babel_extract &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="jinja2.ext" href="jinja2.ext.html"/>
+        <link rel="next" title="jinja2.ext.concat" href="jinja2.ext.concat.html"/>
+        <link rel="prev" title="jinja2.ext" href="jinja2.ext.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="jinja2.ext.html#id1">jinja2.ext</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="jinja2.ext.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.ext.babel_extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.concat.html">jinja2.ext.concat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.contextfunction.html">jinja2.ext.contextfunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.extract_from_ast.html">jinja2.ext.extract_from_ast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.import_string.html">jinja2.ext.import_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.iteritems.html">jinja2.ext.iteritems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.with_metaclass.html">jinja2.ext.with_metaclass</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="jinja2.ext.html#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jinja2.ext.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.ext.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="jinja2.ext.html">jinja2.ext</a> &raquo;</li>
+        
+      <li>jinja2.ext.babel_extract</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/jinja2.ext.babel_extract.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-ext-babel-extract">
+<h1>jinja2.ext.babel_extract<a class="headerlink" href="#jinja2-ext-babel-extract" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="jinja2.ext.babel_extract">
+<code class="descclassname">jinja2.ext.</code><code class="descname">babel_extract</code><span class="sig-paren">(</span><em>fileobj</em>, <em>keywords</em>, <em>comment_tags</em>, <em>options</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jinja2/ext.html#babel_extract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.ext.babel_extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Babel extraction method for Jinja templates.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.3: </span>Basic support for translation comments was added.  If <cite>comment_tags</cite>
+is now set to a list of keywords for extraction, the extractor will
+try to find the best preceeding comment that begins with one of the
+keywords.  For best results, make sure to not have more than one
+gettext call in one line of code and the matching comment in the
+same line or the line before.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5.1: </span>The <cite>newstyle_gettext</cite> flag can be set to <cite>True</cite> to enable newstyle
+gettext calls.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.7: </span>A <cite>silent</cite> option can now be provided.  If set to <cite>False</cite> template
+syntax errors are propagated instead of being ignored.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>fileobj</strong> &#8211; the file-like object the messages should be extracted from</li>
+<li><strong>keywords</strong> &#8211; a list of keywords (i.e. function names) that should be
+recognized as translation functions</li>
+<li><strong>comment_tags</strong> &#8211; a list of translator tags to search for and include
+in the results.</li>
+<li><strong>options</strong> &#8211; a dictionary of additional options (optional)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">an iterator over <code class="docutils literal"><span class="pre">(lineno,</span> <span class="pre">funcname,</span> <span class="pre">message,</span> <span class="pre">comments)</span></code> tuples.
+(comments will be empty currently)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.ext.concat.html" class="btn btn-neutral float-right" title="jinja2.ext.concat" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jinja2.ext.html" class="btn btn-neutral" title="jinja2.ext" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+jinja2.environment.load_extensions
+==================================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: load_extensions

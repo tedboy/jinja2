@@ -1,0 +1,6 @@
+jinja2.nodes.Block.attributes
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Block.attributes

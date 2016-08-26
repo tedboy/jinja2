@@ -1,0 +1,6 @@
+jinja2.environment.Environment.call_test
+========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Environment.call_test

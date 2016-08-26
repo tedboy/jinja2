@@ -1,0 +1,6 @@
+jinja2.parser.Parser.parse_if
+=============================
+
+.. currentmodule:: jinja2.parser
+
+.. automethod:: Parser.parse_if

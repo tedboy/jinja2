@@ -1,0 +1,6 @@
+jinja2.ext.Environment.linked_to
+================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: Environment.linked_to

@@ -1,0 +1,6 @@
+jinja2.nodes.FloorDiv.attributes
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: FloorDiv.attributes

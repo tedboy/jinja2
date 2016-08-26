@@ -1,0 +1,6 @@
+jinja2.nodes.Break.set_ctx
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Break.set_ctx

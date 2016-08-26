@@ -1,0 +1,6 @@
+jinja2.ext.do.tags
+==================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: do.tags

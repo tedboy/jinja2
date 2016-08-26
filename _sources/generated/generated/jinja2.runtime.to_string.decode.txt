@@ -1,0 +1,6 @@
+jinja2.runtime.to_string.decode
+===============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: to_string.decode

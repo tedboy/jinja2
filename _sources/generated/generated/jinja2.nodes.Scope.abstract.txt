@@ -1,0 +1,6 @@
+jinja2.nodes.Scope.abstract
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Scope.abstract

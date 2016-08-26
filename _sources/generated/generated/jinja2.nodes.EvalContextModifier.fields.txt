@@ -1,0 +1,6 @@
+jinja2.nodes.EvalContextModifier.fields
+=======================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: EvalContextModifier.fields

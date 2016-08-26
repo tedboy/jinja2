@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.return_buffer_contents
+=======================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.return_buffer_contents

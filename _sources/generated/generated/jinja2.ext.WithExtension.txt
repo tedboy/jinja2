@@ -1,0 +1,35 @@
+jinja2.ext.WithExtension
+========================
+.. currentmodule:: jinja2.ext
+.. autoclass:: WithExtension
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~WithExtension.__init__
+   ~WithExtension.attr
+   ~WithExtension.bind
+   ~WithExtension.call_method
+   ~WithExtension.filter_stream
+   ~WithExtension.parse
+   ~WithExtension.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~WithExtension.identifier
+   ~WithExtension.priority
+   ~WithExtension.tags
+

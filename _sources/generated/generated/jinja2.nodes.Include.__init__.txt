@@ -1,0 +1,6 @@
+jinja2.nodes.Include.__init__
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Include.__init__

@@ -1,0 +1,6 @@
+jinja2.nodes.Neg.iter_child_nodes
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Neg.iter_child_nodes

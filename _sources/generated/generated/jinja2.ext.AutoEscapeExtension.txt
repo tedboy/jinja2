@@ -1,0 +1,35 @@
+jinja2.ext.AutoEscapeExtension
+==============================
+.. currentmodule:: jinja2.ext
+.. autoclass:: AutoEscapeExtension
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~AutoEscapeExtension.__init__
+   ~AutoEscapeExtension.attr
+   ~AutoEscapeExtension.bind
+   ~AutoEscapeExtension.call_method
+   ~AutoEscapeExtension.filter_stream
+   ~AutoEscapeExtension.parse
+   ~AutoEscapeExtension.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~AutoEscapeExtension.identifier
+   ~AutoEscapeExtension.priority
+   ~AutoEscapeExtension.tags
+

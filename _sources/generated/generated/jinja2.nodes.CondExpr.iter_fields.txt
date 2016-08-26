@@ -1,0 +1,6 @@
+jinja2.nodes.CondExpr.iter_fields
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: CondExpr.iter_fields

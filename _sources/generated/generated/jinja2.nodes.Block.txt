@@ -1,0 +1,36 @@
+jinja2.nodes.Block
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Block
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Block.__init__
+   ~Block.find
+   ~Block.find_all
+   ~Block.iter_child_nodes
+   ~Block.iter_fields
+   ~Block.set_ctx
+   ~Block.set_environment
+   ~Block.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Block.abstract
+   ~Block.attributes
+   ~Block.fields
+

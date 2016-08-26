@@ -1,0 +1,6 @@
+jinja2.nodes.deque.rotate
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.rotate

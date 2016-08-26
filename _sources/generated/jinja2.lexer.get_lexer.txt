@@ -1,0 +1,6 @@
+jinja2.lexer.get_lexer
+======================
+
+.. currentmodule:: jinja2.lexer
+
+.. autofunction:: get_lexer

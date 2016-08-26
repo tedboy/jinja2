@@ -1,0 +1,6 @@
+jinja2.nodes.AssignBlock.set_ctx
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: AssignBlock.set_ctx

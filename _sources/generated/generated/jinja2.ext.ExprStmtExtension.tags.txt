@@ -1,0 +1,6 @@
+jinja2.ext.ExprStmtExtension.tags
+=================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: ExprStmtExtension.tags

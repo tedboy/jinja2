@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Introduction &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
+        <link rel="next" title="2. API" href="off_doc.api.html"/>
+        <link rel="prev" title="Stuffs from the official doc" href="off_doc.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">1.1. Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">1.2. Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#as-a-python-egg-via-easy-install">1.2.1. As a Python egg (via <cite>easy_install</cite>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-the-tarball-release">1.2.2. From the tarball release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-the-development-version">1.2.3. Installing the development version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#markupsafe-dependency">1.2.4. MarkupSafe Dependency</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-api-usage">1.3. Basic API Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-python-3-support">1.4. Experimental Python 3 Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+      <li>1. Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/off_doc.intro.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This is the documentation for the Jinja2 general purpose templating language.
+Jinja2 is a library for Python that is designed to be flexible, fast and secure.</p>
+<p>If you have any exposure to other text-based template languages, such as Smarty or
+Django, you should feel right at home with Jinja2.  It&#8217;s both designer and
+developer friendly by sticking to Python&#8217;s principles and adding functionality
+useful for templating environments.</p>
+<div class="section" id="prerequisites">
+<h2>1.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Jinja2 works with Python 2.6.x, 2.7.x and &gt;= 3.3.  If you are using Python
+3.2 you can use an older release of Jinja2 (2.6) as support for Python 3.2
+was dropped in Jinja2 version 2.7.</p>
+<p>If you wish to use the <a class="reference internal" href="generated/generated/jinja2.PackageLoader.html#jinja2.PackageLoader" title="jinja2.PackageLoader"><code class="xref py py-class docutils literal"><span class="pre">PackageLoader</span></code></a> class, you will also
+need <a class="reference external" href="http://peak.telecommunity.com/DevCenter/setuptools">setuptools</a> or <a class="reference external" href="http://pypi.python.org/pypi/distribute">distribute</a> installed at runtime.</p>
+</div>
+<div class="section" id="installation">
+<h2>1.2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You have multiple ways to install Jinja2.  If you are unsure what to do, go
+with the Python egg or tarball.</p>
+<div class="section" id="as-a-python-egg-via-easy-install">
+<h3>1.2.1. As a Python egg (via <cite>easy_install</cite>)<a class="headerlink" href="#as-a-python-egg-via-easy-install" title="Permalink to this headline">¶</a></h3>
+<p>You can install the most recent Jinja2 version using <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">easy_install</a> or <a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>easy_install Jinja2
+pip install Jinja2
+</pre></div>
+</div>
+<p>This will install a Jinja2 egg in your Python installation&#8217;s site-packages
+directory.</p>
+</div>
+<div class="section" id="from-the-tarball-release">
+<h3>1.2.2. From the tarball release<a class="headerlink" href="#from-the-tarball-release" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Download the most recent tarball from the <a class="reference external" href="http://pypi.python.org/pypi/Jinja2">download page</a></li>
+<li>Unpack the tarball</li>
+<li><code class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></li>
+</ol>
+<p>Note that you either have to have <cite>setuptools</cite> or <cite>distribute</cite> installed;
+the latter is preferred.</p>
+<p>This will install Jinja2 into your Python installation&#8217;s site-packages directory.</p>
+</div>
+<div class="section" id="installing-the-development-version">
+<h3>1.2.3. Installing the development version<a class="headerlink" href="#installing-the-development-version" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Install <a class="reference external" href="http://git-scm.org/">git</a></li>
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git://github.com/pallets/jinja.git</span></code></li>
+<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">jinja2</span></code></li>
+<li><code class="docutils literal"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">jinja2</span> <span class="pre">/usr/lib/python2.X/site-packages</span></code></li>
+</ol>
+<p>As an alternative to steps 4 you can also do <code class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">develop</span></code>
+which will install the package via <cite>distribute</cite> in development mode.  This also
+has the advantage that the C extensions are compiled.</p>
+</div>
+<div class="section" id="markupsafe-dependency">
+<h3>1.2.4. MarkupSafe Dependency<a class="headerlink" href="#markupsafe-dependency" title="Permalink to this headline">¶</a></h3>
+<p>As of version 2.7 Jinja2 depends on the <a class="reference external" href="http://pypi.python.org/pypi/MarkupSafe">MarkupSafe</a> module.  If you
+install Jinja2 via <cite>pip</cite> or <cite>easy_install</cite> it will be installed
+automatically for you.</p>
+</div>
+</div>
+<div class="section" id="basic-api-usage">
+<h2>1.3. Basic API Usage<a class="headerlink" href="#basic-api-usage" title="Permalink to this headline">¶</a></h2>
+<p>This section gives you a brief introduction to the Python API for Jinja2
+templates.</p>
+<p>The most basic way to create a template and render it is through
+<a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a>.  This however is not the recommended way to
+work with it if your templates are not loaded from strings but the file
+system or another data source:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;Hello {{ name }}!&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John Doe&#39;</span><span class="p">)</span>
+<span class="go">u&#39;Hello John Doe!&#39;</span>
+</pre></div>
+</div>
+<p>By creating an instance of <a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a> you get back a new template
+object that provides a method called <a class="reference internal" href="generated/generated/jinja2.Template.render.html#jinja2.Template.render" title="jinja2.Template.render"><code class="xref py py-meth docutils literal"><span class="pre">render()</span></code></a> which when
+called with a dict or keyword arguments expands the template.  The dict
+or keywords arguments passed to the template are the so-called &#8220;context&#8221;
+of the template.</p>
+<p>What you can see here is that Jinja2 is using unicode internally and the
+return value is an unicode string.  So make sure that your application is
+indeed using unicode internally.</p>
+</div>
+<div class="section" id="experimental-python-3-support">
+<h2>1.4. Experimental Python 3 Support<a class="headerlink" href="#experimental-python-3-support" title="Permalink to this headline">¶</a></h2>
+<p>Jinja 2.7 brings experimental support for Python &gt;=3.3.  It means that all
+unittests pass on the new version, but there might still be small bugs in
+there and behavior might be inconsistent.  If you notice any bugs, please
+provide feedback in the <a class="reference external" href="http://github.com/pallets/jinja/issues">Jinja bug tracker</a>.</p>
+<p>Also please keep in mind that the documentation is written with Python 2
+in mind, so you will have to adapt the shown code examples to Python 3 syntax
+for yourself.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="off_doc.api.html" class="btn btn-neutral float-right" title="2. API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="off_doc.html" class="btn btn-neutral" title="Stuffs from the official doc" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

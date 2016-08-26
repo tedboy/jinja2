@@ -1,0 +1,36 @@
+jinja2.nodes.EvalContextModifier
+================================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: EvalContextModifier
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~EvalContextModifier.__init__
+   ~EvalContextModifier.find
+   ~EvalContextModifier.find_all
+   ~EvalContextModifier.iter_child_nodes
+   ~EvalContextModifier.iter_fields
+   ~EvalContextModifier.set_ctx
+   ~EvalContextModifier.set_environment
+   ~EvalContextModifier.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~EvalContextModifier.abstract
+   ~EvalContextModifier.attributes
+   ~EvalContextModifier.fields
+

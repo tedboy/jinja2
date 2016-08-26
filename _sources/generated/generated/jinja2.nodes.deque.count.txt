@@ -1,0 +1,6 @@
+jinja2.nodes.deque.count
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.count

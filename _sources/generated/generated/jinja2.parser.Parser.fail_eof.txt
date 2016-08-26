@@ -1,0 +1,6 @@
+jinja2.parser.Parser.fail_eof
+=============================
+
+.. currentmodule:: jinja2.parser
+
+.. automethod:: Parser.fail_eof

@@ -1,0 +1,6 @@
+jinja2.environment.Environment.extend
+=====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Environment.extend

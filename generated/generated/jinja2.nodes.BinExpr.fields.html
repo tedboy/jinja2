@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.nodes.BinExpr.fields &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="jinja2.nodes.BinExpr" href="jinja2.nodes.BinExpr.html"/>
+        <link rel="next" title="jinja2.nodes.BinExpr.operator" href="jinja2.nodes.BinExpr.operator.html"/>
+        <link rel="prev" title="jinja2.nodes.BinExpr.attributes" href="jinja2.nodes.BinExpr.attributes.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.nodes.html#id1">jinja2.nodes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.nodes.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.nodes.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Add.html">jinja2.nodes.Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.And.html">jinja2.nodes.And</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Assign.html">jinja2.nodes.Assign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.AssignBlock.html">jinja2.nodes.AssignBlock</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="jinja2.nodes.BinExpr.html">jinja2.nodes.BinExpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Block.html">jinja2.nodes.Block</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Break.html">jinja2.nodes.Break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Call.html">jinja2.nodes.Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.CallBlock.html">jinja2.nodes.CallBlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Compare.html">jinja2.nodes.Compare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Concat.html">jinja2.nodes.Concat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.CondExpr.html">jinja2.nodes.CondExpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Const.html">jinja2.nodes.Const</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.ContextReference.html">jinja2.nodes.ContextReference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Continue.html">jinja2.nodes.Continue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Dict.html">jinja2.nodes.Dict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Div.html">jinja2.nodes.Div</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.EnvironmentAttribute.html">jinja2.nodes.EnvironmentAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.EvalContext.html">jinja2.nodes.EvalContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.EvalContextModifier.html">jinja2.nodes.EvalContextModifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Expr.html">jinja2.nodes.Expr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.ExprStmt.html">jinja2.nodes.ExprStmt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Extends.html">jinja2.nodes.Extends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.ExtensionAttribute.html">jinja2.nodes.ExtensionAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Filter.html">jinja2.nodes.Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.FilterBlock.html">jinja2.nodes.FilterBlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.FloorDiv.html">jinja2.nodes.FloorDiv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.For.html">jinja2.nodes.For</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.FromImport.html">jinja2.nodes.FromImport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Getattr.html">jinja2.nodes.Getattr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Getitem.html">jinja2.nodes.Getitem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Helper.html">jinja2.nodes.Helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.If.html">jinja2.nodes.If</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Import.html">jinja2.nodes.Import</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.ImportedName.html">jinja2.nodes.ImportedName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Include.html">jinja2.nodes.Include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.InternalName.html">jinja2.nodes.InternalName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Keyword.html">jinja2.nodes.Keyword</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.List.html">jinja2.nodes.List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Literal.html">jinja2.nodes.Literal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Macro.html">jinja2.nodes.Macro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.MarkSafe.html">jinja2.nodes.MarkSafe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.MarkSafeIfAutoescape.html">jinja2.nodes.MarkSafeIfAutoescape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Markup.html">jinja2.nodes.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Mod.html">jinja2.nodes.Mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Mul.html">jinja2.nodes.Mul</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Name.html">jinja2.nodes.Name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Neg.html">jinja2.nodes.Neg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Node.html">jinja2.nodes.Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.NodeType.html">jinja2.nodes.NodeType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Not.html">jinja2.nodes.Not</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Operand.html">jinja2.nodes.Operand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Or.html">jinja2.nodes.Or</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Output.html">jinja2.nodes.Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Pair.html">jinja2.nodes.Pair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Pos.html">jinja2.nodes.Pos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Pow.html">jinja2.nodes.Pow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Scope.html">jinja2.nodes.Scope</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.ScopedEvalContextModifier.html">jinja2.nodes.ScopedEvalContextModifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Slice.html">jinja2.nodes.Slice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Stmt.html">jinja2.nodes.Stmt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Sub.html">jinja2.nodes.Sub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Template.html">jinja2.nodes.Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.TemplateData.html">jinja2.nodes.TemplateData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Test.html">jinja2.nodes.Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.Tuple.html">jinja2.nodes.Tuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.UnaryExpr.html">jinja2.nodes.UnaryExpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.deque.html">jinja2.nodes.deque</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.izip.html">jinja2.nodes.izip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.nodes.text_type.html">jinja2.nodes.text_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.nodes.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.nodes.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.nodes.html">jinja2.nodes</a> &raquo;</li>
+        
+          <li><a href="jinja2.nodes.BinExpr.html">jinja2.nodes.BinExpr</a> &raquo;</li>
+        
+      <li>jinja2.nodes.BinExpr.fields</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.nodes.BinExpr.fields.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-nodes-binexpr-fields">
+<h1>jinja2.nodes.BinExpr.fields<a class="headerlink" href="#jinja2-nodes-binexpr-fields" title="Permalink to this headline">¶</a></h1>
+<dl class="attribute">
+<dt id="jinja2.nodes.BinExpr.fields">
+<code class="descclassname">BinExpr.</code><code class="descname">fields</code><em class="property"> = ('left', 'right')</em><a class="headerlink" href="#jinja2.nodes.BinExpr.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.nodes.BinExpr.operator.html" class="btn btn-neutral float-right" title="jinja2.nodes.BinExpr.operator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jinja2.nodes.BinExpr.attributes.html" class="btn btn-neutral" title="jinja2.nodes.BinExpr.attributes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

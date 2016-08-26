@@ -1,0 +1,6 @@
+jinja2.environment.Environment.lexer
+====================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Environment.lexer

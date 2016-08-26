@@ -1,0 +1,6 @@
+jinja2.nodes.ImportedName.can_assign
+====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ImportedName.can_assign

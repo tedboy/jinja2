@@ -1,0 +1,6 @@
+jinja2.nodes.Getitem.fields
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Getitem.fields

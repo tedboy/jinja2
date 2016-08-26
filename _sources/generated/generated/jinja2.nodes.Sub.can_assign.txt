@@ -1,0 +1,6 @@
+jinja2.nodes.Sub.can_assign
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Sub.can_assign

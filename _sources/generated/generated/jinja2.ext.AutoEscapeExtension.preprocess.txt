@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.preprocess
+=========================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: AutoEscapeExtension.preprocess

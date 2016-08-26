@@ -1,0 +1,6 @@
+jinja2.runtime.Mapping.iterkeys
+===============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Mapping.iterkeys

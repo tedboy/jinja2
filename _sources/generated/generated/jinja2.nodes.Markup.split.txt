@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.split
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.split

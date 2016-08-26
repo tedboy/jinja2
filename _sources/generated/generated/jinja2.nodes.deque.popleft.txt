@@ -1,0 +1,6 @@
+jinja2.nodes.deque.popleft
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.popleft

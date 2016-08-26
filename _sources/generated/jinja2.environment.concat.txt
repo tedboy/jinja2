@@ -1,0 +1,6 @@
+jinja2.environment.concat
+=========================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: concat

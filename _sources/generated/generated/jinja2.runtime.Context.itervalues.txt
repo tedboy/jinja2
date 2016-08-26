@@ -1,0 +1,6 @@
+jinja2.runtime.Context.itervalues
+=================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.itervalues

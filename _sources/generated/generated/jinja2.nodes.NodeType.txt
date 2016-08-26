@@ -1,0 +1,19 @@
+jinja2.nodes.NodeType
+=====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: NodeType
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~NodeType.mro
+
+
+
+
+

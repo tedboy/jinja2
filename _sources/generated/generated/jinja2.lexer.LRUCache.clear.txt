@@ -1,0 +1,6 @@
+jinja2.lexer.LRUCache.clear
+===========================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: LRUCache.clear

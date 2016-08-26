@@ -1,0 +1,6 @@
+jinja2.runtime.StrictUndefined.__init__
+=======================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: StrictUndefined.__init__

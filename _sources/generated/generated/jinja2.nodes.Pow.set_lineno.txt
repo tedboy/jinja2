@@ -1,0 +1,6 @@
+jinja2.nodes.Pow.set_lineno
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Pow.set_lineno

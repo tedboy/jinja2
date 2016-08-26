@@ -1,0 +1,6 @@
+jinja2.nodes.FromImport.__init__
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FromImport.__init__

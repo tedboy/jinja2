@@ -1,0 +1,6 @@
+jinja2.nodes.Compare.find
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Compare.find

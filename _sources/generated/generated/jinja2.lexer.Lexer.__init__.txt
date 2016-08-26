@@ -1,0 +1,6 @@
+jinja2.lexer.Lexer.__init__
+===========================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: Lexer.__init__

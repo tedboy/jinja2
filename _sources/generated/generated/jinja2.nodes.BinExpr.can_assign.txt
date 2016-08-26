@@ -1,0 +1,6 @@
+jinja2.nodes.BinExpr.can_assign
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: BinExpr.can_assign

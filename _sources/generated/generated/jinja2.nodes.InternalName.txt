@@ -1,0 +1,38 @@
+jinja2.nodes.InternalName
+=========================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: InternalName
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~InternalName.__init__
+   ~InternalName.as_const
+   ~InternalName.can_assign
+   ~InternalName.find
+   ~InternalName.find_all
+   ~InternalName.iter_child_nodes
+   ~InternalName.iter_fields
+   ~InternalName.set_ctx
+   ~InternalName.set_environment
+   ~InternalName.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~InternalName.abstract
+   ~InternalName.attributes
+   ~InternalName.fields
+

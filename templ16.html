@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.16. List of Global Functions &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="4.17. Extensions" href="templ17.html"/>
+        <link rel="prev" title="4.15. List of Builtin Tests" href="templ15.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">4.16. List of Global Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
+        
+      <li>4.16. List of Global Functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/templ16.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="list-of-global-functions">
+<span id="builtin-globals"></span><h1>4.16. List of Global Functions<a class="headerlink" href="#list-of-global-functions" title="Permalink to this headline">¶</a></h1>
+<p>The following functions are available in the global scope by default:</p>
+<dl class="function">
+<dt id="range">
+<code class="descname">range</code><span class="sig-paren">(</span><span class="optional">[</span><em>start</em>, <span class="optional">]</span><em>stop</em><span class="optional">[</span>, <em>step</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list containing an arithmetic progression of integers.
+<code class="docutils literal"><span class="pre">range(i,</span> <span class="pre">j)</span></code> returns <code class="docutils literal"><span class="pre">[i,</span> <span class="pre">i+1,</span> <span class="pre">i+2,</span> <span class="pre">...,</span> <span class="pre">j-1]</span></code>;
+start (!) defaults to <code class="docutils literal"><span class="pre">0</span></code>.
+When step is given, it specifies the increment (or decrement).
+For example, <code class="docutils literal"><span class="pre">range(4)</span></code> and <code class="docutils literal"><span class="pre">range(0,</span> <span class="pre">4,</span> <span class="pre">1)</span></code> return <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>.
+The end point is omitted!
+These are exactly the valid indices for a list of 4 elements.</p>
+<p>This is useful to repeat a template block multiple times, e.g.
+to fill a list.  Imagine you have 7 users in the list but you want to
+render three empty items to enforce a height with CSS:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.username</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">number</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="m">10</span> <span class="o">-</span> <span class="nv">users</span><span class="o">|</span><span class="nf">count</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;empty&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lipsum">
+<code class="descname">lipsum</code><span class="sig-paren">(</span><em>n=5</em>, <em>html=True</em>, <em>min=20</em>, <em>max=100</em><span class="sig-paren">)</span><a class="headerlink" href="#lipsum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates some lorem ipsum for the template.  By default, five paragraphs
+of HTML are generated with each paragraph between 20 and 100 words.
+If html is False, regular text is returned.  This is useful to generate simple
+contents for layout testing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dict">
+<code class="descname">dict</code><span class="sig-paren">(</span><em>**items</em><span class="sig-paren">)</span><a class="headerlink" href="#dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>A convenient alternative to dict literals.  <code class="docutils literal"><span class="pre">{'foo':</span> <span class="pre">'bar'}</span></code> is the same
+as <code class="docutils literal"><span class="pre">dict(foo='bar')</span></code>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cycler">
+<em class="property">class </em><code class="descname">cycler</code><span class="sig-paren">(</span><em>*items</em><span class="sig-paren">)</span><a class="headerlink" href="#cycler" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cycler allows you to cycle among values similar to how <cite>loop.cycle</cite>
+works.  Unlike <cite>loop.cycle</cite>, you can use this cycler outside of
+loops or over multiple loops.</p>
+<p>This can be very useful if you want to show a list of folders and
+files with the folders on top but both in the same list with alternating
+row colors.</p>
+<p>The following example shows how <cite>cycler</cite> can be used:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">row_class</span> <span class="o">=</span> <span class="nv">cycler</span><span class="o">(</span><span class="s1">&#39;odd&#39;</span><span class="o">,</span> <span class="s1">&#39;even&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;browser&quot;</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">folder</span> <span class="k">in</span> <span class="nv">folders</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;folder </span><span class="cp">{{</span> <span class="nv">row_class.next</span><span class="o">()</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">folder</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">filename</span> <span class="k">in</span> <span class="nv">files</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;file </span><span class="cp">{{</span> <span class="nv">row_class.next</span><span class="o">()</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">filename</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>A cycler has the following attributes and methods:</p>
+<dl class="method">
+<dt id="cycler.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cycler.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the cycle to the first item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cycler.next">
+<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cycler.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Goes one item ahead and returns the then-current item.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cycler.current">
+<code class="descname">current</code><a class="headerlink" href="#cycler.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current item.</p>
+</dd></dl>
+
+<p><strong>new in Jinja 2.1</strong></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="joiner">
+<em class="property">class </em><code class="descname">joiner</code><span class="sig-paren">(</span><em>sep='</em>, <em>'</em><span class="sig-paren">)</span><a class="headerlink" href="#joiner" title="Permalink to this definition">¶</a></dt>
+<dd><p>A tiny helper that can be used to &#8220;join&#8221; multiple sections.  A joiner is
+passed a string and will return that string every time it&#8217;s called, except
+the first time (in which case it returns an empty string).  You can
+use this to join things:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">pipe</span> <span class="o">=</span> <span class="nv">joiner</span><span class="o">(</span><span class="s2">&quot;|&quot;</span><span class="o">)</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">categories</span> <span class="cp">%}</span> <span class="cp">{{</span> <span class="nv">pipe</span><span class="o">()</span> <span class="cp">}}</span>
+    Categories: <span class="cp">{{</span> <span class="nv">categories</span><span class="o">|</span><span class="nf">join</span><span class="o">(</span><span class="s2">&quot;, &quot;</span><span class="o">)</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">author</span> <span class="cp">%}</span> <span class="cp">{{</span> <span class="nv">pipe</span><span class="o">()</span> <span class="cp">}}</span>
+    Author: <span class="cp">{{</span> <span class="nv">author</span><span class="o">()</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">can_edit</span> <span class="cp">%}</span> <span class="cp">{{</span> <span class="nv">pipe</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;?action=edit&quot;</span><span class="p">&gt;</span>Edit<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p><strong>new in Jinja 2.1</strong></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templ17.html" class="btn btn-neutral float-right" title="4.17. Extensions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templ15.html" class="btn btn-neutral" title="4.15. List of Builtin Tests" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

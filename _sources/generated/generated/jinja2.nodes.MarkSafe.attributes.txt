@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafe.attributes
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: MarkSafe.attributes

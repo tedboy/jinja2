@@ -1,0 +1,6 @@
+jinja2.nodes.FilterBlock.set_lineno
+===================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FilterBlock.set_lineno

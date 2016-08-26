@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.unescape
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.unescape

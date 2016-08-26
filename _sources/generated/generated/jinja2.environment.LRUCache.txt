@@ -1,0 +1,29 @@
+jinja2.environment.LRUCache
+===========================
+.. currentmodule:: jinja2.environment
+.. autoclass:: LRUCache
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LRUCache.__init__
+   ~LRUCache.clear
+   ~LRUCache.copy
+   ~LRUCache.get
+   ~LRUCache.items
+   ~LRUCache.iteritems
+   ~LRUCache.iterkeys
+   ~LRUCache.itervalue
+   ~LRUCache.keys
+   ~LRUCache.setdefault
+   ~LRUCache.values
+
+
+
+
+

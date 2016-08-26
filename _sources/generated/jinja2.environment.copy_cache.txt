@@ -1,0 +1,6 @@
+jinja2.environment.copy_cache
+=============================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: copy_cache

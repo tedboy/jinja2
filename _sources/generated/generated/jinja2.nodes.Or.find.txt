@@ -1,0 +1,6 @@
+jinja2.nodes.Or.find
+====================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Or.find

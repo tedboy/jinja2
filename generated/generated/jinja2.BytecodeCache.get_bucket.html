@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1.3.2.1.3. jinja2.BytecodeCache.get_bucket &mdash; Jinja2 API</title>
+  <title>jinja2.BytecodeCache.get_bucket &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="../../index.html"/>
-        <link rel="up" title="1.1.3.2. jinja2.BytecodeCache" href="jinja2.BytecodeCache.html"/>
-        <link rel="next" title="1.1.3.2.1.4. jinja2.BytecodeCache.get_cache_key" href="jinja2.BytecodeCache.get_cache_key.html"/>
-        <link rel="prev" title="1.1.3.2.1.2. jinja2.BytecodeCache.dump_bytecode" href="jinja2.BytecodeCache.dump_bytecode.html"/> 
+        <link rel="up" title="jinja2.BytecodeCache" href="jinja2.BytecodeCache.html"/>
+        <link rel="next" title="jinja2.BytecodeCache.get_cache_key" href="jinja2.BytecodeCache.get_cache_key.html"/>
+        <link rel="prev" title="jinja2.BytecodeCache.dump_bytecode" href="jinja2.BytecodeCache.dump_bytecode.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -85,37 +85,45 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.html">1. jinja2</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.html#id1">1.1. jinja2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#nutshell">1.1.1. Nutshell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#functions">1.1.2. Functions</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.html#classes">1.1.3. Classes</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="jinja2.BaseLoader.html">1.1.3.1. jinja2.BaseLoader</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="jinja2.BytecodeCache.html">1.1.3.2. jinja2.BytecodeCache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.ChoiceLoader.html">1.1.3.3. jinja2.ChoiceLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.DebugUndefined.html">1.1.3.4. jinja2.DebugUndefined</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.DictLoader.html">1.1.3.5. jinja2.DictLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Environment.html">1.1.3.6. jinja2.Environment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemBytecodeCache.html">1.1.3.7. jinja2.FileSystemBytecodeCache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemLoader.html">1.1.3.8. jinja2.FileSystemLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.FunctionLoader.html">1.1.3.9. jinja2.FunctionLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Markup.html">1.1.3.10. jinja2.Markup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.MemcachedBytecodeCache.html">1.1.3.11. jinja2.MemcachedBytecodeCache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.ModuleLoader.html">1.1.3.12. jinja2.ModuleLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.PackageLoader.html">1.1.3.13. jinja2.PackageLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.PrefixLoader.html">1.1.3.14. jinja2.PrefixLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.StrictUndefined.html">1.1.3.15. jinja2.StrictUndefined</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Template.html">1.1.3.16. jinja2.Template</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Undefined.html">1.1.3.17. jinja2.Undefined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.html">jinja2</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.html#id1">jinja2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#nutshell">Nutshell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.BaseLoader.html">jinja2.BaseLoader</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="jinja2.BytecodeCache.html">jinja2.BytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ChoiceLoader.html">jinja2.ChoiceLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.DebugUndefined.html">jinja2.DebugUndefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.DictLoader.html">jinja2.DictLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Environment.html">jinja2.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemBytecodeCache.html">jinja2.FileSystemBytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemLoader.html">jinja2.FileSystemLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.FunctionLoader.html">jinja2.FunctionLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Markup.html">jinja2.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.MemcachedBytecodeCache.html">jinja2.MemcachedBytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ModuleLoader.html">jinja2.ModuleLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.PackageLoader.html">jinja2.PackageLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.PrefixLoader.html">jinja2.PrefixLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.StrictUndefined.html">jinja2.StrictUndefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Template.html">jinja2.Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Undefined.html">jinja2.Undefined</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#exceptions">1.1.4. Exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#exceptions">Exceptions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -159,11 +167,11 @@
         
           <li><a href="../../api.html">&lt;no title&gt;</a> &raquo;</li>
         
-          <li><a href="../jinja2.html">1. jinja2</a> &raquo;</li>
+          <li><a href="../jinja2.html">jinja2</a> &raquo;</li>
         
-          <li><a href="jinja2.BytecodeCache.html">1.1.3.2. jinja2.BytecodeCache</a> &raquo;</li>
+          <li><a href="jinja2.BytecodeCache.html">jinja2.BytecodeCache</a> &raquo;</li>
         
-      <li>1.1.3.2.1.3. jinja2.BytecodeCache.get_bucket</li>
+      <li>jinja2.BytecodeCache.get_bucket</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,7 +189,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="jinja2-bytecodecache-get-bucket">
-<h1>1.1.3.2.1.3. jinja2.BytecodeCache.get_bucket<a class="headerlink" href="#jinja2-bytecodecache-get-bucket" title="Permalink to this headline">¶</a></h1>
+<h1>jinja2.BytecodeCache.get_bucket<a class="headerlink" href="#jinja2-bytecodecache-get-bucket" title="Permalink to this headline">¶</a></h1>
 <dl class="method">
 <dt id="jinja2.BytecodeCache.get_bucket">
 <code class="descclassname">BytecodeCache.</code><code class="descname">get_bucket</code><span class="sig-paren">(</span><em>environment</em>, <em>name</em>, <em>filename</em>, <em>source</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jinja2/bccache.html#BytecodeCache.get_bucket"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.BytecodeCache.get_bucket" title="Permalink to this definition">¶</a></dt>
@@ -198,10 +206,10 @@ mandatory but filename may be <cite>None</cite>.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="jinja2.BytecodeCache.get_cache_key.html" class="btn btn-neutral float-right" title="1.1.3.2.1.4. jinja2.BytecodeCache.get_cache_key" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="jinja2.BytecodeCache.get_cache_key.html" class="btn btn-neutral float-right" title="jinja2.BytecodeCache.get_cache_key" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="jinja2.BytecodeCache.dump_bytecode.html" class="btn btn-neutral" title="1.1.3.2.1.2. jinja2.BytecodeCache.dump_bytecode" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="jinja2.BytecodeCache.dump_bytecode.html" class="btn btn-neutral" title="jinja2.BytecodeCache.dump_bytecode" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

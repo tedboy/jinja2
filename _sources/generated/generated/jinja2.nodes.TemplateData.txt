@@ -1,0 +1,38 @@
+jinja2.nodes.TemplateData
+=========================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: TemplateData
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TemplateData.__init__
+   ~TemplateData.as_const
+   ~TemplateData.can_assign
+   ~TemplateData.find
+   ~TemplateData.find_all
+   ~TemplateData.iter_child_nodes
+   ~TemplateData.iter_fields
+   ~TemplateData.set_ctx
+   ~TemplateData.set_environment
+   ~TemplateData.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~TemplateData.abstract
+   ~TemplateData.attributes
+   ~TemplateData.fields
+

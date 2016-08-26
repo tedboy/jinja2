@@ -1,0 +1,19 @@
+jinja2.nodes.izip
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: izip
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~izip.next
+

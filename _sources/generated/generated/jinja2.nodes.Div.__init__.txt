@@ -1,0 +1,6 @@
+jinja2.nodes.Div.__init__
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Div.__init__

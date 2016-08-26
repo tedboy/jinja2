@@ -1,0 +1,6 @@
+jinja2.ext.autoescape.tags
+==========================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: autoescape.tags

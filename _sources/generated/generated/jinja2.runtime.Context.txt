@@ -1,0 +1,46 @@
+jinja2.runtime.Context
+======================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: Context
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Context.__init__
+   ~Context.call
+   ~Context.derived
+   ~Context.get
+   ~Context.get_all
+   ~Context.get_exported
+   ~Context.items
+   ~Context.iteritems
+   ~Context.iterkeys
+   ~Context.itervalues
+   ~Context.keys
+   ~Context.resolve
+   ~Context.super
+   ~Context.values
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Context.blocks
+   ~Context.environment
+   ~Context.eval_ctx
+   ~Context.exported_vars
+   ~Context.name
+   ~Context.parent
+   ~Context.vars
+

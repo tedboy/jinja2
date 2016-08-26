@@ -1,0 +1,6 @@
+jinja2.ext.Extension.identifier
+===============================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: Extension.identifier

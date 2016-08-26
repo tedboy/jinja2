@@ -1,0 +1,6 @@
+jinja2.nodes.Const.from_untrusted
+=================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Const.from_untrusted

@@ -1,0 +1,6 @@
+jinja2.environment.Context.get_all
+==================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Context.get_all

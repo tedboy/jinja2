@@ -83,9 +83,17 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -183,7 +191,7 @@
 <span class="n">_last_iteration</span> <span class="o">=</span> <span class="nb">object</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">markup_join</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="markup_join"><a class="viewcode-back" href="../../generated/jinja2.runtime.markup_join.html#jinja2.markup_join">[docs]</a><span class="k">def</span> <span class="nf">markup_join</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Concatenation that escapes if necessary and converts to unicode.&quot;&quot;&quot;</span>
     <span class="n">buf</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">iterator</span> <span class="o">=</span> <span class="n">imap</span><span class="p">(</span><span class="n">soft_unicode</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span>
@@ -191,15 +199,15 @@
         <span class="n">buf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="s1">&#39;__html__&#39;</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">Markup</span><span class="p">(</span><span class="s1">u&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">iterator</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">unicode_join</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="unicode_join"><a class="viewcode-back" href="../../generated/jinja2.runtime.unicode_join.html#jinja2.unicode_join">[docs]</a><span class="k">def</span> <span class="nf">unicode_join</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Simple args to unicode conversion and concatenation.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">imap</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="n">seq</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">imap</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="n">seq</span><span class="p">))</span></div>
 
 
-<span class="k">def</span> <span class="nf">new_context</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">template_name</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+<div class="viewcode-block" id="new_context"><a class="viewcode-back" href="../../generated/jinja2.runtime.new_context.html#jinja2.new_context">[docs]</a><span class="k">def</span> <span class="nf">new_context</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">template_name</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
                 <span class="n">shared</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Internal helper to for context creation.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">vars</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
@@ -217,14 +225,14 @@
             <span class="k">if</span> <span class="n">key</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;l_&#39;</span> <span class="ow">and</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">missing</span><span class="p">:</span>
                 <span class="n">parent</span><span class="p">[</span><span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">:]]</span> <span class="o">=</span> <span class="n">value</span>
     <span class="k">return</span> <span class="n">environment</span><span class="o">.</span><span class="n">context_class</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">template_name</span><span class="p">,</span>
-                                     <span class="n">blocks</span><span class="p">)</span>
+                                     <span class="n">blocks</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">TemplateReference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="TemplateReference"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.TemplateReference.html#jinja2.TemplateReference">[docs]</a><span class="k">class</span> <span class="nc">TemplateReference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The `self` in templates.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__context</span> <span class="o">=</span> <span class="n">context</span>
+<div class="viewcode-block" id="TemplateReference.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.TemplateReference.__init__.html#jinja2.TemplateReference.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__context</span> <span class="o">=</span> <span class="n">context</span></div>
 
     <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="n">blocks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__context</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
@@ -234,10 +242,10 @@
         <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">%s</span><span class="s1"> </span><span class="si">%r</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__context</span><span class="o">.</span><span class="n">name</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">Context</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Context"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.html#jinja2.Context">[docs]</a><span class="k">class</span> <span class="nc">Context</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The template context holds the variables of a template.  It stores the</span>
 <span class="sd">    values passed to the template and also the names the template exports.</span>
 <span class="sd">    Creating instances is neither supported nor useful as it&#39;s created</span>
@@ -259,7 +267,7 @@
     <span class="n">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="s1">&#39;vars&#39;</span><span class="p">,</span> <span class="s1">&#39;environment&#39;</span><span class="p">,</span> <span class="s1">&#39;eval_ctx&#39;</span><span class="p">,</span> <span class="s1">&#39;exported_vars&#39;</span><span class="p">,</span>
                  <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;blocks&#39;</span><span class="p">,</span> <span class="s1">&#39;__weakref__&#39;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">blocks</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.__init__.html#jinja2.Context.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">blocks</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vars</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="n">environment</span>
@@ -270,9 +278,9 @@
         <span class="c1"># create the initial mapping of blocks.  Whenever template inheritance</span>
         <span class="c1"># takes place the runtime will update this mapping with the new blocks</span>
         <span class="c1"># from the template.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="n">blocks</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="n">blocks</span><span class="p">))</span></div>
 
-    <span class="k">def</span> <span class="nf">super</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">current</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.super"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.super.html#jinja2.Context.super">[docs]</a>    <span class="k">def</span> <span class="nf">super</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">current</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Render a parent block.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">blocks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
@@ -282,18 +290,18 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">undefined</span><span class="p">(</span><span class="s1">&#39;there is no parent block &#39;</span>
                                               <span class="s1">&#39;called </span><span class="si">%r</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">,</span>
                                               <span class="n">name</span><span class="o">=</span><span class="s1">&#39;super&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">BlockReference</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">BlockReference</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.get"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.get.html#jinja2.Context.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns an item from the template context, if it doesn&#39;t exist</span>
 <span class="sd">        `default` is returned.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">default</span>
+            <span class="k">return</span> <span class="n">default</span></div>
 
-    <span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.resolve"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.resolve.html#jinja2.Context.resolve">[docs]</a>    <span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Looks up a variable like `__getitem__` or `get` but returns an</span>
 <span class="sd">        :class:`Undefined` object with the name of the name looked up.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -301,20 +309,20 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">undefined</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">undefined</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">get_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.get_exported"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.get_exported.html#jinja2.Context.get_exported">[docs]</a>    <span class="k">def</span> <span class="nf">get_exported</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a new dict with the exported variables.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">dict</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">exported_vars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">exported_vars</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">get_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.get_all"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.get_all.html#jinja2.Context.get_all">[docs]</a>    <span class="k">def</span> <span class="nf">get_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return a copy of the complete context as dict including the</span>
 <span class="sd">        exported variables.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">)</span></div>
 
     <span class="nd">@internalcode</span>
-    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">__self</span><span class="p">,</span> <span class="n">__obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.call"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.call.html#jinja2.Context.call">[docs]</a>    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">__self</span><span class="p">,</span> <span class="n">__obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Call the callable with the arguments and keyword arguments</span>
 <span class="sd">        provided but inject the active context or environment as first</span>
 <span class="sd">        argument if the callable is a :func:`contextfunction` or</span>
@@ -344,16 +352,16 @@
         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">__self</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">undefined</span><span class="p">(</span><span class="s1">&#39;value was undefined because &#39;</span>
                                                 <span class="s1">&#39;a callable raised a &#39;</span>
-                                                <span class="s1">&#39;StopIteration exception&#39;</span><span class="p">)</span>
+                                                <span class="s1">&#39;StopIteration exception&#39;</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">derived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Context.derived"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Context.derived.html#jinja2.Context.derived">[docs]</a>    <span class="k">def</span> <span class="nf">derived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Internal helper function to create a derived context.&quot;&quot;&quot;</span>
         <span class="n">context</span> <span class="o">=</span> <span class="n">new_context</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">environment</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">{},</span>
                               <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="nb">locals</span><span class="p">)</span>
         <span class="n">context</span><span class="o">.</span><span class="n">vars</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vars</span><span class="p">)</span>
         <span class="n">context</span><span class="o">.</span><span class="n">eval_ctx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_ctx</span>
         <span class="n">context</span><span class="o">.</span><span class="n">blocks</span><span class="o">.</span><span class="n">update</span><span class="p">((</span><span class="n">k</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">))</span>
-        <span class="k">return</span> <span class="n">context</span>
+        <span class="k">return</span> <span class="n">context</span></div>
 
     <span class="k">def</span> <span class="nf">_all</span><span class="p">(</span><span class="n">meth</span><span class="p">):</span>
         <span class="n">proxy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_all</span><span class="p">(),</span> <span class="n">meth</span><span class="p">)()</span>
@@ -389,7 +397,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
             <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_all</span><span class="p">()),</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
 
 
 <span class="c1"># register the context as mapping if possible</span>
@@ -400,14 +408,14 @@
     <span class="k">pass</span>
 
 
-<span class="k">class</span> <span class="nc">BlockReference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="BlockReference"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.BlockReference.html#jinja2.BlockReference">[docs]</a><span class="k">class</span> <span class="nc">BlockReference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;One block on a template reference.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+<div class="viewcode-block" id="BlockReference.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.BlockReference.__init__.html#jinja2.BlockReference.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">stack</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_context</span> <span class="o">=</span> <span class="n">context</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_stack</span> <span class="o">=</span> <span class="n">stack</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span> <span class="o">=</span> <span class="n">depth</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span> <span class="o">=</span> <span class="n">depth</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">super</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -424,13 +432,13 @@
         <span class="n">rv</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stack</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_depth</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">))</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">eval_ctx</span><span class="o">.</span><span class="n">autoescape</span><span class="p">:</span>
             <span class="n">rv</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="n">rv</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">rv</span>
+        <span class="k">return</span> <span class="n">rv</span></div>
 
 
-<span class="k">class</span> <span class="nc">LoopContext</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="LoopContext"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.LoopContext.html#jinja2.LoopContext">[docs]</a><span class="k">class</span> <span class="nc">LoopContext</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A loop context for dynamic iteration.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">depth0</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="LoopContext.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.LoopContext.__init__.html#jinja2.LoopContext.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">depth0</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_recurse</span> <span class="o">=</span> <span class="n">recurse</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_after</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_safe_next</span><span class="p">()</span>
@@ -444,13 +452,13 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
         <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">=</span> <span class="bp">None</span></div>
 
-    <span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="LoopContext.cycle"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.LoopContext.cycle.html#jinja2.LoopContext.cycle">[docs]</a>    <span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Cycles among the arguments with the current loop index.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;no items for cycling given&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">index0</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">index0</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)]</span></div>
 
     <span class="n">first</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">index0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">last</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">_after</span> <span class="ow">is</span> <span class="n">_last_iteration</span><span class="p">)</span>
@@ -501,16 +509,16 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
 
 
 <span class="nd">@implements_iterator</span>
-<span class="k">class</span> <span class="nc">LoopContextIterator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="LoopContextIterator"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.LoopContextIterator.html#jinja2.LoopContextIterator">[docs]</a><span class="k">class</span> <span class="nc">LoopContextIterator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The iterator for a loop context.&quot;&quot;&quot;</span>
     <span class="n">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;context&#39;</span><span class="p">,)</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>
+<div class="viewcode-block" id="LoopContextIterator.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.LoopContextIterator.__init__.html#jinja2.LoopContextIterator.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span></div>
 
     <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span>
@@ -522,13 +530,13 @@
             <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
         <span class="n">next_elem</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">_after</span>
         <span class="n">ctx</span><span class="o">.</span><span class="n">_after</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">_safe_next</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">next_elem</span><span class="p">,</span> <span class="n">ctx</span>
+        <span class="k">return</span> <span class="n">next_elem</span><span class="p">,</span> <span class="n">ctx</span></div>
 
 
-<span class="k">class</span> <span class="nc">Macro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Macro"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Macro.html#jinja2.Macro">[docs]</a><span class="k">class</span> <span class="nc">Macro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Wraps a macro function.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">arguments</span><span class="p">,</span> <span class="n">defaults</span><span class="p">,</span>
+<div class="viewcode-block" id="Macro.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Macro.__init__.html#jinja2.Macro.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">arguments</span><span class="p">,</span> <span class="n">defaults</span><span class="p">,</span>
                  <span class="n">catch_kwargs</span><span class="p">,</span> <span class="n">catch_varargs</span><span class="p">,</span> <span class="n">caller</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_environment</span> <span class="o">=</span> <span class="n">environment</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_func</span> <span class="o">=</span> <span class="n">func</span>
@@ -538,7 +546,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span> <span class="o">=</span> <span class="n">defaults</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">catch_kwargs</span> <span class="o">=</span> <span class="n">catch_kwargs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">catch_varargs</span> <span class="o">=</span> <span class="n">catch_varargs</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span> <span class="o">=</span> <span class="n">caller</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span> <span class="o">=</span> <span class="n">caller</span></div>
 
     <span class="nd">@internalcode</span>
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -586,11 +594,11 @@
         <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="s1">&#39;anonymous&#39;</span> <span class="ow">or</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
 
 
 <span class="nd">@implements_to_string</span>
-<div class="viewcode-block" id="Undefined"><a class="viewcode-back" href="../../generated/generated/jinja2.Undefined.html#jinja2.Undefined">[docs]</a><span class="k">class</span> <span class="nc">Undefined</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Undefined"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Undefined.html#jinja2.Undefined">[docs]</a><span class="k">class</span> <span class="nc">Undefined</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The default undefined type.  This undefined type can be printed and</span>
 <span class="sd">    iterated over, but every other access will raise an :exc:`jinja2.exceptions.UndefinedError`:</span>
 
@@ -607,7 +615,7 @@
     <span class="n">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_undefined_hint&#39;</span><span class="p">,</span> <span class="s1">&#39;_undefined_obj&#39;</span><span class="p">,</span> <span class="s1">&#39;_undefined_name&#39;</span><span class="p">,</span>
                  <span class="s1">&#39;_undefined_exception&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Undefined.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.Undefined.__init__.html#jinja2.Undefined.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hint</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="n">missing</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">exc</span><span class="o">=</span><span class="n">UndefinedError</span><span class="p">):</span>
+<div class="viewcode-block" id="Undefined.__init__"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.Undefined.__init__.html#jinja2.Undefined.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hint</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="n">missing</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">exc</span><span class="o">=</span><span class="n">UndefinedError</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_undefined_hint</span> <span class="o">=</span> <span class="n">hint</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_undefined_obj</span> <span class="o">=</span> <span class="n">obj</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_undefined_name</span> <span class="o">=</span> <span class="n">name</span>
@@ -675,7 +683,7 @@
         <span class="k">return</span> <span class="s1">&#39;Undefined&#39;</span></div>
 
 
-<div class="viewcode-block" id="make_logging_undefined"><a class="viewcode-back" href="../../generated/jinja2.make_logging_undefined.html#jinja2.make_logging_undefined">[docs]</a><span class="k">def</span> <span class="nf">make_logging_undefined</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="make_logging_undefined"><a class="viewcode-back" href="../../generated/jinja2.runtime.make_logging_undefined.html#jinja2.make_logging_undefined">[docs]</a><span class="k">def</span> <span class="nf">make_logging_undefined</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a logger object this returns a new undefined class that will</span>
 <span class="sd">    log certain failures.  It will log iterations and printing.  If no</span>
 <span class="sd">    logger is given a default logger is created.</span>
@@ -757,7 +765,7 @@
 
 
 <span class="nd">@implements_to_string</span>
-<div class="viewcode-block" id="DebugUndefined"><a class="viewcode-back" href="../../generated/generated/jinja2.DebugUndefined.html#jinja2.DebugUndefined">[docs]</a><span class="k">class</span> <span class="nc">DebugUndefined</span><span class="p">(</span><span class="n">Undefined</span><span class="p">):</span>
+<div class="viewcode-block" id="DebugUndefined"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.DebugUndefined.html#jinja2.DebugUndefined">[docs]</a><span class="k">class</span> <span class="nc">DebugUndefined</span><span class="p">(</span><span class="n">Undefined</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An undefined that returns the debug info when printed.</span>
 
 <span class="sd">    &gt;&gt;&gt; foo = DebugUndefined(name=&#39;foo&#39;)</span>
@@ -784,7 +792,7 @@
 
 
 <span class="nd">@implements_to_string</span>
-<div class="viewcode-block" id="StrictUndefined"><a class="viewcode-back" href="../../generated/generated/jinja2.StrictUndefined.html#jinja2.StrictUndefined">[docs]</a><span class="k">class</span> <span class="nc">StrictUndefined</span><span class="p">(</span><span class="n">Undefined</span><span class="p">):</span>
+<div class="viewcode-block" id="StrictUndefined"><a class="viewcode-back" href="../../generated/generated/jinja2.runtime.StrictUndefined.html#jinja2.StrictUndefined">[docs]</a><span class="k">class</span> <span class="nc">StrictUndefined</span><span class="p">(</span><span class="n">Undefined</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An undefined that barks on print and iteration as well as boolean</span>
 <span class="sd">    tests and all kinds of comparisons.  In other words: you can do nothing</span>
 <span class="sd">    with it except checking if it&#39;s defined using the `defined` test.</span>

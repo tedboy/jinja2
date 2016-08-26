@@ -1,0 +1,36 @@
+jinja2.nodes.Assign
+===================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Assign
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Assign.__init__
+   ~Assign.find
+   ~Assign.find_all
+   ~Assign.iter_child_nodes
+   ~Assign.iter_fields
+   ~Assign.set_ctx
+   ~Assign.set_environment
+   ~Assign.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Assign.abstract
+   ~Assign.attributes
+   ~Assign.fields
+

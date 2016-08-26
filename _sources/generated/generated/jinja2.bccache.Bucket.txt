@@ -1,0 +1,24 @@
+jinja2.bccache.Bucket
+=====================
+.. currentmodule:: jinja2.bccache
+.. autoclass:: Bucket
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Bucket.__init__
+   ~Bucket.bytecode_from_string
+   ~Bucket.bytecode_to_string
+   ~Bucket.load_bytecode
+   ~Bucket.reset
+   ~Bucket.write_bytecode
+
+
+
+
+

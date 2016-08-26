@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.visit_Sub
+==========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.visit_Sub

@@ -1,0 +1,6 @@
+jinja2.nodes.Dict.find
+======================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Dict.find

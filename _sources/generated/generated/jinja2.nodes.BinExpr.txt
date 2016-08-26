@@ -1,0 +1,39 @@
+jinja2.nodes.BinExpr
+====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: BinExpr
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BinExpr.__init__
+   ~BinExpr.as_const
+   ~BinExpr.can_assign
+   ~BinExpr.find
+   ~BinExpr.find_all
+   ~BinExpr.iter_child_nodes
+   ~BinExpr.iter_fields
+   ~BinExpr.set_ctx
+   ~BinExpr.set_environment
+   ~BinExpr.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BinExpr.abstract
+   ~BinExpr.attributes
+   ~BinExpr.fields
+   ~BinExpr.operator
+

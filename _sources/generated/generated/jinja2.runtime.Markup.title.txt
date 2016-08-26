@@ -1,0 +1,6 @@
+jinja2.runtime.Markup.title
+===========================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Markup.title

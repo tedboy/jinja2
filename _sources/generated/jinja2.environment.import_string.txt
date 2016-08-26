@@ -1,0 +1,6 @@
+jinja2.environment.import_string
+================================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: import_string

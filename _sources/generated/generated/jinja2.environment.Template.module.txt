@@ -1,0 +1,6 @@
+jinja2.environment.Template.module
+==================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Template.module

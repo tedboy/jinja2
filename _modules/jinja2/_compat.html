@@ -83,9 +83,17 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -179,10 +187,10 @@
     <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span><span class="p">,</span> <span class="n">StringIO</span>
     <span class="n">NativeStringIO</span> <span class="o">=</span> <span class="n">StringIO</span>
 
-    <span class="k">def</span> <span class="nf">reraise</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="reraise"><a class="viewcode-back" href="../../generated/jinja2.environment.reraise.html#jinja2.environment.reraise">[docs]</a>    <span class="k">def</span> <span class="nf">reraise</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">__traceback__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">tb</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-        <span class="k">raise</span> <span class="n">value</span>
+        <span class="k">raise</span> <span class="n">value</span></div>
 
     <span class="n">ifilter</span> <span class="o">=</span> <span class="nb">filter</span>
     <span class="n">imap</span> <span class="o">=</span> <span class="nb">map</span>
@@ -214,25 +222,25 @@
     <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">imap</span><span class="p">,</span> <span class="n">izip</span><span class="p">,</span> <span class="n">ifilter</span>
     <span class="nb">intern</span> <span class="o">=</span> <span class="nb">intern</span>
 
-    <span class="k">def</span> <span class="nf">implements_iterator</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+<div class="viewcode-block" id="implements_iterator"><a class="viewcode-back" href="../../generated/jinja2.runtime.implements_iterator.html#jinja2.environment.implements_iterator">[docs]</a>    <span class="k">def</span> <span class="nf">implements_iterator</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
         <span class="n">cls</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cls</span><span class="o">.</span><span class="n">__next__</span>
         <span class="k">del</span> <span class="n">cls</span><span class="o">.</span><span class="n">__next__</span>
-        <span class="k">return</span> <span class="n">cls</span>
+        <span class="k">return</span> <span class="n">cls</span></div>
 
-<div class="viewcode-block" id="implements_to_string"><a class="viewcode-back" href="../../generated/jinja2.exceptions.implements_to_string.html#jinja2.exceptions.implements_to_string">[docs]</a>    <span class="k">def</span> <span class="nf">implements_to_string</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+<div class="viewcode-block" id="implements_to_string"><a class="viewcode-back" href="../../generated/jinja2.runtime.implements_to_string.html#jinja2.environment.implements_to_string">[docs]</a>    <span class="k">def</span> <span class="nf">implements_to_string</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
         <span class="n">cls</span><span class="o">.</span><span class="n">__unicode__</span> <span class="o">=</span> <span class="n">cls</span><span class="o">.</span><span class="n">__str__</span>
         <span class="n">cls</span><span class="o">.</span><span class="n">__str__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">__unicode__</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">cls</span></div>
 
     <span class="n">get_next</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">next</span>
 
-    <span class="k">def</span> <span class="nf">encode_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="encode_filename"><a class="viewcode-back" href="../../generated/jinja2.environment.encode_filename.html#jinja2.environment.encode_filename">[docs]</a>    <span class="k">def</span> <span class="nf">encode_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">unicode</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">filename</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">filename</span>
+        <span class="k">return</span> <span class="n">filename</span></div>
 
 
-<span class="k">def</span> <span class="nf">with_metaclass</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="o">*</span><span class="n">bases</span><span class="p">):</span>
+<div class="viewcode-block" id="with_metaclass"><a class="viewcode-back" href="../../generated/jinja2.nodes.with_metaclass.html#jinja2.environment.with_metaclass">[docs]</a><span class="k">def</span> <span class="nf">with_metaclass</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="o">*</span><span class="n">bases</span><span class="p">):</span>
     <span class="c1"># This requires a bit of explanation: the basic idea is to make a</span>
     <span class="c1"># dummy metaclass for one level of class instanciation that replaces</span>
     <span class="c1"># itself with the actual metaclass.  Because of internal type checks</span>
@@ -249,7 +257,7 @@
             <span class="k">if</span> <span class="n">this_bases</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
                 <span class="k">return</span> <span class="nb">type</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="p">(),</span> <span class="n">d</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">meta</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">metaclass</span><span class="p">(</span><span class="s1">&#39;temporary_class&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="k">return</span> <span class="n">metaclass</span><span class="p">(</span><span class="s1">&#39;temporary_class&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="p">{})</span></div>
 
 
 <span class="k">try</span><span class="p">:</span>

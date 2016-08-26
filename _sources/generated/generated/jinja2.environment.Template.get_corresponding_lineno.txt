@@ -1,0 +1,6 @@
+jinja2.environment.Template.get_corresponding_lineno
+====================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Template.get_corresponding_lineno

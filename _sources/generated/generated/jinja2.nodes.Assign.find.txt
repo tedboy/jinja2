@@ -1,0 +1,6 @@
+jinja2.nodes.Assign.find
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Assign.find

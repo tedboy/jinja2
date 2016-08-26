@@ -1,0 +1,39 @@
+jinja2.nodes.FloorDiv
+=====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: FloorDiv
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FloorDiv.__init__
+   ~FloorDiv.as_const
+   ~FloorDiv.can_assign
+   ~FloorDiv.find
+   ~FloorDiv.find_all
+   ~FloorDiv.iter_child_nodes
+   ~FloorDiv.iter_fields
+   ~FloorDiv.set_ctx
+   ~FloorDiv.set_environment
+   ~FloorDiv.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~FloorDiv.abstract
+   ~FloorDiv.attributes
+   ~FloorDiv.fields
+   ~FloorDiv.operator
+

@@ -1,0 +1,6 @@
+jinja2.nodes.Output.iter_fields
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Output.iter_fields

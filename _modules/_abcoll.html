@@ -83,9 +83,17 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -426,7 +434,7 @@
 <span class="n">Set</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="MutableSet"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.html#jinja2.sandbox.MutableSet">[docs]</a><span class="k">class</span> <span class="nc">MutableSet</span><span class="p">(</span><span class="n">Set</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSet"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.html#jinja2.runtime.MutableSet">[docs]</a><span class="k">class</span> <span class="nc">MutableSet</span><span class="p">(</span><span class="n">Set</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A mutable set is a finite, iterable container.</span>
 
 <span class="sd">    This class provides concrete generic implementations of all</span>
@@ -439,22 +447,22 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="nd">@abstractmethod</span>
-<div class="viewcode-block" id="MutableSet.add"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.add.html#jinja2.sandbox.MutableSet.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSet.add"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.add.html#jinja2.runtime.MutableSet.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Add an element.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
     <span class="nd">@abstractmethod</span>
-<div class="viewcode-block" id="MutableSet.discard"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.discard.html#jinja2.sandbox.MutableSet.discard">[docs]</a>    <span class="k">def</span> <span class="nf">discard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSet.discard"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.discard.html#jinja2.runtime.MutableSet.discard">[docs]</a>    <span class="k">def</span> <span class="nf">discard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Remove an element.  Do not raise an exception if absent.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="MutableSet.remove"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.remove.html#jinja2.sandbox.MutableSet.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSet.remove"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.remove.html#jinja2.runtime.MutableSet.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Remove an element. If not a member, raise a KeyError.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">value</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MutableSet.pop"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.pop.html#jinja2.sandbox.MutableSet.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSet.pop"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.pop.html#jinja2.runtime.MutableSet.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the popped value.  Raise KeyError if empty.&quot;&quot;&quot;</span>
         <span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
@@ -464,7 +472,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span></div>
 
-<div class="viewcode-block" id="MutableSet.clear"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.clear.html#jinja2.sandbox.MutableSet.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSet.clear"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSet.clear.html#jinja2.runtime.MutableSet.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This is slow (creates N new iterators!) but effective.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -509,7 +517,7 @@
 <span class="c1">### MAPPINGS ###</span>
 
 
-<span class="k">class</span> <span class="nc">Mapping</span><span class="p">(</span><span class="n">Sized</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Container</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.html#jinja2.runtime.Mapping">[docs]</a><span class="k">class</span> <span class="nc">Mapping</span><span class="p">(</span><span class="n">Sized</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Container</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;A Mapping is a generic container for associating key/value</span>
 <span class="sd">    pairs.</span>
@@ -523,12 +531,12 @@
     <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">KeyError</span>
 
-    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.get"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.get.html#jinja2.runtime.Mapping.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="s1">&#39;D.get(k[,d]) -&gt; D[k] if k in D, else d.  d defaults to None.&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">default</span>
+            <span class="k">return</span> <span class="n">default</span></div>
 
     <span class="k">def</span> <span class="nf">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
@@ -538,31 +546,31 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">True</span>
 
-    <span class="k">def</span> <span class="nf">iterkeys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.iterkeys"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.iterkeys.html#jinja2.runtime.Mapping.iterkeys">[docs]</a>    <span class="k">def</span> <span class="nf">iterkeys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;D.iterkeys() -&gt; an iterator over the keys of D&#39;</span>
-        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">itervalues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.itervalues"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.itervalues.html#jinja2.runtime.Mapping.itervalues">[docs]</a>    <span class="k">def</span> <span class="nf">itervalues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;D.itervalues() -&gt; an iterator over the values of D&#39;</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-            <span class="k">yield</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.iteritems"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.iteritems.html#jinja2.runtime.Mapping.iteritems">[docs]</a>    <span class="k">def</span> <span class="nf">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;D.iteritems() -&gt; an iterator over the (key, value) items of D&#39;</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-            <span class="k">yield</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">])</span></div>
 
-    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.keys"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.keys.html#jinja2.runtime.Mapping.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">&quot;D.keys() -&gt; list of D&#39;s keys&quot;</span>
-        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.items"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.items.html#jinja2.runtime.Mapping.items">[docs]</a>    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">&quot;D.items() -&gt; list of D&#39;s (key, value) pairs, as 2-tuples&quot;</span>
-        <span class="k">return</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Mapping.values"><a class="viewcode-back" href="../generated/generated/jinja2.runtime.Mapping.values.html#jinja2.runtime.Mapping.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">&quot;D.values() -&gt; list of D&#39;s values&quot;</span>
-        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span></div>
 
     <span class="c1"># Mappings are not hashable by default, but subclasses can change this</span>
     <span class="n">__hash__</span> <span class="o">=</span> <span class="bp">None</span>
@@ -573,7 +581,7 @@
         <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">())</span> <span class="o">==</span> <span class="nb">dict</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 
     <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span></div>
 
 <span class="k">class</span> <span class="nc">MappingView</span><span class="p">(</span><span class="n">Sized</span><span class="p">):</span>
 
@@ -637,7 +645,7 @@
 
 <span class="n">ValuesView</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">type</span><span class="p">({}</span><span class="o">.</span><span class="n">viewvalues</span><span class="p">()))</span>
 
-<div class="viewcode-block" id="MutableMapping"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.html#jinja2.sandbox.MutableMapping">[docs]</a><span class="k">class</span> <span class="nc">MutableMapping</span><span class="p">(</span><span class="n">Mapping</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableMapping"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.html#jinja2.runtime.MutableMapping">[docs]</a><span class="k">class</span> <span class="nc">MutableMapping</span><span class="p">(</span><span class="n">Mapping</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;A MutableMapping is a generic container for associating</span>
 <span class="sd">    key/value pairs.</span>
@@ -658,7 +666,7 @@
 
     <span class="n">__marker</span> <span class="o">=</span> <span class="nb">object</span><span class="p">()</span>
 
-<div class="viewcode-block" id="MutableMapping.pop"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.pop.html#jinja2.sandbox.MutableMapping.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">__marker</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableMapping.pop"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.pop.html#jinja2.runtime.MutableMapping.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">__marker</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;D.pop(k[,d]) -&gt; v, remove specified key and return the corresponding value.</span>
 <span class="sd">          If key is not found, d is returned if given, otherwise KeyError is raised.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -672,7 +680,7 @@
             <span class="k">del</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">value</span></div>
 
-<div class="viewcode-block" id="MutableMapping.popitem"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.popitem.html#jinja2.sandbox.MutableMapping.popitem">[docs]</a>    <span class="k">def</span> <span class="nf">popitem</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableMapping.popitem"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.popitem.html#jinja2.runtime.MutableMapping.popitem">[docs]</a>    <span class="k">def</span> <span class="nf">popitem</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;D.popitem() -&gt; (k, v), remove and return some (key, value) pair</span>
 <span class="sd">           as a 2-tuple; but raise KeyError if D is empty.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -684,7 +692,7 @@
         <span class="k">del</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span></div>
 
-<div class="viewcode-block" id="MutableMapping.clear"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.clear.html#jinja2.sandbox.MutableMapping.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableMapping.clear"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.clear.html#jinja2.runtime.MutableMapping.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;D.clear() -&gt; None.  Remove all items from D.&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -692,7 +700,7 @@
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
             <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="MutableMapping.update"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.update.html#jinja2.sandbox.MutableMapping.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableMapping.update"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.update.html#jinja2.runtime.MutableMapping.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39; D.update([E, ]**F) -&gt; None.  Update D from mapping/iterable E and F.</span>
 <span class="sd">            If E present and has a .keys() method, does:     for k in E: D[k] = E[k]</span>
 <span class="sd">            If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = v</span>
@@ -720,7 +728,7 @@
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
 
-<div class="viewcode-block" id="MutableMapping.setdefault"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.setdefault.html#jinja2.sandbox.MutableMapping.setdefault">[docs]</a>    <span class="k">def</span> <span class="nf">setdefault</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableMapping.setdefault"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableMapping.setdefault.html#jinja2.runtime.MutableMapping.setdefault">[docs]</a>    <span class="k">def</span> <span class="nf">setdefault</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="s1">&#39;D.setdefault(k[,d]) -&gt; D.get(k,d), also set D[k]=d if k not in D&#39;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
@@ -784,7 +792,7 @@
 <span class="n">Sequence</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">xrange</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="MutableSequence"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.html#jinja2.sandbox.MutableSequence">[docs]</a><span class="k">class</span> <span class="nc">MutableSequence</span><span class="p">(</span><span class="n">Sequence</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.html#jinja2.runtime.MutableSequence">[docs]</a><span class="k">class</span> <span class="nc">MutableSequence</span><span class="p">(</span><span class="n">Sequence</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;All the operations on a read-only sequence.</span>
 
@@ -802,26 +810,26 @@
         <span class="k">raise</span> <span class="ne">IndexError</span>
 
     <span class="nd">@abstractmethod</span>
-<div class="viewcode-block" id="MutableSequence.insert"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.insert.html#jinja2.sandbox.MutableSequence.insert">[docs]</a>    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence.insert"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.insert.html#jinja2.runtime.MutableSequence.insert">[docs]</a>    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="s1">&#39;S.insert(index, object) -- insert object before index&#39;</span>
         <span class="k">raise</span> <span class="ne">IndexError</span></div>
 
-<div class="viewcode-block" id="MutableSequence.append"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.append.html#jinja2.sandbox.MutableSequence.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence.append"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.append.html#jinja2.runtime.MutableSequence.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="s1">&#39;S.append(object) -- append object to the end of the sequence&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MutableSequence.reverse"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.reverse.html#jinja2.sandbox.MutableSequence.reverse">[docs]</a>    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence.reverse"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.reverse.html#jinja2.runtime.MutableSequence.reverse">[docs]</a>    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;S.reverse() -- reverse *IN PLACE*&#39;</span>
         <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
             <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="MutableSequence.extend"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.extend.html#jinja2.sandbox.MutableSequence.extend">[docs]</a>    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence.extend"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.extend.html#jinja2.runtime.MutableSequence.extend">[docs]</a>    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
         <span class="s1">&#39;S.extend(iterable) -- extend sequence by appending elements from the iterable&#39;</span>
         <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MutableSequence.pop"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.pop.html#jinja2.sandbox.MutableSequence.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence.pop"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.pop.html#jinja2.runtime.MutableSequence.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;S.pop([index]) -&gt; item -- remove and return item at index (default last).</span>
 <span class="sd">           Raise IndexError if list is empty or index is out of range.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -829,7 +837,7 @@
         <span class="k">del</span> <span class="bp">self</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">v</span></div>
 
-<div class="viewcode-block" id="MutableSequence.remove"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.remove.html#jinja2.sandbox.MutableSequence.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="MutableSequence.remove"><a class="viewcode-back" href="../generated/generated/jinja2.sandbox.MutableSequence.remove.html#jinja2.runtime.MutableSequence.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;S.remove(value) -- remove first occurrence of value.</span>
 <span class="sd">           Raise ValueError if the value is not present.</span>
 <span class="sd">        &#39;&#39;&#39;</span>

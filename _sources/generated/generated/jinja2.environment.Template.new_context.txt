@@ -1,0 +1,6 @@
+jinja2.environment.Template.new_context
+=======================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Template.new_context

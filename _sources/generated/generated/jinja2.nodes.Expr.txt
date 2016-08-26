@@ -1,0 +1,38 @@
+jinja2.nodes.Expr
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Expr
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Expr.__init__
+   ~Expr.as_const
+   ~Expr.can_assign
+   ~Expr.find
+   ~Expr.find_all
+   ~Expr.iter_child_nodes
+   ~Expr.iter_fields
+   ~Expr.set_ctx
+   ~Expr.set_environment
+   ~Expr.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Expr.abstract
+   ~Expr.attributes
+   ~Expr.fields
+

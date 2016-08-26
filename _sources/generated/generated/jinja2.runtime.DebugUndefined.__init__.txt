@@ -1,0 +1,6 @@
+jinja2.runtime.DebugUndefined.__init__
+======================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: DebugUndefined.__init__

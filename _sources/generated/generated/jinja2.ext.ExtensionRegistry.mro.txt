@@ -1,0 +1,6 @@
+jinja2.ext.ExtensionRegistry.mro
+================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: ExtensionRegistry.mro

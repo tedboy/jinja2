@@ -1,0 +1,36 @@
+jinja2.nodes.If
+===============
+.. currentmodule:: jinja2.nodes
+.. autoclass:: If
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~If.__init__
+   ~If.find
+   ~If.find_all
+   ~If.iter_child_nodes
+   ~If.iter_fields
+   ~If.set_ctx
+   ~If.set_environment
+   ~If.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~If.abstract
+   ~If.attributes
+   ~If.fields
+

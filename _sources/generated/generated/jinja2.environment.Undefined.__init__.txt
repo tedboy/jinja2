@@ -1,0 +1,6 @@
+jinja2.environment.Undefined.__init__
+=====================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Undefined.__init__

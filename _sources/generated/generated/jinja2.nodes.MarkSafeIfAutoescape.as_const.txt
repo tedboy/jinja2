@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafeIfAutoescape.as_const
+==========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafeIfAutoescape.as_const

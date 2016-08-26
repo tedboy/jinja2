@@ -1,0 +1,6 @@
+jinja2.runtime.Markup.splitlines
+================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Markup.splitlines

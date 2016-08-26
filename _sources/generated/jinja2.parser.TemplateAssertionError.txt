@@ -1,0 +1,6 @@
+jinja2.parser.TemplateAssertionError
+====================================
+
+.. currentmodule:: jinja2.parser
+
+.. autoexception:: TemplateAssertionError

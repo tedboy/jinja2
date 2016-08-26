@@ -1,0 +1,6 @@
+jinja2.lexer.TokenStream.eos
+============================
+
+.. currentmodule:: jinja2.lexer
+
+.. autoattribute:: TokenStream.eos

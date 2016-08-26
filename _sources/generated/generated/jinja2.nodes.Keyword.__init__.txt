@@ -1,0 +1,6 @@
+jinja2.nodes.Keyword.__init__
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Keyword.__init__

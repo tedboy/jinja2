@@ -1,0 +1,6 @@
+jinja2.nodes.Tuple.find_all
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Tuple.find_all

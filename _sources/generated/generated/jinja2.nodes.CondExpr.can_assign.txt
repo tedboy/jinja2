@@ -1,0 +1,6 @@
+jinja2.nodes.CondExpr.can_assign
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: CondExpr.can_assign

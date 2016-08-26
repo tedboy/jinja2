@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafeIfAutoescape.find_all
+==========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafeIfAutoescape.find_all

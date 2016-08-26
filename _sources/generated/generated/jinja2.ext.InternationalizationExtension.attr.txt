@@ -1,0 +1,6 @@
+jinja2.ext.InternationalizationExtension.attr
+=============================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: InternationalizationExtension.attr

@@ -1,0 +1,6 @@
+jinja2.environment.Parser.parse_call_block
+==========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Parser.parse_call_block

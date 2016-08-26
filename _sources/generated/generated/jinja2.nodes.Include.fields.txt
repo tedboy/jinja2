@@ -1,0 +1,6 @@
+jinja2.nodes.Include.fields
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Include.fields

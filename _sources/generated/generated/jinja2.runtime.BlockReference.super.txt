@@ -1,0 +1,6 @@
+jinja2.runtime.BlockReference.super
+===================================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoattribute:: BlockReference.super

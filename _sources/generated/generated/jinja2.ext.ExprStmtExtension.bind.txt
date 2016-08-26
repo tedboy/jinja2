@@ -1,0 +1,6 @@
+jinja2.ext.ExprStmtExtension.bind
+=================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: ExprStmtExtension.bind

@@ -1,0 +1,6 @@
+jinja2.ext.InternationalizationExtension.__init__
+=================================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: InternationalizationExtension.__init__

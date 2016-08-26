@@ -1,0 +1,6 @@
+jinja2.environment.Template.debug_info
+======================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Template.debug_info

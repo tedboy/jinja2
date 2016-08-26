@@ -1,0 +1,19 @@
+jinja2.runtime.StrictUndefined
+==============================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: StrictUndefined
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~StrictUndefined.__init__
+
+
+
+
+

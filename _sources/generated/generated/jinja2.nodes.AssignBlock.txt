@@ -1,0 +1,36 @@
+jinja2.nodes.AssignBlock
+========================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: AssignBlock
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~AssignBlock.__init__
+   ~AssignBlock.find
+   ~AssignBlock.find_all
+   ~AssignBlock.iter_child_nodes
+   ~AssignBlock.iter_fields
+   ~AssignBlock.set_ctx
+   ~AssignBlock.set_environment
+   ~AssignBlock.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~AssignBlock.abstract
+   ~AssignBlock.attributes
+   ~AssignBlock.fields
+

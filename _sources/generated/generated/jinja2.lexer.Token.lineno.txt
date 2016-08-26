@@ -1,0 +1,6 @@
+jinja2.lexer.Token.lineno
+=========================
+
+.. currentmodule:: jinja2.lexer
+
+.. autoattribute:: Token.lineno

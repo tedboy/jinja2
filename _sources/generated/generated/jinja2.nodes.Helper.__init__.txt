@@ -1,0 +1,6 @@
+jinja2.nodes.Helper.__init__
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Helper.__init__

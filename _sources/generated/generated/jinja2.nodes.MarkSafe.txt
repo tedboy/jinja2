@@ -1,0 +1,38 @@
+jinja2.nodes.MarkSafe
+=====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: MarkSafe
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MarkSafe.__init__
+   ~MarkSafe.as_const
+   ~MarkSafe.can_assign
+   ~MarkSafe.find
+   ~MarkSafe.find_all
+   ~MarkSafe.iter_child_nodes
+   ~MarkSafe.iter_fields
+   ~MarkSafe.set_ctx
+   ~MarkSafe.set_environment
+   ~MarkSafe.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~MarkSafe.abstract
+   ~MarkSafe.attributes
+   ~MarkSafe.fields
+

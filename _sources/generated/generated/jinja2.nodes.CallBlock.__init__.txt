@@ -1,0 +1,6 @@
+jinja2.nodes.CallBlock.__init__
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: CallBlock.__init__

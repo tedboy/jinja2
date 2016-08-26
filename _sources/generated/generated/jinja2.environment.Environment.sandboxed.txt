@@ -1,0 +1,6 @@
+jinja2.environment.Environment.sandboxed
+========================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Environment.sandboxed

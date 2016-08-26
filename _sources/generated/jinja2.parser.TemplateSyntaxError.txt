@@ -1,0 +1,6 @@
+jinja2.parser.TemplateSyntaxError
+=================================
+
+.. currentmodule:: jinja2.parser
+
+.. autoexception:: TemplateSyntaxError

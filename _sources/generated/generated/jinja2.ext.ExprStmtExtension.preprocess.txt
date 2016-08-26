@@ -1,0 +1,6 @@
+jinja2.ext.ExprStmtExtension.preprocess
+=======================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: ExprStmtExtension.preprocess

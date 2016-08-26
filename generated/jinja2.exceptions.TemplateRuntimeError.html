@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.1.3.6. jinja2.exceptions.TemplateRuntimeError &mdash; Jinja2 API</title>
+  <title>jinja2.exceptions.TemplateRuntimeError &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="../index.html"/>
-        <link rel="up" title="3. jinja2.exceptions" href="jinja2.exceptions.html"/>
-        <link rel="next" title="3.1.3.7. jinja2.exceptions.TemplateSyntaxError" href="jinja2.exceptions.TemplateSyntaxError.html"/>
-        <link rel="prev" title="3.1.3.5. jinja2.exceptions.TemplateNotFound" href="jinja2.exceptions.TemplateNotFound.html"/> 
+        <link rel="up" title="jinja2.exceptions" href="jinja2.exceptions.html"/>
+        <link rel="next" title="jinja2.exceptions.TemplateSyntaxError" href="jinja2.exceptions.TemplateSyntaxError.html"/>
+        <link rel="prev" title="jinja2.exceptions.TemplateNotFound" href="jinja2.exceptions.TemplateNotFound.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,28 +85,36 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="jinja2.html">1. jinja2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="jinja2.exceptions.html">3. jinja2.exceptions</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="jinja2.exceptions.html#id1">3.1. jinja2.exceptions</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="jinja2.exceptions.html#functions">3.1.1. Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="jinja2.exceptions.html#classes">3.1.2. Classes</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="jinja2.exceptions.html#exceptions">3.1.3. Exceptions</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.FilterArgumentError.html">3.1.3.1. jinja2.exceptions.FilterArgumentError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.SecurityError.html">3.1.3.2. jinja2.exceptions.SecurityError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateAssertionError.html">3.1.3.3. jinja2.exceptions.TemplateAssertionError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateError.html">3.1.3.4. jinja2.exceptions.TemplateError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateNotFound.html">3.1.3.5. jinja2.exceptions.TemplateNotFound</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">3.1.3.6. jinja2.exceptions.TemplateRuntimeError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateSyntaxError.html">3.1.3.7. jinja2.exceptions.TemplateSyntaxError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplatesNotFound.html">3.1.3.8. jinja2.exceptions.TemplatesNotFound</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.UndefinedError.html">3.1.3.9. jinja2.exceptions.UndefinedError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="jinja2.exceptions.html#id1">jinja2.exceptions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="jinja2.exceptions.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jinja2.exceptions.html#classes">Classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="jinja2.exceptions.html#exceptions">Exceptions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.FilterArgumentError.html">jinja2.exceptions.FilterArgumentError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.SecurityError.html">jinja2.exceptions.SecurityError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateAssertionError.html">jinja2.exceptions.TemplateAssertionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateError.html">jinja2.exceptions.TemplateError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateNotFound.html">jinja2.exceptions.TemplateNotFound</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.exceptions.TemplateRuntimeError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateSyntaxError.html">jinja2.exceptions.TemplateSyntaxError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplatesNotFound.html">jinja2.exceptions.TemplatesNotFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.UndefinedError.html">jinja2.exceptions.UndefinedError</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -150,9 +158,9 @@
         
           <li><a href="../api.exceptions.html">&lt;no title&gt;</a> &raquo;</li>
         
-          <li><a href="jinja2.exceptions.html">3. jinja2.exceptions</a> &raquo;</li>
+          <li><a href="jinja2.exceptions.html">jinja2.exceptions</a> &raquo;</li>
         
-      <li>3.1.3.6. jinja2.exceptions.TemplateRuntimeError</li>
+      <li>jinja2.exceptions.TemplateRuntimeError</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,7 +178,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="jinja2-exceptions-templateruntimeerror">
-<h1>3.1.3.6. jinja2.exceptions.TemplateRuntimeError<a class="headerlink" href="#jinja2-exceptions-templateruntimeerror" title="Permalink to this headline">¶</a></h1>
+<h1>jinja2.exceptions.TemplateRuntimeError<a class="headerlink" href="#jinja2-exceptions-templateruntimeerror" title="Permalink to this headline">¶</a></h1>
 <dl class="exception">
 <dt id="jinja2.exceptions.TemplateRuntimeError">
 <em class="property">exception </em><code class="descclassname">jinja2.exceptions.</code><code class="descname">TemplateRuntimeError</code><span class="sig-paren">(</span><em>message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jinja2/exceptions.html#TemplateRuntimeError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.exceptions.TemplateRuntimeError" title="Permalink to this definition">¶</a></dt>
@@ -187,10 +195,10 @@ Jinja may raise this exception.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="jinja2.exceptions.TemplateSyntaxError.html" class="btn btn-neutral float-right" title="3.1.3.7. jinja2.exceptions.TemplateSyntaxError" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="jinja2.exceptions.TemplateSyntaxError.html" class="btn btn-neutral float-right" title="jinja2.exceptions.TemplateSyntaxError" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="jinja2.exceptions.TemplateNotFound.html" class="btn btn-neutral" title="3.1.3.5. jinja2.exceptions.TemplateNotFound" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="jinja2.exceptions.TemplateNotFound.html" class="btn btn-neutral" title="jinja2.exceptions.TemplateNotFound" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

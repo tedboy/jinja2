@@ -1,0 +1,6 @@
+jinja2.nodes.Expr.as_const
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Expr.as_const

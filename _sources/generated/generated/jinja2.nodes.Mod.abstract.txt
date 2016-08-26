@@ -1,0 +1,6 @@
+jinja2.nodes.Mod.abstract
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Mod.abstract

@@ -1,0 +1,35 @@
+jinja2.ext.do
+=============
+.. currentmodule:: jinja2.ext
+.. autoclass:: do
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~do.__init__
+   ~do.attr
+   ~do.bind
+   ~do.call_method
+   ~do.filter_stream
+   ~do.parse
+   ~do.preprocess
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~do.identifier
+   ~do.priority
+   ~do.tags
+

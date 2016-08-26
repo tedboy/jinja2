@@ -1,0 +1,6 @@
+jinja2.nodes.Expr.iter_child_nodes
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Expr.iter_child_nodes

@@ -1,0 +1,6 @@
+jinja2.nodes.BinExpr.attributes
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: BinExpr.attributes

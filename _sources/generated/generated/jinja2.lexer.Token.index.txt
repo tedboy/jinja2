@@ -1,0 +1,6 @@
+jinja2.lexer.Token.index
+========================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: Token.index

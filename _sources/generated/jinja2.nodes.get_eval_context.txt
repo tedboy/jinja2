@@ -1,0 +1,6 @@
+jinja2.nodes.get_eval_context
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autofunction:: get_eval_context

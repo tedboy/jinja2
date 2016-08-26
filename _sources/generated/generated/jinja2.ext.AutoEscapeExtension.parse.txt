@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.parse
+====================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: AutoEscapeExtension.parse

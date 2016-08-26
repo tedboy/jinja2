@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.__init__
+=========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.__init__

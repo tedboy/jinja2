@@ -1,0 +1,6 @@
+jinja2.bccache.sha1
+===================
+
+.. currentmodule:: jinja2.bccache
+
+.. autofunction:: sha1

@@ -1,0 +1,21 @@
+jinja2.nodes.EvalContext
+========================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: EvalContext
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~EvalContext.__init__
+   ~EvalContext.revert
+   ~EvalContext.save
+
+
+
+
+

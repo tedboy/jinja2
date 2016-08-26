@@ -1,0 +1,6 @@
+jinja2.environment.Context.parent
+=================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Context.parent

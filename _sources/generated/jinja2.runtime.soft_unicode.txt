@@ -1,0 +1,6 @@
+jinja2.runtime.soft_unicode
+===========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: soft_unicode

@@ -1,0 +1,6 @@
+jinja2.environment.Context.blocks
+=================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Context.blocks

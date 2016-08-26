@@ -1,0 +1,6 @@
+jinja2.ext.ExprStmtExtension.parse
+==================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: ExprStmtExtension.parse

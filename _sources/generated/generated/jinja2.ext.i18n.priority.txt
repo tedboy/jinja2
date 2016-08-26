@@ -1,0 +1,6 @@
+jinja2.ext.i18n.priority
+========================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: i18n.priority

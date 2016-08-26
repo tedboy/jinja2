@@ -1,0 +1,69 @@
+jinja2.parser.Parser
+====================
+.. currentmodule:: jinja2.parser
+.. autoclass:: Parser
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Parser.__init__
+   ~Parser.fail
+   ~Parser.fail_eof
+   ~Parser.fail_unknown_tag
+   ~Parser.free_identifier
+   ~Parser.is_tuple_end
+   ~Parser.parse
+   ~Parser.parse_add
+   ~Parser.parse_and
+   ~Parser.parse_assign_target
+   ~Parser.parse_block
+   ~Parser.parse_call
+   ~Parser.parse_call_block
+   ~Parser.parse_compare
+   ~Parser.parse_concat
+   ~Parser.parse_condexpr
+   ~Parser.parse_dict
+   ~Parser.parse_div
+   ~Parser.parse_expression
+   ~Parser.parse_extends
+   ~Parser.parse_filter
+   ~Parser.parse_filter_block
+   ~Parser.parse_filter_expr
+   ~Parser.parse_floordiv
+   ~Parser.parse_for
+   ~Parser.parse_from
+   ~Parser.parse_if
+   ~Parser.parse_import
+   ~Parser.parse_import_context
+   ~Parser.parse_include
+   ~Parser.parse_list
+   ~Parser.parse_macro
+   ~Parser.parse_mod
+   ~Parser.parse_mul
+   ~Parser.parse_not
+   ~Parser.parse_or
+   ~Parser.parse_postfix
+   ~Parser.parse_pow
+   ~Parser.parse_primary
+   ~Parser.parse_print
+   ~Parser.parse_set
+   ~Parser.parse_signature
+   ~Parser.parse_statement
+   ~Parser.parse_statements
+   ~Parser.parse_sub
+   ~Parser.parse_subscribed
+   ~Parser.parse_subscript
+   ~Parser.parse_test
+   ~Parser.parse_tuple
+   ~Parser.parse_unary
+   ~Parser.subparse
+
+
+
+
+

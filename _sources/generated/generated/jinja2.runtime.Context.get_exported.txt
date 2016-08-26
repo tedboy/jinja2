@@ -1,0 +1,6 @@
+jinja2.runtime.Context.get_exported
+===================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.get_exported

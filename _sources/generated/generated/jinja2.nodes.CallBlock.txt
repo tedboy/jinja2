@@ -1,0 +1,36 @@
+jinja2.nodes.CallBlock
+======================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: CallBlock
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CallBlock.__init__
+   ~CallBlock.find
+   ~CallBlock.find_all
+   ~CallBlock.iter_child_nodes
+   ~CallBlock.iter_fields
+   ~CallBlock.set_ctx
+   ~CallBlock.set_environment
+   ~CallBlock.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~CallBlock.abstract
+   ~CallBlock.attributes
+   ~CallBlock.fields
+

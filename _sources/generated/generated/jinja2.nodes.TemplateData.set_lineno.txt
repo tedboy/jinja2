@@ -1,0 +1,6 @@
+jinja2.nodes.TemplateData.set_lineno
+====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: TemplateData.set_lineno

@@ -1,0 +1,6 @@
+jinja2.parser.describe_token_expr
+=================================
+
+.. currentmodule:: jinja2.parser
+
+.. autofunction:: describe_token_expr

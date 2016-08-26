@@ -1,0 +1,36 @@
+jinja2.nodes.Extends
+====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Extends
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Extends.__init__
+   ~Extends.find
+   ~Extends.find_all
+   ~Extends.iter_child_nodes
+   ~Extends.iter_fields
+   ~Extends.set_ctx
+   ~Extends.set_environment
+   ~Extends.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Extends.abstract
+   ~Extends.attributes
+   ~Extends.fields
+

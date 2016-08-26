@@ -1,0 +1,6 @@
+jinja2.nodes.ContextReference.can_assign
+========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ContextReference.can_assign

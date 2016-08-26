@@ -1,0 +1,6 @@
+jinja2.nodes.Not.operator
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Not.operator

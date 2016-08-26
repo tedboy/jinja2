@@ -1,0 +1,6 @@
+jinja2.nodes.Keyword.as_const
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Keyword.as_const

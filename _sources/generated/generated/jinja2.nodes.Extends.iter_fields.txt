@@ -1,0 +1,6 @@
+jinja2.nodes.Extends.iter_fields
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Extends.iter_fields

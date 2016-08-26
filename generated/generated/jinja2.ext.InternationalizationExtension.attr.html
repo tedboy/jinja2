@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.ext.InternationalizationExtension.attr &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="jinja2.ext.InternationalizationExtension" href="jinja2.ext.InternationalizationExtension.html"/>
+        <link rel="next" title="jinja2.ext.InternationalizationExtension.bind" href="jinja2.ext.InternationalizationExtension.bind.html"/>
+        <link rel="prev" title="jinja2.ext.InternationalizationExtension.__init__" href="jinja2.ext.InternationalizationExtension.__init__.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.ext.html#id1">jinja2.ext</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.ext.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.ext.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.AutoEscapeExtension.html">jinja2.ext.AutoEscapeExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.Environment.html">jinja2.ext.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.ExprStmtExtension.html">jinja2.ext.ExprStmtExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.Extension.html">jinja2.ext.Extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.ExtensionRegistry.html">jinja2.ext.ExtensionRegistry</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="jinja2.ext.InternationalizationExtension.html">jinja2.ext.InternationalizationExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.LoopControlExtension.html">jinja2.ext.LoopControlExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.Markup.html">jinja2.ext.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.WithExtension.html">jinja2.ext.WithExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.autoescape.html">jinja2.ext.autoescape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.do.html">jinja2.ext.do</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.i18n.html">jinja2.ext.i18n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.loopcontrols.html">jinja2.ext.loopcontrols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.with_.html">jinja2.ext.with</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.ext.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.ext.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.ext.html">jinja2.ext</a> &raquo;</li>
+        
+          <li><a href="jinja2.ext.InternationalizationExtension.html">jinja2.ext.InternationalizationExtension</a> &raquo;</li>
+        
+      <li>jinja2.ext.InternationalizationExtension.attr</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.ext.InternationalizationExtension.attr.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-ext-internationalizationextension-attr">
+<h1>jinja2.ext.InternationalizationExtension.attr<a class="headerlink" href="#jinja2-ext-internationalizationextension-attr" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="jinja2.ext.InternationalizationExtension.attr">
+<code class="descclassname">InternationalizationExtension.</code><code class="descname">attr</code><span class="sig-paren">(</span><em>name</em>, <em>lineno=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jinja2.ext.InternationalizationExtension.attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an attribute node for the current extension.  This is useful
+to pass constants on extensions to generated template code.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;_my_attribute&#39;</span><span class="p">,</span> <span class="n">lineno</span><span class="o">=</span><span class="n">lineno</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.ext.InternationalizationExtension.bind.html" class="btn btn-neutral float-right" title="jinja2.ext.InternationalizationExtension.bind" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jinja2.ext.InternationalizationExtension.__init__.html" class="btn btn-neutral" title="jinja2.ext.InternationalizationExtension.__init__" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

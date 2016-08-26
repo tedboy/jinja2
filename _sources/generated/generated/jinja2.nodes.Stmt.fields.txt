@@ -1,0 +1,6 @@
+jinja2.nodes.Stmt.fields
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Stmt.fields

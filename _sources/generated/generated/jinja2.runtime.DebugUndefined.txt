@@ -1,0 +1,19 @@
+jinja2.runtime.DebugUndefined
+=============================
+.. currentmodule:: jinja2.runtime
+.. autoclass:: DebugUndefined
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DebugUndefined.__init__
+
+
+
+
+

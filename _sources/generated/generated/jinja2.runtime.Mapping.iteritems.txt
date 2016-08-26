@@ -1,0 +1,6 @@
+jinja2.runtime.Mapping.iteritems
+================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Mapping.iteritems

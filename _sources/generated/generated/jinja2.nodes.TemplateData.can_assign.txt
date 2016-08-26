@@ -1,0 +1,6 @@
+jinja2.nodes.TemplateData.can_assign
+====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: TemplateData.can_assign

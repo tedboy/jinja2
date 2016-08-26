@@ -1,0 +1,6 @@
+jinja2.nodes.Or.operator
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Or.operator

@@ -1,0 +1,6 @@
+jinja2.nodes.Operand.set_environment
+====================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Operand.set_environment

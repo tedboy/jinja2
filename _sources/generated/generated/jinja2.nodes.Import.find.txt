@@ -1,0 +1,6 @@
+jinja2.nodes.Import.find
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Import.find

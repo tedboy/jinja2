@@ -1,0 +1,6 @@
+jinja2.nodes.EnvironmentAttribute.as_const
+==========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EnvironmentAttribute.as_const

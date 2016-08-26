@@ -1,0 +1,6 @@
+jinja2.nodes.EnvironmentAttribute.set_environment
+=================================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: EnvironmentAttribute.set_environment

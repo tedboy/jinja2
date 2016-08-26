@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.bccache &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../api.bccache.html"/>
+        <link rel="next" title="jinja2.bccache.BytesIO" href="jinja2.bccache.BytesIO.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="../api.bccache.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">jinja2.bccache</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">jinja2.bccache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.bccache.BytesIO.html">jinja2.bccache.BytesIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.bccache.listdir.html">jinja2.bccache.listdir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.bccache.marshal_dump.html">jinja2.bccache.marshal_dump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.bccache.marshal_load.html">jinja2.bccache.marshal_load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.bccache.open_if_exists.html">jinja2.bccache.open_if_exists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.bccache.sha1.html">jinja2.bccache.sha1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.bccache.Bucket.html">jinja2.bccache.Bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.bccache.BytecodeCache.html">jinja2.bccache.BytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.bccache.FileSystemBytecodeCache.html">jinja2.bccache.FileSystemBytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.bccache.MemcachedBytecodeCache.html">jinja2.bccache.MemcachedBytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.bccache.text_type.html">jinja2.bccache.text_type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.bccache.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>jinja2.bccache</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/jinja2.bccache.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jinja2.bccache">
+<span id="jinja2-bccache"></span><h1>jinja2.bccache<a class="headerlink" href="#module-jinja2.bccache" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>jinja2.bccache<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>This module implements the bytecode cache system Jinja is optionally
+using.  This is useful if you have very complex template situations and
+the compiliation of all those templates slow down your application too
+much.</p>
+<p>Situations where this is useful are often forking web applications that
+are initialized on the first request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2010 by the Jinja Team.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">BSD.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.bccache.BytesIO.html#jinja2.bccache.BytesIO" title="jinja2.bccache.BytesIO"><code class="xref py py-obj docutils literal"><span class="pre">BytesIO</span></code></a></td>
+<td>StringIO([s]) &#8211; Return a StringIO-like stream for reading or writing</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.bccache.listdir.html#jinja2.bccache.listdir" title="jinja2.bccache.listdir"><code class="xref py py-obj docutils literal"><span class="pre">listdir</span></code></a>((path)&nbsp;-&gt;&nbsp;list_of_strings)</td>
+<td>Return a list containing the names of the entries in the directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.bccache.marshal_dump.html#jinja2.bccache.marshal_dump" title="jinja2.bccache.marshal_dump"><code class="xref py py-obj docutils literal"><span class="pre">marshal_dump</span></code></a>(code,&nbsp;f)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.bccache.marshal_load.html#jinja2.bccache.marshal_load" title="jinja2.bccache.marshal_load"><code class="xref py py-obj docutils literal"><span class="pre">marshal_load</span></code></a>(f)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.bccache.open_if_exists.html#jinja2.bccache.open_if_exists" title="jinja2.bccache.open_if_exists"><code class="xref py py-obj docutils literal"><span class="pre">open_if_exists</span></code></a>(filename[,&nbsp;mode])</td>
+<td>Returns a file descriptor for the filename if that file exists, otherwise <cite>None</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.bccache.sha1.html#jinja2.bccache.sha1" title="jinja2.bccache.sha1"><code class="xref py py-obj docutils literal"><span class="pre">sha1</span></code></a></td>
+<td>Returns a sha1 hash object; optionally initialized with a string</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.bccache.Bucket.html#jinja2.bccache.Bucket" title="jinja2.bccache.Bucket"><code class="xref py py-obj docutils literal"><span class="pre">Bucket</span></code></a>(environment,&nbsp;key,&nbsp;checksum)</td>
+<td>Buckets are used to store the bytecode for one template.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.bccache.BytecodeCache.html#jinja2.bccache.BytecodeCache" title="jinja2.bccache.BytecodeCache"><code class="xref py py-obj docutils literal"><span class="pre">BytecodeCache</span></code></a></td>
+<td>To implement your own bytecode cache you have to subclass this class and override <code class="xref py py-meth docutils literal"><span class="pre">load_bytecode()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">dump_bytecode()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.bccache.FileSystemBytecodeCache.html#jinja2.bccache.FileSystemBytecodeCache" title="jinja2.bccache.FileSystemBytecodeCache"><code class="xref py py-obj docutils literal"><span class="pre">FileSystemBytecodeCache</span></code></a>([directory,&nbsp;pattern])</td>
+<td>A bytecode cache that stores bytecode on the filesystem.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.bccache.MemcachedBytecodeCache.html#jinja2.bccache.MemcachedBytecodeCache" title="jinja2.bccache.MemcachedBytecodeCache"><code class="xref py py-obj docutils literal"><span class="pre">MemcachedBytecodeCache</span></code></a>(client[,&nbsp;prefix,&nbsp;...])</td>
+<td>This class implements a bytecode cache that uses a memcache cache for storing the information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.bccache.text_type.html#jinja2.bccache.text_type" title="jinja2.bccache.text_type"><code class="xref py py-obj docutils literal"><span class="pre">text_type</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">unicode</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.bccache.BytesIO.html" class="btn btn-neutral float-right" title="jinja2.bccache.BytesIO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.bccache.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

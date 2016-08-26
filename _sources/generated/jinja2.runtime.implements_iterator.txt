@@ -1,0 +1,6 @@
+jinja2.runtime.implements_iterator
+==================================
+
+.. currentmodule:: jinja2.runtime
+
+.. autofunction:: implements_iterator

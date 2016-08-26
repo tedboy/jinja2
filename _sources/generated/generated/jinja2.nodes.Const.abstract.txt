@@ -1,0 +1,6 @@
+jinja2.nodes.Const.abstract
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Const.abstract

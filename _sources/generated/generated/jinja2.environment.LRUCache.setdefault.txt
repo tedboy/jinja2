@@ -1,0 +1,6 @@
+jinja2.environment.LRUCache.setdefault
+======================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: LRUCache.setdefault

@@ -1,0 +1,38 @@
+jinja2.nodes.ExtensionAttribute
+===============================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: ExtensionAttribute
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ExtensionAttribute.__init__
+   ~ExtensionAttribute.as_const
+   ~ExtensionAttribute.can_assign
+   ~ExtensionAttribute.find
+   ~ExtensionAttribute.find_all
+   ~ExtensionAttribute.iter_child_nodes
+   ~ExtensionAttribute.iter_fields
+   ~ExtensionAttribute.set_ctx
+   ~ExtensionAttribute.set_environment
+   ~ExtensionAttribute.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ExtensionAttribute.abstract
+   ~ExtensionAttribute.attributes
+   ~ExtensionAttribute.fields
+

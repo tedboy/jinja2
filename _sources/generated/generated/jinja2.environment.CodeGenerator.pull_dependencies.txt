@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.pull_dependencies
+==================================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.pull_dependencies

@@ -1,0 +1,6 @@
+jinja2.environment.Markup.encode
+================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Markup.encode

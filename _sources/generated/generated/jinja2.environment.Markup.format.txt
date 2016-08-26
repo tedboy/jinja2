@@ -1,0 +1,6 @@
+jinja2.environment.Markup.format
+================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: Markup.format

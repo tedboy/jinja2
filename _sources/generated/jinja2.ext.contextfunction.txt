@@ -1,0 +1,6 @@
+jinja2.ext.contextfunction
+==========================
+
+.. currentmodule:: jinja2.ext
+
+.. autofunction:: contextfunction

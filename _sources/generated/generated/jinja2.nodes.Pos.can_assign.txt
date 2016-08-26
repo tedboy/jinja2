@@ -1,0 +1,6 @@
+jinja2.nodes.Pos.can_assign
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Pos.can_assign

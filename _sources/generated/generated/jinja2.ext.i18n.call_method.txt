@@ -1,0 +1,6 @@
+jinja2.ext.i18n.call_method
+===========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: i18n.call_method

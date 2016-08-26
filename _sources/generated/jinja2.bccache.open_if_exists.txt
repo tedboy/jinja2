@@ -1,0 +1,6 @@
+jinja2.bccache.open_if_exists
+=============================
+
+.. currentmodule:: jinja2.bccache
+
+.. autofunction:: open_if_exists

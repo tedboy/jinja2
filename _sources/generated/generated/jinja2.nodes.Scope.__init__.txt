@@ -1,0 +1,6 @@
+jinja2.nodes.Scope.__init__
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Scope.__init__

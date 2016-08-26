@@ -1,0 +1,6 @@
+jinja2.ext.with_.preprocess
+===========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: with_.preprocess

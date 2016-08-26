@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.parser.Parser &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="jinja2.parser" href="../jinja2.parser.html"/>
+        <link rel="next" title="jinja2.parser.Parser.__init__" href="jinja2.parser.Parser.__init__.html"/>
+        <link rel="prev" title="jinja2.parser.describe_token_expr" href="../jinja2.parser.describe_token_expr.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.parser.html#id1">jinja2.parser</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.parser.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.parser.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.parser.Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.parser.imap.html">jinja2.parser.imap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.parser.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.parser.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.parser.html">jinja2.parser</a> &raquo;</li>
+        
+      <li>jinja2.parser.Parser</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.parser.Parser.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-parser-parser">
+<h1>jinja2.parser.Parser<a class="headerlink" href="#jinja2-parser-parser" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jinja2.parser.Parser">
+<em class="property">class </em><code class="descclassname">jinja2.parser.</code><code class="descname">Parser</code><span class="sig-paren">(</span><em>environment</em>, <em>source</em>, <em>name=None</em>, <em>filename=None</em>, <em>state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jinja2/parser.html#Parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.parser.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the central parsing class Jinja2 uses.  It&#8217;s passed to
+extensions and can be used to parse expressions or statements.</p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.__init__.html#jinja2.parser.Parser.__init__" title="jinja2.parser.Parser.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(environment,&nbsp;source[,&nbsp;name,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.fail.html#jinja2.parser.Parser.fail" title="jinja2.parser.Parser.fail"><code class="xref py py-obj docutils literal"><span class="pre">fail</span></code></a>(msg[,&nbsp;lineno,&nbsp;exc])</td>
+<td>Convenience method that raises <cite>exc</cite> with the message, passed line number or last line number as well as the current name and filename.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.fail_eof.html#jinja2.parser.Parser.fail_eof" title="jinja2.parser.Parser.fail_eof"><code class="xref py py-obj docutils literal"><span class="pre">fail_eof</span></code></a>([end_tokens,&nbsp;lineno])</td>
+<td>Like fail_unknown_tag but for end of template situations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.fail_unknown_tag.html#jinja2.parser.Parser.fail_unknown_tag" title="jinja2.parser.Parser.fail_unknown_tag"><code class="xref py py-obj docutils literal"><span class="pre">fail_unknown_tag</span></code></a>(name[,&nbsp;lineno])</td>
+<td>Called if the parser encounters an unknown tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.free_identifier.html#jinja2.parser.Parser.free_identifier" title="jinja2.parser.Parser.free_identifier"><code class="xref py py-obj docutils literal"><span class="pre">free_identifier</span></code></a>([lineno])</td>
+<td>Return a new free identifier as <a class="reference internal" href="jinja2.nodes.InternalName.html#jinja2.nodes.InternalName" title="jinja2.nodes.InternalName"><code class="xref py py-class docutils literal"><span class="pre">InternalName</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.is_tuple_end.html#jinja2.parser.Parser.is_tuple_end" title="jinja2.parser.Parser.is_tuple_end"><code class="xref py py-obj docutils literal"><span class="pre">is_tuple_end</span></code></a>([extra_end_rules])</td>
+<td>Are we at the end of a tuple?</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse.html#jinja2.parser.Parser.parse" title="jinja2.parser.Parser.parse"><code class="xref py py-obj docutils literal"><span class="pre">parse</span></code></a>()</td>
+<td>Parse the whole template into a <cite>Template</cite> node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_add.html#jinja2.parser.Parser.parse_add" title="jinja2.parser.Parser.parse_add"><code class="xref py py-obj docutils literal"><span class="pre">parse_add</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_and.html#jinja2.parser.Parser.parse_and" title="jinja2.parser.Parser.parse_and"><code class="xref py py-obj docutils literal"><span class="pre">parse_and</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_assign_target.html#jinja2.parser.Parser.parse_assign_target" title="jinja2.parser.Parser.parse_assign_target"><code class="xref py py-obj docutils literal"><span class="pre">parse_assign_target</span></code></a>([with_tuple,&nbsp;name_only,&nbsp;...])</td>
+<td>Parse an assignment target.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_block.html#jinja2.parser.Parser.parse_block" title="jinja2.parser.Parser.parse_block"><code class="xref py py-obj docutils literal"><span class="pre">parse_block</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_call.html#jinja2.parser.Parser.parse_call" title="jinja2.parser.Parser.parse_call"><code class="xref py py-obj docutils literal"><span class="pre">parse_call</span></code></a>(node)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_call_block.html#jinja2.parser.Parser.parse_call_block" title="jinja2.parser.Parser.parse_call_block"><code class="xref py py-obj docutils literal"><span class="pre">parse_call_block</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_compare.html#jinja2.parser.Parser.parse_compare" title="jinja2.parser.Parser.parse_compare"><code class="xref py py-obj docutils literal"><span class="pre">parse_compare</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_concat.html#jinja2.parser.Parser.parse_concat" title="jinja2.parser.Parser.parse_concat"><code class="xref py py-obj docutils literal"><span class="pre">parse_concat</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_condexpr.html#jinja2.parser.Parser.parse_condexpr" title="jinja2.parser.Parser.parse_condexpr"><code class="xref py py-obj docutils literal"><span class="pre">parse_condexpr</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_dict.html#jinja2.parser.Parser.parse_dict" title="jinja2.parser.Parser.parse_dict"><code class="xref py py-obj docutils literal"><span class="pre">parse_dict</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_div.html#jinja2.parser.Parser.parse_div" title="jinja2.parser.Parser.parse_div"><code class="xref py py-obj docutils literal"><span class="pre">parse_div</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_expression.html#jinja2.parser.Parser.parse_expression" title="jinja2.parser.Parser.parse_expression"><code class="xref py py-obj docutils literal"><span class="pre">parse_expression</span></code></a>([with_condexpr])</td>
+<td>Parse an expression.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_extends.html#jinja2.parser.Parser.parse_extends" title="jinja2.parser.Parser.parse_extends"><code class="xref py py-obj docutils literal"><span class="pre">parse_extends</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_filter.html#jinja2.parser.Parser.parse_filter" title="jinja2.parser.Parser.parse_filter"><code class="xref py py-obj docutils literal"><span class="pre">parse_filter</span></code></a>(node[,&nbsp;start_inline])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_filter_block.html#jinja2.parser.Parser.parse_filter_block" title="jinja2.parser.Parser.parse_filter_block"><code class="xref py py-obj docutils literal"><span class="pre">parse_filter_block</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_filter_expr.html#jinja2.parser.Parser.parse_filter_expr" title="jinja2.parser.Parser.parse_filter_expr"><code class="xref py py-obj docutils literal"><span class="pre">parse_filter_expr</span></code></a>(node)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_floordiv.html#jinja2.parser.Parser.parse_floordiv" title="jinja2.parser.Parser.parse_floordiv"><code class="xref py py-obj docutils literal"><span class="pre">parse_floordiv</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_for.html#jinja2.parser.Parser.parse_for" title="jinja2.parser.Parser.parse_for"><code class="xref py py-obj docutils literal"><span class="pre">parse_for</span></code></a>()</td>
+<td>Parse a for loop.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_from.html#jinja2.parser.Parser.parse_from" title="jinja2.parser.Parser.parse_from"><code class="xref py py-obj docutils literal"><span class="pre">parse_from</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_if.html#jinja2.parser.Parser.parse_if" title="jinja2.parser.Parser.parse_if"><code class="xref py py-obj docutils literal"><span class="pre">parse_if</span></code></a>()</td>
+<td>Parse an if construct.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_import.html#jinja2.parser.Parser.parse_import" title="jinja2.parser.Parser.parse_import"><code class="xref py py-obj docutils literal"><span class="pre">parse_import</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_import_context.html#jinja2.parser.Parser.parse_import_context" title="jinja2.parser.Parser.parse_import_context"><code class="xref py py-obj docutils literal"><span class="pre">parse_import_context</span></code></a>(node,&nbsp;default)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_include.html#jinja2.parser.Parser.parse_include" title="jinja2.parser.Parser.parse_include"><code class="xref py py-obj docutils literal"><span class="pre">parse_include</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_list.html#jinja2.parser.Parser.parse_list" title="jinja2.parser.Parser.parse_list"><code class="xref py py-obj docutils literal"><span class="pre">parse_list</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_macro.html#jinja2.parser.Parser.parse_macro" title="jinja2.parser.Parser.parse_macro"><code class="xref py py-obj docutils literal"><span class="pre">parse_macro</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_mod.html#jinja2.parser.Parser.parse_mod" title="jinja2.parser.Parser.parse_mod"><code class="xref py py-obj docutils literal"><span class="pre">parse_mod</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_mul.html#jinja2.parser.Parser.parse_mul" title="jinja2.parser.Parser.parse_mul"><code class="xref py py-obj docutils literal"><span class="pre">parse_mul</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_not.html#jinja2.parser.Parser.parse_not" title="jinja2.parser.Parser.parse_not"><code class="xref py py-obj docutils literal"><span class="pre">parse_not</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_or.html#jinja2.parser.Parser.parse_or" title="jinja2.parser.Parser.parse_or"><code class="xref py py-obj docutils literal"><span class="pre">parse_or</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_postfix.html#jinja2.parser.Parser.parse_postfix" title="jinja2.parser.Parser.parse_postfix"><code class="xref py py-obj docutils literal"><span class="pre">parse_postfix</span></code></a>(node)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_pow.html#jinja2.parser.Parser.parse_pow" title="jinja2.parser.Parser.parse_pow"><code class="xref py py-obj docutils literal"><span class="pre">parse_pow</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_primary.html#jinja2.parser.Parser.parse_primary" title="jinja2.parser.Parser.parse_primary"><code class="xref py py-obj docutils literal"><span class="pre">parse_primary</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_print.html#jinja2.parser.Parser.parse_print" title="jinja2.parser.Parser.parse_print"><code class="xref py py-obj docutils literal"><span class="pre">parse_print</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_set.html#jinja2.parser.Parser.parse_set" title="jinja2.parser.Parser.parse_set"><code class="xref py py-obj docutils literal"><span class="pre">parse_set</span></code></a>()</td>
+<td>Parse an assign statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_signature.html#jinja2.parser.Parser.parse_signature" title="jinja2.parser.Parser.parse_signature"><code class="xref py py-obj docutils literal"><span class="pre">parse_signature</span></code></a>(node)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_statement.html#jinja2.parser.Parser.parse_statement" title="jinja2.parser.Parser.parse_statement"><code class="xref py py-obj docutils literal"><span class="pre">parse_statement</span></code></a>()</td>
+<td>Parse a single statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_statements.html#jinja2.parser.Parser.parse_statements" title="jinja2.parser.Parser.parse_statements"><code class="xref py py-obj docutils literal"><span class="pre">parse_statements</span></code></a>(end_tokens[,&nbsp;drop_needle])</td>
+<td>Parse multiple statements into a list until one of the end tokens is reached.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_sub.html#jinja2.parser.Parser.parse_sub" title="jinja2.parser.Parser.parse_sub"><code class="xref py py-obj docutils literal"><span class="pre">parse_sub</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_subscribed.html#jinja2.parser.Parser.parse_subscribed" title="jinja2.parser.Parser.parse_subscribed"><code class="xref py py-obj docutils literal"><span class="pre">parse_subscribed</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_subscript.html#jinja2.parser.Parser.parse_subscript" title="jinja2.parser.Parser.parse_subscript"><code class="xref py py-obj docutils literal"><span class="pre">parse_subscript</span></code></a>(node)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_test.html#jinja2.parser.Parser.parse_test" title="jinja2.parser.Parser.parse_test"><code class="xref py py-obj docutils literal"><span class="pre">parse_test</span></code></a>(node)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.parse_tuple.html#jinja2.parser.Parser.parse_tuple" title="jinja2.parser.Parser.parse_tuple"><code class="xref py py-obj docutils literal"><span class="pre">parse_tuple</span></code></a>([simplified,&nbsp;with_condexpr,&nbsp;...])</td>
+<td>Works like <cite>parse_expression</cite> but if multiple expressions are delimited by a comma a <a class="reference internal" href="jinja2.nodes.Tuple.html#jinja2.nodes.Tuple" title="jinja2.nodes.Tuple"><code class="xref py py-class docutils literal"><span class="pre">Tuple</span></code></a> node is created.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.parser.Parser.parse_unary.html#jinja2.parser.Parser.parse_unary" title="jinja2.parser.Parser.parse_unary"><code class="xref py py-obj docutils literal"><span class="pre">parse_unary</span></code></a>([with_filter])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.parser.Parser.subparse.html#jinja2.parser.Parser.subparse" title="jinja2.parser.Parser.subparse"><code class="xref py py-obj docutils literal"><span class="pre">subparse</span></code></a>([end_tokens])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.parser.Parser.__init__.html" class="btn btn-neutral float-right" title="jinja2.parser.Parser.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../jinja2.parser.describe_token_expr.html" class="btn btn-neutral" title="jinja2.parser.describe_token_expr" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

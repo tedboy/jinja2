@@ -1,0 +1,6 @@
+jinja2.nodes.Continue.__init__
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Continue.__init__

@@ -1,0 +1,38 @@
+jinja2.nodes.Literal
+====================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Literal
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Literal.__init__
+   ~Literal.as_const
+   ~Literal.can_assign
+   ~Literal.find
+   ~Literal.find_all
+   ~Literal.iter_child_nodes
+   ~Literal.iter_fields
+   ~Literal.set_ctx
+   ~Literal.set_environment
+   ~Literal.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Literal.abstract
+   ~Literal.attributes
+   ~Literal.fields
+

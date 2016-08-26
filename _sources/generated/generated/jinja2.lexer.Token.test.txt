@@ -1,0 +1,6 @@
+jinja2.lexer.Token.test
+=======================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: Token.test

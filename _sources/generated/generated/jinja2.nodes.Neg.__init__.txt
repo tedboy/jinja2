@@ -1,0 +1,6 @@
+jinja2.nodes.Neg.__init__
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Neg.__init__

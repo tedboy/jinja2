@@ -1,0 +1,6 @@
+jinja2.environment.CodeGenerator.position
+=========================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: CodeGenerator.position

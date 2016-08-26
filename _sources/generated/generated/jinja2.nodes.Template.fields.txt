@@ -1,0 +1,6 @@
+jinja2.nodes.Template.fields
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Template.fields

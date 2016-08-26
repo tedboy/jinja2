@@ -1,0 +1,6 @@
+jinja2.lexer.LRUCache.itervalue
+===============================
+
+.. currentmodule:: jinja2.lexer
+
+.. automethod:: LRUCache.itervalue

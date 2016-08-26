@@ -1,0 +1,6 @@
+jinja2.nodes.Neg.attributes
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Neg.attributes

@@ -1,0 +1,38 @@
+jinja2.nodes.Call
+=================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Call
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Call.__init__
+   ~Call.as_const
+   ~Call.can_assign
+   ~Call.find
+   ~Call.find_all
+   ~Call.iter_child_nodes
+   ~Call.iter_fields
+   ~Call.set_ctx
+   ~Call.set_environment
+   ~Call.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Call.abstract
+   ~Call.attributes
+   ~Call.fields
+

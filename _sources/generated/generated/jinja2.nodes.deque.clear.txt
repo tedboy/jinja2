@@ -1,0 +1,6 @@
+jinja2.nodes.deque.clear
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: deque.clear

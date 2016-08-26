@@ -1,0 +1,6 @@
+jinja2.runtime.LoopContext.cycle
+================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: LoopContext.cycle

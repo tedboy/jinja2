@@ -1,0 +1,6 @@
+jinja2.ext.AutoEscapeExtension.identifier
+=========================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoattribute:: AutoEscapeExtension.identifier

@@ -1,0 +1,6 @@
+jinja2.nodes.TemplateData.abstract
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: TemplateData.abstract

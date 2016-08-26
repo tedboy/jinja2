@@ -1,0 +1,6 @@
+jinja2.nodes.Markup.isspace
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Markup.isspace

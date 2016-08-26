@@ -1,0 +1,6 @@
+jinja2.ext.extract_from_ast
+===========================
+
+.. currentmodule:: jinja2.ext
+
+.. autofunction:: extract_from_ast

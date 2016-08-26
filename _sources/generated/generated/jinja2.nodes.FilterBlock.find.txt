@@ -1,0 +1,6 @@
+jinja2.nodes.FilterBlock.find
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FilterBlock.find

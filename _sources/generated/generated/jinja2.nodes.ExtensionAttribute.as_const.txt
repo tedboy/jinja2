@@ -1,0 +1,6 @@
+jinja2.nodes.ExtensionAttribute.as_const
+========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ExtensionAttribute.as_const

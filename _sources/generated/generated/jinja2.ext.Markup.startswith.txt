@@ -1,0 +1,6 @@
+jinja2.ext.Markup.startswith
+============================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: Markup.startswith

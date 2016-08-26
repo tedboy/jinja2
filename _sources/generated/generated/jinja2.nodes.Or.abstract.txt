@@ -1,0 +1,6 @@
+jinja2.nodes.Or.abstract
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Or.abstract

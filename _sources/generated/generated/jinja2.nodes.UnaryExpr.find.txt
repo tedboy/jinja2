@@ -1,0 +1,6 @@
+jinja2.nodes.UnaryExpr.find
+===========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: UnaryExpr.find

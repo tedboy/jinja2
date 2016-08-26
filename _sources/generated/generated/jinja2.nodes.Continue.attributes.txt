@@ -1,0 +1,6 @@
+jinja2.nodes.Continue.attributes
+================================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Continue.attributes

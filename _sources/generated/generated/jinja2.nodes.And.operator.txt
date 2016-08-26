@@ -1,0 +1,6 @@
+jinja2.nodes.And.operator
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: And.operator

@@ -1,0 +1,6 @@
+jinja2.nodes.Compare.abstract
+=============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Compare.abstract

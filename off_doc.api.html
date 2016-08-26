@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. API &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
+        <link rel="next" title="3. Sandbox" href="off_doc.sandbox.html"/>
+        <link rel="prev" title="1. Introduction" href="off_doc.intro.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2. API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basics">2.1. Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unicode">2.2. Unicode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-api">2.3. High Level API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#environment">2.3.1. <code class="docutils literal"><span class="pre">Environment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#template">2.3.2. <code class="docutils literal"><span class="pre">Template</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-environment-templatestream">2.3.3. <code class="docutils literal"><span class="pre">jinja2.environment.TemplateStream</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#autoescaping">2.4. Autoescaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes-on-identifiers">2.5. Notes on Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#undefined-types">2.6. Undefined Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#undefined">2.6.1. <code class="docutils literal"><span class="pre">Undefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#debugundefined">2.6.2. <code class="docutils literal"><span class="pre">DebugUndefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#strictundefined">2.6.3. <code class="docutils literal"><span class="pre">StrictUndefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-logging-undefined">2.6.4. <code class="docutils literal"><span class="pre">make_logging_undefined()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-context">2.7. The Context</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-runtime-context">2.7.1. <code class="docutils literal"><span class="pre">jinja2.runtime.Context</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#loaders">2.8. Loaders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-baseloader">2.8.1. <code class="docutils literal"><span class="pre">jinja2.BaseLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-filesystemloader">2.8.2. <code class="docutils literal"><span class="pre">jinja2.FileSystemLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-packageloader">2.8.3. <code class="docutils literal"><span class="pre">jinja2.PackageLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-dictloader">2.8.4. <code class="docutils literal"><span class="pre">jinja2.DictLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-functionloader">2.8.5. <code class="docutils literal"><span class="pre">jinja2.FunctionLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-prefixloader">2.8.6. <code class="docutils literal"><span class="pre">jinja2.PrefixLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-choiceloader">2.8.7. <code class="docutils literal"><span class="pre">jinja2.ChoiceLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-moduleloader">2.8.8. <code class="docutils literal"><span class="pre">jinja2.ModuleLoader</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#bytecode-cache">2.9. Bytecode Cache</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-bytecodecache">2.9.1. <code class="docutils literal"><span class="pre">jinja2.BytecodeCache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-bccache-bucket">2.9.2. <code class="docutils literal"><span class="pre">jinja2.bccache.Bucket</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-filesystembytecodecache">2.9.3. <code class="docutils literal"><span class="pre">jinja2.FileSystemBytecodeCache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-memcachedbytecodecache">2.9.4. <code class="docutils literal"><span class="pre">jinja2.MemcachedBytecodeCache</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#utilities">2.10. Utilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-environmentfilter">2.10.1. <code class="docutils literal"><span class="pre">jinja2.environmentfilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-contextfilter">2.10.2. <code class="docutils literal"><span class="pre">jinja2.contextfilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-evalcontextfilter">2.10.3. <code class="docutils literal"><span class="pre">jinja2.evalcontextfilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-environmentfunction">2.10.4. <code class="docutils literal"><span class="pre">jinja2.environmentfunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-contextfunction">2.10.5. <code class="docutils literal"><span class="pre">jinja2.contextfunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-evalcontextfunction">2.10.6. <code class="docutils literal"><span class="pre">jinja2.evalcontextfunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#escape-s">2.10.7. escape(s)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-clear-caches">2.10.8. <code class="docutils literal"><span class="pre">jinja2.clear_caches()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-is-undefined">2.10.9. <code class="docutils literal"><span class="pre">jinja2.is_undefined()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-markup">2.10.10. <code class="docutils literal"><span class="pre">jinja2.Markup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">2.11. Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templateerror">2.11.1. <code class="docutils literal"><span class="pre">jinja2.TemplateError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-undefinederror">2.11.2. <code class="docutils literal"><span class="pre">jinja2.UndefinedError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatenotfound">2.11.3. <code class="docutils literal"><span class="pre">jinja2.TemplateNotFound</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatesnotfound">2.11.4. <code class="docutils literal"><span class="pre">jinja2.TemplatesNotFound</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatesyntaxerror">2.11.5. <code class="docutils literal"><span class="pre">jinja2.TemplateSyntaxError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templateassertionerror">2.11.6. <code class="docutils literal"><span class="pre">jinja2.TemplateAssertionError</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-filters">2.12. Custom Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-context">2.13. Evaluation Context</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-nodes-evalcontext">2.13.1. <code class="docutils literal"><span class="pre">jinja2.nodes.EvalContext</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-tests">2.14. Custom Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-global-namespace">2.15. The Global Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#low-level-api">2.16. Low Level API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-meta-api">2.17. The Meta API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+      <li>2. API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/off_doc.api.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jinja2">
+<span id="api"></span><h1>2. API<a class="headerlink" href="#module-jinja2" title="Permalink to this headline">¶</a></h1>
+<p>This document describes the API to Jinja2 and not the template language.  It
+will be most useful as reference to those implementing the template interface
+to the application and not those who are creating Jinja2 templates.</p>
+<div class="section" id="basics">
+<h2>2.1. Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>Jinja2 uses a central object called the template <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a>.
+Instances of this class are used to store the configuration and global objects,
+and are used to load templates from the file system or other locations.
+Even if you are creating templates from strings by using the constructor of
+<a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a> class, an environment is created automatically for you,
+albeit a shared one.</p>
+<p>Most applications will create one <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a> object on application
+initialization and use that to load templates.  In some cases however, it&#8217;s
+useful to have multiple environments side by side, if different configurations
+are in use.</p>
+<p>The simplest way to configure Jinja2 to load templates for your application
+looks roughly like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">PackageLoader</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">PackageLoader</span><span class="p">(</span><span class="s1">&#39;yourapplication&#39;</span><span class="p">,</span> <span class="s1">&#39;templates&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This will create a template environment with the default settings and a
+loader that looks up the templates in the <cite>templates</cite> folder inside the
+<cite>yourapplication</cite> python package.  Different loaders are available
+and you can also write your own if you want to load templates from a
+database or other resources.</p>
+<p>To load a template from this environment you just have to call the
+<code class="xref py py-meth docutils literal"><span class="pre">get_template()</span></code> method which then returns the loaded <a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">&#39;mytemplate.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To render it with some variables, just call the <code class="xref py py-meth docutils literal"><span class="pre">render()</span></code> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">the</span><span class="o">=</span><span class="s1">&#39;variables&#39;</span><span class="p">,</span> <span class="n">go</span><span class="o">=</span><span class="s1">&#39;here&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Using a template loader rather than passing strings to <a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a>
+or <a class="reference internal" href="generated/generated/jinja2.Environment.from_string.html#jinja2.Environment.from_string" title="jinja2.Environment.from_string"><code class="xref py py-meth docutils literal"><span class="pre">Environment.from_string()</span></code></a> has multiple advantages.  Besides being
+a lot easier to use it also enables template inheritance.</p>
+</div>
+<div class="section" id="unicode">
+<h2>2.2. Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h2>
+<p>Jinja2 is using Unicode internally which means that you have to pass Unicode
+objects to the render function or bytestrings that only consist of ASCII
+characters.  Additionally newlines are normalized to one end of line
+sequence which is per default UNIX style (<code class="docutils literal"><span class="pre">\n</span></code>).</p>
+<p>Python 2.x supports two ways of representing string objects.  One is the
+<cite>str</cite> type and the other is the <cite>unicode</cite> type, both of which extend a type
+called <cite>basestring</cite>.  Unfortunately the default is <cite>str</cite> which should not
+be used to store text based information unless only ASCII characters are
+used.  With Python 2.6 it is possible to make <cite>unicode</cite> the default on a per
+module level and with Python 3 it will be the default.</p>
+<p>To explicitly use a Unicode string you have to prefix the string literal
+with a <cite>u</cite>: <code class="docutils literal"><span class="pre">u'Hänsel</span> <span class="pre">und</span> <span class="pre">Gretel</span> <span class="pre">sagen</span> <span class="pre">Hallo'</span></code>.  That way Python will
+store the string as Unicode by decoding the string with the character
+encoding from the current Python module.  If no encoding is specified this
+defaults to &#8216;ASCII&#8217; which means that you can&#8217;t use any non ASCII identifier.</p>
+<p>To set a better module encoding add the following comment to the first or
+second line of the Python module using the Unicode literal:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+</pre></div>
+</div>
+<p>We recommend utf-8 as Encoding for Python modules and templates as it&#8217;s
+possible to represent every Unicode character in utf-8 and because it&#8217;s
+backwards compatible to ASCII.  For Jinja2 the default encoding of templates
+is assumed to be utf-8.</p>
+<p>It is not possible to use Jinja2 to process non-Unicode data.  The reason
+for this is that Jinja2 uses Unicode already on the language level.  For
+example Jinja2 treats the non-breaking space as valid whitespace inside
+expressions which requires knowledge of the encoding or operating on an
+Unicode string.</p>
+<p>For more details about Unicode in Python have a look at the excellent
+<a class="reference external" href="http://docs.python.org/dev/howto/unicode.html">Unicode documentation</a>.</p>
+<p>Another important thing is how Jinja2 is handling string literals in
+templates.  A naive implementation would be using Unicode strings for
+all string literals but it turned out in the past that this is problematic
+as some libraries are typechecking against <cite>str</cite> explicitly.  For example
+<cite>datetime.strftime</cite> does not accept Unicode arguments.  To not break it
+completely Jinja2 is returning <cite>str</cite> for strings that fit into ASCII and
+for everything else <cite>unicode</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s2">u&quot;{</span><span class="si">% s</span><span class="s2">et a, b = &#39;foo&#39;, &#39;föö&#39; %}&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">module</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">a</span>
+<span class="go">&#39;foo&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">b</span>
+<span class="go">u&#39;f\xf6\xf6&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="high-level-api">
+<h2>2.3. High Level API<a class="headerlink" href="#high-level-api" title="Permalink to this headline">¶</a></h2>
+<p>The high-level API is the API you will use in the application to load and
+render Jinja2 templates.  The <a class="reference internal" href="#low-level-api"><span>Low Level API</span></a> on the other side is only
+useful if you want to dig deeper into Jinja2 or <a class="reference internal" href="off_doc.extensions.html#jinja-extensions"><span>develop extensions</span></a>.</p>
+<div class="section" id="environment">
+<h3>2.3.1. <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a><a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="template">
+<h3>2.3.2. <a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a><a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-environment-templatestream">
+<h3>2.3.3. <a class="reference internal" href="generated/generated/jinja2.environment.TemplateStream.html#jinja2.environment.TemplateStream" title="jinja2.environment.TemplateStream"><code class="xref py py-class docutils literal"><span class="pre">jinja2.environment.TemplateStream</span></code></a><a class="headerlink" href="#jinja2-environment-templatestream" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="autoescaping">
+<h2>2.4. Autoescaping<a class="headerlink" href="#autoescaping" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.4.</span></p>
+</div>
+<p>As of Jinja 2.4 the preferred way to do autoescaping is to enable the
+<a class="reference internal" href="ext6.html#autoescape-extension"><span>Autoescape Extension</span></a> and to configure a sensible default for
+autoescaping.  This makes it possible to enable and disable autoescaping
+on a per-template basis (HTML versus text for instance).</p>
+<p>Here a recommended setup that enables autoescaping for templates ending
+in <code class="docutils literal"><span class="pre">'.html'</span></code>, <code class="docutils literal"><span class="pre">'.htm'</span></code> and <code class="docutils literal"><span class="pre">'.xml'</span></code> and disabling it by default
+for all other extensions:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">guess_autoescape</span><span class="p">(</span><span class="n">template_name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">template_name</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="s1">&#39;.&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">template_name</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="n">template_name</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;htm&#39;</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">)</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">autoescape</span><span class="o">=</span><span class="n">guess_autoescape</span><span class="p">,</span>
+                  <span class="n">loader</span><span class="o">=</span><span class="n">PackageLoader</span><span class="p">(</span><span class="s1">&#39;mypackage&#39;</span><span class="p">),</span>
+                  <span class="n">extensions</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;jinja2.ext.autoescape&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>When implementing a guessing autoescape function, make sure you also
+accept <cite>None</cite> as valid template name.  This will be passed when generating
+templates from strings.</p>
+<p>Inside the templates the behaviour can be temporarily changed by using
+the <cite>autoescape</cite> block (see <a class="reference internal" href="templ18.html#autoescape-overrides"><span>Autoescape Extension</span></a>).</p>
+</div>
+<div class="section" id="notes-on-identifiers">
+<span id="identifier-naming"></span><h2>2.5. Notes on Identifiers<a class="headerlink" href="#notes-on-identifiers" title="Permalink to this headline">¶</a></h2>
+<p>Jinja2 uses the regular Python 2.x naming rules.  Valid identifiers have to
+match <code class="docutils literal"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*</span></code>.  As a matter of fact non ASCII characters
+are currently not allowed.  This limitation will probably go away as soon as
+unicode identifiers are fully specified for Python 3.</p>
+<p>Filters and tests are looked up in separate namespaces and have slightly
+modified identifier syntax.  Filters and tests may contain dots to group
+filters and tests by topic.  For example it&#8217;s perfectly valid to add a
+function into the filter dict and call it <cite>to.unicode</cite>.  The regular
+expression for filter and test identifiers is
+<code class="docutils literal"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*(\.[a-zA-Z_][a-zA-Z0-9_]*)*`</span></code>.</p>
+</div>
+<div class="section" id="undefined-types">
+<h2>2.6. Undefined Types<a class="headerlink" href="#undefined-types" title="Permalink to this headline">¶</a></h2>
+<p>These classes can be used as undefined types.  The <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a>
+constructor takes an <cite>undefined</cite> parameter that can be one of those classes
+or a custom subclass of <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a>.  Whenever the template engine is
+unable to look up a name or access an attribute one of those objects is
+created and returned.  Some operations on undefined values are then allowed,
+others fail.</p>
+<p>The closest to regular Python behavior is the <cite>StrictUndefined</cite> which
+disallows all operations beside testing if it&#8217;s an undefined object.</p>
+<div class="section" id="undefined">
+<h3>2.6.1. <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a><a class="headerlink" href="#undefined" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="debugundefined">
+<h3>2.6.2. <a class="reference internal" href="generated/generated/jinja2.DebugUndefined.html#jinja2.DebugUndefined" title="jinja2.DebugUndefined"><code class="xref py py-class docutils literal"><span class="pre">DebugUndefined</span></code></a><a class="headerlink" href="#debugundefined" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="strictundefined">
+<h3>2.6.3. <a class="reference internal" href="generated/generated/jinja2.StrictUndefined.html#jinja2.StrictUndefined" title="jinja2.StrictUndefined"><code class="xref py py-class docutils literal"><span class="pre">StrictUndefined</span></code></a><a class="headerlink" href="#strictundefined" title="Permalink to this headline">¶</a></h3>
+<p>There is also a factory function that can decorate undefined objects to
+implement logging on failures:</p>
+</div>
+<div class="section" id="make-logging-undefined">
+<h3>2.6.4. <a class="reference internal" href="generated/jinja2.make_logging_undefined.html#jinja2.make_logging_undefined" title="jinja2.make_logging_undefined"><code class="xref py py-func docutils literal"><span class="pre">make_logging_undefined()</span></code></a><a class="headerlink" href="#make-logging-undefined" title="Permalink to this headline">¶</a></h3>
+<p>Undefined objects are created by calling <a class="reference internal" href="templ15.html#undefined" title="undefined"><code class="xref py py-attr docutils literal"><span class="pre">undefined</span></code></a>.</p>
+<div class="admonition-implementation admonition">
+<p class="first admonition-title">Implementation</p>
+<p><a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a> objects are implemented by overriding the special
+<cite>__underscore__</cite> methods.  For example the default <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a>
+class implements <cite>__unicode__</cite> in a way that it returns an empty
+string, however <cite>__int__</cite> and others still fail with an exception.  To
+allow conversion to int by returning <code class="docutils literal"><span class="pre">0</span></code> you can implement your own:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NullUndefined</span><span class="p">(</span><span class="n">Undefined</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__int__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="nf">__float__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+<p>To disallow a method, just override it and raise
+<code class="xref py py-attr docutils literal"><span class="pre">_undefined_exception</span></code>.  Because this is a very common
+idom in undefined objects there is the helper method
+<code class="xref py py-meth docutils literal"><span class="pre">_fail_with_undefined_error()</span></code> that does the error raising
+automatically.  Here a class that works like the regular <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a>
+but chokes on iteration:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NonIterableUndefined</span><span class="p">(</span><span class="n">Undefined</span><span class="p">):</span>
+    <span class="n">__iter__</span> <span class="o">=</span> <span class="n">Undefined</span><span class="o">.</span><span class="n">_fail_with_undefined_error</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-context">
+<h2>2.7. The Context<a class="headerlink" href="#the-context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jinja2-runtime-context">
+<h3>2.7.1. <a class="reference internal" href="generated/generated/jinja2.runtime.Context.html#jinja2.runtime.Context" title="jinja2.runtime.Context"><code class="xref py py-class docutils literal"><span class="pre">jinja2.runtime.Context</span></code></a><a class="headerlink" href="#jinja2-runtime-context" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-implementation admonition">
+<p class="first admonition-title">Implementation</p>
+<p>Context is immutable for the same reason Python&#8217;s frame locals are
+immutable inside functions.  Both Jinja2 and Python are not using the
+context / frame locals as data storage for variables but only as primary
+data source.</p>
+<p class="last">When a template accesses a variable the template does not define, Jinja2
+looks up the variable in the context, after that the variable is treated
+as if it was defined in the template.</p>
+</div>
+</div>
+</div>
+<div class="section" id="loaders">
+<span id="id1"></span><h2>2.8. Loaders<a class="headerlink" href="#loaders" title="Permalink to this headline">¶</a></h2>
+<p>Loaders are responsible for loading templates from a resource such as the
+file system.  The environment will keep the compiled modules in memory like
+Python&#8217;s <cite>sys.modules</cite>.  Unlike <cite>sys.modules</cite> however this cache is limited in
+size by default and templates are automatically reloaded.
+All loaders are subclasses of <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">BaseLoader</span></code></a>.  If you want to create your
+own loader, subclass <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">BaseLoader</span></code></a> and override <cite>get_source</cite>.</p>
+<div class="section" id="jinja2-baseloader">
+<h3>2.8.1. <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.BaseLoader</span></code></a><a class="headerlink" href="#jinja2-baseloader" title="Permalink to this headline">¶</a></h3>
+<p class="rubric">Built-in Loaders</p>
+<p>Here a list of the builtin loaders Jinja2 provides:</p>
+</div>
+<div class="section" id="jinja2-filesystemloader">
+<h3>2.8.2. <a class="reference internal" href="generated/generated/jinja2.FileSystemLoader.html#jinja2.FileSystemLoader" title="jinja2.FileSystemLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FileSystemLoader</span></code></a><a class="headerlink" href="#jinja2-filesystemloader" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-packageloader">
+<h3>2.8.3. <a class="reference internal" href="generated/generated/jinja2.PackageLoader.html#jinja2.PackageLoader" title="jinja2.PackageLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.PackageLoader</span></code></a><a class="headerlink" href="#jinja2-packageloader" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-dictloader">
+<h3>2.8.4. <a class="reference internal" href="generated/generated/jinja2.DictLoader.html#jinja2.DictLoader" title="jinja2.DictLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.DictLoader</span></code></a><a class="headerlink" href="#jinja2-dictloader" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-functionloader">
+<h3>2.8.5. <a class="reference internal" href="generated/generated/jinja2.FunctionLoader.html#jinja2.FunctionLoader" title="jinja2.FunctionLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FunctionLoader</span></code></a><a class="headerlink" href="#jinja2-functionloader" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-prefixloader">
+<h3>2.8.6. <a class="reference internal" href="generated/generated/jinja2.PrefixLoader.html#jinja2.PrefixLoader" title="jinja2.PrefixLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.PrefixLoader</span></code></a><a class="headerlink" href="#jinja2-prefixloader" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-choiceloader">
+<h3>2.8.7. <a class="reference internal" href="generated/generated/jinja2.ChoiceLoader.html#jinja2.ChoiceLoader" title="jinja2.ChoiceLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ChoiceLoader</span></code></a><a class="headerlink" href="#jinja2-choiceloader" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-moduleloader">
+<h3>2.8.8. <a class="reference internal" href="generated/generated/jinja2.ModuleLoader.html#jinja2.ModuleLoader" title="jinja2.ModuleLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ModuleLoader</span></code></a><a class="headerlink" href="#jinja2-moduleloader" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="bytecode-cache">
+<span id="id2"></span><h2>2.9. Bytecode Cache<a class="headerlink" href="#bytecode-cache" title="Permalink to this headline">¶</a></h2>
+<p>Jinja 2.1 and higher support external bytecode caching.  Bytecode caches make
+it possible to store the generated bytecode on the file system or a different
+location to avoid parsing the templates on first use.</p>
+<p>This is especially useful if you have a web application that is initialized on
+the first request and Jinja compiles many templates at once which slows down
+the application.</p>
+<p>To use a bytecode cache, instantiate it and pass it to the <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a>.</p>
+<div class="section" id="jinja2-bytecodecache">
+<h3>2.9.1. <a class="reference internal" href="generated/generated/jinja2.BytecodeCache.html#jinja2.BytecodeCache" title="jinja2.BytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.BytecodeCache</span></code></a><a class="headerlink" href="#jinja2-bytecodecache" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-bccache-bucket">
+<h3>2.9.2. <a class="reference internal" href="generated/generated/jinja2.bccache.Bucket.html#jinja2.bccache.Bucket" title="jinja2.bccache.Bucket"><code class="xref py py-class docutils literal"><span class="pre">jinja2.bccache.Bucket</span></code></a><a class="headerlink" href="#jinja2-bccache-bucket" title="Permalink to this headline">¶</a></h3>
+<p class="rubric">Builtin bytecode caches:</p>
+</div>
+<div class="section" id="jinja2-filesystembytecodecache">
+<h3>2.9.3. <a class="reference internal" href="generated/generated/jinja2.FileSystemBytecodeCache.html#jinja2.FileSystemBytecodeCache" title="jinja2.FileSystemBytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FileSystemBytecodeCache</span></code></a><a class="headerlink" href="#jinja2-filesystembytecodecache" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-memcachedbytecodecache">
+<h3>2.9.4. <a class="reference internal" href="generated/generated/jinja2.MemcachedBytecodeCache.html#jinja2.MemcachedBytecodeCache" title="jinja2.MemcachedBytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.MemcachedBytecodeCache</span></code></a><a class="headerlink" href="#jinja2-memcachedbytecodecache" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="utilities">
+<h2>2.10. Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<p>These helper functions and classes are useful if you add custom filters or
+functions to a Jinja2 environment.</p>
+<div class="section" id="jinja2-environmentfilter">
+<h3>2.10.1. <a class="reference internal" href="generated/jinja2.environmentfilter.html#jinja2.environmentfilter" title="jinja2.environmentfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.environmentfilter()</span></code></a><a class="headerlink" href="#jinja2-environmentfilter" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-contextfilter">
+<h3>2.10.2. <a class="reference internal" href="generated/jinja2.contextfilter.html#jinja2.contextfilter" title="jinja2.contextfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.contextfilter()</span></code></a><a class="headerlink" href="#jinja2-contextfilter" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-evalcontextfilter">
+<h3>2.10.3. <a class="reference internal" href="generated/jinja2.evalcontextfilter.html#jinja2.evalcontextfilter" title="jinja2.evalcontextfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.evalcontextfilter()</span></code></a><a class="headerlink" href="#jinja2-evalcontextfilter" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-environmentfunction">
+<h3>2.10.4. <a class="reference internal" href="generated/jinja2.environmentfunction.html#jinja2.environmentfunction" title="jinja2.environmentfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.environmentfunction()</span></code></a><a class="headerlink" href="#jinja2-environmentfunction" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-contextfunction">
+<h3>2.10.5. <a class="reference internal" href="generated/jinja2.contextfunction.html#jinja2.contextfunction" title="jinja2.contextfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.contextfunction()</span></code></a><a class="headerlink" href="#jinja2-contextfunction" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-evalcontextfunction">
+<h3>2.10.6. <a class="reference internal" href="generated/jinja2.evalcontextfunction.html#jinja2.evalcontextfunction" title="jinja2.evalcontextfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.evalcontextfunction()</span></code></a><a class="headerlink" href="#jinja2-evalcontextfunction" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="escape-s">
+<h3>2.10.7. escape(s)<a class="headerlink" href="#escape-s" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="jinja2.escape">
+<code class="descclassname">jinja2.</code><code class="descname">escape</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#jinja2.escape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the characters <code class="docutils literal"><span class="pre">&amp;</span></code>, <code class="docutils literal"><span class="pre">&lt;</span></code>, <code class="docutils literal"><span class="pre">&gt;</span></code>, <code class="docutils literal"><span class="pre">'</span></code>, and <code class="docutils literal"><span class="pre">&quot;</span></code> in string <cite>s</cite>
+to HTML-safe sequences.  Use this if you need to display text that might
+contain such characters in HTML.  This function will not escaped objects
+that do have an HTML representation such as already escaped data.</p>
+<p>The return value is a <a class="reference internal" href="generated/generated/jinja2.Markup.html#jinja2.Markup" title="jinja2.Markup"><code class="xref py py-class docutils literal"><span class="pre">Markup</span></code></a> string.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="jinja2-clear-caches">
+<h3>2.10.8. <a class="reference internal" href="generated/jinja2.clear_caches.html#jinja2.clear_caches" title="jinja2.clear_caches"><code class="xref py py-func docutils literal"><span class="pre">jinja2.clear_caches()</span></code></a><a class="headerlink" href="#jinja2-clear-caches" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-is-undefined">
+<h3>2.10.9. <a class="reference internal" href="generated/jinja2.is_undefined.html#jinja2.is_undefined" title="jinja2.is_undefined"><code class="xref py py-func docutils literal"><span class="pre">jinja2.is_undefined()</span></code></a><a class="headerlink" href="#jinja2-is-undefined" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-markup">
+<h3>2.10.10. <a class="reference internal" href="generated/generated/jinja2.Markup.html#jinja2.Markup" title="jinja2.Markup"><code class="xref py py-class docutils literal"><span class="pre">jinja2.Markup</span></code></a><a class="headerlink" href="#jinja2-markup" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-note admonition">
+<p class="first admonition-title">Note</p>
+<p class="last">The Jinja2 <a class="reference internal" href="generated/generated/jinja2.Markup.html#jinja2.Markup" title="jinja2.Markup"><code class="xref py py-class docutils literal"><span class="pre">Markup</span></code></a> class is compatible with at least Pylons and
+Genshi.  It&#8217;s expected that more template engines and framework will pick
+up the <cite>__html__</cite> concept soon.</p>
+</div>
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>2.11. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jinja2-templateerror">
+<h3>2.11.1. <a class="reference internal" href="generated/jinja2.TemplateError.html#jinja2.TemplateError" title="jinja2.TemplateError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateError</span></code></a><a class="headerlink" href="#jinja2-templateerror" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-undefinederror">
+<h3>2.11.2. <a class="reference internal" href="generated/jinja2.UndefinedError.html#jinja2.UndefinedError" title="jinja2.UndefinedError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.UndefinedError</span></code></a><a class="headerlink" href="#jinja2-undefinederror" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-templatenotfound">
+<h3>2.11.3. <a class="reference internal" href="generated/jinja2.TemplateNotFound.html#jinja2.TemplateNotFound" title="jinja2.TemplateNotFound"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateNotFound</span></code></a><a class="headerlink" href="#jinja2-templatenotfound" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-templatesnotfound">
+<h3>2.11.4. <a class="reference internal" href="generated/jinja2.TemplatesNotFound.html#jinja2.TemplatesNotFound" title="jinja2.TemplatesNotFound"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplatesNotFound</span></code></a><a class="headerlink" href="#jinja2-templatesnotfound" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-templatesyntaxerror">
+<h3>2.11.5. <a class="reference internal" href="generated/jinja2.TemplateSyntaxError.html#jinja2.TemplateSyntaxError" title="jinja2.TemplateSyntaxError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateSyntaxError</span></code></a><a class="headerlink" href="#jinja2-templatesyntaxerror" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jinja2-templateassertionerror">
+<h3>2.11.6. <a class="reference internal" href="generated/jinja2.TemplateAssertionError.html#jinja2.TemplateAssertionError" title="jinja2.TemplateAssertionError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateAssertionError</span></code></a><a class="headerlink" href="#jinja2-templateassertionerror" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="custom-filters">
+<span id="writing-filters"></span><h2>2.12. Custom Filters<a class="headerlink" href="#custom-filters" title="Permalink to this headline">¶</a></h2>
+<p>Custom filters are just regular Python functions that take the left side of
+the filter as first argument and the arguments passed to the filter as
+extra arguments or keyword arguments.</p>
+<p>For example in the filter <code class="docutils literal"><span class="pre">{{</span> <span class="pre">42|myfilter(23)</span> <span class="pre">}}</span></code> the function would be
+called with <code class="docutils literal"><span class="pre">myfilter(42,</span> <span class="pre">23)</span></code>.  Here for example a simple filter that can
+be applied to datetime objects to format them:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">datetimeformat</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;%H:%M / </span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">format</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can register it on the template environment by updating the
+<code class="xref py py-attr docutils literal"><span class="pre">filters</span></code> dict on the environment:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">environment</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">&#39;datetimeformat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetimeformat</span>
+</pre></div>
+</div>
+<p>Inside the template it can then be used as follows:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="x">written on: </span><span class="cp">{{</span> <span class="nv">article.pub_date</span><span class="o">|</span><span class="nf">datetimeformat</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">publication date: </span><span class="cp">{{</span> <span class="nv">article.pub_date</span><span class="o">|</span><span class="nf">datetimeformat</span><span class="o">(</span><span class="s1">&#39;%d-%m-%Y&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>Filters can also be passed the current template context or environment.  This
+is useful if a filter wants to return an undefined value or check the current
+<code class="xref py py-attr docutils literal"><span class="pre">autoescape</span></code> setting.  For this purpose three decorators
+exist: <a class="reference internal" href="generated/jinja2.environmentfilter.html#jinja2.environmentfilter" title="jinja2.environmentfilter"><code class="xref py py-func docutils literal"><span class="pre">environmentfilter()</span></code></a>, <a class="reference internal" href="generated/jinja2.contextfilter.html#jinja2.contextfilter" title="jinja2.contextfilter"><code class="xref py py-func docutils literal"><span class="pre">contextfilter()</span></code></a> and
+<a class="reference internal" href="generated/jinja2.evalcontextfilter.html#jinja2.evalcontextfilter" title="jinja2.evalcontextfilter"><code class="xref py py-func docutils literal"><span class="pre">evalcontextfilter()</span></code></a>.</p>
+<p>Here a small example filter that breaks a text into HTML line breaks and
+paragraphs and marks the return value as safe HTML string if autoescaping is
+enabled:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">evalcontextfilter</span><span class="p">,</span> <span class="n">Markup</span><span class="p">,</span> <span class="n">escape</span>
+
+<span class="n">_paragraph_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;(?:\r\n|\r|\n){2,}&#39;</span><span class="p">)</span>
+
+<span class="nd">@evalcontextfilter</span>
+<span class="k">def</span> <span class="nf">nl2br</span><span class="p">(</span><span class="n">eval_ctx</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">u&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">u&#39;&lt;p&gt;</span><span class="si">%s</span><span class="s1">&lt;/p&gt;&#39;</span> <span class="o">%</span> <span class="n">p</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">Markup</span><span class="p">(</span><span class="s1">&#39;&lt;br&gt;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+                          <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">_paragraph_re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">escape</span><span class="p">(</span><span class="n">value</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">eval_ctx</span><span class="o">.</span><span class="n">autoescape</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>Context filters work the same just that the first argument is the current
+active <code class="xref py py-class docutils literal"><span class="pre">Context</span></code> rather then the environment.</p>
+</div>
+<div class="section" id="evaluation-context">
+<span id="eval-context"></span><h2>2.13. Evaluation Context<a class="headerlink" href="#evaluation-context" title="Permalink to this headline">¶</a></h2>
+<p>The evaluation context (short eval context or eval ctx) is a new object
+introduced in Jinja 2.4 that makes it possible to activate and deactivate
+compiled features at runtime.</p>
+<p>Currently it is only used to enable and disable the automatic escaping but
+can be used for extensions as well.</p>
+<p>In previous Jinja versions filters and functions were marked as
+environment callables in order to check for the autoescape status from the
+environment.  In new versions it&#8217;s encouraged to check the setting from the
+evaluation context instead.</p>
+<p>Previous versions:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nd">@environmentfilter</span>
+<span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">env</span><span class="o">.</span><span class="n">autoescape</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>In new versions you can either use a <a class="reference internal" href="generated/jinja2.contextfilter.html#jinja2.contextfilter" title="jinja2.contextfilter"><code class="xref py py-func docutils literal"><span class="pre">contextfilter()</span></code></a> and access the
+evaluation context from the actual context, or use a
+<a class="reference internal" href="generated/jinja2.evalcontextfilter.html#jinja2.evalcontextfilter" title="jinja2.evalcontextfilter"><code class="xref py py-func docutils literal"><span class="pre">evalcontextfilter()</span></code></a> which directly passes the evaluation context to
+the function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nd">@contextfilter</span>
+<span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">eval_ctx</span><span class="o">.</span><span class="n">autoescape</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nd">@evalcontextfilter</span>
+<span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="n">eval_ctx</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">do_something</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">eval_ctx</span><span class="o">.</span><span class="n">autoescape</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>The evaluation context must not be modified at runtime.  Modifications
+must only happen with a <a class="reference internal" href="generated/generated/jinja2.nodes.EvalContextModifier.html#jinja2.nodes.EvalContextModifier" title="jinja2.nodes.EvalContextModifier"><code class="xref py py-class docutils literal"><span class="pre">nodes.EvalContextModifier</span></code></a> and
+<a class="reference internal" href="generated/generated/jinja2.nodes.ScopedEvalContextModifier.html#jinja2.nodes.ScopedEvalContextModifier" title="jinja2.nodes.ScopedEvalContextModifier"><code class="xref py py-class docutils literal"><span class="pre">nodes.ScopedEvalContextModifier</span></code></a> from an extension, not on the
+eval context object itself.</p>
+<div class="section" id="jinja2-nodes-evalcontext">
+<h3>2.13.1. <a class="reference internal" href="generated/generated/jinja2.nodes.EvalContext.html#jinja2.nodes.EvalContext" title="jinja2.nodes.EvalContext"><code class="xref py py-class docutils literal"><span class="pre">jinja2.nodes.EvalContext</span></code></a><a class="headerlink" href="#jinja2-nodes-evalcontext" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="custom-tests">
+<span id="writing-tests"></span><h2>2.14. Custom Tests<a class="headerlink" href="#custom-tests" title="Permalink to this headline">¶</a></h2>
+<p>Tests work like filters just that there is no way for a test to get access
+to the environment or context and that they can&#8217;t be chained.  The return
+value of a test should be <cite>True</cite> or <cite>False</cite>.  The purpose of a test is to
+give the template designers the possibility to perform type and conformability
+checks.</p>
+<p>Here a simple test that checks if a variable is a prime number:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</pre></div>
+</div>
+<p>You can register it on the template environment by updating the
+<code class="xref py py-attr docutils literal"><span class="pre">tests</span></code> dict on the environment:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">environment</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="s1">&#39;prime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_prime</span>
+</pre></div>
+</div>
+<p>A template designer can then use the test like this:</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="m">42</span> <span class="k">is</span> <span class="nf">prime</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    42 is a prime number</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    42 is not a prime number</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-global-namespace">
+<span id="global-namespace"></span><h2>2.15. The Global Namespace<a class="headerlink" href="#the-global-namespace" title="Permalink to this headline">¶</a></h2>
+<p>Variables stored in the <code class="xref py py-attr docutils literal"><span class="pre">Environment.globals</span></code> dict are special as they
+are available for imported templates too, even if they are imported without
+context.  This is the place where you can put variables and functions
+that should be available all the time.  Additionally <code class="xref py py-attr docutils literal"><span class="pre">Template.globals</span></code>
+exist that are variables available to a specific template that are available
+to all <a class="reference internal" href="generated/generated/jinja2.Template.render.html#jinja2.Template.render" title="jinja2.Template.render"><code class="xref py py-meth docutils literal"><span class="pre">render()</span></code></a> calls.</p>
+</div>
+<div class="section" id="low-level-api">
+<span id="id3"></span><h2>2.16. Low Level API<a class="headerlink" href="#low-level-api" title="Permalink to this headline">¶</a></h2>
+<p>The low level API exposes functionality that can be useful to understand some
+implementation details, debugging purposes or advanced <a class="reference internal" href="off_doc.extensions.html#jinja-extensions"><span>extension</span></a> techniques.  Unless you know exactly what you are doing we
+don&#8217;t recommend using any of those.</p>
+<dl class="method">
+<dt id="jinja2.Environment.lex">
+<code class="descclassname">Environment.</code><code class="descname">lex</code><span class="sig-paren">(</span><em>source</em>, <em>name=None</em>, <em>filename=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jinja2/environment.html#Environment.lex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.Environment.lex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lex the given sourcecode and return a generator that yields
+tokens as tuples in the form <code class="docutils literal"><span class="pre">(lineno,</span> <span class="pre">token_type,</span> <span class="pre">value)</span></code>.
+This can be useful for <a class="reference internal" href="off_doc.extensions.writing.html#writing-extensions"><span>extension development</span></a>
+and debugging templates.</p>
+<p>This does not perform preprocessing.  If you want the preprocessing
+of the extensions to be applied you have to filter source through
+the <a class="reference internal" href="#jinja2.Environment.preprocess" title="jinja2.Environment.preprocess"><code class="xref py py-meth docutils literal"><span class="pre">preprocess()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jinja2.Environment.parse">
+<code class="descclassname">Environment.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>source</em>, <em>name=None</em>, <em>filename=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jinja2/environment.html#Environment.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.Environment.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the sourcecode and return the abstract syntax tree.  This
+tree of nodes is used by the compiler to convert the template into
+executable source- or bytecode.  This is useful for debugging or to
+extract information from templates.</p>
+<p>If you are <a class="reference internal" href="off_doc.extensions.writing.html#writing-extensions"><span>developing Jinja2 extensions</span></a>
+this gives you a good overview of the node tree generated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jinja2.Environment.preprocess">
+<code class="descclassname">Environment.</code><code class="descname">preprocess</code><span class="sig-paren">(</span><em>source</em>, <em>name=None</em>, <em>filename=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jinja2/environment.html#Environment.preprocess"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.Environment.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocesses the source with all extensions.  This is automatically
+called for all parsing and compiling methods but <em>not</em> for <a class="reference internal" href="#jinja2.Environment.lex" title="jinja2.Environment.lex"><code class="xref py py-meth docutils literal"><span class="pre">lex()</span></code></a>
+because there you usually only want the actual source tokenized.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jinja2.Template.new_context">
+<code class="descclassname">Template.</code><code class="descname">new_context</code><span class="sig-paren">(</span><em>vars=None</em>, <em>shared=False</em>, <em>locals=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jinja2/environment.html#Template.new_context"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.Template.new_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new <code class="xref py py-class docutils literal"><span class="pre">Context</span></code> for this template.  The vars
+provided will be passed to the template.  Per default the globals
+are added to the context.  If shared is set to <cite>True</cite> the data
+is passed as it to the context without adding the globals.</p>
+<p><cite>locals</cite> can be a dict of local variables for internal usage.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jinja2.Template.root_render_func">
+<code class="descclassname">Template.</code><code class="descname">root_render_func</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#jinja2.Template.root_render_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the low level render function.  It&#8217;s passed a <code class="xref py py-class docutils literal"><span class="pre">Context</span></code>
+that has to be created by <a class="reference internal" href="#jinja2.Template.new_context" title="jinja2.Template.new_context"><code class="xref py py-meth docutils literal"><span class="pre">new_context()</span></code></a> of the same template or
+a compatible template.  This render function is generated by the
+compiler from the template code and returns a generator that yields
+unicode strings.</p>
+<p>If an exception in the template code happens the template engine will
+not rewrite the exception but pass through the original one.  As a
+matter of fact this function should only be called from within a
+<a class="reference internal" href="generated/generated/jinja2.Template.render.html#jinja2.Template.render" title="jinja2.Template.render"><code class="xref py py-meth docutils literal"><span class="pre">render()</span></code></a> / <a class="reference internal" href="generated/generated/jinja2.Template.generate.html#jinja2.Template.generate" title="jinja2.Template.generate"><code class="xref py py-meth docutils literal"><span class="pre">generate()</span></code></a> / <a class="reference internal" href="generated/generated/jinja2.Template.stream.html#jinja2.Template.stream" title="jinja2.Template.stream"><code class="xref py py-meth docutils literal"><span class="pre">stream()</span></code></a> call.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="jinja2.Template.blocks">
+<code class="descclassname">Template.</code><code class="descname">blocks</code><a class="headerlink" href="#jinja2.Template.blocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dict of block render functions.  Each of these functions works exactly
+like the <a class="reference internal" href="#jinja2.Template.root_render_func" title="jinja2.Template.root_render_func"><code class="xref py py-meth docutils literal"><span class="pre">root_render_func()</span></code></a> with the same limitations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="jinja2.Template.is_up_to_date">
+<code class="descclassname">Template.</code><code class="descname">is_up_to_date</code><a class="headerlink" href="#jinja2.Template.is_up_to_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>This attribute is <cite>False</cite> if there is a newer version of the template
+available, otherwise <cite>True</cite>.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The low-level API is fragile.  Future Jinja2 versions will try not to
+change it in a backwards incompatible way but modifications in the Jinja2
+core may shine through.  For example if Jinja2 introduces a new AST node
+in later versions that may be returned by <a class="reference internal" href="#jinja2.Environment.parse" title="jinja2.Environment.parse"><code class="xref py py-meth docutils literal"><span class="pre">parse()</span></code></a>.</p>
+</div>
+</div>
+<div class="section" id="the-meta-api">
+<h2>2.17. The Meta API<a class="headerlink" href="#the-meta-api" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.2.</span></p>
+</div>
+<p>The meta API returns some information about abstract syntax trees that
+could help applications to implement more advanced template concepts.  All
+the functions of the meta API operate on an abstract syntax tree as
+returned by the <a class="reference internal" href="#jinja2.Environment.parse" title="jinja2.Environment.parse"><code class="xref py py-meth docutils literal"><span class="pre">Environment.parse()</span></code></a> method.</p>
+<dl class="function">
+<dt id="jinja2.meta.find_undeclared_variables">
+<code class="descclassname">jinja2.meta.</code><code class="descname">find_undeclared_variables</code><span class="sig-paren">(</span><em>ast</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jinja2/meta.html#find_undeclared_variables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.meta.find_undeclared_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a set of all variables in the AST that will be looked up from
+the context at runtime.  Because at compile time it&#8217;s not known which
+variables will be used depending on the path the execution takes at
+runtime, all variables are returned.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">meta</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ast</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;{</span><span class="si">% s</span><span class="s1">et foo = 42 %}{{ bar + foo }}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span><span class="o">.</span><span class="n">find_undeclared_variables</span><span class="p">(</span><span class="n">ast</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;bar&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="admonition-implementation admonition">
+<p class="first admonition-title">Implementation</p>
+<p class="last">Internally the code generator is used for finding undeclared variables.
+This is good to know because the code generator might raise a
+<a class="reference internal" href="generated/jinja2.TemplateAssertionError.html#jinja2.TemplateAssertionError" title="jinja2.TemplateAssertionError"><code class="xref py py-exc docutils literal"><span class="pre">TemplateAssertionError</span></code></a> during compilation and as a matter of
+fact this function can currently raise that exception as well.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="jinja2.meta.find_referenced_templates">
+<code class="descclassname">jinja2.meta.</code><code class="descname">find_referenced_templates</code><span class="sig-paren">(</span><em>ast</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jinja2/meta.html#find_referenced_templates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.meta.find_referenced_templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all the referenced templates from the AST.  This will return an
+iterator over all the hardcoded template extensions, inclusions and
+imports.  If dynamic inheritance or inclusion is used, <cite>None</cite> will be
+yielded.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">meta</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ast</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;{</span><span class="si">% e</span><span class="s1">xtends &quot;layout.html&quot; %}{</span><span class="si">% i</span><span class="s1">nclude helper %}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">meta</span><span class="o">.</span><span class="n">find_referenced_templates</span><span class="p">(</span><span class="n">ast</span><span class="p">))</span>
+<span class="go">[&#39;layout.html&#39;, None]</span>
+</pre></div>
+</div>
+<p>This function is useful for dependency tracking.  For example if you want
+to rebuild parts of the website after a layout template has changed.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="off_doc.sandbox.html" class="btn btn-neutral float-right" title="3. Sandbox" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="off_doc.intro.html" class="btn btn-neutral" title="1. Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+jinja2.ext.TemplateAssertionError
+=================================
+
+.. currentmodule:: jinja2.ext
+
+.. autoexception:: TemplateAssertionError

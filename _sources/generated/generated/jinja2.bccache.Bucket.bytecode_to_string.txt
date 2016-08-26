@@ -1,0 +1,6 @@
+jinja2.bccache.Bucket.bytecode_to_string
+========================================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: Bucket.bytecode_to_string

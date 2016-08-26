@@ -1,0 +1,6 @@
+jinja2.runtime.LoopContext.revindex
+===================================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoattribute:: LoopContext.revindex

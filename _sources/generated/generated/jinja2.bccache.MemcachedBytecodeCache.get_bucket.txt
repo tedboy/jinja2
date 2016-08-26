@@ -1,0 +1,6 @@
+jinja2.bccache.MemcachedBytecodeCache.get_bucket
+================================================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: MemcachedBytecodeCache.get_bucket

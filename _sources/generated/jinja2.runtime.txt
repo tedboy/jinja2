@@ -1,0 +1,93 @@
+jinja2.runtime
+==============
+
+.. automodule:: jinja2.runtime
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      concat
+      escape
+      identity
+      implements_iterator
+      implements_to_string
+      internalcode
+      iteritems
+      make_logging_undefined
+      markup_join
+      new_context
+      object_type_repr
+      soft_unicode
+      unicode_join
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      BlockReference
+      Context
+      DebugUndefined
+      EvalContext
+      LoopContext
+      LoopContextIterator
+      Macro
+      Mapping
+      Markup
+      StrictUndefined
+      TemplateReference
+      Undefined
+      chain
+      imap
+      text_type
+      to_string
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.runtime.BlockReference
+       generated/jinja2.runtime.Context
+       generated/jinja2.runtime.DebugUndefined
+       generated/jinja2.runtime.EvalContext
+       generated/jinja2.runtime.LoopContext
+       generated/jinja2.runtime.LoopContextIterator
+       generated/jinja2.runtime.Macro
+       generated/jinja2.runtime.Mapping
+       generated/jinja2.runtime.Markup
+       generated/jinja2.runtime.StrictUndefined
+       generated/jinja2.runtime.TemplateReference
+       generated/jinja2.runtime.Undefined
+       generated/jinja2.runtime.chain
+       generated/jinja2.runtime.imap
+       generated/jinja2.runtime.text_type
+       generated/jinja2.runtime.to_string
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      TemplateNotFound
+      TemplateRuntimeError
+      UndefinedError
+   
+   

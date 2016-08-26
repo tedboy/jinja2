@@ -1,0 +1,6 @@
+jinja2.runtime.chain.next
+=========================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoattribute:: chain.next

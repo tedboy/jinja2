@@ -1,0 +1,6 @@
+jinja2.nodes.FromImport.set_lineno
+==================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FromImport.set_lineno

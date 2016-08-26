@@ -1,0 +1,6 @@
+jinja2.nodes.Div.set_ctx
+========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Div.set_ctx

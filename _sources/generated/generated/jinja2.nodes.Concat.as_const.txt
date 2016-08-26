@@ -1,0 +1,6 @@
+jinja2.nodes.Concat.as_const
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Concat.as_const

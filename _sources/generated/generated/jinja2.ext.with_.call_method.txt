@@ -1,0 +1,6 @@
+jinja2.ext.with_.call_method
+============================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: with_.call_method

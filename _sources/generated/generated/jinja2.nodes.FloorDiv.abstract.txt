@@ -1,0 +1,6 @@
+jinja2.nodes.FloorDiv.abstract
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: FloorDiv.abstract

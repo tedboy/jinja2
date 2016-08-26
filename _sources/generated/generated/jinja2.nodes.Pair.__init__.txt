@@ -1,0 +1,6 @@
+jinja2.nodes.Pair.__init__
+==========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Pair.__init__

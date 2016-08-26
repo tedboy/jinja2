@@ -1,0 +1,6 @@
+jinja2.runtime.to_string.startswith
+===================================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: to_string.startswith

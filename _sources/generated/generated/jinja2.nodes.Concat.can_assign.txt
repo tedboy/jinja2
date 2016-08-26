@@ -1,0 +1,6 @@
+jinja2.nodes.Concat.can_assign
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Concat.can_assign

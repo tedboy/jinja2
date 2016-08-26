@@ -1,0 +1,6 @@
+jinja2.nodes.Extends.attributes
+===============================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Extends.attributes

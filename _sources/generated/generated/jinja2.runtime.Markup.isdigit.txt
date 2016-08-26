@@ -1,0 +1,6 @@
+jinja2.runtime.Markup.isdigit
+=============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Markup.isdigit

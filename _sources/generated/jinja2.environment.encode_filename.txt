@@ -1,0 +1,6 @@
+jinja2.environment.encode_filename
+==================================
+
+.. currentmodule:: jinja2.environment
+
+.. autofunction:: encode_filename

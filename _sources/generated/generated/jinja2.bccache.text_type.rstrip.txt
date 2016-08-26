@@ -1,0 +1,6 @@
+jinja2.bccache.text_type.rstrip
+===============================
+
+.. currentmodule:: jinja2.bccache
+
+.. automethod:: text_type.rstrip

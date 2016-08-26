@@ -1,0 +1,6 @@
+jinja2.ext.do.attr
+==================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: do.attr

@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.11. List of Control Structures &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="index.html"/>
+        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="4.12. Import Context Behavior" href="templ12.html"/>
+        <link rel="prev" title="4.10. HTML Escaping" href="templ10.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">4.11. List of Control Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#for">4.11.1. For</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#if">4.11.2. If</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macros">4.11.3. Macros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#call">4.11.4. Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">4.11.5. Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assignments">4.11.6. Assignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#block-assignments">4.11.7. Block Assignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extends">4.11.8. Extends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blocks">4.11.9. Blocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#include">4.11.10. Include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import">4.11.11. Import</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+        
+          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
+        
+      <li>4.11. List of Control Structures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/templ11.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="list-of-control-structures">
+<span id="id1"></span><h1>4.11. List of Control Structures<a class="headerlink" href="#list-of-control-structures" title="Permalink to this headline">¶</a></h1>
+<p>A control structure refers to all those things that control the flow of a
+program - conditionals (i.e. if/elif/else), for-loops, as well as things like
+macros and blocks.  With the default syntax, control structures appear inside
+<code class="docutils literal"><span class="pre">{%</span> <span class="pre">...</span> <span class="pre">%}</span></code> blocks.</p>
+<div class="section" id="for">
+<span id="for-loop"></span><h2>4.11.1. For<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<p>Loop over each item in a sequence.  For example, to display a list of users
+provided in a variable called <cite>users</cite>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Members<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.username</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>As variables in templates retain their object properties, it is possible to
+iterate over containers like <cite>dict</cite>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="k">in</span> <span class="nv">my_dict.iteritems</span><span class="o">()</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">key</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">value</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Note, however, that <strong>Python dicts are not ordered</strong>; so you might want to
+either pass a sorted <code class="docutils literal"><span class="pre">list</span></code> of <code class="docutils literal"><span class="pre">tuple</span></code> s &#8211; or a
+<code class="docutils literal"><span class="pre">collections.OrderedDict</span></code> &#8211; to the template, or use the <cite>dictsort</cite> filter.</p>
+<p>Inside of a for-loop block, you can access some special variables:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><cite>loop.index</cite></td>
+<td>The current iteration of the loop. (1 indexed)</td>
+</tr>
+<tr class="row-odd"><td><cite>loop.index0</cite></td>
+<td>The current iteration of the loop. (0 indexed)</td>
+</tr>
+<tr class="row-even"><td><cite>loop.revindex</cite></td>
+<td>The number of iterations from the end of the loop
+(1 indexed)</td>
+</tr>
+<tr class="row-odd"><td><cite>loop.revindex0</cite></td>
+<td>The number of iterations from the end of the loop
+(0 indexed)</td>
+</tr>
+<tr class="row-even"><td><cite>loop.first</cite></td>
+<td>True if first iteration.</td>
+</tr>
+<tr class="row-odd"><td><cite>loop.last</cite></td>
+<td>True if last iteration.</td>
+</tr>
+<tr class="row-even"><td><cite>loop.length</cite></td>
+<td>The number of items in the sequence.</td>
+</tr>
+<tr class="row-odd"><td><cite>loop.cycle</cite></td>
+<td>A helper function to cycle between a list of
+sequences.  See the explanation below.</td>
+</tr>
+<tr class="row-even"><td><cite>loop.depth</cite></td>
+<td>Indicates how deep in a recursive loop
+the rendering currently is.  Starts at level 1</td>
+</tr>
+<tr class="row-odd"><td><cite>loop.depth0</cite></td>
+<td>Indicates how deep in a recursive loop
+the rendering currently is.  Starts at level 0</td>
+</tr>
+</tbody>
+</table>
+<p>Within a for-loop, it&#8217;s possible to cycle among a list of strings/variables
+each time through the loop by using the special <cite>loop.cycle</cite> helper:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">row</span> <span class="k">in</span> <span class="nv">rows</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nb">loop</span><span class="nv">.cycle</span><span class="o">(</span><span class="s1">&#39;odd&#39;</span><span class="o">,</span> <span class="s1">&#39;even&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">row</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Since Jinja 2.1, an extra <cite>cycle</cite> helper exists that allows loop-unbound
+cycling.  For more information, have a look at the <a class="reference internal" href="templ16.html#builtin-globals"><span>List of Global Functions</span></a>.</p>
+<p id="loop-filtering">Unlike in Python, it&#8217;s not possible to <cite>break</cite> or <cite>continue</cite> in a loop.  You
+can, however, filter the sequence during iteration, which allows you to skip
+items.  The following example skips all the users which are hidden:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">user.hidden</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.username</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>The advantage is that the special <cite>loop</cite> variable will count correctly; thus
+not counting the users not iterated over.</p>
+<p>If no iteration took place because the sequence was empty or the filtering
+removed all the items from the sequence, you can render a default block
+by using <cite>else</cite>:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.username</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>no users found<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Note that, in Python, <cite>else</cite> blocks are executed whenever the corresponding
+loop <strong>did not</strong> <cite>break</cite>.  Since Jinja loops cannot <cite>break</cite> anyway,
+a slightly different behavior of the <cite>else</cite> keyword was chosen.</p>
+<p>It is also possible to use loops recursively.  This is useful if you are
+dealing with recursive data such as sitemaps or RDFa.
+To use loops recursively, you basically have to add the <cite>recursive</cite> modifier
+to the loop definition and call the <cite>loop</cite> variable with the new iterable
+where you want to recurse.</p>
+<p>The following example implements a sitemap with recursive loops:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sitemap&quot;</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">for</span> <span class="nv">item</span> <span class="k">in</span> <span class="nv">sitemap</span> <span class="k">recursive</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">item.href</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">item.title</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="cp">{%</span>- <span class="k">if</span> <span class="nv">item.children</span> -<span class="cp">%}</span>
+        <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;submenu&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nb">loop</span><span class="o">(</span><span class="nv">item.children</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The <cite>loop</cite> variable always refers to the closest (innermost) loop. If we
+have more than one level of loops, we can rebind the variable <cite>loop</cite> by
+writing <cite>{% set outer_loop = loop %}</cite> after the loop that we want to
+use recursively. Then, we can call it using <cite>{{ outer_loop(...) }}</cite></p>
+</div>
+<div class="section" id="if">
+<span id="id2"></span><h2>4.11.2. If<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>if</cite> statement in Jinja is comparable with the Python if statement.
+In the simplest form, you can use it to test if a variable is defined, not
+empty or not false:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">users</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.username</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>For multiple branches, <cite>elif</cite> and <cite>else</cite> can be used like in Python.  You can
+use more complex <a class="reference internal" href="templ13.html#expressions"><span>Expressions</span></a> there, too:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">kenny.sick</span> <span class="cp">%}</span>
+    Kenny is sick.
+<span class="cp">{%</span> <span class="k">elif</span> <span class="nv">kenny.dead</span> <span class="cp">%}</span>
+    You killed Kenny!  You bastard!!!
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+    Kenny looks okay --- so far
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>If can also be used as an <a class="reference internal" href="templ13.html#if-expression"><span>inline expression</span></a> and for
+<a class="reference internal" href="#loop-filtering"><span>loop filtering</span></a>.</p>
+</div>
+<div class="section" id="macros">
+<span id="id3"></span><h2>4.11.3. Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h2>
+<p>Macros are comparable with functions in regular programming languages.  They
+are useful to put often used idioms into reusable functions to not repeat
+yourself (&#8220;DRY&#8221;).</p>
+<p>Here&#8217;s a small example of a macro that renders a form element:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">input</span><span class="o">(</span><span class="nv">name</span><span class="o">,</span> <span class="nv">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">,</span> <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="o">,</span> <span class="nv">size</span><span class="o">=</span><span class="m">20</span><span class="o">)</span> -<span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">type</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span>
+        <span class="nv">value</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">size</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>The macro can then be called like a function in the namespace:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">input</span><span class="o">(</span><span class="s1">&#39;username&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">input</span><span class="o">(</span><span class="s1">&#39;password&#39;</span><span class="o">,</span> <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>If the macro was defined in a different template, you have to
+<a class="reference internal" href="#import"><span>import</span></a> it first.</p>
+<p>Inside macros, you have access to three special variables:</p>
+<dl class="docutils">
+<dt><cite>varargs</cite></dt>
+<dd>If more positional arguments are passed to the macro than accepted by the
+macro, they end up in the special <cite>varargs</cite> variable as a list of values.</dd>
+<dt><cite>kwargs</cite></dt>
+<dd>Like <cite>varargs</cite> but for keyword arguments.  All unconsumed keyword
+arguments are stored in this special variable.</dd>
+<dt><cite>caller</cite></dt>
+<dd>If the macro was called from a <a class="reference internal" href="#call"><span>call</span></a> tag, the caller is stored
+in this variable as a callable macro.</dd>
+</dl>
+<p>Macros also expose some of their internal details.  The following attributes
+are available on a macro object:</p>
+<dl class="docutils">
+<dt><cite>name</cite></dt>
+<dd>The name of the macro.  <code class="docutils literal"><span class="pre">{{</span> <span class="pre">input.name</span> <span class="pre">}}</span></code> will print <code class="docutils literal"><span class="pre">input</span></code>.</dd>
+<dt><cite>arguments</cite></dt>
+<dd>A tuple of the names of arguments the macro accepts.</dd>
+<dt><cite>defaults</cite></dt>
+<dd>A tuple of default values.</dd>
+<dt><cite>catch_kwargs</cite></dt>
+<dd>This is <cite>true</cite> if the macro accepts extra keyword arguments (i.e.: accesses
+the special <cite>kwargs</cite> variable).</dd>
+<dt><cite>catch_varargs</cite></dt>
+<dd>This is <cite>true</cite> if the macro accepts extra positional arguments (i.e.:
+accesses the special <cite>varargs</cite> variable).</dd>
+<dt><cite>caller</cite></dt>
+<dd>This is <cite>true</cite> if the macro accesses the special <cite>caller</cite> variable and may
+be called from a <a class="reference internal" href="#call"><span>call</span></a> tag.</dd>
+</dl>
+<p>If a macro name starts with an underscore, it&#8217;s not exported and can&#8217;t
+be imported.</p>
+</div>
+<div class="section" id="call">
+<span id="id4"></span><h2>4.11.4. Call<a class="headerlink" href="#call" title="Permalink to this headline">¶</a></h2>
+<p>In some cases it can be useful to pass a macro to another macro.  For this
+purpose, you can use the special <cite>call</cite> block.  The following example shows
+a macro that takes advantage of the call functionality and how it can be
+used:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">render_dialog</span><span class="o">(</span><span class="nv">title</span><span class="o">,</span> <span class="nv">class</span><span class="o">=</span><span class="s1">&#39;dialog&#39;</span><span class="o">)</span> -<span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">class</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;contents&quot;</span><span class="p">&gt;</span>
+            <span class="cp">{{</span> <span class="nv">caller</span><span class="o">()</span> <span class="cp">}}</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">call</span> <span class="nv">render_dialog</span><span class="o">(</span><span class="s1">&#39;Hello World&#39;</span><span class="o">)</span> <span class="cp">%}</span>
+    This is a simple dialog rendered by using a macro and
+    a call block.
+<span class="cp">{%</span> <span class="k">endcall</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>It&#8217;s also possible to pass arguments back to the call block.  This makes it
+useful as a replacement for loops.  Generally speaking, a call block works
+exactly like a macro without a name.</p>
+<p>Here&#8217;s an example of how a call block can be used with arguments:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">dump_users</span><span class="o">(</span><span class="nv">users</span><span class="o">)</span> -<span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="cp">{%</span>- <span class="k">for</span> <span class="nv">user</span> <span class="k">in</span> <span class="nv">users</span> <span class="cp">%}</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.username</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">caller</span><span class="o">(</span><span class="nv">user</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">call</span><span class="o">(</span><span class="nv">user</span><span class="o">)</span> <span class="nv">dump_users</span><span class="o">(</span><span class="nv">list_of_user</span><span class="o">)</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>Realname<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.realname</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">user.description</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endcall</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="filters">
+<h2>4.11.5. Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>Filter sections allow you to apply regular Jinja2 filters on a block of
+template data.  Just wrap the code in the special <cite>filter</cite> section:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">filter</span> <span class="nf">upper</span> <span class="cp">%}</span>
+    This text becomes uppercase
+<span class="cp">{%</span> <span class="k">endfilter</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="assignments">
+<span id="id5"></span><h2>4.11.6. Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<p>Inside code blocks, you can also assign values to variables.  Assignments at
+top level (outside of blocks, macros or loops) are exported from the template
+like top level macros and can be imported by other templates.</p>
+<p>Assignments use the <cite>set</cite> tag and can have multiple targets:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navigation</span> <span class="o">=</span> <span class="o">[(</span><span class="s1">&#39;index.html&#39;</span><span class="o">,</span> <span class="s1">&#39;Index&#39;</span><span class="o">),</span> <span class="o">(</span><span class="s1">&#39;about.html&#39;</span><span class="o">,</span> <span class="s1">&#39;About&#39;</span><span class="o">)]</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">key</span><span class="o">,</span> <span class="nv">value</span> <span class="o">=</span> <span class="nv">call_something</span><span class="o">()</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="block-assignments">
+<h2>4.11.7. Block Assignments<a class="headerlink" href="#block-assignments" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.8.</span></p>
+</div>
+<p>Starting with Jinja 2.8, it&#8217;s possible to also use block assignments to
+capture the contents of a block into a variable name.  This can be useful
+in some situations as an alternative for macros.  In that case, instead of
+using an equals sign and a value, you just write the variable name and then
+everything until <code class="docutils literal"><span class="pre">{%</span> <span class="pre">endset</span> <span class="pre">%}</span></code> is captured.</p>
+<p>Example:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navigation</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Index<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/downloads&quot;</span><span class="p">&gt;</span>Downloads<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endset</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>The <cite>navigation</cite> variable then contains the navigation HTML source.</p>
+</div>
+<div class="section" id="extends">
+<span id="id6"></span><h2>4.11.8. Extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>extends</cite> tag can be used to extend one template from another.  You can
+have multiple <cite>extends</cite> tags in a file, but only one of them may be executed at
+a time.</p>
+<p>See the section about <a class="reference internal" href="templ9.html#template-inheritance"><span>Template Inheritance</span></a> above.</p>
+</div>
+<div class="section" id="blocks">
+<span id="id7"></span><h2>4.11.9. Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h2>
+<p>Blocks are used for inheritance and act as both placeholders and replacements
+at the same time.  They are documented in detail in the
+<a class="reference internal" href="templ9.html#template-inheritance"><span>Template Inheritance</span></a> section.</p>
+</div>
+<div class="section" id="include">
+<h2>4.11.10. Include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>include</cite> statement is useful to include a template and return the
+rendered contents of that file into the current namespace:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">include</span> <span class="s1">&#39;header.html&#39;</span> <span class="cp">%}</span>
+    Body
+<span class="cp">{%</span> <span class="k">include</span> <span class="s1">&#39;footer.html&#39;</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>Included templates have access to the variables of the active context by
+default.  For more details about context behavior of imports and includes,
+see <a class="reference internal" href="templ12.html#import-visibility"><span>Import Context Behavior</span></a>.</p>
+<p>From Jinja 2.2 onwards, you can mark an include with <code class="docutils literal"><span class="pre">ignore</span> <span class="pre">missing</span></code>; in
+which case Jinja will ignore the statement if the template to be included
+does not exist.  When combined with <code class="docutils literal"><span class="pre">with</span></code> or <code class="docutils literal"><span class="pre">without</span> <span class="pre">context</span></code>, it must
+be placed <em>before</em> the context visibility statement.  Here are some valid
+examples:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;sidebar.html&quot;</span> <span class="k">ignore missing</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;sidebar.html&quot;</span> <span class="k">ignore missing</span> <span class="k">with context</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;sidebar.html&quot;</span> <span class="k">ignore missing</span> <span class="k">without context</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.2.</span></p>
+</div>
+<p>You can also provide a list of templates that are checked for existence
+before inclusion.  The first template that exists will be included.  If
+<cite>ignore missing</cite> is given, it will fall back to rendering nothing if
+none of the templates exist, otherwise it will raise an exception.</p>
+<p>Example:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">include</span> <span class="o">[</span><span class="s1">&#39;page_detailed.html&#39;</span><span class="o">,</span> <span class="s1">&#39;page.html&#39;</span><span class="o">]</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">include</span> <span class="o">[</span><span class="s1">&#39;special_sidebar.html&#39;</span><span class="o">,</span> <span class="s1">&#39;sidebar.html&#39;</span><span class="o">]</span> <span class="k">ignore missing</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.4: </span>If a template object was passed to the template context, you can
+include that object using <cite>include</cite>.</p>
+</div>
+</div>
+<div class="section" id="import">
+<span id="id8"></span><h2>4.11.11. Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>Jinja2 supports putting often used code into macros.  These macros can go into
+different templates and get imported from there.  This works similarly to the
+import statements in Python.  It&#8217;s important to know that imports are cached
+and imported templates don&#8217;t have access to the current template variables,
+just the globals by default.  For more details about context behavior of
+imports and includes, see <a class="reference internal" href="templ12.html#import-visibility"><span>Import Context Behavior</span></a>.</p>
+<p>There are two ways to import templates.  You can import a complete template
+into a variable or request specific macros / exported variables from it.</p>
+<p>Imagine we have a helper module that renders forms (called <cite>forms.html</cite>):</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">input</span><span class="o">(</span><span class="nv">name</span><span class="o">,</span> <span class="nv">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">,</span> <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="o">)</span> -<span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">type</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">value</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span>- <span class="k">macro</span> <span class="nv">textarea</span><span class="o">(</span><span class="nv">name</span><span class="o">,</span> <span class="nv">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">,</span> <span class="nv">rows</span><span class="o">=</span><span class="m">10</span><span class="o">,</span> <span class="nv">cols</span><span class="o">=</span><span class="m">40</span><span class="o">)</span> -<span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">rows</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">cols</span>
+        <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">value</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<p>The easiest and most flexible way to access a template&#8217;s variables
+and macros is to import the whole template module into a variable.
+That way, you can access the attributes:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">import</span> <span class="s1">&#39;forms.html&#39;</span> <span class="k">as</span> <span class="nv">forms</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">forms.input</span><span class="o">(</span><span class="s1">&#39;username&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Password<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">forms.input</span><span class="o">(</span><span class="s1">&#39;password&#39;</span><span class="o">,</span> <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">forms.textarea</span><span class="o">(</span><span class="s1">&#39;comment&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, you can import specific names from a template into the current
+namespace:</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">from</span> <span class="s1">&#39;forms.html&#39;</span> <span class="k">import</span> <span class="nv">input</span> <span class="k">as</span> <span class="nv">input_field</span><span class="o">,</span> <span class="nv">textarea</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">input_field</span><span class="o">(</span><span class="s1">&#39;username&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Password<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">input_field</span><span class="o">(</span><span class="s1">&#39;password&#39;</span><span class="o">,</span> <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">textarea</span><span class="o">(</span><span class="s1">&#39;comment&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Macros and variables starting with one or more underscores are private and
+cannot be imported.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.4: </span>If a template object was passed to the template context, you can
+import from that object.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templ12.html" class="btn btn-neutral float-right" title="4.12. Import Context Behavior" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="templ10.html" class="btn btn-neutral" title="4.10. HTML Escaping" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

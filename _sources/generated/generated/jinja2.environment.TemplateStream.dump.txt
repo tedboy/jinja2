@@ -1,0 +1,6 @@
+jinja2.environment.TemplateStream.dump
+======================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: TemplateStream.dump

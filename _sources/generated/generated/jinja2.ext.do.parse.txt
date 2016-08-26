@@ -1,0 +1,6 @@
+jinja2.ext.do.parse
+===================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: do.parse

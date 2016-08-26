@@ -1,0 +1,6 @@
+jinja2.runtime.TemplateNotFound
+===============================
+
+.. currentmodule:: jinja2.runtime
+
+.. autoexception:: TemplateNotFound

@@ -1,0 +1,6 @@
+jinja2.ext.LoopControlExtension.attr
+====================================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: LoopControlExtension.attr

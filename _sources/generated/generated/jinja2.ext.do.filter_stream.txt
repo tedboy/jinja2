@@ -1,0 +1,6 @@
+jinja2.ext.do.filter_stream
+===========================
+
+.. currentmodule:: jinja2.ext
+
+.. automethod:: do.filter_stream

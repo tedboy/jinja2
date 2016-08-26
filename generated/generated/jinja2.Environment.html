@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1.3.6. jinja2.Environment &mdash; Jinja2 API</title>
+  <title>jinja2.Environment &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="../../index.html"/>
-        <link rel="up" title="1. jinja2" href="../jinja2.html"/>
-        <link rel="next" title="1.1.3.6.1.1. jinja2.Environment.__init__" href="jinja2.Environment.__init__.html"/>
-        <link rel="prev" title="1.1.3.5.2.1. jinja2.DictLoader.has_source_access" href="jinja2.DictLoader.has_source_access.html"/> 
+        <link rel="up" title="jinja2" href="../jinja2.html"/>
+        <link rel="next" title="jinja2.Environment.__init__" href="jinja2.Environment.__init__.html"/>
+        <link rel="prev" title="jinja2.DictLoader.has_source_access" href="jinja2.DictLoader.has_source_access.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -85,37 +85,45 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.html">1. jinja2</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.html#id1">1.1. jinja2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#nutshell">1.1.1. Nutshell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#functions">1.1.2. Functions</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.html#classes">1.1.3. Classes</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="jinja2.BaseLoader.html">1.1.3.1. jinja2.BaseLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.BytecodeCache.html">1.1.3.2. jinja2.BytecodeCache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.ChoiceLoader.html">1.1.3.3. jinja2.ChoiceLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.DebugUndefined.html">1.1.3.4. jinja2.DebugUndefined</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.DictLoader.html">1.1.3.5. jinja2.DictLoader</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">1.1.3.6. jinja2.Environment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemBytecodeCache.html">1.1.3.7. jinja2.FileSystemBytecodeCache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemLoader.html">1.1.3.8. jinja2.FileSystemLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.FunctionLoader.html">1.1.3.9. jinja2.FunctionLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Markup.html">1.1.3.10. jinja2.Markup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.MemcachedBytecodeCache.html">1.1.3.11. jinja2.MemcachedBytecodeCache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.ModuleLoader.html">1.1.3.12. jinja2.ModuleLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.PackageLoader.html">1.1.3.13. jinja2.PackageLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.PrefixLoader.html">1.1.3.14. jinja2.PrefixLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.StrictUndefined.html">1.1.3.15. jinja2.StrictUndefined</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Template.html">1.1.3.16. jinja2.Template</a></li>
-<li class="toctree-l4"><a class="reference internal" href="jinja2.Undefined.html">1.1.3.17. jinja2.Undefined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.html">jinja2</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.html#id1">jinja2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#nutshell">Nutshell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.BaseLoader.html">jinja2.BaseLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.BytecodeCache.html">jinja2.BytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ChoiceLoader.html">jinja2.ChoiceLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.DebugUndefined.html">jinja2.DebugUndefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.DictLoader.html">jinja2.DictLoader</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">jinja2.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemBytecodeCache.html">jinja2.FileSystemBytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.FileSystemLoader.html">jinja2.FileSystemLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.FunctionLoader.html">jinja2.FunctionLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Markup.html">jinja2.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.MemcachedBytecodeCache.html">jinja2.MemcachedBytecodeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ModuleLoader.html">jinja2.ModuleLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.PackageLoader.html">jinja2.PackageLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.PrefixLoader.html">jinja2.PrefixLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.StrictUndefined.html">jinja2.StrictUndefined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Template.html">jinja2.Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.Undefined.html">jinja2.Undefined</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#exceptions">1.1.4. Exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.html#exceptions">Exceptions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">2. jinja2.sandbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.ext.html">jinja2.ext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.parser.html">jinja2.parser</a></li>
 </ul>
 
             
@@ -159,9 +167,9 @@
         
           <li><a href="../../api.html">&lt;no title&gt;</a> &raquo;</li>
         
-          <li><a href="../jinja2.html">1. jinja2</a> &raquo;</li>
+          <li><a href="../jinja2.html">jinja2</a> &raquo;</li>
         
-      <li>1.1.3.6. jinja2.Environment</li>
+      <li>jinja2.Environment</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +187,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="jinja2-environment">
-<h1>1.1.3.6. jinja2.Environment<a class="headerlink" href="#jinja2-environment" title="Permalink to this headline">¶</a></h1>
+<h1>jinja2.Environment<a class="headerlink" href="#jinja2-environment" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="jinja2.Environment">
 <em class="property">class </em><code class="descclassname">jinja2.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>block_start_string='{%'</em>, <em>block_end_string='%}'</em>, <em>variable_start_string='{{'</em>, <em>variable_end_string='}}'</em>, <em>comment_start_string='{#'</em>, <em>comment_end_string='#}'</em>, <em>line_statement_prefix=None</em>, <em>line_comment_prefix=None</em>, <em>trim_blocks=False</em>, <em>lstrip_blocks=False</em>, <em>newline_sequence='n'</em>, <em>keep_trailing_newline=False</em>, <em>extensions=()</em>, <em>optimized=True</em>, <em>undefined=&lt;class 'jinja2.runtime.Undefined'&gt;</em>, <em>finalize=None</em>, <em>autoescape=False</em>, <em>loader=None</em>, <em>cache_size=400</em>, <em>auto_reload=True</em>, <em>bytecode_cache=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/jinja2/environment.html#Environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.Environment" title="Permalink to this definition">¶</a></dt>
@@ -208,10 +216,10 @@ Defaults to <code class="docutils literal"><span class="pre">'{{'</span></code>.
 <dd>The string marking the end of a comment.  Defaults to <code class="docutils literal"><span class="pre">'#}'</span></code>.</dd>
 <dt><cite>line_statement_prefix</cite></dt>
 <dd>If given and a string, this will be used as prefix for line based
-statements.  See also <span class="xref std std-ref">line-statements</span>.</dd>
+statements.  See also <a class="reference internal" href="../../templ8.html#line-statements"><span>Line Statements</span></a>.</dd>
 <dt><cite>line_comment_prefix</cite></dt>
 <dd><p class="first">If given and a string, this will be used as prefix for line based
-comments.  See also <span class="xref std std-ref">line-statements</span>.</p>
+comments.  See also <a class="reference internal" href="../../templ8.html#line-statements"><span>Line Statements</span></a>.</p>
 <div class="last versionadded">
 <p><span class="versionmodified">New in version 2.2.</span></p>
 </div>
@@ -238,7 +246,7 @@ if present, to be stripped from the end of the template.</p>
 <dt><cite>extensions</cite></dt>
 <dd>List of Jinja extensions to use.  This can either be import paths
 as strings or extension classes.  For more information have a
-look at <span class="xref std std-ref">the extensions documentation</span>.</dd>
+look at <a class="reference internal" href="../../off_doc.extensions.html#jinja-extensions"><span>the extensions documentation</span></a>.</dd>
 <dt><cite>optimized</cite></dt>
 <dd>should the optimizer be enabled?  Default is <cite>True</cite>.</dd>
 <dt><cite>undefined</cite></dt>
@@ -282,14 +290,14 @@ disable that.</dd>
 <dd><p class="first">If set to a bytecode cache object, this object will provide a
 cache for the internal Jinja bytecode so that templates don&#8217;t
 have to be parsed if they were not changed.</p>
-<p class="last">See <span class="xref std std-ref">bytecode-cache</span> for more information.</p>
+<p class="last">See <a class="reference internal" href="../../off_doc.api.html#bytecode-cache"><span>Bytecode Cache</span></a> for more information.</p>
 </dd>
 </dl>
 </div></blockquote>
 </dd></dl>
 
 <div class="section" id="methods">
-<h2>1.1.3.6.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
@@ -344,7 +352,7 @@ have to be parsed if they were not changed.</p>
 <tr class="row-even"><td><a class="reference internal" href="jinja2.Environment.join_path.html#jinja2.Environment.join_path" title="jinja2.Environment.join_path"><code class="xref py py-obj docutils literal"><span class="pre">join_path</span></code></a>(template,&nbsp;parent)</td>
 <td>Join a template with the parent.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="jinja2.Environment.lex.html#jinja2.Environment.lex" title="jinja2.Environment.lex"><code class="xref py py-obj docutils literal"><span class="pre">lex</span></code></a>(source[,&nbsp;name,&nbsp;filename])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../off_doc.api.html#jinja2.Environment.lex" title="jinja2.Environment.lex"><code class="xref py py-obj docutils literal"><span class="pre">lex</span></code></a>(source[,&nbsp;name,&nbsp;filename])</td>
 <td>Lex the given sourcecode and return a generator that yields tokens as tuples in the form <code class="docutils literal"><span class="pre">(lineno,</span> <span class="pre">token_type,</span> <span class="pre">value)</span></code>.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="jinja2.Environment.list_templates.html#jinja2.Environment.list_templates" title="jinja2.Environment.list_templates"><code class="xref py py-obj docutils literal"><span class="pre">list_templates</span></code></a>([extensions,&nbsp;filter_func])</td>
@@ -356,10 +364,10 @@ have to be parsed if they were not changed.</p>
 <tr class="row-even"><td><a class="reference internal" href="jinja2.Environment.overlay.html#jinja2.Environment.overlay" title="jinja2.Environment.overlay"><code class="xref py py-obj docutils literal"><span class="pre">overlay</span></code></a>([block_start_string,&nbsp;...])</td>
 <td>Create a new overlay environment that shares all the data with the current environment except for cache and the overridden attributes.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="jinja2.Environment.parse.html#jinja2.Environment.parse" title="jinja2.Environment.parse"><code class="xref py py-obj docutils literal"><span class="pre">parse</span></code></a>(source[,&nbsp;name,&nbsp;filename])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../off_doc.api.html#jinja2.Environment.parse" title="jinja2.Environment.parse"><code class="xref py py-obj docutils literal"><span class="pre">parse</span></code></a>(source[,&nbsp;name,&nbsp;filename])</td>
 <td>Parse the sourcecode and return the abstract syntax tree.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="jinja2.Environment.preprocess.html#jinja2.Environment.preprocess" title="jinja2.Environment.preprocess"><code class="xref py py-obj docutils literal"><span class="pre">preprocess</span></code></a>(source[,&nbsp;name,&nbsp;filename])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../off_doc.api.html#jinja2.Environment.preprocess" title="jinja2.Environment.preprocess"><code class="xref py py-obj docutils literal"><span class="pre">preprocess</span></code></a>(source[,&nbsp;name,&nbsp;filename])</td>
 <td>Preprocesses the source with all extensions.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="jinja2.Environment.select_template.html#jinja2.Environment.select_template" title="jinja2.Environment.select_template"><code class="xref py py-obj docutils literal"><span class="pre">select_template</span></code></a>(names[,&nbsp;parent,&nbsp;globals])</td>
@@ -369,7 +377,7 @@ have to be parsed if they were not changed.</p>
 </table>
 </div>
 <div class="section" id="attributes">
-<h2>1.1.3.6.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
@@ -409,10 +417,10 @@ have to be parsed if they were not changed.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="jinja2.Environment.__init__.html" class="btn btn-neutral float-right" title="1.1.3.6.1.1. jinja2.Environment.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="jinja2.Environment.__init__.html" class="btn btn-neutral float-right" title="jinja2.Environment.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="jinja2.DictLoader.has_source_access.html" class="btn btn-neutral" title="1.1.3.5.2.1. jinja2.DictLoader.has_source_access" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="jinja2.DictLoader.has_source_access.html" class="btn btn-neutral" title="jinja2.DictLoader.has_source_access" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

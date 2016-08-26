@@ -1,0 +1,39 @@
+jinja2.nodes.Const
+==================
+.. currentmodule:: jinja2.nodes
+.. autoclass:: Const
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Const.__init__
+   ~Const.as_const
+   ~Const.can_assign
+   ~Const.find
+   ~Const.find_all
+   ~Const.from_untrusted
+   ~Const.iter_child_nodes
+   ~Const.iter_fields
+   ~Const.set_ctx
+   ~Const.set_environment
+   ~Const.set_lineno
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Const.abstract
+   ~Const.attributes
+   ~Const.fields
+

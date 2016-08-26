@@ -1,0 +1,6 @@
+jinja2.nodes.FloorDiv.as_const
+==============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: FloorDiv.as_const

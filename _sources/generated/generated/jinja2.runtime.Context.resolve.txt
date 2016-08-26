@@ -1,0 +1,6 @@
+jinja2.runtime.Context.resolve
+==============================
+
+.. currentmodule:: jinja2.runtime
+
+.. automethod:: Context.resolve

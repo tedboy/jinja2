@@ -1,0 +1,6 @@
+jinja2.nodes.Neg.as_const
+=========================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Neg.as_const

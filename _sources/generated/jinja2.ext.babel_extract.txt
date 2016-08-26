@@ -1,0 +1,6 @@
+jinja2.ext.babel_extract
+========================
+
+.. currentmodule:: jinja2.ext
+
+.. autofunction:: babel_extract

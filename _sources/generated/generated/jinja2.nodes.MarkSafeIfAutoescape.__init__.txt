@@ -1,0 +1,6 @@
+jinja2.nodes.MarkSafeIfAutoescape.__init__
+==========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: MarkSafeIfAutoescape.__init__

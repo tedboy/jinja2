@@ -1,0 +1,6 @@
+jinja2.parser.Parser.parse_primary
+==================================
+
+.. currentmodule:: jinja2.parser
+
+.. automethod:: Parser.parse_primary

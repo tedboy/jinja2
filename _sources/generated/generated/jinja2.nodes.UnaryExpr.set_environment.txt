@@ -1,0 +1,6 @@
+jinja2.nodes.UnaryExpr.set_environment
+======================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: UnaryExpr.set_environment

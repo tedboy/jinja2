@@ -1,0 +1,6 @@
+jinja2.environment.EvalContext.save
+===================================
+
+.. currentmodule:: jinja2.environment
+
+.. automethod:: EvalContext.save

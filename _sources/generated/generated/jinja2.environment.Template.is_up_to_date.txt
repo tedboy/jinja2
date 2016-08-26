@@ -1,0 +1,6 @@
+jinja2.environment.Template.is_up_to_date
+=========================================
+
+.. currentmodule:: jinja2.environment
+
+.. autoattribute:: Template.is_up_to_date

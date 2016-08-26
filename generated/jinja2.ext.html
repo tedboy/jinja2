@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jinja2.ext &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../api.ext.html"/>
+        <link rel="next" title="jinja2.ext.babel_extract" href="jinja2.ext.babel_extract.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="../api.ext.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../off_doc.html">Stuffs from the official doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.exceptions.html">jinja2.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.environment.html">jinja2.environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.runtime.html">jinja2.runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.bccache.html">jinja2.bccache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.nodes.html">jinja2.nodes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">jinja2.ext</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">jinja2.ext</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.babel_extract.html">jinja2.ext.babel_extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.concat.html">jinja2.ext.concat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.contextfunction.html">jinja2.ext.contextfunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.extract_from_ast.html">jinja2.ext.extract_from_ast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.import_string.html">jinja2.ext.import_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.iteritems.html">jinja2.ext.iteritems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.with_metaclass.html">jinja2.ext.with_metaclass</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.AutoEscapeExtension.html">jinja2.ext.AutoEscapeExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.Environment.html">jinja2.ext.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.ExprStmtExtension.html">jinja2.ext.ExprStmtExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.Extension.html">jinja2.ext.Extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.ExtensionRegistry.html">jinja2.ext.ExtensionRegistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.InternationalizationExtension.html">jinja2.ext.InternationalizationExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.LoopControlExtension.html">jinja2.ext.LoopControlExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.Markup.html">jinja2.ext.Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.WithExtension.html">jinja2.ext.WithExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.autoescape.html">jinja2.ext.autoescape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.do.html">jinja2.ext.do</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.i18n.html">jinja2.ext.i18n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.loopcontrols.html">jinja2.ext.loopcontrols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.ext.with_.html">jinja2.ext.with</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.TemplateAssertionError.html">jinja2.ext.TemplateAssertionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.ext.TemplateSyntaxError.html">jinja2.ext.TemplateSyntaxError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.lexer.html">jinja2.lexer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.parser.html">jinja2.parser</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.ext.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>jinja2.ext</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/jinja2.ext.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jinja2.ext">
+<span id="jinja2-ext"></span><h1>jinja2.ext<a class="headerlink" href="#module-jinja2.ext" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>jinja2.ext<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Jinja extensions allow to add custom tags similar to the way django custom
+tags work.  By default two example extensions exist: an i18n and a cache
+extension.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2010 by the Jinja Team.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">BSD.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.ext.babel_extract.html#jinja2.ext.babel_extract" title="jinja2.ext.babel_extract"><code class="xref py py-obj docutils literal"><span class="pre">babel_extract</span></code></a>(fileobj,&nbsp;keywords,&nbsp;...)</td>
+<td>Babel extraction method for Jinja templates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.ext.concat.html#jinja2.ext.concat" title="jinja2.ext.concat"><code class="xref py py-obj docutils literal"><span class="pre">concat</span></code></a></td>
+<td>S.join(iterable) -&gt; unicode</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.ext.contextfunction.html#jinja2.ext.contextfunction" title="jinja2.ext.contextfunction"><code class="xref py py-obj docutils literal"><span class="pre">contextfunction</span></code></a>(f)</td>
+<td>This decorator can be used to mark a function or method context callable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.ext.extract_from_ast.html#jinja2.ext.extract_from_ast" title="jinja2.ext.extract_from_ast"><code class="xref py py-obj docutils literal"><span class="pre">extract_from_ast</span></code></a>(node[,&nbsp;gettext_functions,&nbsp;...])</td>
+<td>Extract localizable strings from the given template node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.ext.import_string.html#jinja2.ext.import_string" title="jinja2.ext.import_string"><code class="xref py py-obj docutils literal"><span class="pre">import_string</span></code></a>(import_name[,&nbsp;silent])</td>
+<td>Imports an object based on a string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.ext.iteritems.html#jinja2.ext.iteritems" title="jinja2.ext.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(d)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.ext.with_metaclass.html#jinja2.ext.with_metaclass" title="jinja2.ext.with_metaclass"><code class="xref py py-obj docutils literal"><span class="pre">with_metaclass</span></code></a>(meta,&nbsp;*bases)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.AutoEscapeExtension.html#jinja2.ext.AutoEscapeExtension" title="jinja2.ext.AutoEscapeExtension"><code class="xref py py-obj docutils literal"><span class="pre">AutoEscapeExtension</span></code></a>(environment)</td>
+<td>Changes auto escape rules for a scope.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.Environment.html#jinja2.ext.Environment" title="jinja2.ext.Environment"><code class="xref py py-obj docutils literal"><span class="pre">Environment</span></code></a>([block_start_string,&nbsp;...])</td>
+<td>The core component of Jinja is the <cite>Environment</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.ExprStmtExtension.html#jinja2.ext.ExprStmtExtension" title="jinja2.ext.ExprStmtExtension"><code class="xref py py-obj docutils literal"><span class="pre">ExprStmtExtension</span></code></a>(environment)</td>
+<td>Adds a <cite>do</cite> tag to Jinja2 that works like the print statement just that it doesn&#8217;t print the return value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.Extension.html#jinja2.ext.Extension" title="jinja2.ext.Extension"><code class="xref py py-obj docutils literal"><span class="pre">Extension</span></code></a>(environment)</td>
+<td>Extensions can be used to add extra functionality to the Jinja template system at the parser level.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.ExtensionRegistry.html#jinja2.ext.ExtensionRegistry" title="jinja2.ext.ExtensionRegistry"><code class="xref py py-obj docutils literal"><span class="pre">ExtensionRegistry</span></code></a></td>
+<td>Gives the extension an unique identifier.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.InternationalizationExtension.html#jinja2.ext.InternationalizationExtension" title="jinja2.ext.InternationalizationExtension"><code class="xref py py-obj docutils literal"><span class="pre">InternationalizationExtension</span></code></a>(environment)</td>
+<td>This extension adds gettext support to Jinja2.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.LoopControlExtension.html#jinja2.ext.LoopControlExtension" title="jinja2.ext.LoopControlExtension"><code class="xref py py-obj docutils literal"><span class="pre">LoopControlExtension</span></code></a>(environment)</td>
+<td>Adds break and continue to the template engine.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.Markup.html#jinja2.ext.Markup" title="jinja2.ext.Markup"><code class="xref py py-obj docutils literal"><span class="pre">Markup</span></code></a></td>
+<td>Marks a string as being safe for inclusion in HTML/XML output without needing to be escaped.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.WithExtension.html#jinja2.ext.WithExtension" title="jinja2.ext.WithExtension"><code class="xref py py-obj docutils literal"><span class="pre">WithExtension</span></code></a>(environment)</td>
+<td>Adds support for a django-like with block.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.autoescape.html#jinja2.ext.autoescape" title="jinja2.ext.autoescape"><code class="xref py py-obj docutils literal"><span class="pre">autoescape</span></code></a></td>
+<td>alias of <a class="reference internal" href="generated/jinja2.ext.AutoEscapeExtension.html#jinja2.ext.AutoEscapeExtension" title="jinja2.ext.AutoEscapeExtension"><code class="xref py py-class docutils literal"><span class="pre">AutoEscapeExtension</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.do.html#jinja2.ext.do" title="jinja2.ext.do"><code class="xref py py-obj docutils literal"><span class="pre">do</span></code></a></td>
+<td>alias of <a class="reference internal" href="generated/jinja2.ext.ExprStmtExtension.html#jinja2.ext.ExprStmtExtension" title="jinja2.ext.ExprStmtExtension"><code class="xref py py-class docutils literal"><span class="pre">ExprStmtExtension</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.i18n.html#jinja2.ext.i18n" title="jinja2.ext.i18n"><code class="xref py py-obj docutils literal"><span class="pre">i18n</span></code></a></td>
+<td>nicer import names</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.ext.loopcontrols.html#jinja2.ext.loopcontrols" title="jinja2.ext.loopcontrols"><code class="xref py py-obj docutils literal"><span class="pre">loopcontrols</span></code></a></td>
+<td>alias of <a class="reference internal" href="generated/jinja2.ext.LoopControlExtension.html#jinja2.ext.LoopControlExtension" title="jinja2.ext.LoopControlExtension"><code class="xref py py-class docutils literal"><span class="pre">LoopControlExtension</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.ext.with_.html#jinja2.ext.with_" title="jinja2.ext.with_"><code class="xref py py-obj docutils literal"><span class="pre">with_</span></code></a></td>
+<td>alias of <a class="reference internal" href="generated/jinja2.ext.WithExtension.html#jinja2.ext.WithExtension" title="jinja2.ext.WithExtension"><code class="xref py py-class docutils literal"><span class="pre">WithExtension</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.ext.TemplateAssertionError.html#jinja2.ext.TemplateAssertionError" title="jinja2.ext.TemplateAssertionError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateAssertionError</span></code></a>(message,&nbsp;lineno[,&nbsp;...])</td>
+<td>Like a template syntax error, but covers cases where something in the template caused an error at compile time that wasn&#8217;t necessarily caused by a syntax error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.ext.TemplateSyntaxError.html#jinja2.ext.TemplateSyntaxError" title="jinja2.ext.TemplateSyntaxError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateSyntaxError</span></code></a>(message,&nbsp;lineno[,&nbsp;name,&nbsp;...])</td>
+<td>Raised to tell the user that there is a problem with the template.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.ext.babel_extract.html" class="btn btn-neutral float-right" title="jinja2.ext.babel_extract" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.ext.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

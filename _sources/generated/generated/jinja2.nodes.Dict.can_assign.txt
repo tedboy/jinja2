@@ -1,0 +1,6 @@
+jinja2.nodes.Dict.can_assign
+============================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: Dict.can_assign

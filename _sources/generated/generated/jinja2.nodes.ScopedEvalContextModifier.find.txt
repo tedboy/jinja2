@@ -1,0 +1,6 @@
+jinja2.nodes.ScopedEvalContextModifier.find
+===========================================
+
+.. currentmodule:: jinja2.nodes
+
+.. automethod:: ScopedEvalContextModifier.find

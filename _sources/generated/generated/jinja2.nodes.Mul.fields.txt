@@ -1,0 +1,6 @@
+jinja2.nodes.Mul.fields
+=======================
+
+.. currentmodule:: jinja2.nodes
+
+.. autoattribute:: Mul.fields
