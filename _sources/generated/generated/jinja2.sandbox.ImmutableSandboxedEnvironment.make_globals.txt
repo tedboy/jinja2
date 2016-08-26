@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.make_globals
+=========================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.make_globals

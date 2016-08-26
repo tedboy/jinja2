@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>markupsafe &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="Module code" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.html">1. jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.sandbox.html">2. jinja2.sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>markupsafe</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for markupsafe</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    markupsafe</span>
+<span class="sd">    ~~~~~~~~~~</span>
+
+<span class="sd">    Implements a Markup string.</span>
+
+<span class="sd">    :copyright: (c) 2010 by Armin Ronacher.</span>
+<span class="sd">    :license: BSD, see LICENSE for more details.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Mapping</span>
+<span class="kn">from</span> <span class="nn">markupsafe._compat</span> <span class="kn">import</span> <span class="n">text_type</span><span class="p">,</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">int_types</span><span class="p">,</span> \
+     <span class="nb">unichr</span><span class="p">,</span> <span class="n">iteritems</span><span class="p">,</span> <span class="n">PY2</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Markup&#39;</span><span class="p">,</span> <span class="s1">&#39;soft_unicode&#39;</span><span class="p">,</span> <span class="s1">&#39;escape&#39;</span><span class="p">,</span> <span class="s1">&#39;escape_silent&#39;</span><span class="p">]</span>
+
+
+<span class="n">_striptags_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;(&lt;!--.*?--&gt;|&lt;[^&gt;]*&gt;)&#39;</span><span class="p">)</span>
+<span class="n">_entity_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;&amp;([^;]+);&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Markup"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.html#jinja2.Markup">[docs]</a><span class="k">class</span> <span class="nc">Markup</span><span class="p">(</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;Marks a string as being safe for inclusion in HTML/XML output without</span>
+<span class="sd">    needing to be escaped.  This implements the `__html__` interface a couple</span>
+<span class="sd">    of frameworks and web applications use.  :class:`Markup` is a direct</span>
+<span class="sd">    subclass of `unicode` and provides all the methods of `unicode` just that</span>
+<span class="sd">    it escapes arguments passed and always returns `Markup`.</span>
+
+<span class="sd">    The `escape` function returns markup objects so that double escaping can&#39;t</span>
+<span class="sd">    happen.</span>
+
+<span class="sd">    The constructor of the :class:`Markup` class can be used for three</span>
+<span class="sd">    different things:  When passed an unicode object it&#39;s assumed to be safe,</span>
+<span class="sd">    when passed an object with an HTML representation (has an `__html__`</span>
+<span class="sd">    method) that representation is used, otherwise the object passed is</span>
+<span class="sd">    converted into a unicode string and then assumed to be safe:</span>
+
+<span class="sd">    &gt;&gt;&gt; Markup(&quot;Hello &lt;em&gt;World&lt;/em&gt;!&quot;)</span>
+<span class="sd">    Markup(u&#39;Hello &lt;em&gt;World&lt;/em&gt;!&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; class Foo(object):</span>
+<span class="sd">    ...  def __html__(self):</span>
+<span class="sd">    ...   return &#39;&lt;a href=&quot;#&quot;&gt;foo&lt;/a&gt;&#39;</span>
+<span class="sd">    ...</span>
+<span class="sd">    &gt;&gt;&gt; Markup(Foo())</span>
+<span class="sd">    Markup(u&#39;&lt;a href=&quot;#&quot;&gt;foo&lt;/a&gt;&#39;)</span>
+
+<span class="sd">    If you want object passed being always treated as unsafe you can use the</span>
+<span class="sd">    :meth:`escape` classmethod to create a :class:`Markup` object:</span>
+
+<span class="sd">    &gt;&gt;&gt; Markup.escape(&quot;Hello &lt;em&gt;World&lt;/em&gt;!&quot;)</span>
+<span class="sd">    Markup(u&#39;Hello &amp;lt;em&amp;gt;World&amp;lt;/em&amp;gt;!&#39;)</span>
+
+<span class="sd">    Operations on a markup string are markup aware which means that all</span>
+<span class="sd">    arguments are passed through the :func:`escape` function:</span>
+
+<span class="sd">    &gt;&gt;&gt; em = Markup(&quot;&lt;em&gt;%s&lt;/em&gt;&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; em % &quot;foo &amp; bar&quot;</span>
+<span class="sd">    Markup(u&#39;&lt;em&gt;foo &amp;amp; bar&lt;/em&gt;&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; strong = Markup(&quot;&lt;strong&gt;%(text)s&lt;/strong&gt;&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; strong % {&#39;text&#39;: &#39;&lt;blink&gt;hacker here&lt;/blink&gt;&#39;}</span>
+<span class="sd">    Markup(u&#39;&lt;strong&gt;&amp;lt;blink&amp;gt;hacker here&amp;lt;/blink&amp;gt;&lt;/strong&gt;&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; Markup(&quot;&lt;em&gt;Hello&lt;/em&gt; &quot;) + &quot;&lt;foo&gt;&quot;</span>
+<span class="sd">    Markup(u&#39;&lt;em&gt;Hello&lt;/em&gt; &amp;lt;foo&amp;gt;&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__slots__</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="s1">u&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;__html__&#39;</span><span class="p">):</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">__html__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">text_type</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">text_type</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__html__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">string_types</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s1">&#39;__html__&#39;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Markup</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__add__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">other</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="nf">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s1">&#39;__html__&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+    <span class="k">def</span> <span class="nf">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">int_types</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">text_type</span><span class="o">.</span><span class="n">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span>
+    <span class="n">__rmul__</span> <span class="o">=</span> <span class="n">__mul__</span>
+
+    <span class="k">def</span> <span class="nf">__mod__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_MarkupEscapeHelper</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arg</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">_MarkupEscapeHelper</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">text_type</span><span class="o">.</span><span class="n">__mod__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">(</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
+            <span class="n">text_type</span><span class="o">.</span><span class="n">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="Markup.join"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.join.html#jinja2.Markup.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">text_type</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">,</span> <span class="n">seq</span><span class="p">)))</span></div>
+    <span class="n">join</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">join</span><span class="o">.</span><span class="n">__doc__</span>
+
+<div class="viewcode-block" id="Markup.split"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.split.html#jinja2.Markup.split">[docs]</a>    <span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="n">text_type</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
+    <span class="n">split</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">__doc__</span>
+
+<div class="viewcode-block" id="Markup.rsplit"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.rsplit.html#jinja2.Markup.rsplit">[docs]</a>    <span class="k">def</span> <span class="nf">rsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="n">text_type</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
+    <span class="n">rsplit</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">rsplit</span><span class="o">.</span><span class="n">__doc__</span>
+
+<div class="viewcode-block" id="Markup.splitlines"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.splitlines.html#jinja2.Markup.splitlines">[docs]</a>    <span class="k">def</span> <span class="nf">splitlines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="n">text_type</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
+    <span class="n">splitlines</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">text_type</span><span class="o">.</span><span class="n">splitlines</span><span class="o">.</span><span class="n">__doc__</span>
+
+<div class="viewcode-block" id="Markup.unescape"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.unescape.html#jinja2.Markup.unescape">[docs]</a>    <span class="k">def</span> <span class="nf">unescape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&quot;&quot;&quot;Unescape markup again into an text_type string.  This also resolves</span>
+<span class="sd">        known HTML4 and XHTML entities:</span>
+
+<span class="sd">        &gt;&gt;&gt; Markup(&quot;Main &amp;raquo; &lt;em&gt;About&lt;/em&gt;&quot;).unescape()</span>
+<span class="sd">        u&#39;Main \xbb &lt;em&gt;About&lt;/em&gt;&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">markupsafe._constants</span> <span class="kn">import</span> <span class="n">HTML_ENTITIES</span>
+        <span class="k">def</span> <span class="nf">handle_match</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">HTML_ENTITIES</span><span class="p">:</span>
+                <span class="k">return</span> <span class="nb">unichr</span><span class="p">(</span><span class="n">HTML_ENTITIES</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">name</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;#x&#39;</span><span class="p">,</span> <span class="s1">&#39;#X&#39;</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="nb">unichr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="mi">2</span><span class="p">:],</span> <span class="mi">16</span><span class="p">))</span>
+                <span class="k">elif</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="nb">unichr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">return</span> <span class="s1">u&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">_entity_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">handle_match</span><span class="p">,</span> <span class="n">text_type</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Markup.striptags"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.striptags.html#jinja2.Markup.striptags">[docs]</a>    <span class="k">def</span> <span class="nf">striptags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&quot;&quot;&quot;Unescape markup into an text_type string and strip all tags.  This</span>
+<span class="sd">        also resolves known HTML4 and XHTML entities.  Whitespace is</span>
+<span class="sd">        normalized to one:</span>
+
+<span class="sd">        &gt;&gt;&gt; Markup(&quot;Main &amp;raquo;  &lt;em&gt;About&lt;/em&gt;&quot;).striptags()</span>
+<span class="sd">        u&#39;Main \xbb About&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">stripped</span> <span class="o">=</span> <span class="s1">u&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_striptags_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">Markup</span><span class="p">(</span><span class="n">stripped</span><span class="p">)</span><span class="o">.</span><span class="n">unescape</span><span class="p">()</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Markup.escape"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.escape.html#jinja2.Markup.escape">[docs]</a>    <span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Escape the string.  Works like :func:`escape` with the difference</span>
+<span class="sd">        that for subclasses of :class:`Markup` this function would return the</span>
+<span class="sd">        correct subclass.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">escape</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rv</span><span class="o">.</span><span class="n">__class__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">cls</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="n">rv</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rv</span></div>
+
+    <span class="k">def</span> <span class="nf">make_simple_escaping_wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="n">orig</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="n">_escape_argspec</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">),</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
+            <span class="n">_escape_argspec</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">iteritems</span><span class="p">(</span><span class="n">kwargs</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">orig</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="n">func</span><span class="o">.</span><span class="n">__name__</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">__name__</span>
+        <span class="n">func</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">__doc__</span>
+        <span class="k">return</span> <span class="n">func</span>
+
+    <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="s1">&#39;__getitem__&#39;</span><span class="p">,</span> <span class="s1">&#39;capitalize&#39;</span><span class="p">,</span> \
+                  <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="s1">&#39;upper&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="s1">&#39;ljust&#39;</span><span class="p">,</span> \
+                  <span class="s1">&#39;rjust&#39;</span><span class="p">,</span> <span class="s1">&#39;lstrip&#39;</span><span class="p">,</span> <span class="s1">&#39;rstrip&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;strip&#39;</span><span class="p">,</span> \
+                  <span class="s1">&#39;translate&#39;</span><span class="p">,</span> <span class="s1">&#39;expandtabs&#39;</span><span class="p">,</span> <span class="s1">&#39;swapcase&#39;</span><span class="p">,</span> <span class="s1">&#39;zfill&#39;</span><span class="p">:</span>
+        <span class="nb">locals</span><span class="p">()[</span><span class="n">method</span><span class="p">]</span> <span class="o">=</span> <span class="n">make_simple_escaping_wrapper</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+
+    <span class="c1"># new in python 2.5</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="s1">&#39;partition&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.partition"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.partition.html#jinja2.Markup.partition">[docs]</a>        <span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span>
+                             <span class="n">text_type</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">sep</span><span class="p">))))</span></div>
+<div class="viewcode-block" id="Markup.rpartition"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.rpartition.html#jinja2.Markup.rpartition">[docs]</a>        <span class="k">def</span> <span class="nf">rpartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span>
+                             <span class="n">text_type</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">sep</span><span class="p">))))</span></div>
+
+    <span class="c1"># new in python 2.6</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="Markup.format"><a class="viewcode-back" href="../generated/generated/jinja2.Markup.format.html#jinja2.Markup.format">[docs]</a>        <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">formatter</span> <span class="o">=</span> <span class="n">EscapeFormatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
+            <span class="n">kwargs</span> <span class="o">=</span> <span class="n">_MagicFormatMapping</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">formatter</span><span class="o">.</span><span class="n">vformat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">))</span></div>
+
+        <span class="k">def</span> <span class="nf">__html_format__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">format_spec</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">format_spec</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unsupported format specification &#39;</span>
+                                 <span class="s1">&#39;for Markup.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># not in python 3</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="s1">&#39;__getslice__&#39;</span><span class="p">):</span>
+        <span class="n">__getslice__</span> <span class="o">=</span> <span class="n">make_simple_escaping_wrapper</span><span class="p">(</span><span class="s1">&#39;__getslice__&#39;</span><span class="p">)</span>
+
+    <span class="k">del</span> <span class="n">method</span><span class="p">,</span> <span class="n">make_simple_escaping_wrapper</span></div>
+
+
+<span class="k">class</span> <span class="nc">_MagicFormatMapping</span><span class="p">(</span><span class="n">Mapping</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class implements a dummy wrapper to fix a bug in the Python</span>
+<span class="sd">    standard library for string formatting.</span>
+
+<span class="sd">    See http://bugs.python.org/issue13598 for information about why</span>
+<span class="sd">    this is necessary.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_index</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_last_index</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_last_index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">text_type</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">EscapeFormatter</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">Formatter</span><span class="p">):</span>
+
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">escape</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">escape</span> <span class="o">=</span> <span class="n">escape</span>
+
+        <span class="k">def</span> <span class="nf">format_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">format_spec</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;__html_format__&#39;</span><span class="p">):</span>
+                <span class="n">rv</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">__html_format__</span><span class="p">(</span><span class="n">format_spec</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;__html__&#39;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">format_spec</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No format specification allowed &#39;</span>
+                                     <span class="s1">&#39;when formatting an object with &#39;</span>
+                                     <span class="s1">&#39;its __html__ method.&#39;</span><span class="p">)</span>
+                <span class="n">rv</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">__html__</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rv</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">Formatter</span><span class="o">.</span><span class="n">format_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">format_spec</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">text_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">rv</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">_escape_argspec</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">escape</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper for various string-wrapped functions.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;__html__&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+            <span class="n">obj</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">escape</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span>
+
+
+<span class="k">class</span> <span class="nc">_MarkupEscapeHelper</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper for Markup.__mod__&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">escape</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">escape</span> <span class="o">=</span> <span class="n">escape</span>
+
+    <span class="n">__getitem__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">_MarkupEscapeHelper</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">obj</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">s</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
+    <span class="n">__unicode__</span> <span class="o">=</span> <span class="n">__str__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">text_type</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">obj</span><span class="p">))</span>
+    <span class="n">__repr__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">obj</span><span class="p">)))</span>
+    <span class="n">__int__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
+    <span class="n">__float__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
+
+
+<span class="c1"># we have to import it down here as the speedups and native</span>
+<span class="c1"># modules imports the markup type which is define above.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">markupsafe._speedups</span> <span class="kn">import</span> <span class="n">escape</span><span class="p">,</span> <span class="n">escape_silent</span><span class="p">,</span> <span class="n">soft_unicode</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">markupsafe._native</span> <span class="kn">import</span> <span class="n">escape</span><span class="p">,</span> <span class="n">escape_silent</span><span class="p">,</span> <span class="n">soft_unicode</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">PY2</span><span class="p">:</span>
+    <span class="n">soft_str</span> <span class="o">=</span> <span class="n">soft_unicode</span>
+    <span class="n">__all__</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;soft_str&#39;</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.getattr
+====================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.getattr

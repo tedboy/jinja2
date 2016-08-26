@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.handle_exception
+===========================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.handle_exception

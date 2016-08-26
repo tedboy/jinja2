@@ -1,0 +1,6 @@
+jinja2.sandbox.deque.popleft
+============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: deque.popleft

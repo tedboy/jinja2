@@ -1,0 +1,6 @@
+jinja2.DictLoader.load
+======================
+
+.. currentmodule:: jinja2
+
+.. automethod:: DictLoader.load

@@ -1,0 +1,6 @@
+jinja2.TemplateNotFound
+=======================
+
+.. currentmodule:: jinja2
+
+.. autoexception:: TemplateNotFound

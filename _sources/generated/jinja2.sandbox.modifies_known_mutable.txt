@@ -1,0 +1,6 @@
+jinja2.sandbox.modifies_known_mutable
+=====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autofunction:: modifies_known_mutable

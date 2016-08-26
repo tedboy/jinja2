@@ -1,0 +1,95 @@
+jinja2
+======
+
+.. automodule:: jinja2
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      clear_caches
+      contextfilter
+      contextfunction
+      environmentfilter
+      environmentfunction
+      escape
+      evalcontextfilter
+      evalcontextfunction
+      is_undefined
+      make_logging_undefined
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      BaseLoader
+      BytecodeCache
+      ChoiceLoader
+      DebugUndefined
+      DictLoader
+      Environment
+      FileSystemBytecodeCache
+      FileSystemLoader
+      FunctionLoader
+      Markup
+      MemcachedBytecodeCache
+      ModuleLoader
+      PackageLoader
+      PrefixLoader
+      StrictUndefined
+      Template
+      Undefined
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.BaseLoader
+       generated/jinja2.BytecodeCache
+       generated/jinja2.ChoiceLoader
+       generated/jinja2.DebugUndefined
+       generated/jinja2.DictLoader
+       generated/jinja2.Environment
+       generated/jinja2.FileSystemBytecodeCache
+       generated/jinja2.FileSystemLoader
+       generated/jinja2.FunctionLoader
+       generated/jinja2.Markup
+       generated/jinja2.MemcachedBytecodeCache
+       generated/jinja2.ModuleLoader
+       generated/jinja2.PackageLoader
+       generated/jinja2.PrefixLoader
+       generated/jinja2.StrictUndefined
+       generated/jinja2.Template
+       generated/jinja2.Undefined
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      TemplateAssertionError
+      TemplateError
+      TemplateNotFound
+      TemplateSyntaxError
+      TemplatesNotFound
+      UndefinedError
+   
+   

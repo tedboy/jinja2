@@ -1,0 +1,6 @@
+jinja2.Markup.partition
+=======================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.partition

@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableSequence.extend
+=====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableSequence.extend

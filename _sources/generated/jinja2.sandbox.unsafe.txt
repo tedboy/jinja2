@@ -1,0 +1,6 @@
+jinja2.sandbox.unsafe
+=====================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autofunction:: unsafe

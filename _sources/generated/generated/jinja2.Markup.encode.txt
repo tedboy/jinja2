@@ -1,0 +1,6 @@
+jinja2.Markup.encode
+====================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.encode

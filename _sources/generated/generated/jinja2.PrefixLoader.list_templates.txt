@@ -1,0 +1,6 @@
+jinja2.PrefixLoader.list_templates
+==================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: PrefixLoader.list_templates

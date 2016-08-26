@@ -1,0 +1,30 @@
+jinja2.sandbox.DictMixin
+========================
+.. currentmodule:: jinja2.sandbox
+.. autoclass:: DictMixin
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DictMixin.clear
+   ~DictMixin.get
+   ~DictMixin.has_key
+   ~DictMixin.items
+   ~DictMixin.iteritems
+   ~DictMixin.iterkeys
+   ~DictMixin.itervalues
+   ~DictMixin.pop
+   ~DictMixin.popitem
+   ~DictMixin.setdefault
+   ~DictMixin.update
+   ~DictMixin.values
+
+
+
+
+

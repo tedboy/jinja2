@@ -1,0 +1,6 @@
+jinja2.exceptions.imap.next
+===========================
+
+.. currentmodule:: jinja2.exceptions
+
+.. autoattribute:: imap.next

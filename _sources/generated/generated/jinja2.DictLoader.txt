@@ -1,0 +1,30 @@
+jinja2.DictLoader
+=================
+.. currentmodule:: jinja2
+.. autoclass:: DictLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DictLoader.__init__
+   ~DictLoader.get_source
+   ~DictLoader.list_templates
+   ~DictLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~DictLoader.has_source_access
+

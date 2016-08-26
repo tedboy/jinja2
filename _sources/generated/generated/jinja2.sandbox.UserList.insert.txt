@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.insert
+==============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.insert

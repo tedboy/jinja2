@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.make_globals
+=======================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.make_globals

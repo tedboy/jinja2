@@ -1,0 +1,6 @@
+jinja2.sandbox.DictMixin.update
+===============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: DictMixin.update

@@ -1,0 +1,6 @@
+jinja2.UndefinedError
+=====================
+
+.. currentmodule:: jinja2
+
+.. autoexception:: UndefinedError

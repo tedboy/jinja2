@@ -1,0 +1,6 @@
+jinja2.sandbox.Set.remove
+=========================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Set.remove

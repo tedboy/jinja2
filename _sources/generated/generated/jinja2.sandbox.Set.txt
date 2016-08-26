@@ -1,0 +1,36 @@
+jinja2.sandbox.Set
+==================
+.. currentmodule:: jinja2.sandbox
+.. autoclass:: Set
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Set.__init__
+   ~Set.add
+   ~Set.clear
+   ~Set.copy
+   ~Set.difference
+   ~Set.difference_update
+   ~Set.discard
+   ~Set.intersection
+   ~Set.intersection_update
+   ~Set.issubset
+   ~Set.issuperset
+   ~Set.pop
+   ~Set.remove
+   ~Set.symmetric_difference
+   ~Set.symmetric_difference_update
+   ~Set.union
+   ~Set.union_update
+   ~Set.update
+
+
+
+
+

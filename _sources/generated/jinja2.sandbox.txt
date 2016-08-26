@@ -1,0 +1,72 @@
+jinja2.sandbox
+==============
+
+.. automodule:: jinja2.sandbox
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      is_internal_attribute
+      modifies_known_mutable
+      safe_range
+      unsafe
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      DictMixin
+      Environment
+      ImmutableSandboxedEnvironment
+      MutableMapping
+      MutableSequence
+      MutableSet
+      SandboxedEnvironment
+      Set
+      UserDict
+      UserList
+      deque
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.sandbox.DictMixin
+       generated/jinja2.sandbox.Environment
+       generated/jinja2.sandbox.ImmutableSandboxedEnvironment
+       generated/jinja2.sandbox.MutableMapping
+       generated/jinja2.sandbox.MutableSequence
+       generated/jinja2.sandbox.MutableSet
+       generated/jinja2.sandbox.SandboxedEnvironment
+       generated/jinja2.sandbox.Set
+       generated/jinja2.sandbox.UserDict
+       generated/jinja2.sandbox.UserList
+       generated/jinja2.sandbox.deque
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      SecurityError
+   
+   

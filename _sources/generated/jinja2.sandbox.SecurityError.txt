@@ -1,0 +1,6 @@
+jinja2.sandbox.SecurityError
+============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoexception:: SecurityError

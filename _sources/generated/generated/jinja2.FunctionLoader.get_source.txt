@@ -1,0 +1,6 @@
+jinja2.FunctionLoader.get_source
+================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FunctionLoader.get_source

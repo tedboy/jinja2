@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.list_templates
+=========================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.list_templates

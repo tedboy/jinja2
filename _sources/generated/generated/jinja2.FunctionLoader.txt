@@ -1,0 +1,30 @@
+jinja2.FunctionLoader
+=====================
+.. currentmodule:: jinja2
+.. autoclass:: FunctionLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FunctionLoader.__init__
+   ~FunctionLoader.get_source
+   ~FunctionLoader.list_templates
+   ~FunctionLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~FunctionLoader.has_source_access
+

@@ -1,0 +1,6 @@
+jinja2.TemplateError
+====================
+
+.. currentmodule:: jinja2
+
+.. autoexception:: TemplateError

@@ -1,0 +1,6 @@
+jinja2.DictLoader.list_templates
+================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: DictLoader.list_templates

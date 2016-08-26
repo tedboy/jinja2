@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.overlayed
+====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: Environment.overlayed

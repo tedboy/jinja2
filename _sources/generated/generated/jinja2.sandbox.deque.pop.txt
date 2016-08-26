@@ -1,0 +1,6 @@
+jinja2.sandbox.deque.pop
+========================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: deque.pop

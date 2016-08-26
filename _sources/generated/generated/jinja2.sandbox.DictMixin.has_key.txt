@@ -1,0 +1,6 @@
+jinja2.sandbox.DictMixin.has_key
+================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: DictMixin.has_key

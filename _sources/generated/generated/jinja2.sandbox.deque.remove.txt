@@ -1,0 +1,6 @@
+jinja2.sandbox.deque.remove
+===========================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: deque.remove

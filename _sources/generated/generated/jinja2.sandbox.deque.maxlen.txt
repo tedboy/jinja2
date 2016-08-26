@@ -1,0 +1,6 @@
+jinja2.sandbox.deque.maxlen
+===========================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: deque.maxlen

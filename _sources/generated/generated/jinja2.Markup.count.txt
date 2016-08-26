@@ -1,0 +1,6 @@
+jinja2.Markup.count
+===================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.count

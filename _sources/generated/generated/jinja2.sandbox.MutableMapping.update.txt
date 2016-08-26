@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableMapping.update
+====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableMapping.update

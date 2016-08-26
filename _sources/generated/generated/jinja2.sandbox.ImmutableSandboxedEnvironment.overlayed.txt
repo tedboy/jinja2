@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.overlayed
+======================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: ImmutableSandboxedEnvironment.overlayed

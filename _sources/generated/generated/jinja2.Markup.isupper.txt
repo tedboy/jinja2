@@ -1,0 +1,6 @@
+jinja2.Markup.isupper
+=====================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.isupper

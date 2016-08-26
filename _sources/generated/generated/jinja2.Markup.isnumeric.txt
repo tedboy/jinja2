@@ -1,0 +1,6 @@
+jinja2.Markup.isnumeric
+=======================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.isnumeric

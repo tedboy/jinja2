@@ -1,0 +1,6 @@
+jinja2.environmentfilter
+========================
+
+.. currentmodule:: jinja2
+
+.. autofunction:: environmentfilter

@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.index
+=============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.index

@@ -1,0 +1,6 @@
+jinja2.Environment.make_globals
+===============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.make_globals

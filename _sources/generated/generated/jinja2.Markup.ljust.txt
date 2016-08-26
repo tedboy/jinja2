@@ -1,0 +1,6 @@
+jinja2.Markup.ljust
+===================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.ljust

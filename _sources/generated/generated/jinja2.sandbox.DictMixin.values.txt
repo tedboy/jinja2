@@ -1,0 +1,6 @@
+jinja2.sandbox.DictMixin.values
+===============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: DictMixin.values

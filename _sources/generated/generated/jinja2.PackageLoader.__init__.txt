@@ -1,0 +1,6 @@
+jinja2.PackageLoader.__init__
+=============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: PackageLoader.__init__

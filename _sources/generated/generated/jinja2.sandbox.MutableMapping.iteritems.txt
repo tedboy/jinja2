@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableMapping.iteritems
+=======================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableMapping.iteritems

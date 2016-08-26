@@ -1,0 +1,6 @@
+jinja2.ModuleLoader.get_module_filename
+=======================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: ModuleLoader.get_module_filename

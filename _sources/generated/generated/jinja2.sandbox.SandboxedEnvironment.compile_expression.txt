@@ -1,0 +1,6 @@
+jinja2.sandbox.SandboxedEnvironment.compile_expression
+======================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: SandboxedEnvironment.compile_expression

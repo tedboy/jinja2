@@ -1,0 +1,19 @@
+jinja2.Undefined
+================
+.. currentmodule:: jinja2
+.. autoclass:: Undefined
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Undefined.__init__
+
+
+
+
+

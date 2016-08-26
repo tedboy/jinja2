@@ -1,0 +1,6 @@
+jinja2.MemcachedBytecodeCache.get_source_checksum
+=================================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: MemcachedBytecodeCache.get_source_checksum

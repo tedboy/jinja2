@@ -1,0 +1,6 @@
+jinja2.sandbox.UserDict.setdefault
+==================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserDict.setdefault

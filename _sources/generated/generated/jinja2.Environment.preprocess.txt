@@ -1,0 +1,6 @@
+jinja2.Environment.preprocess
+=============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.preprocess

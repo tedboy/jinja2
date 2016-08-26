@@ -1,0 +1,6 @@
+jinja2.Markup.striptags
+=======================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.striptags

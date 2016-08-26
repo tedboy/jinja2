@@ -1,0 +1,66 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment
+============================================
+.. currentmodule:: jinja2.sandbox
+.. autoclass:: ImmutableSandboxedEnvironment
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ImmutableSandboxedEnvironment.__init__
+   ~ImmutableSandboxedEnvironment.add_extension
+   ~ImmutableSandboxedEnvironment.call
+   ~ImmutableSandboxedEnvironment.call_binop
+   ~ImmutableSandboxedEnvironment.call_filter
+   ~ImmutableSandboxedEnvironment.call_test
+   ~ImmutableSandboxedEnvironment.call_unop
+   ~ImmutableSandboxedEnvironment.compile
+   ~ImmutableSandboxedEnvironment.compile_expression
+   ~ImmutableSandboxedEnvironment.compile_templates
+   ~ImmutableSandboxedEnvironment.extend
+   ~ImmutableSandboxedEnvironment.from_string
+   ~ImmutableSandboxedEnvironment.get_or_select_template
+   ~ImmutableSandboxedEnvironment.get_template
+   ~ImmutableSandboxedEnvironment.getattr
+   ~ImmutableSandboxedEnvironment.getitem
+   ~ImmutableSandboxedEnvironment.handle_exception
+   ~ImmutableSandboxedEnvironment.intercept_unop
+   ~ImmutableSandboxedEnvironment.is_safe_attribute
+   ~ImmutableSandboxedEnvironment.is_safe_callable
+   ~ImmutableSandboxedEnvironment.iter_extensions
+   ~ImmutableSandboxedEnvironment.join_path
+   ~ImmutableSandboxedEnvironment.lex
+   ~ImmutableSandboxedEnvironment.list_templates
+   ~ImmutableSandboxedEnvironment.make_globals
+   ~ImmutableSandboxedEnvironment.overlay
+   ~ImmutableSandboxedEnvironment.parse
+   ~ImmutableSandboxedEnvironment.preprocess
+   ~ImmutableSandboxedEnvironment.select_template
+   ~ImmutableSandboxedEnvironment.unsafe_undefined
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ImmutableSandboxedEnvironment.default_binop_table
+   ~ImmutableSandboxedEnvironment.default_unop_table
+   ~ImmutableSandboxedEnvironment.exception_formatter
+   ~ImmutableSandboxedEnvironment.exception_handler
+   ~ImmutableSandboxedEnvironment.intercepted_binops
+   ~ImmutableSandboxedEnvironment.intercepted_unops
+   ~ImmutableSandboxedEnvironment.lexer
+   ~ImmutableSandboxedEnvironment.linked_to
+   ~ImmutableSandboxedEnvironment.overlayed
+   ~ImmutableSandboxedEnvironment.sandboxed
+   ~ImmutableSandboxedEnvironment.shared
+

@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.remove
+==============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.remove

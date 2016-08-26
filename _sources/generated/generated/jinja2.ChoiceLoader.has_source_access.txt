@@ -1,0 +1,6 @@
+jinja2.ChoiceLoader.has_source_access
+=====================================
+
+.. currentmodule:: jinja2
+
+.. autoattribute:: ChoiceLoader.has_source_access

@@ -1,0 +1,6 @@
+jinja2.BytecodeCache.clear
+==========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: BytecodeCache.clear

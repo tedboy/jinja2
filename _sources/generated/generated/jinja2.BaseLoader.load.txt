@@ -1,0 +1,6 @@
+jinja2.BaseLoader.load
+======================
+
+.. currentmodule:: jinja2
+
+.. automethod:: BaseLoader.load

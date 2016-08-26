@@ -1,0 +1,6 @@
+jinja2.FunctionLoader.__init__
+==============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FunctionLoader.__init__

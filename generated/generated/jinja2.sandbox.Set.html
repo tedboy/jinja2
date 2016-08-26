@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1.2.8. jinja2.sandbox.Set &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="2. jinja2.sandbox" href="../jinja2.sandbox.html"/>
+        <link rel="next" title="2.1.2.8.1.1. jinja2.sandbox.Set.__init__" href="jinja2.sandbox.Set.__init__.html"/>
+        <link rel="prev" title="2.1.2.7.2.11. jinja2.sandbox.SandboxedEnvironment.shared" href="jinja2.sandbox.SandboxedEnvironment.shared.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">1. jinja2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.sandbox.html">2. jinja2.sandbox</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.sandbox.html#id1">2.1. jinja2.sandbox</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.sandbox.html#functions">2.1.1. Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.sandbox.html#classes">2.1.2. Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.DictMixin.html">2.1.2.1. jinja2.sandbox.DictMixin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.Environment.html">2.1.2.2. jinja2.sandbox.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.ImmutableSandboxedEnvironment.html">2.1.2.3. jinja2.sandbox.ImmutableSandboxedEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.MutableMapping.html">2.1.2.4. jinja2.sandbox.MutableMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.MutableSequence.html">2.1.2.5. jinja2.sandbox.MutableSequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.MutableSet.html">2.1.2.6. jinja2.sandbox.MutableSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.SandboxedEnvironment.html">2.1.2.7. jinja2.sandbox.SandboxedEnvironment</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">2.1.2.8. jinja2.sandbox.Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.UserDict.html">2.1.2.9. jinja2.sandbox.UserDict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.UserList.html">2.1.2.10. jinja2.sandbox.UserList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.deque.html">2.1.2.11. jinja2.sandbox.deque</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.sandbox.html#exceptions">2.1.3. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api_sandbox.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.sandbox.html">2. jinja2.sandbox</a> &raquo;</li>
+        
+      <li>2.1.2.8. jinja2.sandbox.Set</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.sandbox.Set.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-sandbox-set">
+<h1>2.1.2.8. jinja2.sandbox.Set<a class="headerlink" href="#jinja2-sandbox-set" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jinja2.sandbox.Set">
+<em class="property">class </em><code class="descclassname">jinja2.sandbox.</code><code class="descname">Set</code><span class="sig-paren">(</span><em>iterable=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/sets.html#Set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.sandbox.Set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutable set class.</p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>2.1.2.8.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.__init__.html#jinja2.sandbox.Set.__init__" title="jinja2.sandbox.Set.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([iterable])</td>
+<td>Construct a set from an optional iterable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.add.html#jinja2.sandbox.Set.add" title="jinja2.sandbox.Set.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>(element)</td>
+<td>Add an element to a set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.clear.html#jinja2.sandbox.Set.clear" title="jinja2.sandbox.Set.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td>Remove all elements from this set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.copy.html#jinja2.sandbox.Set.copy" title="jinja2.sandbox.Set.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Return a shallow copy of a set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.difference.html#jinja2.sandbox.Set.difference" title="jinja2.sandbox.Set.difference"><code class="xref py py-obj docutils literal"><span class="pre">difference</span></code></a>(other)</td>
+<td>Return the difference of two sets as a new Set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.difference_update.html#jinja2.sandbox.Set.difference_update" title="jinja2.sandbox.Set.difference_update"><code class="xref py py-obj docutils literal"><span class="pre">difference_update</span></code></a>(other)</td>
+<td>Remove all elements of another set from this set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.discard.html#jinja2.sandbox.Set.discard" title="jinja2.sandbox.Set.discard"><code class="xref py py-obj docutils literal"><span class="pre">discard</span></code></a>(element)</td>
+<td>Remove an element from a set if it is a member.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.intersection.html#jinja2.sandbox.Set.intersection" title="jinja2.sandbox.Set.intersection"><code class="xref py py-obj docutils literal"><span class="pre">intersection</span></code></a>(other)</td>
+<td>Return the intersection of two sets as a new set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.intersection_update.html#jinja2.sandbox.Set.intersection_update" title="jinja2.sandbox.Set.intersection_update"><code class="xref py py-obj docutils literal"><span class="pre">intersection_update</span></code></a>(other)</td>
+<td>Update a set with the intersection of itself and another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.issubset.html#jinja2.sandbox.Set.issubset" title="jinja2.sandbox.Set.issubset"><code class="xref py py-obj docutils literal"><span class="pre">issubset</span></code></a>(other)</td>
+<td>Report whether another set contains this set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.issuperset.html#jinja2.sandbox.Set.issuperset" title="jinja2.sandbox.Set.issuperset"><code class="xref py py-obj docutils literal"><span class="pre">issuperset</span></code></a>(other)</td>
+<td>Report whether this set contains another set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.pop.html#jinja2.sandbox.Set.pop" title="jinja2.sandbox.Set.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>()</td>
+<td>Remove and return an arbitrary set element.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.remove.html#jinja2.sandbox.Set.remove" title="jinja2.sandbox.Set.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(element)</td>
+<td>Remove an element from a set; it must be a member.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.symmetric_difference.html#jinja2.sandbox.Set.symmetric_difference" title="jinja2.sandbox.Set.symmetric_difference"><code class="xref py py-obj docutils literal"><span class="pre">symmetric_difference</span></code></a>(other)</td>
+<td>Return the symmetric difference of two sets as a new set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.symmetric_difference_update.html#jinja2.sandbox.Set.symmetric_difference_update" title="jinja2.sandbox.Set.symmetric_difference_update"><code class="xref py py-obj docutils literal"><span class="pre">symmetric_difference_update</span></code></a>(other)</td>
+<td>Update a set with the symmetric difference of itself and another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.union.html#jinja2.sandbox.Set.union" title="jinja2.sandbox.Set.union"><code class="xref py py-obj docutils literal"><span class="pre">union</span></code></a>(other)</td>
+<td>Return the union of two sets as a new set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.Set.union_update.html#jinja2.sandbox.Set.union_update" title="jinja2.sandbox.Set.union_update"><code class="xref py py-obj docutils literal"><span class="pre">union_update</span></code></a>(other)</td>
+<td>Update a set with the union of itself and another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.Set.update.html#jinja2.sandbox.Set.update" title="jinja2.sandbox.Set.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(iterable)</td>
+<td>Add all values from an iterable (such as a list or file).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.sandbox.Set.__init__.html" class="btn btn-neutral float-right" title="2.1.2.8.1.1. jinja2.sandbox.Set.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jinja2.sandbox.SandboxedEnvironment.shared.html" class="btn btn-neutral" title="2.1.2.7.2.11. jinja2.sandbox.SandboxedEnvironment.shared" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

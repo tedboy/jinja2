@@ -1,0 +1,6 @@
+jinja2.Markup.isalpha
+=====================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.isalpha

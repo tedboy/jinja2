@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.parse
+==================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.parse

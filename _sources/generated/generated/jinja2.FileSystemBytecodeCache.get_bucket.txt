@@ -1,0 +1,6 @@
+jinja2.FileSystemBytecodeCache.get_bucket
+=========================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemBytecodeCache.get_bucket

@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.getitem
+==================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.getitem

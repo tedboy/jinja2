@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableMapping.popitem
+=====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableMapping.popitem

@@ -1,0 +1,6 @@
+jinja2.sandbox.DictMixin.clear
+==============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: DictMixin.clear

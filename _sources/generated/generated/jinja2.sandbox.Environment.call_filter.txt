@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.call_filter
+======================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.call_filter

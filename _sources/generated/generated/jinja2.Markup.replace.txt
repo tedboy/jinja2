@@ -1,0 +1,6 @@
+jinja2.Markup.replace
+=====================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.replace

@@ -1,0 +1,6 @@
+jinja2.sandbox.Set.difference
+=============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Set.difference

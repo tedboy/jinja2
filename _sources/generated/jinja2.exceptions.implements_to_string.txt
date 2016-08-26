@@ -1,0 +1,6 @@
+jinja2.exceptions.implements_to_string
+======================================
+
+.. currentmodule:: jinja2.exceptions
+
+.. autofunction:: implements_to_string

@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.select_template
+============================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.select_template

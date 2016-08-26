@@ -1,0 +1,24 @@
+jinja2.sandbox.MutableSet
+=========================
+.. currentmodule:: jinja2.sandbox
+.. autoclass:: MutableSet
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MutableSet.add
+   ~MutableSet.clear
+   ~MutableSet.discard
+   ~MutableSet.isdisjoint
+   ~MutableSet.pop
+   ~MutableSet.remove
+
+
+
+
+

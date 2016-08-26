@@ -1,0 +1,6 @@
+jinja2.exceptions.TemplatesNotFound
+===================================
+
+.. currentmodule:: jinja2.exceptions
+
+.. autoexception:: TemplatesNotFound

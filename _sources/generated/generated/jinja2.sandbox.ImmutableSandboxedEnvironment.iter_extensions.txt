@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.iter_extensions
+============================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.iter_extensions

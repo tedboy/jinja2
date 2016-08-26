@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.add_extension
+==========================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.add_extension

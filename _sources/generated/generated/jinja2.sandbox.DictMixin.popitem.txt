@@ -1,0 +1,6 @@
+jinja2.sandbox.DictMixin.popitem
+================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: DictMixin.popitem

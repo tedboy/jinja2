@@ -1,0 +1,31 @@
+jinja2.PrefixLoader
+===================
+.. currentmodule:: jinja2
+.. autoclass:: PrefixLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~PrefixLoader.__init__
+   ~PrefixLoader.get_loader
+   ~PrefixLoader.get_source
+   ~PrefixLoader.list_templates
+   ~PrefixLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~PrefixLoader.has_source_access
+

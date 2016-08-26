@@ -1,0 +1,6 @@
+jinja2.Environment.getattr
+==========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.getattr

@@ -1,0 +1,6 @@
+jinja2.sandbox.SandboxedEnvironment.unsafe_undefined
+====================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: SandboxedEnvironment.unsafe_undefined

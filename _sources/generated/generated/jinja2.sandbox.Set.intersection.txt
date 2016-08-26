@@ -1,0 +1,6 @@
+jinja2.sandbox.Set.intersection
+===============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Set.intersection

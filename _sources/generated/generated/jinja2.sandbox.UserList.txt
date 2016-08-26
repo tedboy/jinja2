@@ -1,0 +1,28 @@
+jinja2.sandbox.UserList
+=======================
+.. currentmodule:: jinja2.sandbox
+.. autoclass:: UserList
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~UserList.__init__
+   ~UserList.append
+   ~UserList.count
+   ~UserList.extend
+   ~UserList.index
+   ~UserList.insert
+   ~UserList.pop
+   ~UserList.remove
+   ~UserList.reverse
+   ~UserList.sort
+
+
+
+
+

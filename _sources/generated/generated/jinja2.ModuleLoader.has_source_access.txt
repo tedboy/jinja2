@@ -1,0 +1,6 @@
+jinja2.ModuleLoader.has_source_access
+=====================================
+
+.. currentmodule:: jinja2
+
+.. autoattribute:: ModuleLoader.has_source_access

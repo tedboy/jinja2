@@ -1,0 +1,36 @@
+jinja2.Template
+===============
+.. currentmodule:: jinja2
+.. autoclass:: Template
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Template.from_code
+   ~Template.from_module_dict
+   ~Template.generate
+   ~Template.get_corresponding_lineno
+   ~Template.make_module
+   ~Template.new_context
+   ~Template.render
+   ~Template.stream
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Template.debug_info
+   ~Template.is_up_to_date
+   ~Template.module
+

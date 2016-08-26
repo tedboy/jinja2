@@ -1,0 +1,6 @@
+jinja2.Environment.compile
+==========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.compile

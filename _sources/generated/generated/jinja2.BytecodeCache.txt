@@ -1,0 +1,25 @@
+jinja2.BytecodeCache
+====================
+.. currentmodule:: jinja2
+.. autoclass:: BytecodeCache
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BytecodeCache.clear
+   ~BytecodeCache.dump_bytecode
+   ~BytecodeCache.get_bucket
+   ~BytecodeCache.get_cache_key
+   ~BytecodeCache.get_source_checksum
+   ~BytecodeCache.load_bytecode
+   ~BytecodeCache.set_bucket
+
+
+
+
+

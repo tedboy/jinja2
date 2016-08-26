@@ -1,0 +1,6 @@
+jinja2.is_undefined
+===================
+
+.. currentmodule:: jinja2
+
+.. autofunction:: is_undefined

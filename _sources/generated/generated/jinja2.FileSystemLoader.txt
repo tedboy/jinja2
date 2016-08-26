@@ -1,0 +1,30 @@
+jinja2.FileSystemLoader
+=======================
+.. currentmodule:: jinja2
+.. autoclass:: FileSystemLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FileSystemLoader.__init__
+   ~FileSystemLoader.get_source
+   ~FileSystemLoader.list_templates
+   ~FileSystemLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~FileSystemLoader.has_source_access
+

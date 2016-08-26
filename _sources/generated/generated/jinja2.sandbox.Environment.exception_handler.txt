@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.exception_handler
+============================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: Environment.exception_handler

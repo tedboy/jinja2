@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.from_string
+======================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.from_string

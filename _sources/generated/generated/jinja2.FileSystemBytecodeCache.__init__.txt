@@ -1,0 +1,6 @@
+jinja2.FileSystemBytecodeCache.__init__
+=======================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemBytecodeCache.__init__

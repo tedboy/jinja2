@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.sort
+============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.sort

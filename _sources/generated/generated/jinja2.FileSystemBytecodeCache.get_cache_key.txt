@@ -1,0 +1,6 @@
+jinja2.FileSystemBytecodeCache.get_cache_key
+============================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemBytecodeCache.get_cache_key

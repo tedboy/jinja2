@@ -1,0 +1,6 @@
+jinja2.sandbox.UserDict.copy
+============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserDict.copy

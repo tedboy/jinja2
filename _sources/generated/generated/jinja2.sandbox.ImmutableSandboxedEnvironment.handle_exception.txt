@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.handle_exception
+=============================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.handle_exception

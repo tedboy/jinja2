@@ -1,0 +1,6 @@
+jinja2.Markup.rstrip
+====================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.rstrip

@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.is_safe_callable
+=============================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.is_safe_callable

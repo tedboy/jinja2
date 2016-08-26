@@ -1,0 +1,6 @@
+jinja2.FileSystemLoader.get_source
+==================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemLoader.get_source

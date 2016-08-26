@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.getattr
+==================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.getattr

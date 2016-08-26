@@ -1,0 +1,32 @@
+jinja2.ModuleLoader
+===================
+.. currentmodule:: jinja2
+.. autoclass:: ModuleLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ModuleLoader.__init__
+   ~ModuleLoader.get_module_filename
+   ~ModuleLoader.get_source
+   ~ModuleLoader.get_template_key
+   ~ModuleLoader.list_templates
+   ~ModuleLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ModuleLoader.has_source_access
+

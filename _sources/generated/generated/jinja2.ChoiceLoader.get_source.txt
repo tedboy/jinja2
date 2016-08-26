@@ -1,0 +1,6 @@
+jinja2.ChoiceLoader.get_source
+==============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: ChoiceLoader.get_source

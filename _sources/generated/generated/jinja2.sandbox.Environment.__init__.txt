@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.__init__
+===================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.__init__

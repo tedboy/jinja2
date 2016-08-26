@@ -1,0 +1,6 @@
+jinja2.FunctionLoader.has_source_access
+=======================================
+
+.. currentmodule:: jinja2
+
+.. autoattribute:: FunctionLoader.has_source_access

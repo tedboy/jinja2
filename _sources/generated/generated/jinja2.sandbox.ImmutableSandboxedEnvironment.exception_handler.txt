@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.exception_handler
+==============================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: ImmutableSandboxedEnvironment.exception_handler

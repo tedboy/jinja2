@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.exception_formatter
+================================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: ImmutableSandboxedEnvironment.exception_formatter

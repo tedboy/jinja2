@@ -1,0 +1,6 @@
+jinja2.FileSystemLoader.__init__
+================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemLoader.__init__

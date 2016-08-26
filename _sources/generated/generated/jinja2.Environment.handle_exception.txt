@@ -1,0 +1,6 @@
+jinja2.Environment.handle_exception
+===================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.handle_exception

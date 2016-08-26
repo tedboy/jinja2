@@ -1,0 +1,30 @@
+jinja2.ChoiceLoader
+===================
+.. currentmodule:: jinja2
+.. autoclass:: ChoiceLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ChoiceLoader.__init__
+   ~ChoiceLoader.get_source
+   ~ChoiceLoader.list_templates
+   ~ChoiceLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ChoiceLoader.has_source_access
+

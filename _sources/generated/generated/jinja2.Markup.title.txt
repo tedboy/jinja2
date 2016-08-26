@@ -1,0 +1,6 @@
+jinja2.Markup.title
+===================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.title

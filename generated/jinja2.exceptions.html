@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. jinja2.exceptions &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../api.exceptions.html"/>
+        <link rel="next" title="3.1.1.1. jinja2.exceptions.implements_to_string" href="jinja2.exceptions.implements_to_string.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="../api.exceptions.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jinja2.html">1. jinja2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jinja2.sandbox.html">2. jinja2.sandbox</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. jinja2.exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. jinja2.exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">3.1.1. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.implements_to_string.html">3.1.1.1. jinja2.exceptions.implements_to_string</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">3.1.2. Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.exceptions.imap.html">3.1.2.1. jinja2.exceptions.imap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/jinja2.exceptions.text_type.html">3.1.2.2. jinja2.exceptions.text_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">3.1.3. Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.FilterArgumentError.html">3.1.3.1. jinja2.exceptions.FilterArgumentError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.SecurityError.html">3.1.3.2. jinja2.exceptions.SecurityError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateAssertionError.html">3.1.3.3. jinja2.exceptions.TemplateAssertionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateError.html">3.1.3.4. jinja2.exceptions.TemplateError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateNotFound.html">3.1.3.5. jinja2.exceptions.TemplateNotFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateRuntimeError.html">3.1.3.6. jinja2.exceptions.TemplateRuntimeError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplateSyntaxError.html">3.1.3.7. jinja2.exceptions.TemplateSyntaxError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.TemplatesNotFound.html">3.1.3.8. jinja2.exceptions.TemplatesNotFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.exceptions.UndefinedError.html">3.1.3.9. jinja2.exceptions.UndefinedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.exceptions.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>3. jinja2.exceptions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/jinja2.exceptions.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jinja2.exceptions">
+<span id="jinja2-exceptions"></span><h1>3. jinja2.exceptions<a class="headerlink" href="#module-jinja2.exceptions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>3.1. jinja2.exceptions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Jinja exceptions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2010 by the Jinja Team.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">BSD, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="functions">
+<h3>3.1.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.exceptions.implements_to_string.html#jinja2.exceptions.implements_to_string" title="jinja2.exceptions.implements_to_string"><code class="xref py py-obj docutils literal"><span class="pre">implements_to_string</span></code></a>(cls)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>3.1.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/jinja2.exceptions.imap.html#jinja2.exceptions.imap" title="jinja2.exceptions.imap"><code class="xref py py-obj docutils literal"><span class="pre">imap</span></code></a></td>
+<td>imap(func, <a href="#id2"><span class="problematic" id="id3">*</span></a>iterables) &#8211;&gt; imap object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/jinja2.exceptions.text_type.html#jinja2.exceptions.text_type" title="jinja2.exceptions.text_type"><code class="xref py py-obj docutils literal"><span class="pre">text_type</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">unicode</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h3>3.1.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.exceptions.FilterArgumentError.html#jinja2.exceptions.FilterArgumentError" title="jinja2.exceptions.FilterArgumentError"><code class="xref py py-obj docutils literal"><span class="pre">FilterArgumentError</span></code></a>([message])</td>
+<td>This error is raised if a filter was called with inappropriate</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.exceptions.SecurityError.html#jinja2.exceptions.SecurityError" title="jinja2.exceptions.SecurityError"><code class="xref py py-obj docutils literal"><span class="pre">SecurityError</span></code></a>([message])</td>
+<td>Raised if a template tries to do something insecure if the sandbox is enabled.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.exceptions.TemplateAssertionError.html#jinja2.exceptions.TemplateAssertionError" title="jinja2.exceptions.TemplateAssertionError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateAssertionError</span></code></a>(message,&nbsp;lineno[,&nbsp;...])</td>
+<td>Like a template syntax error, but covers cases where something in the template caused an error at compile time that wasn&#8217;t necessarily caused by a syntax error.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.exceptions.TemplateError.html#jinja2.exceptions.TemplateError" title="jinja2.exceptions.TemplateError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateError</span></code></a>([message])</td>
+<td>Baseclass for all template errors.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.exceptions.TemplateNotFound.html#jinja2.exceptions.TemplateNotFound" title="jinja2.exceptions.TemplateNotFound"><code class="xref py py-obj docutils literal"><span class="pre">TemplateNotFound</span></code></a>(name[,&nbsp;message])</td>
+<td>Raised if a template does not exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.exceptions.TemplateRuntimeError.html#jinja2.exceptions.TemplateRuntimeError" title="jinja2.exceptions.TemplateRuntimeError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateRuntimeError</span></code></a>([message])</td>
+<td>A generic runtime error in the template engine.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.exceptions.TemplateSyntaxError.html#jinja2.exceptions.TemplateSyntaxError" title="jinja2.exceptions.TemplateSyntaxError"><code class="xref py py-obj docutils literal"><span class="pre">TemplateSyntaxError</span></code></a>(message,&nbsp;lineno[,&nbsp;name,&nbsp;...])</td>
+<td>Raised to tell the user that there is a problem with the template.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.exceptions.TemplatesNotFound.html#jinja2.exceptions.TemplatesNotFound" title="jinja2.exceptions.TemplatesNotFound"><code class="xref py py-obj docutils literal"><span class="pre">TemplatesNotFound</span></code></a>([names,&nbsp;message])</td>
+<td>Like <a class="reference internal" href="jinja2.exceptions.TemplateNotFound.html#jinja2.exceptions.TemplateNotFound" title="jinja2.exceptions.TemplateNotFound"><code class="xref py py-class docutils literal"><span class="pre">TemplateNotFound</span></code></a> but raised if multiple templates are selected.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.exceptions.UndefinedError.html#jinja2.exceptions.UndefinedError" title="jinja2.exceptions.UndefinedError"><code class="xref py py-obj docutils literal"><span class="pre">UndefinedError</span></code></a>([message])</td>
+<td>Raised if a template tries to operate on <code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.exceptions.implements_to_string.html" class="btn btn-neutral float-right" title="3.1.1.1. jinja2.exceptions.implements_to_string" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.exceptions.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

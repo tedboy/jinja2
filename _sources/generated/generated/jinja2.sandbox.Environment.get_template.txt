@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.get_template
+=======================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.get_template

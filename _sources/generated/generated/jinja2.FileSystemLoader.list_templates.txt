@@ -1,0 +1,6 @@
+jinja2.FileSystemLoader.list_templates
+======================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemLoader.list_templates

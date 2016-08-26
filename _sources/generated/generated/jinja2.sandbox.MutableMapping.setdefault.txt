@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableMapping.setdefault
+========================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableMapping.setdefault

@@ -1,0 +1,6 @@
+jinja2.Environment.shared
+=========================
+
+.. currentmodule:: jinja2
+
+.. autoattribute:: Environment.shared

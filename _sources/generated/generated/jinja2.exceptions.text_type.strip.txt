@@ -1,0 +1,6 @@
+jinja2.exceptions.text_type.strip
+=================================
+
+.. currentmodule:: jinja2.exceptions
+
+.. automethod:: text_type.strip

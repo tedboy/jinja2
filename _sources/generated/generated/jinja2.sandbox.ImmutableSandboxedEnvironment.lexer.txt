@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.lexer
+==================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: ImmutableSandboxedEnvironment.lexer

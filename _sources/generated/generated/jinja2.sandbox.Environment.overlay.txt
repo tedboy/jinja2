@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.overlay
+==================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.overlay

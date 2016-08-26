@@ -1,0 +1,6 @@
+jinja2.PackageLoader.get_source
+===============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: PackageLoader.get_source

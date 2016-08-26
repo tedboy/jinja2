@@ -1,0 +1,6 @@
+jinja2.Markup.expandtabs
+========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.expandtabs

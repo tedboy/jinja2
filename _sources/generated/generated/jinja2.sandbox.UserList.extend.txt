@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.extend
+==============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.extend

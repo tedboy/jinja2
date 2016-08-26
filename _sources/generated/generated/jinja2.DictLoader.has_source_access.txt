@@ -1,0 +1,6 @@
+jinja2.DictLoader.has_source_access
+===================================
+
+.. currentmodule:: jinja2
+
+.. autoattribute:: DictLoader.has_source_access

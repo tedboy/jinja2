@@ -1,0 +1,6 @@
+jinja2.sandbox.Set.intersection_update
+======================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Set.intersection_update

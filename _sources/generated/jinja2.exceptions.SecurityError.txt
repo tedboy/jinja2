@@ -1,0 +1,6 @@
+jinja2.exceptions.SecurityError
+===============================
+
+.. currentmodule:: jinja2.exceptions
+
+.. autoexception:: SecurityError

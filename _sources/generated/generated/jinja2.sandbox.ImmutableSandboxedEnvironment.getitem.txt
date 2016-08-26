@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.getitem
+====================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.getitem

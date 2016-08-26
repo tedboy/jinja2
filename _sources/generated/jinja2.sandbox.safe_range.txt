@@ -1,0 +1,6 @@
+jinja2.sandbox.safe_range
+=========================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autofunction:: safe_range

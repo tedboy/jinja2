@@ -1,0 +1,66 @@
+jinja2.sandbox.SandboxedEnvironment
+===================================
+.. currentmodule:: jinja2.sandbox
+.. autoclass:: SandboxedEnvironment
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~SandboxedEnvironment.__init__
+   ~SandboxedEnvironment.add_extension
+   ~SandboxedEnvironment.call
+   ~SandboxedEnvironment.call_binop
+   ~SandboxedEnvironment.call_filter
+   ~SandboxedEnvironment.call_test
+   ~SandboxedEnvironment.call_unop
+   ~SandboxedEnvironment.compile
+   ~SandboxedEnvironment.compile_expression
+   ~SandboxedEnvironment.compile_templates
+   ~SandboxedEnvironment.extend
+   ~SandboxedEnvironment.from_string
+   ~SandboxedEnvironment.get_or_select_template
+   ~SandboxedEnvironment.get_template
+   ~SandboxedEnvironment.getattr
+   ~SandboxedEnvironment.getitem
+   ~SandboxedEnvironment.handle_exception
+   ~SandboxedEnvironment.intercept_unop
+   ~SandboxedEnvironment.is_safe_attribute
+   ~SandboxedEnvironment.is_safe_callable
+   ~SandboxedEnvironment.iter_extensions
+   ~SandboxedEnvironment.join_path
+   ~SandboxedEnvironment.lex
+   ~SandboxedEnvironment.list_templates
+   ~SandboxedEnvironment.make_globals
+   ~SandboxedEnvironment.overlay
+   ~SandboxedEnvironment.parse
+   ~SandboxedEnvironment.preprocess
+   ~SandboxedEnvironment.select_template
+   ~SandboxedEnvironment.unsafe_undefined
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~SandboxedEnvironment.default_binop_table
+   ~SandboxedEnvironment.default_unop_table
+   ~SandboxedEnvironment.exception_formatter
+   ~SandboxedEnvironment.exception_handler
+   ~SandboxedEnvironment.intercepted_binops
+   ~SandboxedEnvironment.intercepted_unops
+   ~SandboxedEnvironment.lexer
+   ~SandboxedEnvironment.linked_to
+   ~SandboxedEnvironment.overlayed
+   ~SandboxedEnvironment.sandboxed
+   ~SandboxedEnvironment.shared
+

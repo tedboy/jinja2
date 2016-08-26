@@ -1,0 +1,29 @@
+jinja2.BaseLoader
+=================
+.. currentmodule:: jinja2
+.. autoclass:: BaseLoader
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BaseLoader.get_source
+   ~BaseLoader.list_templates
+   ~BaseLoader.load
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BaseLoader.has_source_access
+

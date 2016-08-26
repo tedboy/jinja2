@@ -1,0 +1,6 @@
+jinja2.sandbox.UserDict.items
+=============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserDict.items

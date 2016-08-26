@@ -1,0 +1,6 @@
+jinja2.ModuleLoader.list_templates
+==================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: ModuleLoader.list_templates

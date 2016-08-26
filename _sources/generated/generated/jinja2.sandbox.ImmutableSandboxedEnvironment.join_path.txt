@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.join_path
+======================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.join_path

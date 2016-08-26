@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1.2.1. jinja2.sandbox.DictMixin &mdash; Jinja2 API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Jinja2 API" href="../../index.html"/>
+        <link rel="up" title="2. jinja2.sandbox" href="../jinja2.sandbox.html"/>
+        <link rel="next" title="2.1.2.1.1.1. jinja2.sandbox.DictMixin.clear" href="jinja2.sandbox.DictMixin.clear.html"/>
+        <link rel="prev" title="2.1.1.4. jinja2.sandbox.unsafe" href="../jinja2.sandbox.unsafe.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jinja2 API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.html">1. jinja2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jinja2.sandbox.html">2. jinja2.sandbox</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../jinja2.sandbox.html#id1">2.1. jinja2.sandbox</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.sandbox.html#functions">2.1.1. Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../jinja2.sandbox.html#classes">2.1.2. Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">2.1.2.1. jinja2.sandbox.DictMixin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.Environment.html">2.1.2.2. jinja2.sandbox.Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.ImmutableSandboxedEnvironment.html">2.1.2.3. jinja2.sandbox.ImmutableSandboxedEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.MutableMapping.html">2.1.2.4. jinja2.sandbox.MutableMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.MutableSequence.html">2.1.2.5. jinja2.sandbox.MutableSequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.MutableSet.html">2.1.2.6. jinja2.sandbox.MutableSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.SandboxedEnvironment.html">2.1.2.7. jinja2.sandbox.SandboxedEnvironment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.Set.html">2.1.2.8. jinja2.sandbox.Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.UserDict.html">2.1.2.9. jinja2.sandbox.UserDict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.UserList.html">2.1.2.10. jinja2.sandbox.UserList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jinja2.sandbox.deque.html">2.1.2.11. jinja2.sandbox.deque</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../jinja2.sandbox.html#exceptions">2.1.3. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jinja2.exceptions.html">3. jinja2.exceptions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jinja2 API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api_sandbox.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../jinja2.sandbox.html">2. jinja2.sandbox</a> &raquo;</li>
+        
+      <li>2.1.2.1. jinja2.sandbox.DictMixin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/generated/generated/jinja2.sandbox.DictMixin.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jinja2-sandbox-dictmixin">
+<h1>2.1.2.1. jinja2.sandbox.DictMixin<a class="headerlink" href="#jinja2-sandbox-dictmixin" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jinja2.sandbox.DictMixin">
+<em class="property">class </em><code class="descclassname">jinja2.sandbox.</code><code class="descname">DictMixin</code><a class="reference internal" href="../../_modules/UserDict.html#DictMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jinja2.sandbox.DictMixin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="methods">
+<h2>2.1.2.1.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.clear.html#jinja2.sandbox.DictMixin.clear" title="jinja2.sandbox.DictMixin.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.get.html#jinja2.sandbox.DictMixin.get" title="jinja2.sandbox.DictMixin.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;default])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.has_key.html#jinja2.sandbox.DictMixin.has_key" title="jinja2.sandbox.DictMixin.has_key"><code class="xref py py-obj docutils literal"><span class="pre">has_key</span></code></a>(key)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.items.html#jinja2.sandbox.DictMixin.items" title="jinja2.sandbox.DictMixin.items"><code class="xref py py-obj docutils literal"><span class="pre">items</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.iteritems.html#jinja2.sandbox.DictMixin.iteritems" title="jinja2.sandbox.DictMixin.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.iterkeys.html#jinja2.sandbox.DictMixin.iterkeys" title="jinja2.sandbox.DictMixin.iterkeys"><code class="xref py py-obj docutils literal"><span class="pre">iterkeys</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.itervalues.html#jinja2.sandbox.DictMixin.itervalues" title="jinja2.sandbox.DictMixin.itervalues"><code class="xref py py-obj docutils literal"><span class="pre">itervalues</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.pop.html#jinja2.sandbox.DictMixin.pop" title="jinja2.sandbox.DictMixin.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>(key,&nbsp;*args)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.popitem.html#jinja2.sandbox.DictMixin.popitem" title="jinja2.sandbox.DictMixin.popitem"><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.setdefault.html#jinja2.sandbox.DictMixin.setdefault" title="jinja2.sandbox.DictMixin.setdefault"><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code></a>(key[,&nbsp;default])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.update.html#jinja2.sandbox.DictMixin.update" title="jinja2.sandbox.DictMixin.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>([other])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="jinja2.sandbox.DictMixin.values.html#jinja2.sandbox.DictMixin.values" title="jinja2.sandbox.DictMixin.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jinja2.sandbox.DictMixin.clear.html" class="btn btn-neutral float-right" title="2.1.2.1.1.1. jinja2.sandbox.DictMixin.clear" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../jinja2.sandbox.unsafe.html" class="btn btn-neutral" title="2.1.1.4. jinja2.sandbox.unsafe" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

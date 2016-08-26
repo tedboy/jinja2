@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.unsafe_undefined
+=============================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.unsafe_undefined

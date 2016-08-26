@@ -1,0 +1,6 @@
+jinja2.Environment.compile_templates
+====================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.compile_templates

@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableSet.pop
+=============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableSet.pop

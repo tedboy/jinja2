@@ -1,0 +1,6 @@
+jinja2.clear_caches
+===================
+
+.. currentmodule:: jinja2
+
+.. autofunction:: clear_caches

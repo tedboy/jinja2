@@ -1,0 +1,6 @@
+jinja2.Environment.get_template
+===============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Environment.get_template

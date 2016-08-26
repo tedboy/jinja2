@@ -1,0 +1,59 @@
+jinja2.exceptions
+=================
+
+.. automodule:: jinja2.exceptions
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      implements_to_string
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      imap
+      text_type
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/jinja2.exceptions.imap
+       generated/jinja2.exceptions.text_type
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      FilterArgumentError
+      SecurityError
+      TemplateAssertionError
+      TemplateError
+      TemplateNotFound
+      TemplateRuntimeError
+      TemplateSyntaxError
+      TemplatesNotFound
+      UndefinedError
+   
+   

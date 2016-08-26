@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.call_unop
+======================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: ImmutableSandboxedEnvironment.call_unop

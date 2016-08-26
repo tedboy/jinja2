@@ -1,0 +1,6 @@
+jinja2.sandbox.UserDict.clear
+=============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserDict.clear

@@ -1,0 +1,6 @@
+jinja2.sandbox.DictMixin.iteritems
+==================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: DictMixin.iteritems

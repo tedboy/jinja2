@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.reverse
+===============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.reverse

@@ -1,0 +1,6 @@
+jinja2.sandbox.UserList.__init__
+================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: UserList.__init__

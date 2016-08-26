@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.linked_to
+====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: Environment.linked_to

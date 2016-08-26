@@ -1,0 +1,26 @@
+jinja2.MemcachedBytecodeCache
+=============================
+.. currentmodule:: jinja2
+.. autoclass:: MemcachedBytecodeCache
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MemcachedBytecodeCache.__init__
+   ~MemcachedBytecodeCache.clear
+   ~MemcachedBytecodeCache.dump_bytecode
+   ~MemcachedBytecodeCache.get_bucket
+   ~MemcachedBytecodeCache.get_cache_key
+   ~MemcachedBytecodeCache.get_source_checksum
+   ~MemcachedBytecodeCache.load_bytecode
+   ~MemcachedBytecodeCache.set_bucket
+
+
+
+
+

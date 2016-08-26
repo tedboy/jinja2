@@ -1,0 +1,6 @@
+jinja2.ChoiceLoader.load
+========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: ChoiceLoader.load

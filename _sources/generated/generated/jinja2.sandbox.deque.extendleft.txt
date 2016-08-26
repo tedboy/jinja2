@@ -1,0 +1,6 @@
+jinja2.sandbox.deque.extendleft
+===============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: deque.extendleft

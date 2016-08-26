@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableSet.isdisjoint
+====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableSet.isdisjoint

@@ -1,0 +1,19 @@
+jinja2.exceptions.imap
+======================
+.. currentmodule:: jinja2.exceptions
+.. autoclass:: imap
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~imap.next
+

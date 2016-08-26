@@ -1,0 +1,6 @@
+jinja2.sandbox.MutableSet.clear
+===============================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: MutableSet.clear

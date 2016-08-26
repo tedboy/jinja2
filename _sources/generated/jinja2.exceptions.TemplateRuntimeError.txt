@@ -1,0 +1,6 @@
+jinja2.exceptions.TemplateRuntimeError
+======================================
+
+.. currentmodule:: jinja2.exceptions
+
+.. autoexception:: TemplateRuntimeError

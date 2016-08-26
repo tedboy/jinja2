@@ -1,0 +1,6 @@
+jinja2.evalcontextfunction
+==========================
+
+.. currentmodule:: jinja2
+
+.. autofunction:: evalcontextfunction

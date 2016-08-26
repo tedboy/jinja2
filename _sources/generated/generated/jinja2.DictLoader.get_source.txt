@@ -1,0 +1,6 @@
+jinja2.DictLoader.get_source
+============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: DictLoader.get_source

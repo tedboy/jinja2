@@ -1,0 +1,6 @@
+jinja2.FileSystemBytecodeCache.get_source_checksum
+==================================================
+
+.. currentmodule:: jinja2
+
+.. automethod:: FileSystemBytecodeCache.get_source_checksum

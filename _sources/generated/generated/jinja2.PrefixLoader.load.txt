@@ -1,0 +1,6 @@
+jinja2.PrefixLoader.load
+========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: PrefixLoader.load

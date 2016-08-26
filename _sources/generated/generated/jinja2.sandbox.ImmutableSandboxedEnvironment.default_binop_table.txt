@@ -1,0 +1,6 @@
+jinja2.sandbox.ImmutableSandboxedEnvironment.default_binop_table
+================================================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autoattribute:: ImmutableSandboxedEnvironment.default_binop_table

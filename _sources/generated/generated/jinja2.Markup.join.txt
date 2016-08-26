@@ -1,0 +1,6 @@
+jinja2.Markup.join
+==================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.join

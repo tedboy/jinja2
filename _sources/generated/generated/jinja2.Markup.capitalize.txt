@@ -1,0 +1,6 @@
+jinja2.Markup.capitalize
+========================
+
+.. currentmodule:: jinja2
+
+.. automethod:: Markup.capitalize

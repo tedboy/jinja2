@@ -1,0 +1,6 @@
+jinja2.PrefixLoader.get_source
+==============================
+
+.. currentmodule:: jinja2
+
+.. automethod:: PrefixLoader.get_source

@@ -1,0 +1,6 @@
+jinja2.sandbox.is_internal_attribute
+====================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. autofunction:: is_internal_attribute

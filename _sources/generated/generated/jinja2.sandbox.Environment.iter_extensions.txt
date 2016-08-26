@@ -1,0 +1,6 @@
+jinja2.sandbox.Environment.iter_extensions
+==========================================
+
+.. currentmodule:: jinja2.sandbox
+
+.. automethod:: Environment.iter_extensions
