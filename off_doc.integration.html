@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7. Integration &mdash; Jinja2 API</title>
+  <title>4. Integration &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
-        <link rel="next" title="8. Switching from other Template Engines" href="off_doc.switching.html"/>
-        <link rel="prev" title="6. Writing Extensions" href="off_doc.extensions.writing.html"/> 
+        <link rel="up" title="Others from the official doc" href="off_doc.html"/>
+        <link rel="next" title="5. Switching from other Template Engines" href="off_doc.switching.html"/>
+        <link rel="prev" title="3. Writing Extensions" href="off_doc.extensions.writing.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,23 +81,23 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">7. Integration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#babel-integration">7.1. Babel Integration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pylons">7.2. Pylons</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#textmate">7.3. TextMate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vim">7.4. Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Others from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">2. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">3. Writing Extensions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">4. Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#babel-integration">4.1. Babel Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pylons">4.2. Pylons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textmate">4.3. TextMate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vim">4.4. Vim</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">5. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">6. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">7. Frequently Asked Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
@@ -155,9 +151,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.html">Others from the official doc</a> &raquo;</li>
         
-      <li>7. Integration</li>
+      <li>4. Integration</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,14 +171,23 @@
            <div itemprop="articleBody">
             
   <div class="section" id="integration">
-<h1>7. Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<h1>4. Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#babel-integration" id="id4">Babel Integration</a></li>
+<li><a class="reference internal" href="#pylons" id="id5">Pylons</a></li>
+<li><a class="reference internal" href="#textmate" id="id6">TextMate</a></li>
+<li><a class="reference internal" href="#vim" id="id7">Vim</a></li>
+</ul>
+</div>
 <p>Jinja2 provides some code for integration into other tools such as frameworks,
 the <a class="reference external" href="http://babel.pocoo.org/">Babel</a> library or your favourite editor for fancy code highlighting.
 This is a brief description of whats included.</p>
 <p>Files to help integration are available
 <a class="reference external" href="https://github.com/pallets/jinja/tree/master/ext">here.</a></p>
 <div class="section" id="babel-integration">
-<span id="id1"></span><h2>7.1. Babel Integration<a class="headerlink" href="#babel-integration" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2><a class="toc-backref" href="#id4">4.1. Babel Integration</a><a class="headerlink" href="#babel-integration" title="Permalink to this headline">¶</a></h2>
 <p>Jinja provides support for extracting gettext messages from templates via a
 <a class="reference external" href="http://babel.pocoo.org/">Babel</a> extractor entry point called <cite>jinja2.ext.babel_extract</cite>.  The Babel
 support is implemented as part of the <a class="reference internal" href="ext2.html#i18n-extension"><span>i18n Extension</span></a> extension.</p>
@@ -214,7 +219,7 @@ exceptions are propagated.</p>
 </div>
 </div>
 <div class="section" id="pylons">
-<h2>7.2. Pylons<a class="headerlink" href="#pylons" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">4.2. Pylons</a><a class="headerlink" href="#pylons" title="Permalink to this headline">¶</a></h2>
 <p>With <a class="reference external" href="http://www.pylonshq.com/">Pylons</a> 0.9.7 onwards it&#8217;s incredible easy to integrate Jinja into a
 Pylons powered application.</p>
 <p>The template engine is configured in <cite>config/environment.py</cite>.  The configuration
@@ -236,12 +241,12 @@ snippet and add it into your <cite>config/environment.py</cite>:</p>
 </div>
 </div>
 <div class="section" id="textmate">
-<h2>7.3. TextMate<a class="headerlink" href="#textmate" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">4.3. TextMate</a><a class="headerlink" href="#textmate" title="Permalink to this headline">¶</a></h2>
 <p>There is a <a class="reference external" href="https://github.com/mitsuhiko/jinja2-tmbundle">bundle for TextMate</a> that supports syntax highlighting for Jinja1 and Jinja2 for text based
 templates as well as HTML.  It also contains a few often used snippets.</p>
 </div>
 <div class="section" id="vim">
-<h2>7.4. Vim<a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">4.4. Vim</a><a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h2>
 <p>A syntax plugin for <a class="reference external" href="http://www.vim.org/">Vim</a> exists in the Vim-scripts directory as well as the
 <cite>ext</cite> folder at the root of the Jinja2 project.  <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1856">The script</a> supports Jinja1 and
 Jinja2.  Once installed two file types are available <cite>jinja</cite> and <cite>htmljinja</cite>.
@@ -257,10 +262,10 @@ The first one for text based templates, the latter for HTML templates.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="off_doc.switching.html" class="btn btn-neutral float-right" title="8. Switching from other Template Engines" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off_doc.switching.html" class="btn btn-neutral float-right" title="5. Switching from other Template Engines" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.extensions.writing.html" class="btn btn-neutral" title="6. Writing Extensions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.extensions.writing.html" class="btn btn-neutral" title="3. Writing Extensions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -291,7 +296,7 @@ The first one for text based templates, the latter for HTML templates.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.6. Autoescape Extension &mdash; Jinja2 API</title>
+  <title>6. Autoescape Extension &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="5. Extensions" href="off_doc.extensions.html"/>
-        <link rel="next" title="6. Writing Extensions" href="off_doc.extensions.writing.html"/>
-        <link rel="prev" title="5.5. With Statement" href="ext5.html"/> 
+        <link rel="up" title="Extensions" href="off_doc.extensions.html"/>
+        <link rel="next" title="Others from the official doc" href="off_doc.html"/>
+        <link rel="prev" title="5. With Statement" href="ext5.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,27 +81,18 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ext1.html">5.1. Adding Extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext2.html">5.2. i18n Extension</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext3.html">5.3. Expression Statement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext4.html">5.4. Loop Controls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext5.html">5.5. With Statement</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">5.6. Autoescape Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.extensions.html">Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ext1.html">1. Adding Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext2.html">2. i18n Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext3.html">3. Expression Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext4.html">4. Loop Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext5.html">5. With Statement</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">6. Autoescape Extension</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.html">Others from the official doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
@@ -157,11 +144,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.extensions.html">Extensions</a> &raquo;</li>
         
-          <li><a href="off_doc.extensions.html">5. Extensions</a> &raquo;</li>
-        
-      <li>5.6. Autoescape Extension</li>
+      <li>6. Autoescape Extension</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +164,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="autoescape-extension">
-<span id="id1"></span><h1>5.6. Autoescape Extension<a class="headerlink" href="#autoescape-extension" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>6. Autoescape Extension<a class="headerlink" href="#autoescape-extension" title="Permalink to this headline">¶</a></h1>
 <p><strong>Import name:</strong> <cite>jinja2.ext.autoescape</cite></p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.4.</span></p>
@@ -197,10 +182,10 @@ deactivated.  The setting overriding is scoped.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="off_doc.extensions.writing.html" class="btn btn-neutral float-right" title="6. Writing Extensions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off_doc.html" class="btn btn-neutral float-right" title="Others from the official doc" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ext5.html" class="btn btn-neutral" title="5.5. With Statement" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ext5.html" class="btn btn-neutral" title="5. With Statement" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -231,7 +216,7 @@ deactivated.  The setting overriding is scoped.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

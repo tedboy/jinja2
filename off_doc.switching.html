@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. Switching from other Template Engines &mdash; Jinja2 API</title>
+  <title>5. Switching from other Template Engines &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
-        <link rel="next" title="9. Tips and Tricks" href="off_doc.tricks.html"/>
-        <link rel="prev" title="7. Integration" href="off_doc.integration.html"/> 
+        <link rel="up" title="Others from the official doc" href="off_doc.html"/>
+        <link rel="next" title="6. Tips and Tricks" href="off_doc.tricks.html"/>
+        <link rel="prev" title="4. Integration" href="off_doc.integration.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,33 +81,33 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">8. Switching from other Template Engines</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#jinja1">8.1. Jinja1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#api">8.1.1. API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#templates">8.1.2. Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Others from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">2. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">3. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">4. Integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">5. Switching from other Template Engines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jinja1">5.1. Jinja1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api">5.1.1. API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#templates">5.1.2. Templates</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#django">8.2. Django</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#method-calls">8.2.1. Method Calls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filter-arguments">8.2.2. Filter Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tests">8.2.3. Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loops">8.2.4. Loops</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cycle">8.2.5. Cycle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#django">5.2. Django</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#method-calls">5.2.1. Method Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-arguments">5.2.2. Filter Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tests">5.2.3. Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loops">5.2.4. Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cycle">5.2.5. Cycle</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#mako">8.3. Mako</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mako">5.3. Mako</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">6. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">7. Frequently Asked Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
@@ -165,9 +161,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.html">Others from the official doc</a> &raquo;</li>
         
-      <li>8. Switching from other Template Engines</li>
+      <li>5. Switching from other Template Engines</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,17 +181,36 @@
            <div itemprop="articleBody">
             
   <div class="section" id="switching-from-other-template-engines">
-<h1>8. Switching from other Template Engines<a class="headerlink" href="#switching-from-other-template-engines" title="Permalink to this headline">¶</a></h1>
+<h1>5. Switching from other Template Engines<a class="headerlink" href="#switching-from-other-template-engines" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#jinja1" id="id1">Jinja1</a><ul>
+<li><a class="reference internal" href="#api" id="id2">API</a></li>
+<li><a class="reference internal" href="#templates" id="id3">Templates</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#django" id="id4">Django</a><ul>
+<li><a class="reference internal" href="#method-calls" id="id5">Method Calls</a></li>
+<li><a class="reference internal" href="#filter-arguments" id="id6">Filter Arguments</a></li>
+<li><a class="reference internal" href="#tests" id="id7">Tests</a></li>
+<li><a class="reference internal" href="#loops" id="id8">Loops</a></li>
+<li><a class="reference internal" href="#cycle" id="id9">Cycle</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mako" id="id10">Mako</a></li>
+</ul>
+</div>
 <p>If you have used a different template engine in the past and want to switch
 to Jinja2 here is a small guide that shows the basic syntactic and semantic
 changes between some common, similar text template engines for Python.</p>
 <div class="section" id="jinja1">
-<h2>8.1. Jinja1<a class="headerlink" href="#jinja1" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">5.1. Jinja1</a><a class="headerlink" href="#jinja1" title="Permalink to this headline">¶</a></h2>
 <p>Jinja2 is mostly compatible with Jinja1 in terms of API usage and template
 syntax.  The differences between Jinja1 and 2 are explained in the following
 list.</p>
 <div class="section" id="api">
-<h3>8.1.1. API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">5.1.1. API</a><a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt>Loaders</dt>
 <dd>Jinja2 uses a different loader API.  Because the internal representation
@@ -241,7 +256,7 @@ and allowed to use factory functions.</dd>
 </dl>
 </div>
 <div class="section" id="templates">
-<h3>8.1.2. Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">5.1.2. Templates</a><a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
 <p>Jinja2 has mostly the same syntax as Jinja1.  What&#8217;s different is that
 macros require parentheses around the argument list now.</p>
 <p>Additionally Jinja2 allows dynamic inheritance now and dynamic includes.
@@ -255,7 +270,7 @@ yourself.  See <a class="reference internal" href="off_doc.tricks.html#accessing
 </div>
 </div>
 <div class="section" id="django">
-<h2>8.2. Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">5.2. Django</a><a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
 <p>If you have previously worked with Django templates, you should find
 Jinja2 very familiar.  In fact, most of the syntax elements look and
 work the same.</p>
@@ -264,7 +279,7 @@ documentation and some work a bit different.</p>
 <p>This section covers the template changes.  As the API is fundamentally
 different we won&#8217;t cover it here.</p>
 <div class="section" id="method-calls">
-<h3>8.2.1. Method Calls<a class="headerlink" href="#method-calls" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">5.2.1. Method Calls</a><a class="headerlink" href="#method-calls" title="Permalink to this headline">¶</a></h3>
 <p>In Django method calls work implicitly, while Jinja requires the explicit
 Python syntax. Thus this Django code:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">page</span> <span class="k">in</span> <span class="nv">user.get_created_pages</span> <span class="cp">%}</span>
@@ -282,7 +297,7 @@ Python syntax. Thus this Django code:</p>
 Django. This syntax is also used for macros.</p>
 </div>
 <div class="section" id="filter-arguments">
-<h3>8.2.2. Filter Arguments<a class="headerlink" href="#filter-arguments" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">5.2.2. Filter Arguments</a><a class="headerlink" href="#filter-arguments" title="Permalink to this headline">¶</a></h3>
 <p>Jinja2 provides more than one argument for filters.  Also the syntax for
 argument passing is different.  A template that looks like this in Django:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">items</span><span class="o">|</span><span class="nf">join</span><span class="s2">:&quot;, &quot;</span> <span class="cp">}}</span>
@@ -296,7 +311,7 @@ argument passing is different.  A template that looks like this in Django:</p>
 including variables - and more than one of them.</p>
 </div>
 <div class="section" id="tests">
-<h3>8.2.3. Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">5.2.3. Tests</a><a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
 <p>In addition to filters there also are tests you can perform using the is
 operator.  Here are some examples:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">user.user_id</span> <span class="k">is</span> <span class="nf">odd</span> <span class="cp">%}</span>
@@ -308,7 +323,7 @@ operator.  Here are some examples:</p>
 </div>
 </div>
 <div class="section" id="loops">
-<h3>8.2.4. Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">5.2.4. Loops</a><a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
 <p>For loops work very similarly to Django, but notably the Jinja2 special
 variable for the loop context is called <cite>loop</cite>, not <cite>forloop</cite> as in Django.</p>
 <p>In addition, the Django <cite>empty</cite> argument is called <cite>else</cite> in Jinja2. For
@@ -330,7 +345,7 @@ example, the Django template:</p>
 </div>
 </div>
 <div class="section" id="cycle">
-<h3>8.2.5. Cycle<a class="headerlink" href="#cycle" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">5.2.5. Cycle</a><a class="headerlink" href="#cycle" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">{%</span> <span class="pre">cycle</span> <span class="pre">%}</span></code> tag does not exist in Jinja2; however, you can achieve the
 same output by using the <cite>cycle</cite> method on the loop context special variable.</p>
 <p>The following Django template:</p>
@@ -349,7 +364,7 @@ same output by using the <cite>cycle</cite> method on the loop context special v
 </div>
 </div>
 <div class="section" id="mako">
-<h2>8.3. Mako<a class="headerlink" href="#mako" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">5.3. Mako</a><a class="headerlink" href="#mako" title="Permalink to this headline">¶</a></h2>
 <p>If you have used Mako so far and want to switch to Jinja2 you can configure
 Jinja2 to look more like Mako:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="s1">&#39;&lt;%&#39;</span><span class="p">,</span> <span class="s1">&#39;%&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;${&#39;</span><span class="p">,</span> <span class="s1">&#39;}&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;</span><span class="si">%d</span><span class="s1">oc&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;/</span><span class="si">%d</span><span class="s1">oc&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="s1">&#39;##&#39;</span><span class="p">)</span>
@@ -391,10 +406,10 @@ The following Mako template:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="off_doc.tricks.html" class="btn btn-neutral float-right" title="9. Tips and Tricks" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off_doc.tricks.html" class="btn btn-neutral float-right" title="6. Tips and Tricks" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.integration.html" class="btn btn-neutral" title="7. Integration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.integration.html" class="btn btn-neutral" title="4. Integration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -425,7 +440,7 @@ The following Mako template:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

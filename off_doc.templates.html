@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Template Designer Documentation &mdash; Jinja2 API</title>
+  <title>Template Designer Documentation &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,8 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
-        <link rel="next" title="4.1. Synopsis" href="templ1.html"/>
-        <link rel="prev" title="3. Sandbox" href="off_doc.sandbox.html"/> 
+        <link rel="next" title="1. Synopsis" href="templ1.html"/>
+        <link rel="prev" title="Introduction" href="off_doc.intro.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +60,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,39 +80,30 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">4. Template Designer Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Template Designer Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templ1.html">1. Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ2.html">2. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ3.html">3. Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ4.html">4. Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ5.html">5. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ6.html">6. Whitespace Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ7.html">7. Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ8.html">8. Line Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html">9. Template Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ10.html">10. HTML Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html">11. List of Control Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ12.html">12. Import Context Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html">13. Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ14.html">14. List of Builtin Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ15.html">15. List of Builtin Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ16.html">16. List of Global Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html">17. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ18.html">18. Autoescape Extension</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.html">Others from the official doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
@@ -169,9 +155,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
-        
-      <li>4. Template Designer Documentation</li>
+      <li>Template Designer Documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,7 +173,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="template-designer-documentation">
-<h1>4. Template Designer Documentation<a class="headerlink" href="#template-designer-documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Template Designer Documentation<a class="headerlink" href="#template-designer-documentation" title="Permalink to this headline">¶</a></h1>
 <p>This document describes the syntax and semantics of the template engine and
 will be most useful as reference to those creating Jinja templates.  As the
 template engine is very flexible, the configuration from the application can
@@ -198,63 +182,63 @@ behavior of undefined values.</p>
 <div class="toctree-wrapper compound" id="templates">
 <p class="caption"><span class="caption-text">Contents</span><a class="headerlink" href="#templates" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="templ9.html#base-template">4.9.1. Base Template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ9.html#child-template">4.9.2. Child Template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ9.html#super-blocks">4.9.3. Super Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ9.html#named-block-end-tags">4.9.4. Named Block End-Tags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ9.html#block-nesting-and-scope">4.9.5. Block Nesting and Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ9.html#template-objects">4.9.6. Template Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ1.html">1. Synopsis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ2.html">2. Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ3.html">3. Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ4.html">4. Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ5.html">5. Comments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ6.html">6. Whitespace Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ7.html">7. Escaping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ8.html">8. Line Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ9.html">9. Template Inheritance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html#base-template">9.1. Base Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html#child-template">9.2. Child Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html#super-blocks">9.3. Super Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html#named-block-end-tags">9.4. Named Block End-Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html#block-nesting-and-scope">9.5. Block Nesting and Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html#template-objects">9.6. Template Objects</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="templ10.html#working-with-manual-escaping">4.10.1. Working with Manual Escaping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ10.html#working-with-automatic-escaping">4.10.2. Working with Automatic Escaping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ10.html">10. HTML Escaping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templ10.html#working-with-manual-escaping">10.1. Working with Manual Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ10.html#working-with-automatic-escaping">10.2. Working with Automatic Escaping</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#for">4.11.1. For</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#if">4.11.2. If</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#macros">4.11.3. Macros</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#call">4.11.4. Call</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#filters">4.11.5. Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#assignments">4.11.6. Assignments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#block-assignments">4.11.7. Block Assignments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#extends">4.11.8. Extends</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#blocks">4.11.9. Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#include">4.11.10. Include</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ11.html#import">4.11.11. Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ11.html">11. List of Control Structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#for">11.1. For</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#if">11.2. If</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#macros">11.3. Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#call">11.4. Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#filters">11.5. Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#assignments">11.6. Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#block-assignments">11.7. Block Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#extends">11.8. Extends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#blocks">11.9. Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#include">11.10. Include</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html#import">11.11. Import</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ13.html">4.13. Expressions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="templ13.html#literals">4.13.1. Literals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ13.html#math">4.13.2. Math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ13.html#comparisons">4.13.3. Comparisons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ13.html#logic">4.13.4. Logic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ13.html#other-operators">4.13.5. Other Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ13.html#if-expression">4.13.6. If Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ12.html">12. Import Context Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ13.html">13. Expressions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html#literals">13.1. Literals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html#math">13.2. Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html#comparisons">13.3. Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html#logic">13.4. Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html#other-operators">13.5. Other Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html#if-expression">13.6. If Expression</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templ17.html">4.17. Extensions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="templ17.html#i18n">4.17.1. i18n</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ17.html#expression-statement">4.17.2. Expression Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ17.html#loop-controls">4.17.3. Loop Controls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templ17.html#with-statement">4.17.4. With Statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ14.html">14. List of Builtin Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ15.html">15. List of Builtin Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ16.html">16. List of Global Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ17.html">17. Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html#i18n">17.1. i18n</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html#expression-statement">17.2. Expression Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html#loop-controls">17.3. Loop Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html#with-statement">17.4. With Statement</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templ18.html">18. Autoescape Extension</a></li>
 </ul>
 </div>
 </div>
@@ -266,10 +250,10 @@ behavior of undefined values.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="templ1.html" class="btn btn-neutral float-right" title="4.1. Synopsis" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="templ1.html" class="btn btn-neutral float-right" title="1. Synopsis" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.sandbox.html" class="btn btn-neutral" title="3. Sandbox" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.intro.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -300,7 +284,7 @@ behavior of undefined values.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

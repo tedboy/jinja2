@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. API &mdash; Jinja2 API</title>
+  <title>1. API &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
-        <link rel="next" title="3. Sandbox" href="off_doc.sandbox.html"/>
-        <link rel="prev" title="1. Introduction" href="off_doc.intro.html"/> 
+        <link rel="up" title="Others from the official doc" href="off_doc.html"/>
+        <link rel="next" title="2. Sandbox" href="off_doc.sandbox.html"/>
+        <link rel="prev" title="Others from the official doc" href="off_doc.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,89 +81,89 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2. API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#basics">2.1. Basics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#unicode">2.2. Unicode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#high-level-api">2.3. High Level API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#environment">2.3.1. <code class="docutils literal"><span class="pre">Environment</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#template">2.3.2. <code class="docutils literal"><span class="pre">Template</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-environment-templatestream">2.3.3. <code class="docutils literal"><span class="pre">jinja2.environment.TemplateStream</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Others from the official doc</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">1. API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basics">1.1. Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unicode">1.2. Unicode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-api">1.3. High Level API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#environment">1.3.1. <code class="docutils literal"><span class="pre">Environment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#template">1.3.2. <code class="docutils literal"><span class="pre">Template</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-environment-templatestream">1.3.3. <code class="docutils literal"><span class="pre">jinja2.environment.TemplateStream</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#autoescaping">2.4. Autoescaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#notes-on-identifiers">2.5. Notes on Identifiers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#undefined-types">2.6. Undefined Types</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#undefined">2.6.1. <code class="docutils literal"><span class="pre">Undefined</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#debugundefined">2.6.2. <code class="docutils literal"><span class="pre">DebugUndefined</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#strictundefined">2.6.3. <code class="docutils literal"><span class="pre">StrictUndefined</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#make-logging-undefined">2.6.4. <code class="docutils literal"><span class="pre">make_logging_undefined()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autoescaping">1.4. Autoescaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes-on-identifiers">1.5. Notes on Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#undefined-types">1.6. Undefined Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#undefined">1.6.1. <code class="docutils literal"><span class="pre">Undefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#debugundefined">1.6.2. <code class="docutils literal"><span class="pre">DebugUndefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#strictundefined">1.6.3. <code class="docutils literal"><span class="pre">StrictUndefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-logging-undefined">1.6.4. <code class="docutils literal"><span class="pre">make_logging_undefined()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#the-context">2.7. The Context</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-runtime-context">2.7.1. <code class="docutils literal"><span class="pre">jinja2.runtime.Context</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-context">1.7. The Context</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-runtime-context">1.7.1. <code class="docutils literal"><span class="pre">jinja2.runtime.Context</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#loaders">2.8. Loaders</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-baseloader">2.8.1. <code class="docutils literal"><span class="pre">jinja2.BaseLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-filesystemloader">2.8.2. <code class="docutils literal"><span class="pre">jinja2.FileSystemLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-packageloader">2.8.3. <code class="docutils literal"><span class="pre">jinja2.PackageLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-dictloader">2.8.4. <code class="docutils literal"><span class="pre">jinja2.DictLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-functionloader">2.8.5. <code class="docutils literal"><span class="pre">jinja2.FunctionLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-prefixloader">2.8.6. <code class="docutils literal"><span class="pre">jinja2.PrefixLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-choiceloader">2.8.7. <code class="docutils literal"><span class="pre">jinja2.ChoiceLoader</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-moduleloader">2.8.8. <code class="docutils literal"><span class="pre">jinja2.ModuleLoader</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loaders">1.8. Loaders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-baseloader">1.8.1. <code class="docutils literal"><span class="pre">jinja2.BaseLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-filesystemloader">1.8.2. <code class="docutils literal"><span class="pre">jinja2.FileSystemLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-packageloader">1.8.3. <code class="docutils literal"><span class="pre">jinja2.PackageLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-dictloader">1.8.4. <code class="docutils literal"><span class="pre">jinja2.DictLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-functionloader">1.8.5. <code class="docutils literal"><span class="pre">jinja2.FunctionLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-prefixloader">1.8.6. <code class="docutils literal"><span class="pre">jinja2.PrefixLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-choiceloader">1.8.7. <code class="docutils literal"><span class="pre">jinja2.ChoiceLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-moduleloader">1.8.8. <code class="docutils literal"><span class="pre">jinja2.ModuleLoader</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#bytecode-cache">2.9. Bytecode Cache</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-bytecodecache">2.9.1. <code class="docutils literal"><span class="pre">jinja2.BytecodeCache</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-bccache-bucket">2.9.2. <code class="docutils literal"><span class="pre">jinja2.bccache.Bucket</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-filesystembytecodecache">2.9.3. <code class="docutils literal"><span class="pre">jinja2.FileSystemBytecodeCache</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-memcachedbytecodecache">2.9.4. <code class="docutils literal"><span class="pre">jinja2.MemcachedBytecodeCache</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bytecode-cache">1.9. Bytecode Cache</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-bytecodecache">1.9.1. <code class="docutils literal"><span class="pre">jinja2.BytecodeCache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-bccache-bucket">1.9.2. <code class="docutils literal"><span class="pre">jinja2.bccache.Bucket</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-filesystembytecodecache">1.9.3. <code class="docutils literal"><span class="pre">jinja2.FileSystemBytecodeCache</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-memcachedbytecodecache">1.9.4. <code class="docutils literal"><span class="pre">jinja2.MemcachedBytecodeCache</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#utilities">2.10. Utilities</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-environmentfilter">2.10.1. <code class="docutils literal"><span class="pre">jinja2.environmentfilter()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-contextfilter">2.10.2. <code class="docutils literal"><span class="pre">jinja2.contextfilter()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-evalcontextfilter">2.10.3. <code class="docutils literal"><span class="pre">jinja2.evalcontextfilter()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-environmentfunction">2.10.4. <code class="docutils literal"><span class="pre">jinja2.environmentfunction()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-contextfunction">2.10.5. <code class="docutils literal"><span class="pre">jinja2.contextfunction()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-evalcontextfunction">2.10.6. <code class="docutils literal"><span class="pre">jinja2.evalcontextfunction()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#escape-s">2.10.7. escape(s)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-clear-caches">2.10.8. <code class="docutils literal"><span class="pre">jinja2.clear_caches()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-is-undefined">2.10.9. <code class="docutils literal"><span class="pre">jinja2.is_undefined()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-markup">2.10.10. <code class="docutils literal"><span class="pre">jinja2.Markup</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utilities">1.10. Utilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-environmentfilter">1.10.1. <code class="docutils literal"><span class="pre">jinja2.environmentfilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-contextfilter">1.10.2. <code class="docutils literal"><span class="pre">jinja2.contextfilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-evalcontextfilter">1.10.3. <code class="docutils literal"><span class="pre">jinja2.evalcontextfilter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-environmentfunction">1.10.4. <code class="docutils literal"><span class="pre">jinja2.environmentfunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-contextfunction">1.10.5. <code class="docutils literal"><span class="pre">jinja2.contextfunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-evalcontextfunction">1.10.6. <code class="docutils literal"><span class="pre">jinja2.evalcontextfunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#escape-s">1.10.7. escape(s)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-clear-caches">1.10.8. <code class="docutils literal"><span class="pre">jinja2.clear_caches()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-is-undefined">1.10.9. <code class="docutils literal"><span class="pre">jinja2.is_undefined()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-markup">1.10.10. <code class="docutils literal"><span class="pre">jinja2.Markup</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#exceptions">2.11. Exceptions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-templateerror">2.11.1. <code class="docutils literal"><span class="pre">jinja2.TemplateError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-undefinederror">2.11.2. <code class="docutils literal"><span class="pre">jinja2.UndefinedError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatenotfound">2.11.3. <code class="docutils literal"><span class="pre">jinja2.TemplateNotFound</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatesnotfound">2.11.4. <code class="docutils literal"><span class="pre">jinja2.TemplatesNotFound</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatesyntaxerror">2.11.5. <code class="docutils literal"><span class="pre">jinja2.TemplateSyntaxError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-templateassertionerror">2.11.6. <code class="docutils literal"><span class="pre">jinja2.TemplateAssertionError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">1.11. Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templateerror">1.11.1. <code class="docutils literal"><span class="pre">jinja2.TemplateError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-undefinederror">1.11.2. <code class="docutils literal"><span class="pre">jinja2.UndefinedError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatenotfound">1.11.3. <code class="docutils literal"><span class="pre">jinja2.TemplateNotFound</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatesnotfound">1.11.4. <code class="docutils literal"><span class="pre">jinja2.TemplatesNotFound</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templatesyntaxerror">1.11.5. <code class="docutils literal"><span class="pre">jinja2.TemplateSyntaxError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-templateassertionerror">1.11.6. <code class="docutils literal"><span class="pre">jinja2.TemplateAssertionError</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-filters">2.12. Custom Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#evaluation-context">2.13. Evaluation Context</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2-nodes-evalcontext">2.13.1. <code class="docutils literal"><span class="pre">jinja2.nodes.EvalContext</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-filters">1.12. Custom Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-context">1.13. Evaluation Context</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2-nodes-evalcontext">1.13.1. <code class="docutils literal"><span class="pre">jinja2.nodes.EvalContext</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-tests">2.14. Custom Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-global-namespace">2.15. The Global Namespace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#low-level-api">2.16. Low Level API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-meta-api">2.17. The Meta API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-tests">1.14. Custom Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-global-namespace">1.15. The Global Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#low-level-api">1.16. Low Level API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-meta-api">1.17. The Meta API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">2. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">3. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">4. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">5. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">6. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">7. Frequently Asked Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
@@ -221,9 +217,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.html">Others from the official doc</a> &raquo;</li>
         
-      <li>2. API</li>
+      <li>1. API</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -240,13 +236,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-jinja2">
-<span id="api"></span><h1>2. API<a class="headerlink" href="#module-jinja2" title="Permalink to this headline">¶</a></h1>
-<p>This document describes the API to Jinja2 and not the template language.  It
+  <div class="section" id="api">
+<h1>1. API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#basics" id="id4">Basics</a></li>
+<li><a class="reference internal" href="#unicode" id="id5">Unicode</a></li>
+<li><a class="reference internal" href="#high-level-api" id="id6">High Level API</a></li>
+<li><a class="reference internal" href="#autoescaping" id="id7">Autoescaping</a></li>
+<li><a class="reference internal" href="#notes-on-identifiers" id="id8">Notes on Identifiers</a></li>
+<li><a class="reference internal" href="#undefined-types" id="id9">Undefined Types</a></li>
+<li><a class="reference internal" href="#the-context" id="id10">The Context</a></li>
+<li><a class="reference internal" href="#loaders" id="id11">Loaders</a></li>
+<li><a class="reference internal" href="#bytecode-cache" id="id12">Bytecode Cache</a></li>
+<li><a class="reference internal" href="#utilities" id="id13">Utilities</a></li>
+<li><a class="reference internal" href="#exceptions" id="id14">Exceptions</a></li>
+<li><a class="reference internal" href="#custom-filters" id="id15">Custom Filters</a></li>
+<li><a class="reference internal" href="#evaluation-context" id="id16">Evaluation Context</a></li>
+<li><a class="reference internal" href="#custom-tests" id="id17">Custom Tests</a></li>
+<li><a class="reference internal" href="#the-global-namespace" id="id18">The Global Namespace</a></li>
+<li><a class="reference internal" href="#low-level-api" id="id19">Low Level API</a></li>
+<li><a class="reference internal" href="#the-meta-api" id="id20">The Meta API</a></li>
+</ul>
+</div>
+<span class="target" id="module-jinja2"></span><p>This document describes the API to Jinja2 and not the template language.  It
 will be most useful as reference to those implementing the template interface
 to the application and not those who are creating Jinja2 templates.</p>
 <div class="section" id="basics">
-<h2>2.1. Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">1.1. Basics</a><a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
 <p>Jinja2 uses a central object called the template <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a>.
 Instances of this class are used to store the configuration and global objects,
 and are used to load templates from the file system or other locations.
@@ -282,7 +300,7 @@ or <a class="reference internal" href="generated/generated/jinja2.Environment.fr
 a lot easier to use it also enables template inheritance.</p>
 </div>
 <div class="section" id="unicode">
-<h2>2.2. Unicode<a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">1.2. Unicode</a><a class="headerlink" href="#unicode" title="Permalink to this headline">¶</a></h2>
 <p>Jinja2 is using Unicode internally which means that you have to pass Unicode
 objects to the render function or bytestrings that only consist of ASCII
 characters.  Additionally newlines are normalized to one end of line
@@ -330,22 +348,22 @@ for everything else <cite>unicode</cite>:</p>
 </div>
 </div>
 <div class="section" id="high-level-api">
-<h2>2.3. High Level API<a class="headerlink" href="#high-level-api" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">1.3. High Level API</a><a class="headerlink" href="#high-level-api" title="Permalink to this headline">¶</a></h2>
 <p>The high-level API is the API you will use in the application to load and
 render Jinja2 templates.  The <a class="reference internal" href="#low-level-api"><span>Low Level API</span></a> on the other side is only
 useful if you want to dig deeper into Jinja2 or <a class="reference internal" href="off_doc.extensions.html#jinja-extensions"><span>develop extensions</span></a>.</p>
 <div class="section" id="environment">
-<h3>2.3.1. <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a><a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.1. <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a><a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="template">
-<h3>2.3.2. <a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a><a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.2. <a class="reference internal" href="generated/generated/jinja2.Template.html#jinja2.Template" title="jinja2.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a><a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-environment-templatestream">
-<h3>2.3.3. <a class="reference internal" href="generated/generated/jinja2.environment.TemplateStream.html#jinja2.environment.TemplateStream" title="jinja2.environment.TemplateStream"><code class="xref py py-class docutils literal"><span class="pre">jinja2.environment.TemplateStream</span></code></a><a class="headerlink" href="#jinja2-environment-templatestream" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.3. <a class="reference internal" href="generated/generated/jinja2.environment.TemplateStream.html#jinja2.environment.TemplateStream" title="jinja2.environment.TemplateStream"><code class="xref py py-class docutils literal"><span class="pre">jinja2.environment.TemplateStream</span></code></a><a class="headerlink" href="#jinja2-environment-templatestream" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="autoescaping">
-<h2>2.4. Autoescaping<a class="headerlink" href="#autoescaping" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">1.4. Autoescaping</a><a class="headerlink" href="#autoescaping" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.4.</span></p>
 </div>
@@ -374,7 +392,7 @@ templates from strings.</p>
 the <cite>autoescape</cite> block (see <a class="reference internal" href="templ18.html#autoescape-overrides"><span>Autoescape Extension</span></a>).</p>
 </div>
 <div class="section" id="notes-on-identifiers">
-<span id="identifier-naming"></span><h2>2.5. Notes on Identifiers<a class="headerlink" href="#notes-on-identifiers" title="Permalink to this headline">¶</a></h2>
+<span id="identifier-naming"></span><h2><a class="toc-backref" href="#id8">1.5. Notes on Identifiers</a><a class="headerlink" href="#notes-on-identifiers" title="Permalink to this headline">¶</a></h2>
 <p>Jinja2 uses the regular Python 2.x naming rules.  Valid identifiers have to
 match <code class="docutils literal"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*</span></code>.  As a matter of fact non ASCII characters
 are currently not allowed.  This limitation will probably go away as soon as
@@ -387,7 +405,7 @@ expression for filter and test identifiers is
 <code class="docutils literal"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*(\.[a-zA-Z_][a-zA-Z0-9_]*)*`</span></code>.</p>
 </div>
 <div class="section" id="undefined-types">
-<h2>2.6. Undefined Types<a class="headerlink" href="#undefined-types" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">1.6. Undefined Types</a><a class="headerlink" href="#undefined-types" title="Permalink to this headline">¶</a></h2>
 <p>These classes can be used as undefined types.  The <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a>
 constructor takes an <cite>undefined</cite> parameter that can be one of those classes
 or a custom subclass of <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a>.  Whenever the template engine is
@@ -397,18 +415,18 @@ others fail.</p>
 <p>The closest to regular Python behavior is the <cite>StrictUndefined</cite> which
 disallows all operations beside testing if it&#8217;s an undefined object.</p>
 <div class="section" id="undefined">
-<h3>2.6.1. <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a><a class="headerlink" href="#undefined" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.1. <a class="reference internal" href="generated/generated/jinja2.Undefined.html#jinja2.Undefined" title="jinja2.Undefined"><code class="xref py py-class docutils literal"><span class="pre">Undefined</span></code></a><a class="headerlink" href="#undefined" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="debugundefined">
-<h3>2.6.2. <a class="reference internal" href="generated/generated/jinja2.DebugUndefined.html#jinja2.DebugUndefined" title="jinja2.DebugUndefined"><code class="xref py py-class docutils literal"><span class="pre">DebugUndefined</span></code></a><a class="headerlink" href="#debugundefined" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.2. <a class="reference internal" href="generated/generated/jinja2.DebugUndefined.html#jinja2.DebugUndefined" title="jinja2.DebugUndefined"><code class="xref py py-class docutils literal"><span class="pre">DebugUndefined</span></code></a><a class="headerlink" href="#debugundefined" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="strictundefined">
-<h3>2.6.3. <a class="reference internal" href="generated/generated/jinja2.StrictUndefined.html#jinja2.StrictUndefined" title="jinja2.StrictUndefined"><code class="xref py py-class docutils literal"><span class="pre">StrictUndefined</span></code></a><a class="headerlink" href="#strictundefined" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.3. <a class="reference internal" href="generated/generated/jinja2.StrictUndefined.html#jinja2.StrictUndefined" title="jinja2.StrictUndefined"><code class="xref py py-class docutils literal"><span class="pre">StrictUndefined</span></code></a><a class="headerlink" href="#strictundefined" title="Permalink to this headline">¶</a></h3>
 <p>There is also a factory function that can decorate undefined objects to
 implement logging on failures:</p>
 </div>
 <div class="section" id="make-logging-undefined">
-<h3>2.6.4. <a class="reference internal" href="generated/jinja2.make_logging_undefined.html#jinja2.make_logging_undefined" title="jinja2.make_logging_undefined"><code class="xref py py-func docutils literal"><span class="pre">make_logging_undefined()</span></code></a><a class="headerlink" href="#make-logging-undefined" title="Permalink to this headline">¶</a></h3>
+<h3>1.6.4. <a class="reference internal" href="generated/jinja2.make_logging_undefined.html#jinja2.make_logging_undefined" title="jinja2.make_logging_undefined"><code class="xref py py-func docutils literal"><span class="pre">make_logging_undefined()</span></code></a><a class="headerlink" href="#make-logging-undefined" title="Permalink to this headline">¶</a></h3>
 <p>Undefined objects are created by calling <a class="reference internal" href="templ15.html#undefined" title="undefined"><code class="xref py py-attr docutils literal"><span class="pre">undefined</span></code></a>.</p>
 <div class="admonition-implementation admonition">
 <p class="first admonition-title">Implementation</p>
@@ -438,9 +456,9 @@ but chokes on iteration:</p>
 </div>
 </div>
 <div class="section" id="the-context">
-<h2>2.7. The Context<a class="headerlink" href="#the-context" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">1.7. The Context</a><a class="headerlink" href="#the-context" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="jinja2-runtime-context">
-<h3>2.7.1. <a class="reference internal" href="generated/generated/jinja2.runtime.Context.html#jinja2.runtime.Context" title="jinja2.runtime.Context"><code class="xref py py-class docutils literal"><span class="pre">jinja2.runtime.Context</span></code></a><a class="headerlink" href="#jinja2-runtime-context" title="Permalink to this headline">¶</a></h3>
+<h3>1.7.1. <a class="reference internal" href="generated/generated/jinja2.runtime.Context.html#jinja2.runtime.Context" title="jinja2.runtime.Context"><code class="xref py py-class docutils literal"><span class="pre">jinja2.runtime.Context</span></code></a><a class="headerlink" href="#jinja2-runtime-context" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-implementation admonition">
 <p class="first admonition-title">Implementation</p>
 <p>Context is immutable for the same reason Python&#8217;s frame locals are
@@ -454,7 +472,7 @@ as if it was defined in the template.</p>
 </div>
 </div>
 <div class="section" id="loaders">
-<span id="id1"></span><h2>2.8. Loaders<a class="headerlink" href="#loaders" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2><a class="toc-backref" href="#id11">1.8. Loaders</a><a class="headerlink" href="#loaders" title="Permalink to this headline">¶</a></h2>
 <p>Loaders are responsible for loading templates from a resource such as the
 file system.  The environment will keep the compiled modules in memory like
 Python&#8217;s <cite>sys.modules</cite>.  Unlike <cite>sys.modules</cite> however this cache is limited in
@@ -462,34 +480,34 @@ size by default and templates are automatically reloaded.
 All loaders are subclasses of <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">BaseLoader</span></code></a>.  If you want to create your
 own loader, subclass <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">BaseLoader</span></code></a> and override <cite>get_source</cite>.</p>
 <div class="section" id="jinja2-baseloader">
-<h3>2.8.1. <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.BaseLoader</span></code></a><a class="headerlink" href="#jinja2-baseloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.1. <a class="reference internal" href="generated/generated/jinja2.BaseLoader.html#jinja2.BaseLoader" title="jinja2.BaseLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.BaseLoader</span></code></a><a class="headerlink" href="#jinja2-baseloader" title="Permalink to this headline">¶</a></h3>
 <p class="rubric">Built-in Loaders</p>
 <p>Here a list of the builtin loaders Jinja2 provides:</p>
 </div>
 <div class="section" id="jinja2-filesystemloader">
-<h3>2.8.2. <a class="reference internal" href="generated/generated/jinja2.FileSystemLoader.html#jinja2.FileSystemLoader" title="jinja2.FileSystemLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FileSystemLoader</span></code></a><a class="headerlink" href="#jinja2-filesystemloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.2. <a class="reference internal" href="generated/generated/jinja2.FileSystemLoader.html#jinja2.FileSystemLoader" title="jinja2.FileSystemLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FileSystemLoader</span></code></a><a class="headerlink" href="#jinja2-filesystemloader" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-packageloader">
-<h3>2.8.3. <a class="reference internal" href="generated/generated/jinja2.PackageLoader.html#jinja2.PackageLoader" title="jinja2.PackageLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.PackageLoader</span></code></a><a class="headerlink" href="#jinja2-packageloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.3. <a class="reference internal" href="generated/generated/jinja2.PackageLoader.html#jinja2.PackageLoader" title="jinja2.PackageLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.PackageLoader</span></code></a><a class="headerlink" href="#jinja2-packageloader" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-dictloader">
-<h3>2.8.4. <a class="reference internal" href="generated/generated/jinja2.DictLoader.html#jinja2.DictLoader" title="jinja2.DictLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.DictLoader</span></code></a><a class="headerlink" href="#jinja2-dictloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.4. <a class="reference internal" href="generated/generated/jinja2.DictLoader.html#jinja2.DictLoader" title="jinja2.DictLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.DictLoader</span></code></a><a class="headerlink" href="#jinja2-dictloader" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-functionloader">
-<h3>2.8.5. <a class="reference internal" href="generated/generated/jinja2.FunctionLoader.html#jinja2.FunctionLoader" title="jinja2.FunctionLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FunctionLoader</span></code></a><a class="headerlink" href="#jinja2-functionloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.5. <a class="reference internal" href="generated/generated/jinja2.FunctionLoader.html#jinja2.FunctionLoader" title="jinja2.FunctionLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FunctionLoader</span></code></a><a class="headerlink" href="#jinja2-functionloader" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-prefixloader">
-<h3>2.8.6. <a class="reference internal" href="generated/generated/jinja2.PrefixLoader.html#jinja2.PrefixLoader" title="jinja2.PrefixLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.PrefixLoader</span></code></a><a class="headerlink" href="#jinja2-prefixloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.6. <a class="reference internal" href="generated/generated/jinja2.PrefixLoader.html#jinja2.PrefixLoader" title="jinja2.PrefixLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.PrefixLoader</span></code></a><a class="headerlink" href="#jinja2-prefixloader" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-choiceloader">
-<h3>2.8.7. <a class="reference internal" href="generated/generated/jinja2.ChoiceLoader.html#jinja2.ChoiceLoader" title="jinja2.ChoiceLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ChoiceLoader</span></code></a><a class="headerlink" href="#jinja2-choiceloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.7. <a class="reference internal" href="generated/generated/jinja2.ChoiceLoader.html#jinja2.ChoiceLoader" title="jinja2.ChoiceLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ChoiceLoader</span></code></a><a class="headerlink" href="#jinja2-choiceloader" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-moduleloader">
-<h3>2.8.8. <a class="reference internal" href="generated/generated/jinja2.ModuleLoader.html#jinja2.ModuleLoader" title="jinja2.ModuleLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ModuleLoader</span></code></a><a class="headerlink" href="#jinja2-moduleloader" title="Permalink to this headline">¶</a></h3>
+<h3>1.8.8. <a class="reference internal" href="generated/generated/jinja2.ModuleLoader.html#jinja2.ModuleLoader" title="jinja2.ModuleLoader"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ModuleLoader</span></code></a><a class="headerlink" href="#jinja2-moduleloader" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="bytecode-cache">
-<span id="id2"></span><h2>2.9. Bytecode Cache<a class="headerlink" href="#bytecode-cache" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id12">1.9. Bytecode Cache</a><a class="headerlink" href="#bytecode-cache" title="Permalink to this headline">¶</a></h2>
 <p>Jinja 2.1 and higher support external bytecode caching.  Bytecode caches make
 it possible to store the generated bytecode on the file system or a different
 location to avoid parsing the templates on first use.</p>
@@ -498,43 +516,43 @@ the first request and Jinja compiles many templates at once which slows down
 the application.</p>
 <p>To use a bytecode cache, instantiate it and pass it to the <a class="reference internal" href="generated/generated/jinja2.Environment.html#jinja2.Environment" title="jinja2.Environment"><code class="xref py py-class docutils literal"><span class="pre">Environment</span></code></a>.</p>
 <div class="section" id="jinja2-bytecodecache">
-<h3>2.9.1. <a class="reference internal" href="generated/generated/jinja2.BytecodeCache.html#jinja2.BytecodeCache" title="jinja2.BytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.BytecodeCache</span></code></a><a class="headerlink" href="#jinja2-bytecodecache" title="Permalink to this headline">¶</a></h3>
+<h3>1.9.1. <a class="reference internal" href="generated/generated/jinja2.BytecodeCache.html#jinja2.BytecodeCache" title="jinja2.BytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.BytecodeCache</span></code></a><a class="headerlink" href="#jinja2-bytecodecache" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-bccache-bucket">
-<h3>2.9.2. <a class="reference internal" href="generated/generated/jinja2.bccache.Bucket.html#jinja2.bccache.Bucket" title="jinja2.bccache.Bucket"><code class="xref py py-class docutils literal"><span class="pre">jinja2.bccache.Bucket</span></code></a><a class="headerlink" href="#jinja2-bccache-bucket" title="Permalink to this headline">¶</a></h3>
+<h3>1.9.2. <a class="reference internal" href="generated/generated/jinja2.bccache.Bucket.html#jinja2.bccache.Bucket" title="jinja2.bccache.Bucket"><code class="xref py py-class docutils literal"><span class="pre">jinja2.bccache.Bucket</span></code></a><a class="headerlink" href="#jinja2-bccache-bucket" title="Permalink to this headline">¶</a></h3>
 <p class="rubric">Builtin bytecode caches:</p>
 </div>
 <div class="section" id="jinja2-filesystembytecodecache">
-<h3>2.9.3. <a class="reference internal" href="generated/generated/jinja2.FileSystemBytecodeCache.html#jinja2.FileSystemBytecodeCache" title="jinja2.FileSystemBytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FileSystemBytecodeCache</span></code></a><a class="headerlink" href="#jinja2-filesystembytecodecache" title="Permalink to this headline">¶</a></h3>
+<h3>1.9.3. <a class="reference internal" href="generated/generated/jinja2.FileSystemBytecodeCache.html#jinja2.FileSystemBytecodeCache" title="jinja2.FileSystemBytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.FileSystemBytecodeCache</span></code></a><a class="headerlink" href="#jinja2-filesystembytecodecache" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-memcachedbytecodecache">
-<h3>2.9.4. <a class="reference internal" href="generated/generated/jinja2.MemcachedBytecodeCache.html#jinja2.MemcachedBytecodeCache" title="jinja2.MemcachedBytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.MemcachedBytecodeCache</span></code></a><a class="headerlink" href="#jinja2-memcachedbytecodecache" title="Permalink to this headline">¶</a></h3>
+<h3>1.9.4. <a class="reference internal" href="generated/generated/jinja2.MemcachedBytecodeCache.html#jinja2.MemcachedBytecodeCache" title="jinja2.MemcachedBytecodeCache"><code class="xref py py-class docutils literal"><span class="pre">jinja2.MemcachedBytecodeCache</span></code></a><a class="headerlink" href="#jinja2-memcachedbytecodecache" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="utilities">
-<h2>2.10. Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">1.10. Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
 <p>These helper functions and classes are useful if you add custom filters or
 functions to a Jinja2 environment.</p>
 <div class="section" id="jinja2-environmentfilter">
-<h3>2.10.1. <a class="reference internal" href="generated/jinja2.environmentfilter.html#jinja2.environmentfilter" title="jinja2.environmentfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.environmentfilter()</span></code></a><a class="headerlink" href="#jinja2-environmentfilter" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.1. <a class="reference internal" href="generated/jinja2.environmentfilter.html#jinja2.environmentfilter" title="jinja2.environmentfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.environmentfilter()</span></code></a><a class="headerlink" href="#jinja2-environmentfilter" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-contextfilter">
-<h3>2.10.2. <a class="reference internal" href="generated/jinja2.contextfilter.html#jinja2.contextfilter" title="jinja2.contextfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.contextfilter()</span></code></a><a class="headerlink" href="#jinja2-contextfilter" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.2. <a class="reference internal" href="generated/jinja2.contextfilter.html#jinja2.contextfilter" title="jinja2.contextfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.contextfilter()</span></code></a><a class="headerlink" href="#jinja2-contextfilter" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-evalcontextfilter">
-<h3>2.10.3. <a class="reference internal" href="generated/jinja2.evalcontextfilter.html#jinja2.evalcontextfilter" title="jinja2.evalcontextfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.evalcontextfilter()</span></code></a><a class="headerlink" href="#jinja2-evalcontextfilter" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.3. <a class="reference internal" href="generated/jinja2.evalcontextfilter.html#jinja2.evalcontextfilter" title="jinja2.evalcontextfilter"><code class="xref py py-func docutils literal"><span class="pre">jinja2.evalcontextfilter()</span></code></a><a class="headerlink" href="#jinja2-evalcontextfilter" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-environmentfunction">
-<h3>2.10.4. <a class="reference internal" href="generated/jinja2.environmentfunction.html#jinja2.environmentfunction" title="jinja2.environmentfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.environmentfunction()</span></code></a><a class="headerlink" href="#jinja2-environmentfunction" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.4. <a class="reference internal" href="generated/jinja2.environmentfunction.html#jinja2.environmentfunction" title="jinja2.environmentfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.environmentfunction()</span></code></a><a class="headerlink" href="#jinja2-environmentfunction" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-contextfunction">
-<h3>2.10.5. <a class="reference internal" href="generated/jinja2.contextfunction.html#jinja2.contextfunction" title="jinja2.contextfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.contextfunction()</span></code></a><a class="headerlink" href="#jinja2-contextfunction" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.5. <a class="reference internal" href="generated/jinja2.contextfunction.html#jinja2.contextfunction" title="jinja2.contextfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.contextfunction()</span></code></a><a class="headerlink" href="#jinja2-contextfunction" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-evalcontextfunction">
-<h3>2.10.6. <a class="reference internal" href="generated/jinja2.evalcontextfunction.html#jinja2.evalcontextfunction" title="jinja2.evalcontextfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.evalcontextfunction()</span></code></a><a class="headerlink" href="#jinja2-evalcontextfunction" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.6. <a class="reference internal" href="generated/jinja2.evalcontextfunction.html#jinja2.evalcontextfunction" title="jinja2.evalcontextfunction"><code class="xref py py-func docutils literal"><span class="pre">jinja2.evalcontextfunction()</span></code></a><a class="headerlink" href="#jinja2-evalcontextfunction" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="escape-s">
-<h3>2.10.7. escape(s)<a class="headerlink" href="#escape-s" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.7. escape(s)<a class="headerlink" href="#escape-s" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="jinja2.escape">
 <code class="descclassname">jinja2.</code><code class="descname">escape</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#jinja2.escape" title="Permalink to this definition">¶</a></dt>
@@ -547,13 +565,13 @@ that do have an HTML representation such as already escaped data.</p>
 
 </div>
 <div class="section" id="jinja2-clear-caches">
-<h3>2.10.8. <a class="reference internal" href="generated/jinja2.clear_caches.html#jinja2.clear_caches" title="jinja2.clear_caches"><code class="xref py py-func docutils literal"><span class="pre">jinja2.clear_caches()</span></code></a><a class="headerlink" href="#jinja2-clear-caches" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.8. <a class="reference internal" href="generated/jinja2.clear_caches.html#jinja2.clear_caches" title="jinja2.clear_caches"><code class="xref py py-func docutils literal"><span class="pre">jinja2.clear_caches()</span></code></a><a class="headerlink" href="#jinja2-clear-caches" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-is-undefined">
-<h3>2.10.9. <a class="reference internal" href="generated/jinja2.is_undefined.html#jinja2.is_undefined" title="jinja2.is_undefined"><code class="xref py py-func docutils literal"><span class="pre">jinja2.is_undefined()</span></code></a><a class="headerlink" href="#jinja2-is-undefined" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.9. <a class="reference internal" href="generated/jinja2.is_undefined.html#jinja2.is_undefined" title="jinja2.is_undefined"><code class="xref py py-func docutils literal"><span class="pre">jinja2.is_undefined()</span></code></a><a class="headerlink" href="#jinja2-is-undefined" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-markup">
-<h3>2.10.10. <a class="reference internal" href="generated/generated/jinja2.Markup.html#jinja2.Markup" title="jinja2.Markup"><code class="xref py py-class docutils literal"><span class="pre">jinja2.Markup</span></code></a><a class="headerlink" href="#jinja2-markup" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.10. <a class="reference internal" href="generated/generated/jinja2.Markup.html#jinja2.Markup" title="jinja2.Markup"><code class="xref py py-class docutils literal"><span class="pre">jinja2.Markup</span></code></a><a class="headerlink" href="#jinja2-markup" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-note admonition">
 <p class="first admonition-title">Note</p>
 <p class="last">The Jinja2 <a class="reference internal" href="generated/generated/jinja2.Markup.html#jinja2.Markup" title="jinja2.Markup"><code class="xref py py-class docutils literal"><span class="pre">Markup</span></code></a> class is compatible with at least Pylons and
@@ -563,28 +581,28 @@ up the <cite>__html__</cite> concept soon.</p>
 </div>
 </div>
 <div class="section" id="exceptions">
-<h2>2.11. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">1.11. Exceptions</a><a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="jinja2-templateerror">
-<h3>2.11.1. <a class="reference internal" href="generated/jinja2.TemplateError.html#jinja2.TemplateError" title="jinja2.TemplateError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateError</span></code></a><a class="headerlink" href="#jinja2-templateerror" title="Permalink to this headline">¶</a></h3>
+<h3>1.11.1. <a class="reference internal" href="generated/jinja2.TemplateError.html#jinja2.TemplateError" title="jinja2.TemplateError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateError</span></code></a><a class="headerlink" href="#jinja2-templateerror" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-undefinederror">
-<h3>2.11.2. <a class="reference internal" href="generated/jinja2.UndefinedError.html#jinja2.UndefinedError" title="jinja2.UndefinedError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.UndefinedError</span></code></a><a class="headerlink" href="#jinja2-undefinederror" title="Permalink to this headline">¶</a></h3>
+<h3>1.11.2. <a class="reference internal" href="generated/jinja2.UndefinedError.html#jinja2.UndefinedError" title="jinja2.UndefinedError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.UndefinedError</span></code></a><a class="headerlink" href="#jinja2-undefinederror" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-templatenotfound">
-<h3>2.11.3. <a class="reference internal" href="generated/jinja2.TemplateNotFound.html#jinja2.TemplateNotFound" title="jinja2.TemplateNotFound"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateNotFound</span></code></a><a class="headerlink" href="#jinja2-templatenotfound" title="Permalink to this headline">¶</a></h3>
+<h3>1.11.3. <a class="reference internal" href="generated/jinja2.TemplateNotFound.html#jinja2.TemplateNotFound" title="jinja2.TemplateNotFound"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateNotFound</span></code></a><a class="headerlink" href="#jinja2-templatenotfound" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-templatesnotfound">
-<h3>2.11.4. <a class="reference internal" href="generated/jinja2.TemplatesNotFound.html#jinja2.TemplatesNotFound" title="jinja2.TemplatesNotFound"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplatesNotFound</span></code></a><a class="headerlink" href="#jinja2-templatesnotfound" title="Permalink to this headline">¶</a></h3>
+<h3>1.11.4. <a class="reference internal" href="generated/jinja2.TemplatesNotFound.html#jinja2.TemplatesNotFound" title="jinja2.TemplatesNotFound"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplatesNotFound</span></code></a><a class="headerlink" href="#jinja2-templatesnotfound" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-templatesyntaxerror">
-<h3>2.11.5. <a class="reference internal" href="generated/jinja2.TemplateSyntaxError.html#jinja2.TemplateSyntaxError" title="jinja2.TemplateSyntaxError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateSyntaxError</span></code></a><a class="headerlink" href="#jinja2-templatesyntaxerror" title="Permalink to this headline">¶</a></h3>
+<h3>1.11.5. <a class="reference internal" href="generated/jinja2.TemplateSyntaxError.html#jinja2.TemplateSyntaxError" title="jinja2.TemplateSyntaxError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateSyntaxError</span></code></a><a class="headerlink" href="#jinja2-templatesyntaxerror" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="jinja2-templateassertionerror">
-<h3>2.11.6. <a class="reference internal" href="generated/jinja2.TemplateAssertionError.html#jinja2.TemplateAssertionError" title="jinja2.TemplateAssertionError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateAssertionError</span></code></a><a class="headerlink" href="#jinja2-templateassertionerror" title="Permalink to this headline">¶</a></h3>
+<h3>1.11.6. <a class="reference internal" href="generated/jinja2.TemplateAssertionError.html#jinja2.TemplateAssertionError" title="jinja2.TemplateAssertionError"><code class="xref py py-class docutils literal"><span class="pre">jinja2.TemplateAssertionError</span></code></a><a class="headerlink" href="#jinja2-templateassertionerror" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="custom-filters">
-<span id="writing-filters"></span><h2>2.12. Custom Filters<a class="headerlink" href="#custom-filters" title="Permalink to this headline">¶</a></h2>
+<span id="writing-filters"></span><h2><a class="toc-backref" href="#id15">1.12. Custom Filters</a><a class="headerlink" href="#custom-filters" title="Permalink to this headline">¶</a></h2>
 <p>Custom filters are just regular Python functions that take the left side of
 the filter as first argument and the arguments passed to the filter as
 extra arguments or keyword arguments.</p>
@@ -631,7 +649,7 @@ enabled:</p>
 active <code class="xref py py-class docutils literal"><span class="pre">Context</span></code> rather then the environment.</p>
 </div>
 <div class="section" id="evaluation-context">
-<span id="eval-context"></span><h2>2.13. Evaluation Context<a class="headerlink" href="#evaluation-context" title="Permalink to this headline">¶</a></h2>
+<span id="eval-context"></span><h2><a class="toc-backref" href="#id16">1.13. Evaluation Context</a><a class="headerlink" href="#evaluation-context" title="Permalink to this headline">¶</a></h2>
 <p>The evaluation context (short eval context or eval ctx) is a new object
 introduced in Jinja 2.4 that makes it possible to activate and deactivate
 compiled features at runtime.</p>
@@ -674,11 +692,11 @@ must only happen with a <a class="reference internal" href="generated/generated/
 <a class="reference internal" href="generated/generated/jinja2.nodes.ScopedEvalContextModifier.html#jinja2.nodes.ScopedEvalContextModifier" title="jinja2.nodes.ScopedEvalContextModifier"><code class="xref py py-class docutils literal"><span class="pre">nodes.ScopedEvalContextModifier</span></code></a> from an extension, not on the
 eval context object itself.</p>
 <div class="section" id="jinja2-nodes-evalcontext">
-<h3>2.13.1. <a class="reference internal" href="generated/generated/jinja2.nodes.EvalContext.html#jinja2.nodes.EvalContext" title="jinja2.nodes.EvalContext"><code class="xref py py-class docutils literal"><span class="pre">jinja2.nodes.EvalContext</span></code></a><a class="headerlink" href="#jinja2-nodes-evalcontext" title="Permalink to this headline">¶</a></h3>
+<h3>1.13.1. <a class="reference internal" href="generated/generated/jinja2.nodes.EvalContext.html#jinja2.nodes.EvalContext" title="jinja2.nodes.EvalContext"><code class="xref py py-class docutils literal"><span class="pre">jinja2.nodes.EvalContext</span></code></a><a class="headerlink" href="#jinja2-nodes-evalcontext" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="custom-tests">
-<span id="writing-tests"></span><h2>2.14. Custom Tests<a class="headerlink" href="#custom-tests" title="Permalink to this headline">¶</a></h2>
+<span id="writing-tests"></span><h2><a class="toc-backref" href="#id17">1.14. Custom Tests</a><a class="headerlink" href="#custom-tests" title="Permalink to this headline">¶</a></h2>
 <p>Tests work like filters just that there is no way for a test to get access
 to the environment or context and that they can&#8217;t be chained.  The return
 value of a test should be <cite>True</cite> or <cite>False</cite>.  The purpose of a test is to
@@ -711,7 +729,7 @@ checks.</p>
 </div>
 </div>
 <div class="section" id="the-global-namespace">
-<span id="global-namespace"></span><h2>2.15. The Global Namespace<a class="headerlink" href="#the-global-namespace" title="Permalink to this headline">¶</a></h2>
+<span id="global-namespace"></span><h2><a class="toc-backref" href="#id18">1.15. The Global Namespace</a><a class="headerlink" href="#the-global-namespace" title="Permalink to this headline">¶</a></h2>
 <p>Variables stored in the <code class="xref py py-attr docutils literal"><span class="pre">Environment.globals</span></code> dict are special as they
 are available for imported templates too, even if they are imported without
 context.  This is the place where you can put variables and functions
@@ -720,7 +738,7 @@ exist that are variables available to a specific template that are available
 to all <a class="reference internal" href="generated/generated/jinja2.Template.render.html#jinja2.Template.render" title="jinja2.Template.render"><code class="xref py py-meth docutils literal"><span class="pre">render()</span></code></a> calls.</p>
 </div>
 <div class="section" id="low-level-api">
-<span id="id3"></span><h2>2.16. Low Level API<a class="headerlink" href="#low-level-api" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2><a class="toc-backref" href="#id19">1.16. Low Level API</a><a class="headerlink" href="#low-level-api" title="Permalink to this headline">¶</a></h2>
 <p>The low level API exposes functionality that can be useful to understand some
 implementation details, debugging purposes or advanced <a class="reference internal" href="off_doc.extensions.html#jinja-extensions"><span>extension</span></a> techniques.  Unless you know exactly what you are doing we
 don&#8217;t recommend using any of those.</p>
@@ -802,7 +820,7 @@ in later versions that may be returned by <a class="reference internal" href="#j
 </div>
 </div>
 <div class="section" id="the-meta-api">
-<h2>2.17. The Meta API<a class="headerlink" href="#the-meta-api" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">1.17. The Meta API</a><a class="headerlink" href="#the-meta-api" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.2.</span></p>
 </div>
@@ -861,10 +879,10 @@ to rebuild parts of the website after a layout template has changed.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="off_doc.sandbox.html" class="btn btn-neutral float-right" title="3. Sandbox" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off_doc.sandbox.html" class="btn btn-neutral float-right" title="2. Sandbox" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.intro.html" class="btn btn-neutral" title="1. Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.html" class="btn btn-neutral" title="Others from the official doc" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -895,7 +913,7 @@ to rebuild parts of the website after a layout template has changed.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

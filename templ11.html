@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.11. List of Control Structures &mdash; Jinja2 API</title>
+  <title>11. List of Control Structures &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
-        <link rel="next" title="4.12. Import Context Behavior" href="templ12.html"/>
-        <link rel="prev" title="4.10. HTML Escaping" href="templ10.html"/> 
+        <link rel="up" title="Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="12. Import Context Behavior" href="templ12.html"/>
+        <link rel="prev" title="10. HTML Escaping" href="templ10.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,52 +81,43 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">4.11. List of Control Structures</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#for">4.11.1. For</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#if">4.11.2. If</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#macros">4.11.3. Macros</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#call">4.11.4. Call</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filters">4.11.5. Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#assignments">4.11.6. Assignments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#block-assignments">4.11.7. Block Assignments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#extends">4.11.8. Extends</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#blocks">4.11.9. Blocks</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#include">4.11.10. Include</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#import">4.11.11. Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="templ1.html">1. Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ2.html">2. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ3.html">3. Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ4.html">4. Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ5.html">5. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ6.html">6. Whitespace Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ7.html">7. Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ8.html">8. Line Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html">9. Template Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ10.html">10. HTML Escaping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">11. List of Control Structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for">11.1. For</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if">11.2. If</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macros">11.3. Macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#call">11.4. Call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filters">11.5. Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assignments">11.6. Assignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-assignments">11.7. Block Assignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extends">11.8. Extends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blocks">11.9. Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#include">11.10. Include</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import">11.11. Import</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ12.html">12. Import Context Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html">13. Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ14.html">14. List of Builtin Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ15.html">15. List of Builtin Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ16.html">16. List of Global Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html">17. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ18.html">18. Autoescape Extension</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.html">Others from the official doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
@@ -182,11 +169,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.templates.html">Template Designer Documentation</a> &raquo;</li>
         
-          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
-        
-      <li>4.11. List of Control Structures</li>
+      <li>11. List of Control Structures</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -204,13 +189,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="list-of-control-structures">
-<span id="id1"></span><h1>4.11. List of Control Structures<a class="headerlink" href="#list-of-control-structures" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>11. List of Control Structures<a class="headerlink" href="#list-of-control-structures" title="Permalink to this headline">¶</a></h1>
 <p>A control structure refers to all those things that control the flow of a
 program - conditionals (i.e. if/elif/else), for-loops, as well as things like
 macros and blocks.  With the default syntax, control structures appear inside
 <code class="docutils literal"><span class="pre">{%</span> <span class="pre">...</span> <span class="pre">%}</span></code> blocks.</p>
 <div class="section" id="for">
-<span id="for-loop"></span><h2>4.11.1. For<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<span id="for-loop"></span><h2>11.1. For<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
 <p>Loop over each item in a sequence.  For example, to display a list of users
 provided in a variable called <cite>users</cite>:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Members<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -339,7 +324,7 @@ writing <cite>{% set outer_loop = loop %}</cite> after the loop that we want to
 use recursively. Then, we can call it using <cite>{{ outer_loop(...) }}</cite></p>
 </div>
 <div class="section" id="if">
-<span id="id2"></span><h2>4.11.2. If<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>11.2. If<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>if</cite> statement in Jinja is comparable with the Python if statement.
 In the simplest form, you can use it to test if a variable is defined, not
 empty or not false:</p>
@@ -367,7 +352,7 @@ use more complex <a class="reference internal" href="templ13.html#expressions"><
 <a class="reference internal" href="#loop-filtering"><span>loop filtering</span></a>.</p>
 </div>
 <div class="section" id="macros">
-<span id="id3"></span><h2>4.11.3. Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>11.3. Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h2>
 <p>Macros are comparable with functions in regular programming languages.  They
 are useful to put often used idioms into reusable functions to not repeat
 yourself (&#8220;DRY&#8221;).</p>
@@ -420,7 +405,7 @@ be called from a <a class="reference internal" href="#call"><span>call</span></a
 be imported.</p>
 </div>
 <div class="section" id="call">
-<span id="id4"></span><h2>4.11.4. Call<a class="headerlink" href="#call" title="Permalink to this headline">¶</a></h2>
+<span id="id4"></span><h2>11.4. Call<a class="headerlink" href="#call" title="Permalink to this headline">¶</a></h2>
 <p>In some cases it can be useful to pass a macro to another macro.  For this
 purpose, you can use the special <cite>call</cite> block.  The following example shows
 a macro that takes advantage of the call functionality and how it can be
@@ -464,7 +449,7 @@ exactly like a macro without a name.</p>
 </div>
 </div>
 <div class="section" id="filters">
-<h2>4.11.5. Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<h2>11.5. Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
 <p>Filter sections allow you to apply regular Jinja2 filters on a block of
 template data.  Just wrap the code in the special <cite>filter</cite> section:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">filter</span> <span class="nf">upper</span> <span class="cp">%}</span>
@@ -474,7 +459,7 @@ template data.  Just wrap the code in the special <cite>filter</cite> section:</
 </div>
 </div>
 <div class="section" id="assignments">
-<span id="id5"></span><h2>4.11.6. Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>11.6. Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
 <p>Inside code blocks, you can also assign values to variables.  Assignments at
 top level (outside of blocks, macros or loops) are exported from the template
 like top level macros and can be imported by other templates.</p>
@@ -485,7 +470,7 @@ like top level macros and can be imported by other templates.</p>
 </div>
 </div>
 <div class="section" id="block-assignments">
-<h2>4.11.7. Block Assignments<a class="headerlink" href="#block-assignments" title="Permalink to this headline">¶</a></h2>
+<h2>11.7. Block Assignments<a class="headerlink" href="#block-assignments" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.8.</span></p>
 </div>
@@ -504,20 +489,20 @@ everything until <code class="docutils literal"><span class="pre">{%</span> <spa
 <p>The <cite>navigation</cite> variable then contains the navigation HTML source.</p>
 </div>
 <div class="section" id="extends">
-<span id="id6"></span><h2>4.11.8. Extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h2>
+<span id="id6"></span><h2>11.8. Extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>extends</cite> tag can be used to extend one template from another.  You can
 have multiple <cite>extends</cite> tags in a file, but only one of them may be executed at
 a time.</p>
 <p>See the section about <a class="reference internal" href="templ9.html#template-inheritance"><span>Template Inheritance</span></a> above.</p>
 </div>
 <div class="section" id="blocks">
-<span id="id7"></span><h2>4.11.9. Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h2>
+<span id="id7"></span><h2>11.9. Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h2>
 <p>Blocks are used for inheritance and act as both placeholders and replacements
 at the same time.  They are documented in detail in the
 <a class="reference internal" href="templ9.html#template-inheritance"><span>Template Inheritance</span></a> section.</p>
 </div>
 <div class="section" id="include">
-<h2>4.11.10. Include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
+<h2>11.10. Include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>include</cite> statement is useful to include a template and return the
 rendered contents of that file into the current namespace:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">include</span> <span class="s1">&#39;header.html&#39;</span> <span class="cp">%}</span>
@@ -556,7 +541,7 @@ include that object using <cite>include</cite>.</p>
 </div>
 </div>
 <div class="section" id="import">
-<span id="id8"></span><h2>4.11.11. Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<span id="id8"></span><h2>11.11. Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
 <p>Jinja2 supports putting often used code into macros.  These macros can go into
 different templates and get imported from there.  This works similarly to the
 import statements in Python.  It&#8217;s important to know that imports are cached
@@ -617,10 +602,10 @@ import from that object.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="templ12.html" class="btn btn-neutral float-right" title="4.12. Import Context Behavior" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="templ12.html" class="btn btn-neutral float-right" title="12. Import Context Behavior" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="templ10.html" class="btn btn-neutral" title="4.10. HTML Escaping" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="templ10.html" class="btn btn-neutral" title="10. HTML Escaping" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -651,7 +636,7 @@ import from that object.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

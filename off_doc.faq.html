@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10. Frequently Asked Questions &mdash; Jinja2 API</title>
+  <title>7. Frequently Asked Questions &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
+        <link rel="up" title="Others from the official doc" href="off_doc.html"/>
         <link rel="next" title="&lt;no title&gt;" href="api.html"/>
-        <link rel="prev" title="9. Tips and Tricks" href="off_doc.tricks.html"/> 
+        <link rel="prev" title="6. Tips and Tricks" href="off_doc.tricks.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,26 +81,26 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10. Frequently Asked Questions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#why-is-it-called-jinja">10.1. Why is it called Jinja?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-fast-is-it">10.2. How fast is it?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-compatible-is-jinja2-with-django">10.3. How Compatible is Jinja2 with Django?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#isn-t-it-a-terrible-idea-to-put-logic-into-templates">10.4. Isn&#8217;t it a terrible idea to put Logic into Templates?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#why-is-autoescaping-not-the-default">10.5. Why is Autoescaping not the Default?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#why-is-the-context-immutable">10.6. Why is the Context immutable?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#my-tracebacks-look-weird-what-s-happening">10.7. My tracebacks look weird.  What&#8217;s happening?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#why-is-there-no-python-2-3-2-4-2-5-3-1-3-2-support">10.8. Why is there no Python 2.3/2.4/2.5/3.1/3.2 support?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#my-macros-are-overridden-by-something">10.9. My Macros are overridden by something</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Others from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">2. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">3. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">4. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">5. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">6. Tips and Tricks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">7. Frequently Asked Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-it-called-jinja">7.1. Why is it called Jinja?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-fast-is-it">7.2. How fast is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-compatible-is-jinja2-with-django">7.3. How Compatible is Jinja2 with Django?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isn-t-it-a-terrible-idea-to-put-logic-into-templates">7.4. Isn&#8217;t it a terrible idea to put Logic into Templates?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-autoescaping-not-the-default">7.5. Why is Autoescaping not the Default?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-the-context-immutable">7.6. Why is the Context immutable?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-tracebacks-look-weird-what-s-happening">7.7. My tracebacks look weird.  What&#8217;s happening?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-there-no-python-2-3-2-4-2-5-3-1-3-2-support">7.8. Why is there no Python 2.3/2.4/2.5/3.1/3.2 support?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-macros-are-overridden-by-something">7.9. My Macros are overridden by something</a></li>
 </ul>
 </li>
 </ul>
@@ -160,9 +156,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.html">Others from the official doc</a> &raquo;</li>
         
-      <li>10. Frequently Asked Questions</li>
+      <li>7. Frequently Asked Questions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,16 +176,30 @@
            <div itemprop="articleBody">
             
   <div class="section" id="frequently-asked-questions">
-<h1>10. Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<h1>7. Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
 <p>This page answers some of the often asked questions about Jinja.</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#why-is-it-called-jinja" id="id1">Why is it called Jinja?</a></li>
+<li><a class="reference internal" href="#how-fast-is-it" id="id2">How fast is it?</a></li>
+<li><a class="reference internal" href="#how-compatible-is-jinja2-with-django" id="id3">How Compatible is Jinja2 with Django?</a></li>
+<li><a class="reference internal" href="#isn-t-it-a-terrible-idea-to-put-logic-into-templates" id="id4">Isn&#8217;t it a terrible idea to put Logic into Templates?</a></li>
+<li><a class="reference internal" href="#why-is-autoescaping-not-the-default" id="id5">Why is Autoescaping not the Default?</a></li>
+<li><a class="reference internal" href="#why-is-the-context-immutable" id="id6">Why is the Context immutable?</a></li>
+<li><a class="reference internal" href="#my-tracebacks-look-weird-what-s-happening" id="id7">My tracebacks look weird.  What&#8217;s happening?</a></li>
+<li><a class="reference internal" href="#why-is-there-no-python-2-3-2-4-2-5-3-1-3-2-support" id="id8">Why is there no Python 2.3/2.4/2.5/3.1/3.2 support?</a></li>
+<li><a class="reference internal" href="#my-macros-are-overridden-by-something" id="id9">My Macros are overridden by something</a></li>
+</ul>
+</div>
 <div class="section" id="why-is-it-called-jinja">
-<h2>10.1. Why is it called Jinja?<a class="headerlink" href="#why-is-it-called-jinja" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">7.1. Why is it called Jinja?</a><a class="headerlink" href="#why-is-it-called-jinja" title="Permalink to this headline">¶</a></h2>
 <p>The name Jinja was chosen because it&#8217;s the name of a Japanese temple and
 temple and template share a similar pronunciation.  It is not named after
 the city in Uganda.</p>
 </div>
 <div class="section" id="how-fast-is-it">
-<h2>10.2. How fast is it?<a class="headerlink" href="#how-fast-is-it" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">7.2. How fast is it?</a><a class="headerlink" href="#how-fast-is-it" title="Permalink to this headline">¶</a></h2>
 <p>We really hate benchmarks especially since they don&#8217;t reflect much.  The
 performance of a template depends on many factors and you would have to
 benchmark different engines in different situations.  The benchmarks from the
@@ -202,7 +212,7 @@ usual bottleneck in a web application is either the database or the application
 code.</p>
 </div>
 <div class="section" id="how-compatible-is-jinja2-with-django">
-<h2>10.3. How Compatible is Jinja2 with Django?<a class="headerlink" href="#how-compatible-is-jinja2-with-django" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">7.3. How Compatible is Jinja2 with Django?</a><a class="headerlink" href="#how-compatible-is-jinja2-with-django" title="Permalink to this headline">¶</a></h2>
 <p>The default syntax of Jinja2 matches Django syntax in many ways.  However
 this similarity doesn&#8217;t mean that you can use a Django template unmodified
 in Jinja2.  For example filter arguments use a function call syntax rather
@@ -238,7 +248,7 @@ it still isn&#8217;t a good idea.  Queries should go into the view code and not
 the template!</p>
 </div>
 <div class="section" id="isn-t-it-a-terrible-idea-to-put-logic-into-templates">
-<h2>10.4. Isn&#8217;t it a terrible idea to put Logic into Templates?<a class="headerlink" href="#isn-t-it-a-terrible-idea-to-put-logic-into-templates" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">7.4. Isn&#8217;t it a terrible idea to put Logic into Templates?</a><a class="headerlink" href="#isn-t-it-a-terrible-idea-to-put-logic-into-templates" title="Permalink to this headline">¶</a></h2>
 <p>Without a doubt you should try to remove as much logic from templates as
 possible.  But templates without any logic mean that you have to do all
 the processing in the code which is boring and stupid.  A template engine
@@ -255,7 +265,7 @@ and generator expressions are not supported.  This keeps the template engine
 easier to maintain and templates more readable.</p>
 </div>
 <div class="section" id="why-is-autoescaping-not-the-default">
-<h2>10.5. Why is Autoescaping not the Default?<a class="headerlink" href="#why-is-autoescaping-not-the-default" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">7.5. Why is Autoescaping not the Default?</a><a class="headerlink" href="#why-is-autoescaping-not-the-default" title="Permalink to this headline">¶</a></h2>
 <p>There are multiple reasons why automatic escaping is not the default mode
 and also not the recommended one.  While automatic escaping of variables
 means that you will less likely have an XSS problem it also causes a huge
@@ -276,7 +286,7 @@ for HTML/XML generation.  For example you may generate LaTeX, emails,
 CSS, JavaScript, or configuration files.</p>
 </div>
 <div class="section" id="why-is-the-context-immutable">
-<h2>10.6. Why is the Context immutable?<a class="headerlink" href="#why-is-the-context-immutable" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">7.6. Why is the Context immutable?</a><a class="headerlink" href="#why-is-the-context-immutable" title="Permalink to this headline">¶</a></h2>
 <p>When writing a <code class="xref py py-func docutils literal"><span class="pre">contextfunction()</span></code> or something similar you may have
 noticed that the context tries to stop you from modifying it.  If you have
 managed to modify the context by using an internal context API you may
@@ -290,7 +300,7 @@ instead that one can assign to a variable by using set:</p>
 </div>
 </div>
 <div class="section" id="my-tracebacks-look-weird-what-s-happening">
-<h2>10.7. My tracebacks look weird.  What&#8217;s happening?<a class="headerlink" href="#my-tracebacks-look-weird-what-s-happening" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">7.7. My tracebacks look weird.  What&#8217;s happening?</a><a class="headerlink" href="#my-tracebacks-look-weird-what-s-happening" title="Permalink to this headline">¶</a></h2>
 <p>If the debugsupport module is not compiled and you are using a Python
 installation without ctypes (Python 2.4 without ctypes, Jython or Google&#8217;s
 AppEngine) Jinja2 is unable to provide correct debugging information and
@@ -309,7 +319,7 @@ if os.environ.get(&#39;SERVER_SOFTWARE&#39;, &#39;&#39;).startswith(&#39;Dev&#39
 <p>Credit for this snippet goes to <a class="reference external" href="http://stackoverflow.com/questions/3086091/debug-jinja2-in-google-app-engine/3694434#3694434">Thomas Johansson</a></p>
 </div>
 <div class="section" id="why-is-there-no-python-2-3-2-4-2-5-3-1-3-2-support">
-<h2>10.8. Why is there no Python 2.3/2.4/2.5/3.1/3.2 support?<a class="headerlink" href="#why-is-there-no-python-2-3-2-4-2-5-3-1-3-2-support" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">7.8. Why is there no Python 2.3/2.4/2.5/3.1/3.2 support?</a><a class="headerlink" href="#why-is-there-no-python-2-3-2-4-2-5-3-1-3-2-support" title="Permalink to this headline">¶</a></h2>
 <p>Python 2.3 is missing a lot of features that are used heavily in Jinja2.  This
 decision was made as with the upcoming Python 2.6 and 3.0 versions it becomes
 harder to maintain the code for older Python versions.  If you really need
@@ -322,7 +332,7 @@ literals in a way compatible to each other version. If you really need support
 for older Python 2 (or 3) versions, you can just use Jinja2 2.6.</p>
 </div>
 <div class="section" id="my-macros-are-overridden-by-something">
-<h2>10.9. My Macros are overridden by something<a class="headerlink" href="#my-macros-are-overridden-by-something" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">7.9. My Macros are overridden by something</a><a class="headerlink" href="#my-macros-are-overridden-by-something" title="Permalink to this headline">¶</a></h2>
 <p>In some situations the Jinja scoping appears arbitrary:</p>
 <p>layout.tmpl:</p>
 <div class="highlight-jinja"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">macro</span> <span class="nv">foo</span><span class="o">()</span> <span class="cp">%}</span><span class="x">LAYOUT</span><span class="cp">{%</span> <span class="k">endmacro</span> <span class="cp">%}</span><span class="x"></span>
@@ -353,7 +363,7 @@ uncommon prefix.</p>
         <a href="api.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.tricks.html" class="btn btn-neutral" title="9. Tips and Tricks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.tricks.html" class="btn btn-neutral" title="6. Tips and Tricks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -384,7 +394,7 @@ uncommon prefix.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

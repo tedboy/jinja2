@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.13. Expressions &mdash; Jinja2 API</title>
+  <title>13. Expressions &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
-        <link rel="next" title="4.14. List of Builtin Filters" href="templ14.html"/>
-        <link rel="prev" title="4.12. Import Context Behavior" href="templ12.html"/> 
+        <link rel="up" title="Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="14. List of Builtin Filters" href="templ14.html"/>
+        <link rel="prev" title="12. Import Context Behavior" href="templ12.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,47 +81,38 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ2.html">4.2. Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">4.13. Expressions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#literals">4.13.1. Literals</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#math">4.13.2. Math</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#comparisons">4.13.3. Comparisons</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#logic">4.13.4. Logic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-operators">4.13.5. Other Operators</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#if-expression">4.13.6. If Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="templ1.html">1. Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ2.html">2. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ3.html">3. Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ4.html">4. Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ5.html">5. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ6.html">6. Whitespace Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ7.html">7. Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ8.html">8. Line Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html">9. Template Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ10.html">10. HTML Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html">11. List of Control Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ12.html">12. Import Context Behavior</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">13. Expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#literals">13.1. Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#math">13.2. Math</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparisons">13.3. Comparisons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logic">13.4. Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-operators">13.5. Other Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-expression">13.6. If Expression</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ14.html">14. List of Builtin Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ15.html">15. List of Builtin Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ16.html">16. List of Global Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html">17. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ18.html">18. Autoescape Extension</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.html">Others from the official doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
@@ -177,11 +164,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.templates.html">Template Designer Documentation</a> &raquo;</li>
         
-          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
-        
-      <li>4.13. Expressions</li>
+      <li>13. Expressions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -199,12 +184,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="expressions">
-<span id="id1"></span><h1>4.13. Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>13. Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h1>
 <p>Jinja allows basic expressions everywhere.  These work very similarly to
 regular Python; even if you&#8217;re not working with Python
 you should feel comfortable with it.</p>
 <div class="section" id="literals">
-<h2>4.13.1. Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h2>
+<h2>13.1. Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h2>
 <p>The simplest form of expressions are literals.  Literals are representations
 for Python objects such as strings and numbers.  The following literals exist:</p>
 <dl class="docutils">
@@ -256,7 +241,7 @@ you should use the lowercase versions.</p>
 </div>
 </div>
 <div class="section" id="math">
-<h2>4.13.2. Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<h2>13.2. Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <p>Jinja allows you to calculate with values.  This is rarely useful in templates
 but exists for completeness&#8217; sake.  The following operators are supported:</p>
 <dl class="docutils">
@@ -292,7 +277,7 @@ would return <code class="docutils literal"><span class="pre">8</span></code>.</
 </dl>
 </div>
 <div class="section" id="comparisons">
-<h2>4.13.3. Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
+<h2>13.3. Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>==</dt>
 <dd>Compares two objects for equality.</dd>
@@ -313,7 +298,7 @@ would return <code class="docutils literal"><span class="pre">8</span></code>.</
 </dl>
 </div>
 <div class="section" id="logic">
-<h2>4.13.4. Logic<a class="headerlink" href="#logic" title="Permalink to this headline">¶</a></h2>
+<h2>13.4. Logic<a class="headerlink" href="#logic" title="Permalink to this headline">¶</a></h2>
 <p>For <cite>if</cite> statements, <cite>for</cite> filtering, and <cite>if</cite> expressions, it can be useful to
 combine multiple expressions:</p>
 <dl class="docutils">
@@ -335,7 +320,7 @@ and <code class="docutils literal"><span class="pre">not</span> <span class="pre
 </div>
 </div>
 <div class="section" id="other-operators">
-<h2>4.13.5. Other Operators<a class="headerlink" href="#other-operators" title="Permalink to this headline">¶</a></h2>
+<h2>13.5. Other Operators<a class="headerlink" href="#other-operators" title="Permalink to this headline">¶</a></h2>
 <p>The following operators are very useful but don&#8217;t fit into any of the other
 two categories:</p>
 <dl class="docutils">
@@ -364,7 +349,7 @@ can use positional arguments and keyword arguments like in Python:</p>
 </dl>
 </div>
 <div class="section" id="if-expression">
-<span id="id2"></span><h2>4.13.6. If Expression<a class="headerlink" href="#if-expression" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>13.6. If Expression<a class="headerlink" href="#if-expression" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to use inline <cite>if</cite> expressions.  These are useful in some
 situations.  For example, you can use this to extend from one template if a
 variable is defined, otherwise from the default layout template:</p>
@@ -388,10 +373,10 @@ evaluates into an undefined object:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="templ14.html" class="btn btn-neutral float-right" title="4.14. List of Builtin Filters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="templ14.html" class="btn btn-neutral float-right" title="14. List of Builtin Filters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="templ12.html" class="btn btn-neutral" title="4.12. Import Context Behavior" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="templ12.html" class="btn btn-neutral" title="12. Import Context Behavior" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -422,7 +407,7 @@ evaluates into an undefined object:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

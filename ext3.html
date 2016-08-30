@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.3. Expression Statement &mdash; Jinja2 API</title>
+  <title>3. Expression Statement &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="5. Extensions" href="off_doc.extensions.html"/>
-        <link rel="next" title="5.4. Loop Controls" href="ext4.html"/>
-        <link rel="prev" title="5.2. i18n Extension" href="ext2.html"/> 
+        <link rel="up" title="Extensions" href="off_doc.extensions.html"/>
+        <link rel="next" title="4. Loop Controls" href="ext4.html"/>
+        <link rel="prev" title="2. i18n Extension" href="ext2.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,27 +81,18 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ext1.html">5.1. Adding Extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext2.html">5.2. i18n Extension</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">5.3. Expression Statement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext4.html">5.4. Loop Controls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext5.html">5.5. With Statement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ext6.html">5.6. Autoescape Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.extensions.html">Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ext1.html">1. Adding Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext2.html">2. i18n Extension</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">3. Expression Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext4.html">4. Loop Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext5.html">5. With Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext6.html">6. Autoescape Extension</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.html">Others from the official doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
@@ -157,11 +144,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.extensions.html">Extensions</a> &raquo;</li>
         
-          <li><a href="off_doc.extensions.html">5. Extensions</a> &raquo;</li>
-        
-      <li>5.3. Expression Statement</li>
+      <li>3. Expression Statement</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +164,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="expression-statement">
-<h1>5.3. Expression Statement<a class="headerlink" href="#expression-statement" title="Permalink to this headline">¶</a></h1>
+<h1>3. Expression Statement<a class="headerlink" href="#expression-statement" title="Permalink to this headline">¶</a></h1>
 <p><strong>Import name:</strong> <cite>jinja2.ext.do</cite></p>
 <p>The &#8220;do&#8221; aka expression-statement extension adds a simple <cite>do</cite> tag to the
 template engine that works like a variable expression but ignores the
@@ -193,10 +178,10 @@ return value.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ext4.html" class="btn btn-neutral float-right" title="5.4. Loop Controls" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ext4.html" class="btn btn-neutral float-right" title="4. Loop Controls" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ext2.html" class="btn btn-neutral" title="5.2. i18n Extension" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ext2.html" class="btn btn-neutral" title="2. i18n Extension" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -227,7 +212,7 @@ return value.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

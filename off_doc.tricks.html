@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9. Tips and Tricks &mdash; Jinja2 API</title>
+  <title>6. Tips and Tricks &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
-        <link rel="next" title="10. Frequently Asked Questions" href="off_doc.faq.html"/>
-        <link rel="prev" title="8. Switching from other Template Engines" href="off_doc.switching.html"/> 
+        <link rel="up" title="Others from the official doc" href="off_doc.html"/>
+        <link rel="next" title="7. Frequently Asked Questions" href="off_doc.faq.html"/>
+        <link rel="prev" title="5. Switching from other Template Engines" href="off_doc.switching.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,23 +81,23 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9. Tips and Tricks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#null-master-fallback">9.1. Null-Master Fallback</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#alternating-rows">9.2. Alternating Rows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#highlighting-active-menu-items">9.3. Highlighting Active Menu Items</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#accessing-the-parent-loop">9.4. Accessing the parent Loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Others from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">2. Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">3. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">4. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">5. Switching from other Template Engines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">6. Tips and Tricks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#null-master-fallback">6.1. Null-Master Fallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alternating-rows">6.2. Alternating Rows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#highlighting-active-menu-items">6.3. Highlighting Active Menu Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-parent-loop">6.4. Accessing the parent Loop</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">7. Frequently Asked Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
@@ -155,9 +151,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.html">Others from the official doc</a> &raquo;</li>
         
-      <li>9. Tips and Tricks</li>
+      <li>6. Tips and Tricks</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,11 +171,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="tips-and-tricks">
-<h1>9. Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h1>
+<h1>6. Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#null-master-fallback" id="id3">Null-Master Fallback</a></li>
+<li><a class="reference internal" href="#alternating-rows" id="id4">Alternating Rows</a></li>
+<li><a class="reference internal" href="#highlighting-active-menu-items" id="id5">Highlighting Active Menu Items</a></li>
+<li><a class="reference internal" href="#accessing-the-parent-loop" id="id6">Accessing the parent Loop</a></li>
+</ul>
+</div>
 <p>This part of the documentation shows some tips and tricks for Jinja2
 templates.</p>
 <div class="section" id="null-master-fallback">
-<span id="id1"></span><h2>9.1. Null-Master Fallback<a class="headerlink" href="#null-master-fallback" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2><a class="toc-backref" href="#id3">6.1. Null-Master Fallback</a><a class="headerlink" href="#null-master-fallback" title="Permalink to this headline">¶</a></h2>
 <p>Jinja2 supports dynamic inheritance and does not distinguish between parent
 and child template as long as no <cite>extends</cite> tag is visited.  While this leads
 to the surprising behavior that everything before the first <cite>extends</cite> tag
@@ -202,7 +207,7 @@ basic skeleton is added to the file so that if it&#8217;s indeed rendered with
 </div>
 </div>
 <div class="section" id="alternating-rows">
-<h2>9.2. Alternating Rows<a class="headerlink" href="#alternating-rows" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">6.2. Alternating Rows</a><a class="headerlink" href="#alternating-rows" title="Permalink to this headline">¶</a></h2>
 <p>If you want to have different styles for each row of a table or
 list you can use the <cite>cycle</cite> method on the <cite>loop</cite> object:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -216,7 +221,7 @@ list you can use the <cite>cycle</cite> method on the <cite>loop</cite> object:<
 tag is encountered the next item from the list is rendered.</p>
 </div>
 <div class="section" id="highlighting-active-menu-items">
-<h2>9.3. Highlighting Active Menu Items<a class="headerlink" href="#highlighting-active-menu-items" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">6.3. Highlighting Active Menu Items</a><a class="headerlink" href="#highlighting-active-menu-items" title="Permalink to this headline">¶</a></h2>
 <p>Often you want to have a navigation bar with an active navigation
 item.  This is really simple to achieve.  Because assignments outside
 of <cite>block</cite>s in child templates are global and executed before the layout
@@ -246,7 +251,7 @@ sense to define a default for that variable:</p>
 </div>
 </div>
 <div class="section" id="accessing-the-parent-loop">
-<span id="id2"></span><h2>9.4. Accessing the parent Loop<a class="headerlink" href="#accessing-the-parent-loop" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id6">6.4. Accessing the parent Loop</a><a class="headerlink" href="#accessing-the-parent-loop" title="Permalink to this headline">¶</a></h2>
 <p>The special <cite>loop</cite> variable always points to the innermost loop.  If it&#8217;s
 desired to have access to an outer loop it&#8217;s possible to alias it:</p>
 <div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
@@ -271,10 +276,10 @@ desired to have access to an outer loop it&#8217;s possible to alias it:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="off_doc.faq.html" class="btn btn-neutral float-right" title="10. Frequently Asked Questions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off_doc.faq.html" class="btn btn-neutral float-right" title="7. Frequently Asked Questions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.switching.html" class="btn btn-neutral" title="8. Switching from other Template Engines" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.switching.html" class="btn btn-neutral" title="5. Switching from other Template Engines" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -305,7 +310,7 @@ desired to have access to an outer loop it&#8217;s possible to alias it:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

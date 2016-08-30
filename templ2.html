@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.2. Variables &mdash; Jinja2 API</title>
+  <title>2. Variables &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
-        <link rel="next" title="4.3. Filters" href="templ3.html"/>
-        <link rel="prev" title="4.1. Synopsis" href="templ1.html"/> 
+        <link rel="up" title="Template Designer Documentation" href="off_doc.templates.html"/>
+        <link rel="next" title="3. Filters" href="templ3.html"/>
+        <link rel="prev" title="1. Synopsis" href="templ1.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,39 +81,30 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.sandbox.html">3. Sandbox</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="templ1.html">4.1. Synopsis</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">4.2. Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ3.html">4.3. Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ4.html">4.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ5.html">4.5. Comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ6.html">4.6. Whitespace Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ7.html">4.7. Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ8.html">4.8. Line Statements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ9.html">4.9. Template Inheritance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ10.html">4.10. HTML Escaping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ11.html">4.11. List of Control Structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ12.html">4.12. Import Context Behavior</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ13.html">4.13. Expressions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ14.html">4.14. List of Builtin Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ15.html">4.15. List of Builtin Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ16.html">4.16. List of Global Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ17.html">4.17. Extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templ18.html">4.18. Autoescape Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="templ1.html">1. Synopsis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ3.html">3. Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ4.html">4. Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ5.html">5. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ6.html">6. Whitespace Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ7.html">7. Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ8.html">8. Line Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ9.html">9. Template Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ10.html">10. HTML Escaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ11.html">11. List of Control Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ12.html">12. Import Context Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ13.html">13. Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ14.html">14. List of Builtin Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ15.html">15. List of Builtin Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ16.html">16. List of Global Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ17.html">17. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templ18.html">18. Autoescape Extension</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.html">Others from the official doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.sandbox.html">jinja2.sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.exceptions.html">jinja2.exceptions</a></li>
@@ -169,11 +156,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.templates.html">Template Designer Documentation</a> &raquo;</li>
         
-          <li><a href="off_doc.templates.html">4. Template Designer Documentation</a> &raquo;</li>
-        
-      <li>4.2. Variables</li>
+      <li>2. Variables</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,7 +176,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="variables">
-<span id="id1"></span><h1>4.2. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>2. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
 <p>Template variables are defined by the context dictionary passed to the
 template.</p>
 <p>You can mess around with the variables in templates provided they are passed in
@@ -243,10 +228,10 @@ name.  Additionally, the <a class="reference internal" href="templ14.html#attr" 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="templ3.html" class="btn btn-neutral float-right" title="4.3. Filters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="templ3.html" class="btn btn-neutral float-right" title="3. Filters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="templ1.html" class="btn btn-neutral" title="4.1. Synopsis" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="templ1.html" class="btn btn-neutral" title="1. Synopsis" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -277,7 +262,7 @@ name.  Additionally, the <a class="reference internal" href="templ14.html#attr" 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

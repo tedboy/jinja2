@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Sandbox &mdash; Jinja2 API</title>
+  <title>2. Sandbox &mdash; Jinja2 API</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="Jinja2 API" href="index.html"/>
-        <link rel="up" title="Stuffs from the official doc" href="off_doc.html"/>
-        <link rel="next" title="4. Template Designer Documentation" href="off_doc.templates.html"/>
-        <link rel="prev" title="2. API" href="off_doc.api.html"/> 
+        <link rel="up" title="Others from the official doc" href="off_doc.html"/>
+        <link rel="next" title="3. Writing Extensions" href="off_doc.extensions.writing.html"/>
+        <link rel="prev" title="1. API" href="off_doc.api.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -61,10 +61,6 @@
           
             
             
-              <div class="version">
-                1
-              </div>
-            
           
 
           
@@ -85,29 +81,29 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Stuffs from the official doc</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="off_doc.intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">2. API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3. Sandbox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#api">3.1. API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sandboxedenvironment">3.1.1. <code class="docutils literal"><span class="pre">SandboxedEnvironment</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#immutablesandboxedenvironment">3.1.2. <code class="docutils literal"><span class="pre">ImmutableSandboxedEnvironment</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#securityerror">3.1.3. <code class="docutils literal"><span class="pre">SecurityError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#unsafe">3.1.4. <code class="docutils literal"><span class="pre">unsafe()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#is-internal-attribute">3.1.5. <code class="docutils literal"><span class="pre">is_internal_attribute()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#modifies-known-mutable">3.1.6. <code class="docutils literal"><span class="pre">modifies_known_mutable()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.templates.html">Template Designer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="off_doc.extensions.html">Extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="off_doc.html">Others from the official doc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="off_doc.api.html">1. API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2. Sandbox</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api">2.1. API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sandboxedenvironment">2.1.1. <code class="docutils literal"><span class="pre">SandboxedEnvironment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#immutablesandboxedenvironment">2.1.2. <code class="docutils literal"><span class="pre">ImmutableSandboxedEnvironment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#securityerror">2.1.3. <code class="docutils literal"><span class="pre">SecurityError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unsafe">2.1.4. <code class="docutils literal"><span class="pre">unsafe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#is-internal-attribute">2.1.5. <code class="docutils literal"><span class="pre">is_internal_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifies-known-mutable">2.1.6. <code class="docutils literal"><span class="pre">modifies_known_mutable()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#operator-intercepting">3.2. Operator Intercepting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operator-intercepting">2.2. Operator Intercepting</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.templates.html">4. Template Designer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.html">5. Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">6. Writing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">7. Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">8. Switching from other Template Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">9. Tips and Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">10. Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.extensions.writing.html">3. Writing Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.integration.html">4. Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.switching.html">5. Switching from other Template Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.tricks.html">6. Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_doc.faq.html">7. Frequently Asked Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="generated/jinja2.html">jinja2</a></li>
@@ -161,9 +157,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="off_doc.html">Stuffs from the official doc</a> &raquo;</li>
+          <li><a href="off_doc.html">Others from the official doc</a> &raquo;</li>
         
-      <li>3. Sandbox</li>
+      <li>2. Sandbox</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,9 +176,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-jinja2.sandbox">
-<span id="sandbox"></span><h1>3. Sandbox<a class="headerlink" href="#module-jinja2.sandbox" title="Permalink to this headline">¶</a></h1>
-<p>The Jinja2 sandbox can be used to evaluate untrusted code.  Access to unsafe
+  <div class="section" id="sandbox">
+<h1>2. Sandbox<a class="headerlink" href="#sandbox" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#api" id="id1">API</a><ul>
+<li><a class="reference internal" href="#sandboxedenvironment" id="id2"><a class="reference internal" href="generated/generated/jinja2.sandbox.SandboxedEnvironment.html#jinja2.sandbox.SandboxedEnvironment" title="jinja2.sandbox.SandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">SandboxedEnvironment</span></code></a></a></li>
+<li><a class="reference internal" href="#immutablesandboxedenvironment" id="id3"><a class="reference internal" href="generated/generated/jinja2.sandbox.ImmutableSandboxedEnvironment.html#jinja2.sandbox.ImmutableSandboxedEnvironment" title="jinja2.sandbox.ImmutableSandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">ImmutableSandboxedEnvironment</span></code></a></a></li>
+<li><a class="reference internal" href="#securityerror" id="id4"><a class="reference internal" href="generated/jinja2.sandbox.SecurityError.html#jinja2.sandbox.SecurityError" title="jinja2.sandbox.SecurityError"><code class="xref py py-class docutils literal"><span class="pre">SecurityError</span></code></a></a></li>
+<li><a class="reference internal" href="#unsafe" id="id5"><a class="reference internal" href="generated/jinja2.sandbox.unsafe.html#jinja2.sandbox.unsafe" title="jinja2.sandbox.unsafe"><code class="xref py py-func docutils literal"><span class="pre">unsafe()</span></code></a></a></li>
+<li><a class="reference internal" href="#is-internal-attribute" id="id6"><a class="reference internal" href="generated/jinja2.sandbox.is_internal_attribute.html#jinja2.sandbox.is_internal_attribute" title="jinja2.sandbox.is_internal_attribute"><code class="xref py py-func docutils literal"><span class="pre">is_internal_attribute()</span></code></a></a></li>
+<li><a class="reference internal" href="#modifies-known-mutable" id="id7"><a class="reference internal" href="generated/jinja2.sandbox.modifies_known_mutable.html#jinja2.sandbox.modifies_known_mutable" title="jinja2.sandbox.modifies_known_mutable"><code class="xref py py-func docutils literal"><span class="pre">modifies_known_mutable()</span></code></a></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operator-intercepting" id="id8">Operator Intercepting</a></li>
+</ul>
+</div>
+<span class="target" id="module-jinja2.sandbox"></span><p>The Jinja2 sandbox can be used to evaluate untrusted code.  Access to unsafe
 attributes and methods is prohibited.</p>
 <p>Assuming <cite>env</cite> is a <a class="reference internal" href="generated/generated/jinja2.sandbox.SandboxedEnvironment.html#jinja2.sandbox.SandboxedEnvironment" title="jinja2.sandbox.SandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">SandboxedEnvironment</span></code></a> in the default configuration
 the following piece of code shows how it works:</p>
@@ -195,24 +206,24 @@ the following piece of code shows how it works:</p>
 </pre></div>
 </div>
 <div class="section" id="api">
-<h2>3.1. API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">2.1. API</a><a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sandboxedenvironment">
-<h3>3.1.1. <a class="reference internal" href="generated/generated/jinja2.sandbox.SandboxedEnvironment.html#jinja2.sandbox.SandboxedEnvironment" title="jinja2.sandbox.SandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">SandboxedEnvironment</span></code></a><a class="headerlink" href="#sandboxedenvironment" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">2.1.1. <a class="reference internal" href="generated/generated/jinja2.sandbox.SandboxedEnvironment.html#jinja2.sandbox.SandboxedEnvironment" title="jinja2.sandbox.SandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">SandboxedEnvironment</span></code></a></a><a class="headerlink" href="#sandboxedenvironment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="immutablesandboxedenvironment">
-<h3>3.1.2. <a class="reference internal" href="generated/generated/jinja2.sandbox.ImmutableSandboxedEnvironment.html#jinja2.sandbox.ImmutableSandboxedEnvironment" title="jinja2.sandbox.ImmutableSandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">ImmutableSandboxedEnvironment</span></code></a><a class="headerlink" href="#immutablesandboxedenvironment" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">2.1.2. <a class="reference internal" href="generated/generated/jinja2.sandbox.ImmutableSandboxedEnvironment.html#jinja2.sandbox.ImmutableSandboxedEnvironment" title="jinja2.sandbox.ImmutableSandboxedEnvironment"><code class="xref py py-class docutils literal"><span class="pre">ImmutableSandboxedEnvironment</span></code></a></a><a class="headerlink" href="#immutablesandboxedenvironment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="securityerror">
-<h3>3.1.3. <a class="reference internal" href="generated/jinja2.sandbox.SecurityError.html#jinja2.sandbox.SecurityError" title="jinja2.sandbox.SecurityError"><code class="xref py py-class docutils literal"><span class="pre">SecurityError</span></code></a><a class="headerlink" href="#securityerror" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">2.1.3. <a class="reference internal" href="generated/jinja2.sandbox.SecurityError.html#jinja2.sandbox.SecurityError" title="jinja2.sandbox.SecurityError"><code class="xref py py-class docutils literal"><span class="pre">SecurityError</span></code></a></a><a class="headerlink" href="#securityerror" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="unsafe">
-<h3>3.1.4. <a class="reference internal" href="generated/jinja2.sandbox.unsafe.html#jinja2.sandbox.unsafe" title="jinja2.sandbox.unsafe"><code class="xref py py-func docutils literal"><span class="pre">unsafe()</span></code></a><a class="headerlink" href="#unsafe" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">2.1.4. <a class="reference internal" href="generated/jinja2.sandbox.unsafe.html#jinja2.sandbox.unsafe" title="jinja2.sandbox.unsafe"><code class="xref py py-func docutils literal"><span class="pre">unsafe()</span></code></a></a><a class="headerlink" href="#unsafe" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="is-internal-attribute">
-<h3>3.1.5. <a class="reference internal" href="generated/jinja2.sandbox.is_internal_attribute.html#jinja2.sandbox.is_internal_attribute" title="jinja2.sandbox.is_internal_attribute"><code class="xref py py-func docutils literal"><span class="pre">is_internal_attribute()</span></code></a><a class="headerlink" href="#is-internal-attribute" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">2.1.5. <a class="reference internal" href="generated/jinja2.sandbox.is_internal_attribute.html#jinja2.sandbox.is_internal_attribute" title="jinja2.sandbox.is_internal_attribute"><code class="xref py py-func docutils literal"><span class="pre">is_internal_attribute()</span></code></a></a><a class="headerlink" href="#is-internal-attribute" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="modifies-known-mutable">
-<h3>3.1.6. <a class="reference internal" href="generated/jinja2.sandbox.modifies_known_mutable.html#jinja2.sandbox.modifies_known_mutable" title="jinja2.sandbox.modifies_known_mutable"><code class="xref py py-func docutils literal"><span class="pre">modifies_known_mutable()</span></code></a><a class="headerlink" href="#modifies-known-mutable" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">2.1.6. <a class="reference internal" href="generated/jinja2.sandbox.modifies_known_mutable.html#jinja2.sandbox.modifies_known_mutable" title="jinja2.sandbox.modifies_known_mutable"><code class="xref py py-func docutils literal"><span class="pre">modifies_known_mutable()</span></code></a></a><a class="headerlink" href="#modifies-known-mutable" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>The Jinja2 sandbox alone is no solution for perfect security.  Especially
@@ -229,7 +240,7 @@ so make sure to catch them.</p>
 </div>
 </div>
 <div class="section" id="operator-intercepting">
-<h2>3.2. Operator Intercepting<a class="headerlink" href="#operator-intercepting" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">2.2. Operator Intercepting</a><a class="headerlink" href="#operator-intercepting" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.6.</span></p>
 </div>
@@ -278,10 +289,10 @@ evaluate expressions.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="off_doc.templates.html" class="btn btn-neutral float-right" title="4. Template Designer Documentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off_doc.extensions.writing.html" class="btn btn-neutral float-right" title="3. Writing Extensions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="off_doc.api.html" class="btn btn-neutral" title="2. API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="off_doc.api.html" class="btn btn-neutral" title="1. API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -312,7 +323,7 @@ evaluate expressions.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
