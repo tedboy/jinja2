@@ -1,5 +1,5 @@
-jinja2.sandbox.MutableSequence
-==============================
+:class:`jinja2.sandbox.MutableSequence`
+=======================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: MutableSequence
    :undoc-members:

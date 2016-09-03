@@ -1,5 +1,5 @@
-jinja2.nodes.MarkSafe
-=====================
+:class:`jinja2.nodes.MarkSafe`
+==============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: MarkSafe
    :undoc-members:

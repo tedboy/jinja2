@@ -1,5 +1,5 @@
-jinja2.ext.autoescape
-=====================
+:class:`jinja2.ext.autoescape`
+==============================
 .. currentmodule:: jinja2.ext
 .. autoclass:: autoescape
    :undoc-members:

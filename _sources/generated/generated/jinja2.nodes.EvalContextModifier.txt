@@ -1,5 +1,5 @@
-jinja2.nodes.EvalContextModifier
-================================
+:class:`jinja2.nodes.EvalContextModifier`
+=========================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: EvalContextModifier
    :undoc-members:

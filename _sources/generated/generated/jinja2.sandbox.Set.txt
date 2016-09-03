@@ -1,5 +1,5 @@
-jinja2.sandbox.Set
-==================
+:class:`jinja2.sandbox.Set`
+===========================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: Set
    :undoc-members:

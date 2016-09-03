@@ -1,5 +1,5 @@
-jinja2.sandbox.UserList
-=======================
+:class:`jinja2.sandbox.UserList`
+================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: UserList
    :undoc-members:

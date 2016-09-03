@@ -1,5 +1,5 @@
-jinja2.lexer.Token
-==================
+:class:`jinja2.lexer.Token`
+===========================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: Token
    :undoc-members:

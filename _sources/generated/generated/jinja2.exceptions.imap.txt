@@ -1,5 +1,5 @@
-jinja2.exceptions.imap
-======================
+:class:`jinja2.exceptions.imap`
+===============================
 .. currentmodule:: jinja2.exceptions
 .. autoclass:: imap
    :undoc-members:

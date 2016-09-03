@@ -1,5 +1,5 @@
-jinja2.lexer.itemgetter
-=======================
+:class:`jinja2.lexer.itemgetter`
+================================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: itemgetter
    :undoc-members:

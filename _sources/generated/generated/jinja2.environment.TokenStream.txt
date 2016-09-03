@@ -1,5 +1,5 @@
-jinja2.environment.TokenStream
-==============================
+:class:`jinja2.environment.TokenStream`
+=======================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: TokenStream
    :undoc-members:

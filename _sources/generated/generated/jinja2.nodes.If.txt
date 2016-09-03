@@ -1,5 +1,5 @@
-jinja2.nodes.If
-===============
+:class:`jinja2.nodes.If`
+========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: If
    :undoc-members:

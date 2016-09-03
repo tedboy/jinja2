@@ -1,5 +1,5 @@
-jinja2.nodes.Test
-=================
+:class:`jinja2.nodes.Test`
+==========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Test
    :undoc-members:

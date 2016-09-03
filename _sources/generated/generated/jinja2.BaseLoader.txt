@@ -1,5 +1,5 @@
-jinja2.BaseLoader
-=================
+:class:`jinja2.BaseLoader`
+==========================
 .. currentmodule:: jinja2
 .. autoclass:: BaseLoader
    :undoc-members:

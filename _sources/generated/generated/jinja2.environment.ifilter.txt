@@ -1,5 +1,5 @@
-jinja2.environment.ifilter
-==========================
+:class:`jinja2.environment.ifilter`
+===================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: ifilter
    :undoc-members:

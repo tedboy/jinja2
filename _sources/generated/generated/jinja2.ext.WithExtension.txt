@@ -1,5 +1,5 @@
-jinja2.ext.WithExtension
-========================
+:class:`jinja2.ext.WithExtension`
+=================================
 .. currentmodule:: jinja2.ext
 .. autoclass:: WithExtension
    :undoc-members:

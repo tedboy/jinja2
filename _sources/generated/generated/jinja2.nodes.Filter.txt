@@ -1,5 +1,5 @@
-jinja2.nodes.Filter
-===================
+:class:`jinja2.nodes.Filter`
+============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Filter
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.runtime.LoopContext
-==========================
+:class:`jinja2.runtime.LoopContext`
+===================================
 .. currentmodule:: jinja2.runtime
 .. autoclass:: LoopContext
    :undoc-members:

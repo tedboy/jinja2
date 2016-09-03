@@ -1,5 +1,5 @@
-jinja2.nodes.TemplateData
-=========================
+:class:`jinja2.nodes.TemplateData`
+==================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: TemplateData
    :undoc-members:

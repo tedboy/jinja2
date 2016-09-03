@@ -1,5 +1,5 @@
-jinja2.nodes.Helper
-===================
+:class:`jinja2.nodes.Helper`
+============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Helper
    :undoc-members:

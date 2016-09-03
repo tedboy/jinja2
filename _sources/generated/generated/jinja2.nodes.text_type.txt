@@ -1,5 +1,5 @@
-jinja2.nodes.text_type
-======================
+:class:`jinja2.nodes.text_type`
+===============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: text_type
    :undoc-members:

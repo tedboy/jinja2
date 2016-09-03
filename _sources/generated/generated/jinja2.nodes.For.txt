@@ -1,5 +1,5 @@
-jinja2.nodes.For
-================
+:class:`jinja2.nodes.For`
+=========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: For
    :undoc-members:

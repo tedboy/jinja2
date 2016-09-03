@@ -1,5 +1,5 @@
-jinja2.runtime.EvalContext
-==========================
+:class:`jinja2.runtime.EvalContext`
+===================================
 .. currentmodule:: jinja2.runtime
 .. autoclass:: EvalContext
    :undoc-members:

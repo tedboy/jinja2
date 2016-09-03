@@ -1,5 +1,5 @@
-jinja2.runtime.Markup
-=====================
+:class:`jinja2.runtime.Markup`
+==============================
 .. currentmodule:: jinja2.runtime
 .. autoclass:: Markup
    :undoc-members:

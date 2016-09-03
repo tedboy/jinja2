@@ -1,5 +1,5 @@
-jinja2.nodes.Tuple
-==================
+:class:`jinja2.nodes.Tuple`
+===========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Tuple
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.sandbox.MutableMapping
-=============================
+:class:`jinja2.sandbox.MutableMapping`
+======================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: MutableMapping
    :undoc-members:

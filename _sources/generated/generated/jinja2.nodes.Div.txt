@@ -1,5 +1,5 @@
-jinja2.nodes.Div
-================
+:class:`jinja2.nodes.Div`
+=========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Div
    :undoc-members:

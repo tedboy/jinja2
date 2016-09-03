@@ -1,5 +1,5 @@
-jinja2.nodes.UnaryExpr
-======================
+:class:`jinja2.nodes.UnaryExpr`
+===============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: UnaryExpr
    :undoc-members:

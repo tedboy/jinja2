@@ -1,5 +1,5 @@
-jinja2.ext.with_
-================
+:class:`jinja2.ext.with_`
+=========================
 .. currentmodule:: jinja2.ext
 .. autoclass:: with_
    :undoc-members:

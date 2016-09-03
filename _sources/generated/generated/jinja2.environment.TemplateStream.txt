@@ -1,5 +1,5 @@
-jinja2.environment.TemplateStream
-=================================
+:class:`jinja2.environment.TemplateStream`
+==========================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: TemplateStream
    :undoc-members:

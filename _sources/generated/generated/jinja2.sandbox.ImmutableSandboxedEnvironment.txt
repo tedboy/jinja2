@@ -1,5 +1,5 @@
-jinja2.sandbox.ImmutableSandboxedEnvironment
-============================================
+:class:`jinja2.sandbox.ImmutableSandboxedEnvironment`
+=====================================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: ImmutableSandboxedEnvironment
    :undoc-members:

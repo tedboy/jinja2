@@ -1,5 +1,5 @@
-jinja2.MemcachedBytecodeCache
-=============================
+:class:`jinja2.MemcachedBytecodeCache`
+======================================
 .. currentmodule:: jinja2
 .. autoclass:: MemcachedBytecodeCache
    :undoc-members:

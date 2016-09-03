@@ -1,5 +1,5 @@
-jinja2.sandbox.deque
-====================
+:class:`jinja2.sandbox.deque`
+=============================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: deque
    :undoc-members:

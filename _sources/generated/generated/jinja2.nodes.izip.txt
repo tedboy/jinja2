@@ -1,5 +1,5 @@
-jinja2.nodes.izip
-=================
+:class:`jinja2.nodes.izip`
+==========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: izip
    :undoc-members:

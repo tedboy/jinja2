@@ -1,5 +1,5 @@
-jinja2.ext.Extension
-====================
+:class:`jinja2.ext.Extension`
+=============================
 .. currentmodule:: jinja2.ext
 .. autoclass:: Extension
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.Scope
-==================
+:class:`jinja2.nodes.Scope`
+===========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Scope
    :undoc-members:

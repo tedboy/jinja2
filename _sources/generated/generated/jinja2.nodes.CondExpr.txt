@@ -1,5 +1,5 @@
-jinja2.nodes.CondExpr
-=====================
+:class:`jinja2.nodes.CondExpr`
+==============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: CondExpr
    :undoc-members:

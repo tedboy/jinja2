@@ -1,5 +1,5 @@
-jinja2.DebugUndefined
-=====================
+:class:`jinja2.DebugUndefined`
+==============================
 .. currentmodule:: jinja2
 .. autoclass:: DebugUndefined
    :undoc-members:

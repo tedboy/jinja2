@@ -1,5 +1,5 @@
-jinja2.ChoiceLoader
-===================
+:class:`jinja2.ChoiceLoader`
+============================
 .. currentmodule:: jinja2
 .. autoclass:: ChoiceLoader
    :undoc-members:

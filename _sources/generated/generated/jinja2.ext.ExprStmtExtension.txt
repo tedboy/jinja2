@@ -1,5 +1,5 @@
-jinja2.ext.ExprStmtExtension
-============================
+:class:`jinja2.ext.ExprStmtExtension`
+=====================================
 .. currentmodule:: jinja2.ext
 .. autoclass:: ExprStmtExtension
    :undoc-members:

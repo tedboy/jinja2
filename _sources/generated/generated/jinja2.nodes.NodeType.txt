@@ -1,5 +1,5 @@
-jinja2.nodes.NodeType
-=====================
+:class:`jinja2.nodes.NodeType`
+==============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: NodeType
    :undoc-members:

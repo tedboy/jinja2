@@ -1,5 +1,5 @@
-jinja2.nodes.Block
-==================
+:class:`jinja2.nodes.Block`
+===========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Block
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.Pair
-=================
+:class:`jinja2.nodes.Pair`
+==========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Pair
    :undoc-members:

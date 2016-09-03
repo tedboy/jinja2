@@ -1,5 +1,5 @@
-jinja2.runtime.Mapping
-======================
+:class:`jinja2.runtime.Mapping`
+===============================
 .. currentmodule:: jinja2.runtime
 .. autoclass:: Mapping
    :undoc-members:

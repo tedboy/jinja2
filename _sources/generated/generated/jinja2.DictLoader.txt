@@ -1,5 +1,5 @@
-jinja2.DictLoader
-=================
+:class:`jinja2.DictLoader`
+==========================
 .. currentmodule:: jinja2
 .. autoclass:: DictLoader
    :undoc-members:

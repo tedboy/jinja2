@@ -1,5 +1,5 @@
-jinja2.nodes.Call
-=================
+:class:`jinja2.nodes.Call`
+==========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Call
    :undoc-members:

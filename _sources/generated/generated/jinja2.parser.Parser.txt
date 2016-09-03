@@ -1,5 +1,5 @@
-jinja2.parser.Parser
-====================
+:class:`jinja2.parser.Parser`
+=============================
 .. currentmodule:: jinja2.parser
 .. autoclass:: Parser
    :undoc-members:

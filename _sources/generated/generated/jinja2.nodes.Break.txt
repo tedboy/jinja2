@@ -1,5 +1,5 @@
-jinja2.nodes.Break
-==================
+:class:`jinja2.nodes.Break`
+===========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Break
    :undoc-members:

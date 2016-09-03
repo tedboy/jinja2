@@ -1,5 +1,5 @@
-jinja2.nodes.CallBlock
-======================
+:class:`jinja2.nodes.CallBlock`
+===============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: CallBlock
    :undoc-members:

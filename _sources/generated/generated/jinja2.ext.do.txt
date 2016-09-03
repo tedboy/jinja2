@@ -1,5 +1,5 @@
-jinja2.ext.do
-=============
+:class:`jinja2.ext.do`
+======================
 .. currentmodule:: jinja2.ext
 .. autoclass:: do
    :undoc-members:

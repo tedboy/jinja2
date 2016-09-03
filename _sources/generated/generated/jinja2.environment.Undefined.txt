@@ -1,5 +1,5 @@
-jinja2.environment.Undefined
-============================
+:class:`jinja2.environment.Undefined`
+=====================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: Undefined
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.InternalName
-=========================
+:class:`jinja2.nodes.InternalName`
+==================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: InternalName
    :undoc-members:

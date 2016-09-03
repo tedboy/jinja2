@@ -1,5 +1,5 @@
-jinja2.environment.imap
-=======================
+:class:`jinja2.environment.imap`
+================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: imap
    :undoc-members:

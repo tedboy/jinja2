@@ -1,5 +1,5 @@
-jinja2.nodes.ExprStmt
-=====================
+:class:`jinja2.nodes.ExprStmt`
+==============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: ExprStmt
    :undoc-members:

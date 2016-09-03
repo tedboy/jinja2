@@ -1,5 +1,5 @@
-jinja2.nodes.Slice
-==================
+:class:`jinja2.nodes.Slice`
+===========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Slice
    :undoc-members:

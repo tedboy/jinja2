@@ -1,5 +1,5 @@
-jinja2.nodes.Or
-===============
+:class:`jinja2.nodes.Or`
+========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Or
    :undoc-members:

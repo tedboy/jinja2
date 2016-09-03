@@ -1,5 +1,5 @@
-jinja2.nodes.Getattr
-====================
+:class:`jinja2.nodes.Getattr`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Getattr
    :undoc-members:

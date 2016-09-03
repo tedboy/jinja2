@@ -1,5 +1,5 @@
-jinja2.Template
-===============
+:class:`jinja2.Template`
+========================
 .. currentmodule:: jinja2
 .. autoclass:: Template
    :undoc-members:

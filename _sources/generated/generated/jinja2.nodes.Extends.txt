@@ -1,5 +1,5 @@
-jinja2.nodes.Extends
-====================
+:class:`jinja2.nodes.Extends`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Extends
    :undoc-members:

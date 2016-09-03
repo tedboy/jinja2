@@ -1,5 +1,5 @@
-jinja2.lexer.TokenStreamIterator
-================================
+:class:`jinja2.lexer.TokenStreamIterator`
+=========================================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: TokenStreamIterator
    :undoc-members:

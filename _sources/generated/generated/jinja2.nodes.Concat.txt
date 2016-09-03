@@ -1,5 +1,5 @@
-jinja2.nodes.Concat
-===================
+:class:`jinja2.nodes.Concat`
+============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Concat
    :undoc-members:

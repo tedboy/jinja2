@@ -1,5 +1,5 @@
-jinja2.nodes.Name
-=================
+:class:`jinja2.nodes.Name`
+==========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Name
    :undoc-members:

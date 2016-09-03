@@ -1,5 +1,5 @@
-jinja2.sandbox.MutableSet
-=========================
+:class:`jinja2.sandbox.MutableSet`
+==================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: MutableSet
    :undoc-members:

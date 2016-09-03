@@ -1,5 +1,5 @@
-jinja2.nodes.Getitem
-====================
+:class:`jinja2.nodes.Getitem`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Getitem
    :undoc-members:

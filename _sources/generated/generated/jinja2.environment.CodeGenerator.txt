@@ -1,5 +1,5 @@
-jinja2.environment.CodeGenerator
-================================
+:class:`jinja2.environment.CodeGenerator`
+=========================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: CodeGenerator
    :undoc-members:

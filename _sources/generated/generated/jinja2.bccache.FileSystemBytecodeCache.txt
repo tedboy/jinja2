@@ -1,5 +1,5 @@
-jinja2.bccache.FileSystemBytecodeCache
-======================================
+:class:`jinja2.bccache.FileSystemBytecodeCache`
+===============================================
 .. currentmodule:: jinja2.bccache
 .. autoclass:: FileSystemBytecodeCache
    :undoc-members:

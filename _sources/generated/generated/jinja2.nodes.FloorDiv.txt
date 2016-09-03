@@ -1,5 +1,5 @@
-jinja2.nodes.FloorDiv
-=====================
+:class:`jinja2.nodes.FloorDiv`
+==============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: FloorDiv
    :undoc-members:

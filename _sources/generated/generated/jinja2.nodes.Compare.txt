@@ -1,5 +1,5 @@
-jinja2.nodes.Compare
-====================
+:class:`jinja2.nodes.Compare`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Compare
    :undoc-members:

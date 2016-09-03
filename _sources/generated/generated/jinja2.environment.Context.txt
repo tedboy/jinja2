@@ -1,5 +1,5 @@
-jinja2.environment.Context
-==========================
+:class:`jinja2.environment.Context`
+===================================
 .. currentmodule:: jinja2.environment
 .. autoclass:: Context
    :undoc-members:

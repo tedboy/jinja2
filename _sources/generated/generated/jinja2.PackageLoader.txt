@@ -1,5 +1,5 @@
-jinja2.PackageLoader
-====================
+:class:`jinja2.PackageLoader`
+=============================
 .. currentmodule:: jinja2
 .. autoclass:: PackageLoader
    :undoc-members:

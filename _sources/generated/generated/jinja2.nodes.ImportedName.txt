@@ -1,5 +1,5 @@
-jinja2.nodes.ImportedName
-=========================
+:class:`jinja2.nodes.ImportedName`
+==================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: ImportedName
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.ScopedEvalContextModifier
-======================================
+:class:`jinja2.nodes.ScopedEvalContextModifier`
+===============================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: ScopedEvalContextModifier
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.Pos
-================
+:class:`jinja2.nodes.Pos`
+=========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Pos
    :undoc-members:

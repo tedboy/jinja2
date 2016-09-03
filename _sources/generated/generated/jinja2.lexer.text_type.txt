@@ -1,5 +1,5 @@
-jinja2.lexer.text_type
-======================
+:class:`jinja2.lexer.text_type`
+===============================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: text_type
    :undoc-members:

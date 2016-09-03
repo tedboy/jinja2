@@ -1,5 +1,5 @@
-jinja2.FileSystemLoader
-=======================
+:class:`jinja2.FileSystemLoader`
+================================
 .. currentmodule:: jinja2
 .. autoclass:: FileSystemLoader
    :undoc-members:

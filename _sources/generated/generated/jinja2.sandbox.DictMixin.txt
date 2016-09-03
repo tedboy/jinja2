@@ -1,5 +1,5 @@
-jinja2.sandbox.DictMixin
-========================
+:class:`jinja2.sandbox.DictMixin`
+=================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: DictMixin
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.Not
-================
+:class:`jinja2.nodes.Not`
+=========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Not
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.bccache.Bucket
-=====================
+:class:`jinja2.bccache.Bucket`
+==============================
 .. currentmodule:: jinja2.bccache
 .. autoclass:: Bucket
    :undoc-members:

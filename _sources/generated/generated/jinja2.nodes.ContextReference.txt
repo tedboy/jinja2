@@ -1,5 +1,5 @@
-jinja2.nodes.ContextReference
-=============================
+:class:`jinja2.nodes.ContextReference`
+======================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: ContextReference
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.lexer.Lexer
-==================
+:class:`jinja2.lexer.Lexer`
+===========================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: Lexer
    :undoc-members:

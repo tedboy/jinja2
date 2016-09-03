@@ -1,5 +1,5 @@
-jinja2.bccache.text_type
-========================
+:class:`jinja2.bccache.text_type`
+=================================
 .. currentmodule:: jinja2.bccache
 .. autoclass:: text_type
    :undoc-members:

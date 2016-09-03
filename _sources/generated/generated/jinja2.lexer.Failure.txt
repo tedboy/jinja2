@@ -1,5 +1,5 @@
-jinja2.lexer.Failure
-====================
+:class:`jinja2.lexer.Failure`
+=============================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: Failure
    :undoc-members:

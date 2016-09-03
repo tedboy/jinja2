@@ -1,5 +1,5 @@
-jinja2.nodes.EnvironmentAttribute
-=================================
+:class:`jinja2.nodes.EnvironmentAttribute`
+==========================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: EnvironmentAttribute
    :undoc-members:

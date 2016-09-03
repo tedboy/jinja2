@@ -1,5 +1,5 @@
-jinja2.lexer.deque
-==================
+:class:`jinja2.lexer.deque`
+===========================
 .. currentmodule:: jinja2.lexer
 .. autoclass:: deque
    :undoc-members:

@@ -1,5 +1,5 @@
-jinja2.nodes.Mul
-================
+:class:`jinja2.nodes.Mul`
+=========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Mul
    :undoc-members:

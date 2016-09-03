@@ -1,5 +1,5 @@
-jinja2.nodes.Literal
-====================
+:class:`jinja2.nodes.Literal`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Literal
    :undoc-members:

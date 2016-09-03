@@ -1,5 +1,5 @@
-jinja2.exceptions.text_type
-===========================
+:class:`jinja2.exceptions.text_type`
+====================================
 .. currentmodule:: jinja2.exceptions
 .. autoclass:: text_type
    :undoc-members:

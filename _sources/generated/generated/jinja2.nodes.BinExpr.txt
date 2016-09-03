@@ -1,5 +1,5 @@
-jinja2.nodes.BinExpr
-====================
+:class:`jinja2.nodes.BinExpr`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: BinExpr
    :undoc-members:

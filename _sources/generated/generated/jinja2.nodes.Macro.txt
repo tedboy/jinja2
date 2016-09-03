@@ -1,5 +1,5 @@
-jinja2.nodes.Macro
-==================
+:class:`jinja2.nodes.Macro`
+===========================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Macro
    :undoc-members:

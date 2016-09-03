@@ -1,5 +1,5 @@
-jinja2.nodes.Keyword
-====================
+:class:`jinja2.nodes.Keyword`
+=============================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: Keyword
    :undoc-members:

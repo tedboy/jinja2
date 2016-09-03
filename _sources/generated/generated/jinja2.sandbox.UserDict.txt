@@ -1,5 +1,5 @@
-jinja2.sandbox.UserDict
-=======================
+:class:`jinja2.sandbox.UserDict`
+================================
 .. currentmodule:: jinja2.sandbox
 .. autoclass:: UserDict
    :undoc-members:

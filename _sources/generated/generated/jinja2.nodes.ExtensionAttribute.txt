@@ -1,5 +1,5 @@
-jinja2.nodes.ExtensionAttribute
-===============================
+:class:`jinja2.nodes.ExtensionAttribute`
+========================================
 .. currentmodule:: jinja2.nodes
 .. autoclass:: ExtensionAttribute
    :undoc-members:

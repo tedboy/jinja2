@@ -1,5 +1,5 @@
-jinja2.ext.loopcontrols
-=======================
+:class:`jinja2.ext.loopcontrols`
+================================
 .. currentmodule:: jinja2.ext
 .. autoclass:: loopcontrols
    :undoc-members:
