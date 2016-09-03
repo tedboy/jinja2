@@ -1,6 +1,3 @@
-jinja2.lexer
-============
-
 .. automodule:: jinja2.lexer
 
    

@@ -1,6 +1,3 @@
-jinja2.environment
-==================
-
 .. automodule:: jinja2.environment
 
    

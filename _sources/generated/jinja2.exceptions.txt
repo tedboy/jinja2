@@ -1,6 +1,3 @@
-jinja2.exceptions
-=================
-
 .. automodule:: jinja2.exceptions
 
    
